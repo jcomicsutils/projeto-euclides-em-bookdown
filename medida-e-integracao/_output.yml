@@ -8,7 +8,7 @@ bookdown::gitbook:
       theme: "night" 
     toc:
       before: |
-        <li><a href="./">Medida e Integração (Segunda Edição)</a></li>
+        <li><a href="./">Medida e Integração</a></li>
       after: |
         <li><a href="https://github.com/jcomicsutils/projeto-euclides-em-bookdown" target="blank">Published with bookdown</a></li>
     edit: https://github.com/jcomicsutils/projeto-euclides-em-bookdown/medida-e-integracao/edit/main/%s
