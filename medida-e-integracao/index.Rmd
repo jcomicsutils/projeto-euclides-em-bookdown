@@ -1,5 +1,5 @@
 ---
-title: "Medida e Integração (Segunda Edição)"
+title: "Medida e Integração"
 author: "Pedro J. Fernandez"
 date: "1976"
 site: bookdown::bookdown_site
@@ -10,12 +10,10 @@ split_bib: false
 nocite: |
   @* 
 delete_merged_file: true
-# url: your book url like https://bookdown.org/yihui/bookdown
+url: https://jcomicsutils.github.io/projeto-euclides-em-bookdown/medida-e-integracao/_book
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::gitbook,
-  set in the _output.yml file.
+  Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)
 link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
