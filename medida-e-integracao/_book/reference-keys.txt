@@ -3,7 +3,7 @@ cap01
 cap02
 cap03
 cap04
-classes-de-conjuntos
+cap1
 medidas-e-extensão-de-medidas
 medidas
 extensão-de-medidas

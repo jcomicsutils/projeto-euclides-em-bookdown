@@ -1,4 +1,4 @@
-# Introdução {.unnumbered}
+# Introdução {.unnumbered #intro}
 
 Para a leitura deste livro é essencial que o leitor tenha realizado anteriormente um curso de Cálculo Diferencial em várias variáveis reais e outro de Funções Reais. Seria conveniente que conhecesse os temas mais importantes de um curso de Análise no $\mathbb{R}^n$, noções gerais de espaços topológicos, e algumas definições e propriedades básicas de Espaços de Banach. Porém o requisito talvez mais importante é o de ter um pouco de maturidade matemática. Por essa razão é aconselhável que um curso baseado neste livro seja deixado para a segunda metade de um programa de mestrado. A notação usada é a usual em outros livros e textos gerais de matemática. Alguns símbolos que achamos que não sejam frequentemente usados, são indicados a seguir.
 
