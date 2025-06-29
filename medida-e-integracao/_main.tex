@@ -180,7 +180,6 @@ O problema então pode ser formulado da seguinte maneira. Dado um semi-anel \(\m
 O resultado mais importante é o seguinte:
 
 \textbf{Teorema} (Teorema de extensão) Dada uma medida \(\mu\) sobre um semi-anel \(\mathbb{S}\), existem um \(\sigma\)-anel \(\Lambda, \Lambda \supseteq \mathbb{S}\), e uma medida completa \(\mu\) sobre \(\Lambda\) que é uma extensão de \(\mu\). Se \(\mu\) é \(\sigma\)-finita sobre \(\mathbb{S}\) então a extensão é única.
-:::
 
 O Cap. 1 estuda diferentes classes de conjuntos sobre as quais as funções de conjunto introduzidas no Cap. 2 vão ser definidas. O teorema enunciado acima está contido no Cap. 2 e é obtido depois de uma série de resultados técnicos muitos deles com interesse independente. O procedimento de extensão é trabalhoso e vai requerer do leitor atenção, concentração e força de vontade para ler os detalhes até o fim. Na minha opinião vale a pena fazer o esforço logo no início pela familiaridade que se obtém na manipulação de conjuntos mensuráveis, facilitando dessa forma a leitura dos capítulos seguintes.
 
@@ -220,9 +219,9 @@ O capítulo contém vários resultados clássicos muito importantes como o \emph
 
 Diversas funções que devem figurar na bagagem de todo matemático são construídas. Por exemplo, uma função contínua, estritamente crescente e com derivada nula em quase todo ponto.
 
-\chapter{Conjuntos}\label{conjuntos}
+\chapter{Conjuntos}\label{cap0}
 
-\section{Conjuntos}\label{conjuntos-1}
+\section{Conjuntos}\label{cap01}
 
 Neste livro, toda vez que usamos a palavra conjunto queremos significar um subconjunto de um conjunto fixo, que em geral designaremos por \(\Omega\).
 
@@ -245,7 +244,7 @@ Assim, o conjunto que consiste nos números 0, 2 e 4 será indicado \(\{0, 2, 4\
 
 É importante distinguir entre o ponto \(\omega\) e o conjunto \(\{\omega\}\), cujo único elemento é \(\omega\).
 
-\section{Operações com conjuntos}\label{operauxe7uxf5es-com-conjuntos}
+\section{Operações com conjuntos}\label{cap02}
 
 Seja \(\Gamma\) um certo conjunto de índices e, para cada \(\gamma \in \Gamma\), consideremos \(A_{\gamma}\), um subconjunto de \(\Omega\).
 Chamaremos de união da família \(\{A_{\gamma}: \gamma \in \Gamma\}\) o conjunto de todos os pontos que pertencem a pelo menos um dos conjuntos \(A_{\gamma}\).
@@ -286,33 +285,33 @@ Ao conjunto \((A-B) + (B-A)\), designado por \(A \Delta B\), chamaremos diferen�
 Apresentamos, a seguir, uma série de importantes relações que serão usadas sem menções explícitas, nos capítulos seguintes.
 Suas demonstrações são deixadas como exercícios.
 
-\(\forall A, A \subseteq \Omega; A \cup \varnothing = A, A \cap \varnothing = \varnothing\).
+\textbf{0.2.1.} \(\forall A, A \subseteq \Omega; A \cup \varnothing = A, A \cap \varnothing = \varnothing\).
 
-\(A \subseteq B\) se, e somente se, \(A \cup B = B\).
+\textbf{0.2.2.} \(A \subseteq B\) se, e somente se, \(A \cup B = B\).
 
-\(A \cup (B \cup C) = (A \cup B) \cup C\).
+\textbf{0.2.3.} \(A \cup (B \cup C) = (A \cup B) \cup C\).
 
-\(A \cap (B \cap C) = (A \cap B) \cap C\).
+\textbf{0.2.4.} \(A \cap (B \cap C) = (A \cap B) \cap C\).
 
-\(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\).
+\textbf{0.2.5.} \(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\).
 
-\(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\).
+\textbf{0.2.6.} \(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\).
 
-\(A \cap (\bigcup\limits_{\gamma \in \Gamma} A_{\gamma}) = \bigcup\limits_{\gamma \in \Gamma} (A \cap A_{\gamma})\).
+\textbf{0.2.7.} \(A \cap (\bigcup\limits_{\gamma \in \Gamma} A_{\gamma}) = \bigcup\limits_{\gamma \in \Gamma} (A \cap A_{\gamma})\).
 
-\(A \cup (\bigcap\limits_{\gamma \in \Gamma} A_{\gamma}) = \bigcap\limits_{\gamma \in \Gamma} (A \cup A_{\gamma})\).
+\textbf{0.2.8.} \(A \cup (\bigcap\limits_{\gamma \in \Gamma} A_{\gamma}) = \bigcap\limits_{\gamma \in \Gamma} (A \cup A_{\gamma})\).
 
-\(A + A^c = \Omega, A \cap A^c = \varnothing, \Omega^c = \varnothing, \varnothing^c = \Omega\).
+\textbf{0.2.9.} \(A + A^c = \Omega, A \cap A^c = \varnothing, \Omega^c = \varnothing, \varnothing^c = \Omega\).
 
-\((A^c)^c = A\); \(A \subseteq B\) se, e somente se, \(B^c \subseteq A^c\).
+\textbf{0.2.10.} \((A^c)^c = A\); \(A \subseteq B\) se, e somente se, \(B^c \subseteq A^c\).
 
-\((\bigcup\limits_{\gamma \in \Gamma} A_{\gamma})^c = \bigcap\limits_{\gamma \in \Gamma} (A_{\gamma}^c)\).
+\textbf{0.2.11.} \((\bigcup\limits_{\gamma \in \Gamma} A_{\gamma})^c = \bigcap\limits_{\gamma \in \Gamma} (A_{\gamma}^c)\).
 
-\((\bigcap\limits_{\gamma \in \Gamma} A_{\gamma})^c = \bigcup\limits_{\gamma \in \Gamma} (A_{\gamma}^c)\).
+\textbf{0.2.12.} \((\bigcap\limits_{\gamma \in \Gamma} A_{\gamma})^c = \bigcup\limits_{\gamma \in \Gamma} (A_{\gamma}^c)\).
 
-\(A \Delta B \subseteq (A \Delta C) \cup (B \Delta C), \forall C \subseteq \Omega\).
+\textbf{0.2.13.} \(A \Delta B \subseteq (A \Delta C) \cup (B \Delta C), \forall C \subseteq \Omega\).
 
-\section{Limites e indicadores}\label{limites-e-indicadores}
+\section{Limites e indicadores}\label{cap03}
 
 Se \(\{A_n\}_{n=1,2,...}\) é uma sucessão de conjuntos, chamaremos limite superior da sucessão \(\{A_n\}_{n=1,2,...}\) ao conjunto de todos os pontos \(\omega\) que pertençam a \(A_n\), para infinitos valores de \(n\).
 É fácil ver que: \[ \lim_n \sup A_n = \bigcap_{n=1}^{\infty} \bigcup_{i=n}^{\infty} A_i. \]
@@ -333,21 +332,21 @@ Esta noção nos será extremamente útil nos capítulos seguintes.
 A seguir, apresentaremos algumas fórmulas, que são deixadas a título de exercício.
 É importante que o leitor se familiarize com o manejo de indicadores.
 
-\(A \subseteq B\) se, e somente se, \(I_A \le I_B, I_{A^c} = 1 - I_A\).
+\textbf{0.3.1.} \(A \subseteq B\) se, e somente se, \(I_A \le I_B, I_{A^c} = 1 - I_A\).
 
-\(I_{A \cap B} = I_A \wedge I_B = I_A I_B\); \(I_{\bigcap\limits_{i=1}^n A_i} = \prod\limits_{i=1}^n I_{A_i}\).
+\textbf{0.3.2.} \(I_{A \cap B} = I_A \wedge I_B = I_A I_B\); \(I_{\bigcap\limits_{i=1}^n A_i} = \prod\limits_{i=1}^n I_{A_i}\).
 
-\(I_{A \cup B} = I_A + I_B - I_A I_B = I_A \vee I_B\).
+\textbf{0.3.3.} \(I_{A \cup B} = I_A + I_B - I_A I_B = I_A \vee I_B\).
 
-\(I_{(\bigcup\limits_{i=1}^n A_i)} = 1 - \prod\limits_{i=1}^n (1-I_{A_i}) = \sum\limits_{k=1}^n (-1)^{k-1} \sum\limits_{1 \le i_1 < i_2 < \dots < i_k \le n} \quad \prod\limits_{j=1}^k I_{A_{i_j}}\).
+\textbf{0.3.4.} \(I_{(\bigcup\limits_{i=1}^n A_i)} = 1 - \prod\limits_{i=1}^n (1-I_{A_i}) = \sum\limits_{k=1}^n (-1)^{k-1} \sum\limits_{1 \le i_1 < i_2 < \dots < i_k \le n} \quad \prod\limits_{j=1}^k I_{A_{i_j}}\).
 
-\(I_{(A \Delta B)} = I_A + I_B - 2 I_A I_B = |I_A - I_B|\).
+\textbf{0.3.5.} \(I_{(A \Delta B)} = I_A + I_B - 2 I_A I_B = |I_A - I_B|\).
 
-\(I_{(A-B)} = I_A(1 - I_B)\).
+\textbf{0.3.6.} \(I_{(A-B)} = I_A(1 - I_B)\).
 
-\(I_{\lim_n \sup A_n} = \lim_n \sup I_{A_n}\); \(I_{\lim_n \inf A_n} = \lim_n \inf I_{A_n}\).
+\textbf{0.3.7.} \(I_{\lim_n \sup A_n} = \lim_n \sup I_{A_n}\); \(I_{\lim_n \inf A_n} = \lim_n \inf I_{A_n}\).
 
-\section{Funções}\label{funuxe7uxf5es}
+\section{Funções}\label{cap04}
 
 Sendo \(X\) e \(Y\) dois conjuntos, denotamos por \(Y^X\) o conjunto de todas as funções de \(X\) em \(Y\).
 
@@ -356,14 +355,13 @@ Se \(B \subseteq X\), \(f(B)\) representará o conjunto \(\{y: \exists x \in B: 
 
 Usaremos, sem menção explícita, as seguintes fórmulas facilmente verificáveis:
 
-0.4.1.
-\(f^{-1}(A^c) = [f^{-1}(A)]^c\); \(A \subseteq Y\).
-0.4.2.
-\(f^{-1}(\bigcap\limits_{\alpha \in I} A_{\alpha}) = \bigcap\limits_{\alpha \in I} f^{-1}(A_{\alpha})\), \(f^{-1}(\bigcup\limits_{\alpha \in I} A_{\alpha}) = \bigcup\limits_{\alpha \in I} f^{-1}(A_{\alpha})\), onde \(\{A_{\alpha}\}_{\alpha \in I}\) é uma família de subconjuntos de \(Y\).
-0.4.3.
-\(f(\bigcup\limits_{\alpha \in I} B_{\alpha}) = \bigcup\limits_{\alpha \in I} f(B_{\alpha})\), \(\{B_{\alpha}\}_{\alpha \in I}\) é uma família de subconjuntos de \(X\).
-0.4.4.
-\(f(\bigcap\limits_{\alpha \in I} A_{\alpha}) \subseteq \bigcap\limits_{\alpha \in I} f(A_{\alpha})\).
+\textbf{0.4.1.} \(f^{-1}(A^c) = [f^{-1}(A)]^c\); \(A \subseteq Y\).
+
+\textbf{0.4.2.} \(f^{-1}(\bigcap\limits_{\alpha \in I} A_{\alpha}) = \bigcap\limits_{\alpha \in I} f^{-1}(A_{\alpha})\), \(f^{-1}(\bigcup\limits_{\alpha \in I} A_{\alpha}) = \bigcup\limits_{\alpha \in I} f^{-1}(A_{\alpha})\), onde \(\{A_{\alpha}\}_{\alpha \in I}\) é uma família de subconjuntos de \(Y\).
+
+\textbf{0.4.3.} \(f(\bigcup\limits_{\alpha \in I} B_{\alpha}) = \bigcup\limits_{\alpha \in I} f(B_{\alpha})\), \(\{B_{\alpha}\}_{\alpha \in I}\) é uma família de subconjuntos de \(X\).
+
+\textbf{0.4.4.} \(f(\bigcap\limits_{\alpha \in I} A_{\alpha}) \subseteq \bigcap\limits_{\alpha \in I} f(A_{\alpha})\).
 
 Se \(A \subseteq X\) e \(f: X \to Y\), a notação \(f|_A\) é a função pertinente a \(Y^A\), definida por:
 
@@ -376,7 +374,7 @@ Se \(A \subseteq X\) e \(f: X \to Y\), a notação \(f|_A\) é a função pertin
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Provar as fórmulas das Seqs. 0.2, 0.3 e 0.4.
+  Provar as fórmulas das Seçs. \ref{cap02}, \ref{cap03}, \ref{cap04}.
 \item
   Descrever por palavras o conjunto: \[ \lim_n \sup A_n - \lim_n \inf A_n. \]
 \item
@@ -384,7 +382,7 @@ Se \(A \subseteq X\) e \(f: X \to Y\), a notação \(f|_A\) é a função pertin
 \item
   Seja \(\{x_1, x_2, ...\}\) uma enumeração dos racionais de \(\mathbb{R}^1\). Seja \(A_n = (x_n-1, x_n+1)\). Calcular \(\lim_n \sup A_n\) e \(\lim_n \inf A_n\).
 \item
-  Dar um exemplo para mostrar que a inclusão em 0.4.4 pode ser estrita.
+  Dar um exemplo para mostrar que a inclusão em \hyperref[cap04]{0.4.4} pode ser estrita.
 \end{enumerate}
 
 \chapter{Classes de Conjuntos}\label{classes-de-conjuntos}

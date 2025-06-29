@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Euclides em Bookdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a; /* Dark mode background */
+            color: #e0e0e0; /* Dark mode text color */
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: #2c2c2c; /* Dark mode container background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #f0f0f0; /* Dark mode heading color */
+            margin-bottom: 30px;
+        }
+        .book-showcase {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .book-item {
+            background-color: #3a3a3a; /* Dark mode book item background */
+            border: 1px solid #555; /* Dark mode border */
+            border-radius: 5px;
+            padding: 15px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.2s ease-in-out, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .book-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .book-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #cccccc; 
+        }
+        .book-link {
+            display: inline-block;
+            background-color: #6a6aff; 
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .book-link:hover {
+            background-color: #4a4a9a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Projeto Euclides</h1>
+
+        <section class="book-showcase" id="bookList">
+            </section>
+    </div>
+
+    <script>
+        const bookData = [
+            {
+                title: "Medida e Integração (Segunda Edição)",
+                link: "medida-e-integracao/_book/index.html"
+            }
+            // {
+            //     title: "Another Book Title",
+            //     link: "path/to/another-book/index.html"
+            // },
+            // {
+            //     title: "Third Book Title",
+            //     link: "path/to/third-book/index.html"
+            // }
+        ];
+
+        const bookList = document.getElementById('bookList');
+
+        // Function to render books
+        function renderBooks() {
+            bookList.innerHTML = ''; // Clear existing books
+            bookData.forEach(book => {
+                const bookItem = document.createElement('div');
+                bookItem.classList.add('book-item');
+                bookItem.innerHTML = `
+                    <div class="book-info">
+                        <div class="book-title">${book.title}</div>
+                    </div>
+                    <a href="${book.link}" class="book-link">Ler</a>
+                `;
+                bookList.appendChild(bookItem);
+            });
+        }
+
+        // Initial render of books
+        renderBooks();
+    </script>
+</body>
+</html>
