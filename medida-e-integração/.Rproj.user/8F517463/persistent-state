@@ -1,8 +1,0 @@
-build-last-errors="[]"
-build-last-errors-base-dir=""
-build-last-outputs="[{\"type\":0,\"output\":\"==> rmarkdown::render_site(output_format = 'bookdown::gitbook', encoding = 'UTF-8')\\n\\n\"},{\"type\":1,\"output\":\"\\r  |                                                                  \\r  |                                                            |   0%\\r  |                                                                  \\r  |.........                                                   |  14%          \\r  |                                                                  \\r  |.................                                           |  29% [setup]  \"},{\"type\":2,\"output\":\"\\r\\n\\r\\nprocessing file: _main.Rmd\\r\\n\"},{\"type\":2,\"output\":\"\\r\\n\\r\\n\"},{\"type\":1,\"output\":\"\\r                                                                                                    \\r\\n\"},{\"type\":2,\"output\":\"Error:\\r\\n! 'new_block' is not an exported object from 'namespace:knitr'\\r\\n\\r\\nQuitting from _main.Rmd:23-30 [setup]\\r\\nPlease delete _main.Rmd after you finish debugging the error.\\r\\nExecução interrompida\\r\\n\"},{\"type\":2,\"output\":\"\\nExited with status 1.\\n\\n\"}]"
-compile_pdf_state="{\"tab_visible\":false,\"running\":false,\"target_file\":\"\",\"output\":\"\",\"errors\":[]}"
-files.monitored-path=""
-find-in-files-state="{\"handle\":\"\",\"input\":\"\",\"path\":\"\",\"regex\":false,\"ignoreCase\":false,\"results\":{\"file\":[],\"line\":[],\"lineValue\":[],\"matchOn\":[],\"matchOff\":[],\"replaceMatchOn\":[],\"replaceMatchOff\":[]},\"running\":false,\"replace\":false,\"preview\":false,\"gitFlag\":false,\"replacePattern\":\"\"}"
-imageDirtyState="0"
-saveActionState="0"
