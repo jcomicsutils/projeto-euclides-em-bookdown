@@ -1,11 +1,11 @@
-# Medidas com Sinal
+# Medidas com Sinal {#cap6e}
 
-## Generalidades
+## Generalidades {#cap6e1e}
 
-## Decomposição de Hahn e Jordan
+## Decomposição de Hahn e Jordan {#cap6e2e}
 
-## Continuidade absoluta. Teorema de Radon-Nikodym
+## Continuidade absoluta. Teorema de Radon-Nikodym {#cap6e3e}
 
-## Teorema de Representação de Riesz
+## Teorema de Representação de Riesz {#cap6e4e}
 
 ## Exercícios {-}

@@ -1,4 +1,4 @@
-# Classes de Conjuntos {#cap1}
+# Classes de Conjuntos {#cap1e}
 
 Neste capítulo estudaremos certas classes de conjuntos sobre as quais, nos capítulos seguintes, definiremos diversos tipos de funções. Entre esses tipos têm destaque muito especial as medidas finitamente aditivas e $\sigma$-aditivas positivas e com sinal, que estudaremos posteriormente. As Props. 1.6 e 1.7 são as mais importantes. Os Exemplos 1.1 e 1.2 devem ser bem analisados e lembrados juntamente com as diversas classes de conjuntos gerados por eles.
 
@@ -117,10 +117,10 @@ Para mostrar que $\mathbb{H} \supseteq \mathscr{C}$, seja $C \in \mathscr{C}$ e 
 ## Exercícios {.unnumbered}
 
 1.  $\{\Omega_i\}_{i \in I}$ uma família de conjuntos e $\mathbb{S}_i$ uma semi-álgebra sobre $\Omega_i$. Seja $\Omega = \prod\limits_{i \in I} \Omega_i$ e $\mathbb{S} = \{\prod\limits_{i \in I} B_i \text{ onde } B_i = \Omega_i \text{ para todos os índices, salvo um número finito nos quais } B_i \in \mathbb{S}_i \}$. Então $\mathbb{S}$ é uma semi-álgebra sobre $\Omega$ (Essa semi-álgebra é chamada semi-álgebra produto).
-2.  Demonstrar a Prop. [1.1.](#cap1)
-3.  Demonstrar a Prop. [1.5.](#cap1)
-4.  Demonstrar a Prop. [1.7.](#cap1)
-5.  Calcular $\sigma(\mathbb{S})$ e $\overline{\sigma}(\mathbb{S})$ onde $\mathbb{S}$ é o semi-anel descrito no Exemplo [1.3.](#cap1)
+2.  Demonstrar a Prop. [1.1.](#cap1e)
+3.  Demonstrar a Prop. [1.5.](#cap1e)
+4.  Demonstrar a Prop. [1.7.](#cap1e)
+5.  Calcular $\sigma(\mathbb{S})$ e $\overline{\sigma}(\mathbb{S})$ onde $\mathbb{S}$ é o semi-anel descrito no Exemplo [1.3.](#cap1e)
 6.  Seja $\mathscr{C}$ uma classe de conjuntos tal que $\varnothing \in \mathscr{C}$. Seja $\tilde{\mathscr{C}}$ a classe dos conjuntos que são uniões finitas de diferenças de elementos de $\mathscr{C}$. Definimos $\mathscr{C}_0 = \mathscr{C}$ e para $n \ge 1$, $\mathscr{C}_n = \tilde{\mathscr{C}}_{n-1}$. Provar:
 
 <!-- -->
@@ -131,7 +131,7 @@ b)  se $\mathscr{C}$ é enumerável, $\mathbb{R}(\mathscr{C})$ também o é.
 
 <!-- -->
 
-7.  Se $(X, \tau)$ é um espaço topológico, denotaremos com $\mathscr{B}(X, \tau)$ ou $\mathscr{B}(\tau)$ simplesmente a $\sigma$-álgebra gerada pela topologia. Essa $\sigma$-álgebra é chamada $\sigma$-álgebra de Borel. Provar que a $\sigma$-álgebra de Borel de $\mathbb{R}^n$ coincide com a $\sigma$-álgebra gerada pelos conjuntos descritos no Exemplo [1.2.](#cap1)
+7.  Se $(X, \tau)$ é um espaço topológico, denotaremos com $\mathscr{B}(X, \tau)$ ou $\mathscr{B}(\tau)$ simplesmente a $\sigma$-álgebra gerada pela topologia. Essa $\sigma$-álgebra é chamada $\sigma$-álgebra de Borel. Provar que a $\sigma$-álgebra de Borel de $\mathbb{R}^n$ coincide com a $\sigma$-álgebra gerada pelos conjuntos descritos no Exemplo [1.2.](#cap1e)
 8.  Seja $\mathscr{C}$ uma classe de conjuntos não-vazia. Seja $A \in \sigma(\mathscr{C})$. Então existe uma classe enumerável $\mathscr{D} \subseteq \mathscr{C}$, tal que $A \in \sigma(\mathscr{D})$.
 9.  Seja $\mathscr{C}$ uma classe não-vazia de conjuntos, e $A \subseteq \Omega$. Denotamos com $\mathscr{C} \cap A = \{C \cap A: C \in \mathscr{C}\}$. Provar que $\sigma(\mathscr{C} \cap A) = \sigma(\mathscr{C}) \cap A$ onde $\sigma(\mathscr{C} \cap A)$ indica a $\sigma$-álgebra gerada em $A$ por $\mathscr{C} \cap A$. O resultado continua válido se $\sigma$ for trocado por $\overline{\sigma}$.
 10. Uma $\sigma$-álgebra $\mathscr{A}$ é chamada separável, se $\exists \mathscr{A}_0 \subseteq \mathscr{A}, \mathscr{A}_0$ enumerável, e tal que $\sigma(\mathscr{A}_0) = \mathscr{A}$.

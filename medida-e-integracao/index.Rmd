@@ -15,10 +15,10 @@ url: https://jcomicsutils.github.io/projeto-euclides-em-bookdown/medida-e-integr
 description: |
   Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo: jcomicsutils/projeto-euclides-em-bookdown
 ---
 
-# Prefácio {.unnumbered}
+# Prefácio {.unnumbered #prefacio}
 
 O presente livro vem tentar preencher a necessidade cada vez mais imperiosa de proporcionar, num programa de Mestrado em Matemática ou Estatística Matemática, uma versão da Teoria da Medida que permita “uma aplicação mais ou menos imediata a outras áreas, como por exemplo Teoria “das Probabilidades, Estatística Matemática e suas ramificações, Física Matemática, etc.
 

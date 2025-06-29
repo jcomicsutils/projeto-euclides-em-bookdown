@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.2 Extensão de medidas | Medida e Integração</title>
+  <meta name="description" content="2.2 Extensão de medidas | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.2 Extensão de medidas | Medida e Integração" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="2.2 Extensão de medidas | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="github-repo" content="jcomicsutils/projeto-euclides-em-bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.2 Extensão de medidas | Medida e Integração" />
+  
+  <meta name="twitter:description" content="2.2 Extensão de medidas | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  
+
+<meta name="author" content="Pedro J. Fernandez" />
+
+
+<meta name="date" content="1976-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="cap2e1e.html"/>
+<link rel="next" href="cap2e3e.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Medida e Integração</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i>Introdução</a></li>
+<li class="chapter" data-level="0" data-path="cap0e.html"><a href="cap0e.html"><i class="fa fa-check"></i><b>0</b> Conjuntos</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="cap0e1e.html"><a href="cap0e1e.html"><i class="fa fa-check"></i><b>0.1</b> Conjuntos</a></li>
+<li class="chapter" data-level="0.2" data-path="cap0e2e.html"><a href="cap0e2e.html"><i class="fa fa-check"></i><b>0.2</b> Operações com conjuntos</a></li>
+<li class="chapter" data-level="0.3" data-path="cap0e3e.html"><a href="cap0e3e.html"><i class="fa fa-check"></i><b>0.3</b> Limites e indicadores</a></li>
+<li class="chapter" data-level="0.4" data-path="cap0e4e.html"><a href="cap0e4e.html"><i class="fa fa-check"></i><b>0.4</b> Funções</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="cap1e.html"><a href="cap1e.html"><i class="fa fa-check"></i><b>1</b> Classes de Conjuntos</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-1"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="cap2e.html"><a href="cap2e.html"><i class="fa fa-check"></i><b>2</b> Medidas e Extensão de Medidas</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cap2e1e.html"><a href="cap2e1e.html"><i class="fa fa-check"></i><b>2.1</b> Medidas</a></li>
+<li class="chapter" data-level="2.2" data-path="cap2e2e.html"><a href="cap2e2e.html"><i class="fa fa-check"></i><b>2.2</b> Extensão de medidas</a></li>
+<li class="chapter" data-level="2.3" data-path="cap2e3e.html"><a href="cap2e3e.html"><i class="fa fa-check"></i><b>2.3</b> Medida interior</a></li>
+<li class="chapter" data-level="2.4" data-path="cap2e4e.html"><a href="cap2e4e.html"><i class="fa fa-check"></i><b>2.4</b> Construção de medidas sobre semi-anéis. Exemplos</a></li>
+<li class="chapter" data-level="2.5" data-path="cap2e5e.html"><a href="cap2e5e.html"><i class="fa fa-check"></i><b>2.5</b> Alguns comentários sobre o problema da medida</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-2"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cap3e.html"><a href="cap3e.html"><i class="fa fa-check"></i><b>3</b> Funções Mensuráveis</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-3"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="cap4e.html"><a href="cap4e.html"><i class="fa fa-check"></i><b>4</b> Integração</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="cap4e1e.html"><a href="cap4e1e.html"><i class="fa fa-check"></i><b>4.1</b> A integral. Teoremas básicos de convergência</a></li>
+<li class="chapter" data-level="4.2" data-path="cap4e2e.html"><a href="cap4e2e.html"><i class="fa fa-check"></i><b>4.2</b> Espaços <span class="math inline">\(L_p\)</span></a></li>
+<li class="chapter" data-level="4.3" data-path="cap4e3e.html"><a href="cap4e3e.html"><i class="fa fa-check"></i><b>4.3</b> Aplicações</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-4"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="cap5e.html"><a href="cap5e.html"><i class="fa fa-check"></i><b>5</b> Imagens de Medidas e Medidas-Produto</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="cap5e1e.html"><a href="cap5e1e.html"><i class="fa fa-check"></i><b>5.1</b> Imagens de medidas</a></li>
+<li class="chapter" data-level="5.2" data-path="cap5e2e.html"><a href="cap5e2e.html"><i class="fa fa-check"></i><b>5.2</b> Medidas-produto - Teorema de Fubini</a></li>
+<li class="chapter" data-level="5.3" data-path="cap5e3e.html"><a href="cap5e3e.html"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a></li>
+<li class="chapter" data-level="5.4" data-path="cap5e4e.html"><a href="cap5e4e.html"><i class="fa fa-check"></i><b>5.4</b> Produtos finitos e infinitos de espaços de medida</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-5"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="cap6e.html"><a href="cap6e.html"><i class="fa fa-check"></i><b>6</b> Medidas com Sinal</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="cap6e1e.html"><a href="cap6e1e.html"><i class="fa fa-check"></i><b>6.1</b> Generalidades</a></li>
+<li class="chapter" data-level="6.2" data-path="cap6e2e.html"><a href="cap6e2e.html"><i class="fa fa-check"></i><b>6.2</b> Decomposição de Hahn e Jordan</a></li>
+<li class="chapter" data-level="6.3" data-path="cap6e3e.html"><a href="cap6e3e.html"><i class="fa fa-check"></i><b>6.3</b> Continuidade absoluta. Teorema de Radon-Nikodym</a></li>
+<li class="chapter" data-level="6.4" data-path="cap6e4e.html"><a href="cap6e4e.html"><i class="fa fa-check"></i><b>6.4</b> Teorema de Representação de Riesz</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-6"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="cap7e.html"><a href="cap7e.html"><i class="fa fa-check"></i><b>7</b> Integração e Diferenciação</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="cap7e1e.html"><a href="cap7e1e.html"><i class="fa fa-check"></i><b>7.1</b> Diferenciação de funções monótonas</a></li>
+<li class="chapter" data-level="7.2" data-path="cap7e2e.html"><a href="cap7e2e.html"><i class="fa fa-check"></i><b>7.2</b> Funções de variação limitada</a></li>
+<li class="chapter" data-level="7.3" data-path="cap7e3e.html"><a href="cap7e3e.html"><i class="fa fa-check"></i><b>7.3</b> Teorema de diferenciação de Lebesgue</a></li>
+<li class="chapter" data-level="7.4" data-path="cap7e4e.html"><a href="cap7e4e.html"><i class="fa fa-check"></i><b>7.4</b> Continuidade absoluta</a></li>
+<li class="chapter" data-level="7.5" data-path="cap7e5e.html"><a href="cap7e5e.html"><i class="fa fa-check"></i><b>7.5</b> Alguns resultados e exemplos especiais</a></li>
+<li class="chapter" data-level="7.6" data-path="cap7e6e.html"><a href="cap7e6e.html"><i class="fa fa-check"></i><b>7.6</b> Mudança de variáveis em integrais</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-7"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/jcomicsutils/projeto-euclides-em-bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Medida e Integração</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cap2e2e" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Extensão de medidas<a href="cap2e2e.html#cap2e2e" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>PROPOSIÇÃO 2.2.1.</strong> Seja <span class="math inline">\(\mu\)</span> uma medida finitamente aditiva sobre o semi-anel <span class="math inline">\(\mathbb{S}\)</span>. Então existe uma única medida <span class="math inline">\(\overline{\mu}\)</span> finitamente aditiva sobre o anel gerado por <span class="math inline">\(\mathbb{S}\)</span>, que é uma extensão de <span class="math inline">\(\mu\)</span>.</p>
+<p><strong>Demonstração</strong> Observemos inicialmente que se <span class="math inline">\(\sum\limits_{i=1}^{n} C_i = \sum\limits_{j=1}^{m} B_j\)</span>, com <span class="math inline">\(C_i\)</span> e <span class="math inline">\(B_j \in \mathbb{S}\)</span>, então: <span class="math display">\[ \sum_{i=1}^{n} \mu(C_i) = \sum_{i=1}^{n} \sum_{j=1}^{m} \mu(C_i \cap B_j) = \sum_{j=1}^{m} \sum_{i=1}^{n} \mu(C_i \cap B_j) = \sum_{j=1}^{m} \mu(B_j). \]</span> Definimos então para todo <span class="math inline">\(A\)</span> no anel gerado por <span class="math inline">\(\mathbb{S}\)</span>, com <span class="math display">\[ A = \sum_{i=1}^{n} C_i \quad \text{e} \quad C_i \in \mathbb{S}, \]</span> <span class="math display">\[ \overline{\mu}(A) = \sum_{i=1}^{n} \mu(C_i), \]</span> o que é possível pela observação acima (isto é, <span class="math inline">\(\overline{\mu}\)</span> está bem definida). É fácil ver que <span class="math inline">\(\overline{\mu}\)</span> é finitamente aditiva sobre o anel gerado. A unicidade é evidente.</p>
+<p><strong>PROPOSIÇÃO 2.2.2.</strong> Seja <span class="math inline">\(\mu\)</span> uma medida sobre um semi-anel <span class="math inline">\(\mathbb{S}\)</span>. Então:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(A \subseteq B \Rightarrow \mu(A) \le \mu(B), \quad A, B \in \mathbb{S} \quad\)</span> e</p></li>
+<li><p><span class="math inline">\(A \subseteq \bigcup\limits_{n=1}^{\infty} A_n \Rightarrow \mu(A) \le \sum\limits_{n=1}^{\infty} \mu(A_n); \quad A, A_n \in \mathbb{S}\)</span>.</p></li>
+</ol>
+<p><strong>Demonstração</strong></p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math display">\[ B-A = \sum_{i=1}^{n} C_i, \quad C_i \in \mathbb{S} \]</span> <span class="math display">\[ B = A + \sum_{i=1}^{n} C_i, \]</span> <span class="math display">\[ \mu(B) = \mu(A) + \sum_{i=1}^{n} \mu(C_i) \ge \mu(A); \]</span></p></li>
+<li><p><span class="math display">\[ \bigcup_{n=1}^{\infty} A_n = A_1 + \sum_{n=2}^{\infty} \left(A_n - \bigcup_{i=1}^{n-1} A_i\right). \]</span> Agora <span class="math inline">\(\left(A_n - \sum\limits_{i=1}^{n-1} A_i\right)\)</span> é um elemento do anel gerado por <span class="math inline">\(\mathbb{S}\)</span>, e portanto <span class="math display">\[ A_n - \bigcup_{i=1}^{n-1} A_i = \sum_{j=1}^{k_n} B_{nj} \quad B_{nj} \in \mathbb{S}. \]</span> Se definimos <span class="math inline">\(k_1=1\)</span> e <span class="math inline">\(B_{11}=A_1\)</span>, temos que: <span class="math display">\[ A = A \cap \sum_{n=1}^{\infty} \sum_{j=1}^{k_n} B_{nj} = \sum_{n=1}^{\infty} \sum_{j=1}^{k_n} (B_{nj} \cap A) \]</span> e <span class="math display">\[ \mu(A) = \sum_{n=1}^{\infty} \sum_{j=1}^{k_n} \mu(B_{nj} \cap A) \le \sum_{n=1}^{\infty} \sum_{j=1}^{k_n} \mu(B_{nj}) \le \sum_{n=1}^{\infty} \mu(A_n). \]</span></p></li>
+</ol>
+<p>Seja <span class="math inline">\(\mu\)</span> uma medida sobre um semi-anel <span class="math inline">\(\mathbb{S}\)</span>.</p>
+<p><strong>PROPOSIÇÃO 2.2.3.</strong> Dada uma seqüência <span class="math inline">\(\{C_n\}, C_n \in \mathbb{S} \forall n\)</span>, existe uma seqüência <span class="math inline">\(\{C_n&#39;\}, C_n&#39; \in \mathbb{S} \forall n\)</span>, tal que: <span class="math display">\[ \bigcup_{n=1}^{\infty} C_n = \sum_{n=1}^{\infty} C_n&#39; \quad \text{e} \quad \sum_{n=1}^{\infty} \mu(C_n&#39;) \le \sum_{n=1}^{\infty} \mu(C_n). \]</span></p>
+<p><strong>Demonstração</strong> <span class="math display">\[ \bigcup_{n=1}^{\infty} C_n = C_1 + \sum_{n=2}^{\infty} \left[C_n - \left(\bigcup_{i=1}^{n-1} C_i\right)\right] \qquad \text{(I)} \]</span> Porém, <span class="math inline">\(\forall n \ge 2, C_n - \bigcup_{i=1}^{n-1} C_i\)</span> pertence ao anel gerado por <span class="math inline">\(\mathbb{S}\)</span>, e pela Prop. <a href="cap1e.html#cap1e">1.2</a> pode ser escrito como uma soma finita de elementos de <span class="math inline">\(\mathbb{S}\)</span>, ou seja, <span class="math display">\[ C_n - \bigcup_{i=1}^{n-1} C_i = \sum_{j=1}^{k_n} B_{nj} \]</span> onde <span class="math inline">\(B_{nj} \in \mathbb{S}\)</span>. Substituindo em <span class="math inline">\(\text{(I)}\)</span>, obtemos uma soma enumerável de elementos de <span class="math inline">\(\mathbb{S}\)</span>. Como <span class="math inline">\(\sum_{j=1}^{k_n} B_{nj} \subseteq C_n\)</span>, temos que <span class="math display">\[ \mu(C_n) \ge \sum_{j=1}^{k_n} \mu(B_{nj}). \]</span> Temos também que <span class="math display">\[ \sum_{n=1}^{\infty} \mu(C_n) \ge \sum_{n=1}^{\infty} \mu(C_n&#39;). \]</span></p>
+<p><strong>DEFINIÇÃO 2.2.1.</strong> Seja <span class="math inline">\(\mathbb{S}\)</span> um semi-anel. <span class="math inline">\(\mu\)</span> é uma medida sobre <span class="math inline">\(\mathbb{S}\)</span>. Definimos: <span class="math display">\[ \mathscr{F} = \{A \subseteq \Omega: A \subseteq \bigcup\limits_{n=1}^{\infty} C_n, \text{ para alguma seqüência } \{C_n\}_{n \in \mathbb{N}} \text{ onde } C_n \in \mathbb{S}, \forall n\}. \]</span></p>
+<p><strong>Observação 1.</strong> <span class="math inline">\(\mathscr{F}\)</span> é um <span class="math inline">\(\sigma\)</span>-anel e é hereditário, no sentido de que <span class="math inline">\(B \subseteq A, A \in \mathscr{F} \Rightarrow B \in \mathscr{F}\)</span>.</p>
+<p><strong>DEFINIÇÃO 2.2.2.</strong> Para cada <span class="math inline">\(A \in \mathscr{F}\)</span> definimos: <span class="math display">\[ \mu^*(A) = \inf\left\{\sum\limits_{n=1}^{\infty} \mu(C_n): A \subseteq \bigcup\limits_{n=1}^{\infty} C_n, \quad C_n \in \mathbb{S}, \forall n\right\}. \]</span> <span class="math inline">\(\mu^*: \mathscr{F} \to [0, \infty]\)</span> assim definida é dita a medida exterior induzida por <span class="math inline">\(\mu\)</span> sobre <span class="math inline">\(\mathscr{F}\)</span>.</p>
+<p><strong>PROPOSIÇÃO 2.2.4</strong></p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(A \in \mathbb{S} \Rightarrow \mu(A) = \mu^*(A)\)</span>;</p></li>
+<li><p><span class="math inline">\(\mu^*(\varnothing) = 0. \quad 0 \le \mu^*(A) \le \infty, \quad A \in \mathscr{F}\)</span>;</p></li>
+<li><p><span class="math inline">\(A \subseteq B \Rightarrow \mu^*(A) \le \mu^*(B), \quad \forall A, B \in \mathscr{F}\)</span> e</p></li>
+<li><p><span class="math inline">\(\mu^*(\bigcup\limits_{n=1}^{\infty} A_n) \le \sum\limits_{n=1}^{\infty} \mu^*(A_n), \quad \forall \{A_n\}_{n \in \mathbb{N}}, \quad A_n \in \mathscr{F}, \forall n\)</span>.</p></li>
+</ol>
+<p><strong>Demonstração</strong> Demonstração 1), 2) e 3) são fáceis. Vamos provar 4).</p>
+<p>Se <span class="math inline">\(\mu^*(A_n) = \infty\)</span> para algum <span class="math inline">\(n \in \mathbb{N}\)</span>, ambos os membros são iguais a <span class="math inline">\(+\infty\)</span>.</p>
+<p>Supondo que <span class="math inline">\(\mu^*(A_n) &lt; \infty, \forall n\)</span>, é suficiente mostrar que <span class="math inline">\(\forall \varepsilon &gt; 0\)</span>, <span class="math display">\[ \mu^*\left(\bigcup\limits_{n=1}^{\infty} A_n\right) \le \sum\limits_{n=1}^{\infty} \mu^*(A_n) + \varepsilon. \]</span></p>
+<p>Seja <span class="math inline">\(\varepsilon &gt; 0\)</span>. Então, por definição de <span class="math inline">\(\mu^*\)</span>, para todo <span class="math inline">\(n\)</span>, <span class="math inline">\(\exists \{S_{nj}\}_{j \in \mathbb{N}}\)</span> com <span class="math inline">\(S_{nj} \in \mathbb{S} \forall j\)</span>, tal que <span class="math display">\[ A_n \subseteq \bigcup\limits_{j=1}^{\infty} S_{nj} \quad \text{e} \quad \sum\limits_{j=1}^{\infty} \mu(S_{nj}) &lt; \mu^*(A_n) + \frac{\varepsilon}{2^n}. \]</span></p>
+<p>Logo, <span class="math inline">\(\bigcup\limits_{n=1}^{\infty} A_n \subseteq \bigcup\limits_{n=1}^{\infty} \bigcup\limits_{j=1}^{\infty} S_{nj}\)</span>, e usando novamente a definição de <span class="math inline">\(\mu^*\)</span>: <span class="math display">\[ \begin{aligned} \mu^*\left(\bigcup\limits_{n=1}^{\infty} A_n\right) &amp;\le \sum\limits_{n=1}^{\infty} \sum\limits_{j=1}^{\infty} \mu(S_{nj}) \le \sum\limits_{n=1}^{\infty} \left(\mu^*(A_n) + \frac{\varepsilon}{2^n}\right) = \\ &amp;= \sum\limits_{n=1}^{\infty} \mu^*(A_n) + \varepsilon, \qquad c. q. d. \end{aligned} \]</span></p>
+<p><strong>DEFINIÇÃO 2.2.3.</strong> Dado um <span class="math inline">\(\sigma\)</span>-anel hereditário <span class="math inline">\(\mathscr{F}\)</span>, uma função <span class="math inline">\(\mu^*\)</span> de <span class="math inline">\(\mathscr{F}\)</span> em <span class="math inline">\(\mathbb{R}^1 \cup \{+\infty\}\)</span> que satisfaz as condições 2), 3) e 4) da Prop. <a href="cap2e2e.html#cap2e2e">2.2.4</a>, é dita uma medida exterior sobre <span class="math inline">\(\mathscr{F}\)</span>.</p>
+<p><strong>DEFINIÇÃO 2.2.4.</strong> <span class="math inline">\(M \in \mathscr{F}\)</span> é dito mensurável se <span class="math inline">\(\forall A \in \mathscr{F}\)</span>, <span class="math display">\[ \mu^*(A) = \mu^*(A \cap M) + \mu^*(A \cap M^c). \]</span></p>
+<p><em>Notação.</em> <span class="math inline">\(\Lambda = \{M \in \mathscr{F}: M \text{ é mensurável}\}\)</span>.</p>
+<p><strong>PROPOSIÇÃO 2.2.5</strong></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(M_1, M_2 \in \Lambda \Rightarrow M_1 \cup M_2 \in \Lambda\)</span>;</li>
+<li><span class="math inline">\(M_1, M_2 \in \Lambda\)</span> e <span class="math inline">\(M_1 \cap M_2 = \varnothing \Rightarrow \forall A \in \mathscr{F},\)</span> <span class="math display">\[\mu^*(A \cap (M_1 + M_2)) = \mu^*(A \cap M_1) + \mu^*(A \cap M_2);\]</span></li>
+<li><span class="math inline">\(M_1, M_2 \in \Lambda\)</span> e <span class="math inline">\(M_1 \cap M_2 = \varnothing \Rightarrow \mu^*(M_1 + M_2) = \mu^*(M_1) + \mu^*(M_2)\)</span>;</li>
+<li><span class="math inline">\(M_1, M_2 \in \Lambda \Rightarrow M_1 - M_2 \in \Lambda\)</span> e</li>
+<li><span class="math inline">\(\mu^*(M) = 0, \quad M \in \mathscr{F} \Rightarrow M \in \Lambda\)</span>.</li>
+</ol>
+<p>Observe que 1) e 4) mostram que <span class="math inline">\(\Lambda\)</span> é um anel e 3) mostra que <span class="math inline">\(\mu^*\)</span>, restrita a <span class="math inline">\(\Lambda\)</span>, é finitamente aditiva.</p>
+<p><strong>Demonstração</strong> Observemos inicialmente que se desejamos provar que um certo conjunto <span class="math inline">\(M \in \mathscr{F}\)</span> é mensurável, é suficiente mostrar que <span class="math display">\[ \mu^*(A) \ge \mu^*(A \cap M) + \mu^*(A \cap M^c), \]</span> para todo <span class="math inline">\(A \in \mathscr{F}\)</span>, tal que <span class="math inline">\(\mu^*(A) &lt; \infty\)</span>, pois a desigualdade no outro sentido é sempre válida pela Prop. <a href="cap2e2e.html#cap2e2e">2.2.4</a>, 4), e a desigualdade acima é verdadeira sempre que <span class="math inline">\(\mu^*(A) = \infty\)</span>.</p>
+<p>Seja <span class="math inline">\(A \in \mathscr{F}\)</span>, tal que <span class="math inline">\(\mu^*(A) &lt; \infty\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math display">\[ \begin{aligned} \mu^*(A) &amp;= \mu^*(AM_1) + \mu^*(AM_1^c) = \mu^*(AM_1) + \mu^*(AM_1^c M_2) + \\ &amp;+ \mu^*(AM_1^c M_2^c) \ge \\ &amp;\ge \mu^*[A \cap (M_1 + M_1^c M_2)] + \mu^*[A \cap (M_1 \cup M_2)^c] \\ &amp;= \mu^*[A \cap (M_1 \cup M_2)] + \mu^*[A \cap (M_1 \cup M_2)^c] \end{aligned} \]</span> A 3.<span class="math inline">\(^{\text{a}}\)</span> desigualdade decorre da Prop. <a href="cap2e2e.html#cap2e2e">2.2.4</a>, 4).</p></li>
+<li><p>Da prova de 1) temos, <span class="math display">\[ \mu^*(A) = \mu^*(AM_1) + \mu^*(AM_1^c M_2) + \mu^*(AM_1^c M_2^c), \quad \forall A \in \mathscr{F} \]</span> substituindo <span class="math inline">\(A\)</span> por <span class="math inline">\(A \cap (M_1+M_2)\)</span> acima, obtemos o resultado desejado.</p></li>
+<li><p>Basta substituir <span class="math inline">\(A\)</span> por <span class="math inline">\(M_1 + M_2\)</span> em 2).</p></li>
+<li><p>É suficiente considerar o caso em que <span class="math inline">\(M_1 \supseteq M_2\)</span>, porque de 1) <span class="math inline">\(\Lambda\)</span> é fechado por união finita e <span class="math inline">\(M_1 - M_2 = (M_1 \cup M_2) - M_2\)</span>. <span class="math inline">\(\text{(I) } \mu^*(A \cap (M_1 - M_2)^c) = \mu^*(A M_1^c M_2)\)</span>. <span class="math inline">\(\text{(II) } \mu^*(A \cap (M_1 - M_2)^c) = \mu^*(A \cap (M_2 + M_1^c)) \le \mu^*(A M_2) + \mu^*(A M_1^c) = \mu^*(A M_1 M_2) + \mu^*(A M_1^c)\)</span>. Somando <span class="math inline">\(\text{(I)}\)</span> e <span class="math inline">\(\text{(II)}\)</span> temos: <span class="math display">\[ \mu^*(A \cap (M_1-M_2)) + \mu^*(A \cap (M_1 - M_2)^c) \le \mu^*(A M_1 M_2^c) + \\ + \mu^*(A M_1 M_2) + \mu^*(A M_1^c) = \mu^*(A M_1) + \mu^*(A M_1^c) = \mu^*(A). \]</span></p></li>
+<li><p><span class="math inline">\(\mu^*(A \cap M) \le \mu^*(M) = 0.\)</span> <span class="math inline">\(\mu^*(A \cap M^c) \le \mu^*(A).\)</span> somando membro a membro obtemos o resultado desejado. c. q. d.</p></li>
+</ol>
+<p><strong>PROPOSIÇÃO 2.2.6</strong></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(M_n \in \Lambda, n \in \mathbb{N} \Rightarrow \sum\limits_{n=1}^{\infty} M_n \in \Lambda\)</span>;</li>
+<li><span class="math inline">\(A \in \mathscr{F}, M_n \in \Lambda \forall n\)</span>, os <span class="math inline">\(M_n\)</span> disjuntos dois a dois <span class="math inline">\(\Rightarrow \mu^*(A \cap \sum\limits_{n=1}^{\infty} M_n) = \sum\limits_{n=1}^{\infty} \mu^*(A \cap M_n)\)</span>.</li>
+<li>Nas condições de 2, <span class="math inline">\(\mu^*(\sum\limits_{n=1}^{\infty} M_n) = \sum\limits_{n=1}^{\infty} \mu^*(M_n)\)</span>.</li>
+</ol>
+<p>Observe que 1) mostra que <span class="math inline">\(\Lambda\)</span> é um <span class="math inline">\(\sigma\)</span>-anel e 3) mostra que <span class="math inline">\(\mu^*\)</span> restrita a <span class="math inline">\(\Lambda\)</span> é <span class="math inline">\(\sigma\)</span>-aditiva.</p>
+<p><strong>Demonstração</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>É suficiente considerar o caso em que os <span class="math inline">\(M_n\)</span> são disjuntos dois a dois, porque <span class="math inline">\(\Lambda\)</span> é anel e <span class="math display">\[ \bigcup_{n=1}^{\infty} M_n = M_1 + \sum_{n=2}^{\infty} \left(M_n - \bigcup_{i=1}^{n-1} M_i\right). \]</span> Seja <span class="math inline">\(A \in \mathscr{F}\)</span> e seja <span class="math inline">\(n \in \mathbb{N}\)</span>: <span class="math display">\[ \begin{aligned} \mu^*(A) &amp;= \mu^*\left(A \cap \sum_{i=1}^{n} M_i\right) + \mu^*\left(A \cap \left(\sum_{i=1}^{n} M_i\right)^c\right) \\ &amp;\ge \sum_{i=1}^{n} \mu^*(A \cap M_i) + \mu^*\left(A \cap \left(\sum_{i=1}^{\infty} M_i\right)^c\right). \end{aligned} \]</span> Para a igualdade, usamos o fato de que <span class="math inline">\(\Lambda\)</span> é um anel e portanto <span class="math inline">\(\sum\limits_{i=1}^{n} M_i\)</span> é mensurável, e para a desigualdade, usamos a Prop. <a href="cap2e2e.html#cap2e2e">2.2.5</a>, 2) e a Prop. <a href="cap2e2e.html#cap2e2e">2.2.4</a>, 3). Como a desigualdade obtida vale para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math display">\[ \begin{aligned} \mu^*(A) &amp;\ge \sum_{i=1}^{\infty} \mu^*(A \cap M_i) + \mu^*\left(A \cap \left(\sum_{i=1}^{\infty} M_i\right)^c\right) \\ &amp;\ge \mu^*\left(A \cap \sum_{i=1}^{\infty} M_i\right) + \mu^*\left(A \cap \left(\sum_{i=1}^{\infty} M_i\right)^c\right). \end{aligned} \]</span></p></li>
+<li><p>Da prova de 1), sabemos que: <span class="math display">\[ \mu^*(A) = \sum_{i=1}^{\infty} \mu^*(A \cap M_i) + \mu^*\left(A \cap \left(\sum_{i=1}^{\infty} M_i\right)^c\right), \quad \forall A \in \mathscr{F}. \]</span> Então, substituindo <span class="math inline">\(A\)</span> por <span class="math inline">\(A \cap \left(\sum\limits_{i=1}^{\infty} M_i\right)\)</span> acima, obtemos o resultado procurado.</p></li>
+<li><p>Substituir <span class="math inline">\(A\)</span> por <span class="math inline">\(\sum\limits_{i=1}^{\infty} M_i\)</span> em 2).</p></li>
+</ol>
+<p><strong>PROPOSIÇÃO 2.2.7.</strong> <span class="math inline">\(\mathbb{S} \subseteq \Lambda\)</span> (ou seja, os conjuntos do semi-anel <span class="math inline">\(\mathbb{S}\)</span> são mensuráveis).</p>
+<p><strong>Demonstração</strong> Seja <span class="math inline">\(C \in \mathbb{S}\)</span>. É suficiente provar que <span class="math inline">\(\forall \varepsilon &gt; 0, \forall A \in \mathscr{F}\)</span> com <span class="math inline">\(\mu^*(A) &lt; \infty\)</span>, <span class="math display">\[ \mu^*(A \cap C) + \mu^*(A \cap C^c) \le \mu^*(A) + \varepsilon \]</span> Sejam <span class="math inline">\(\varepsilon &gt; 0\)</span> e <span class="math inline">\(A \in \mathscr{F}\)</span>. Então existe uma seqüência <span class="math inline">\(\{C_n\}\)</span>, com <span class="math inline">\(C_n \in \mathbb{S} \forall n\)</span>, tal que: <span class="math display">\[ A \subseteq \bigcup_{n=1}^{\infty} C_n \quad \text{e} \quad \sum_{n=1}^{\infty} \mu(C_n) &lt; \mu^*(A) + \varepsilon. \quad \text{(I)} \]</span> <span class="math display">\[ \mu^*(A \cap C) \le \mu^*(C \cap \bigcup_{n=1}^{\infty} C_n) \le \sum_{n=1}^{\infty} \mu^*(C \cap C_n) = \sum_{n=1}^{\infty} \mu(C \cap C_n) \quad \text{(II)} \]</span> pela Prop. <a href="cap2e2e.html#cap2e2e">2.2.4</a>, 3) e 4), e pela Prop. <a href="cap2e2e.html#cap2e2e">2.2.4</a>, 1). Agora <span class="math inline">\(A \cap C^c \subseteq \bigcup_{n=1}^{\infty} [C_n \cap C^c] = \bigcup_{n=1}^{\infty} (C_n - C).\)</span> Como <span class="math inline">\(\mathbb{S}\)</span> é semi-anel, <span class="math inline">\(\forall n\)</span>, <span class="math display">\[ C_n - C = \sum_{j=1}^{k_n} B_{nj} \]</span> para algum <span class="math inline">\(k_n \in \mathbb{N}\)</span> e para alguns <span class="math inline">\(B_{nj} \in \mathbb{S}, 1 \le j \le k_n\)</span>. Observe que daí decorre que <span class="math display">\[ \mu(C_n) = \mu(C \cap C_n) + \sum_{j=1}^{k_n} \mu(B_{nj}), \quad \forall n. \]</span> Então, <span class="math display">\[ \begin{aligned} \mu^*(A \cap C^c) &amp;\le \sum_{n=1}^{\infty} \sum_{j=1}^{k_n} \mu(B_{nj}) = \sum_{n=1}^{\infty} [\mu(C_n) - \mu(C \cap C_n)] = \\ &amp;= \sum_{n=1}^{\infty} \mu(C_n) - \sum_{n=1}^{\infty} \mu(C \cap C_n) \end{aligned} \quad \text{(III)} \]</span> A última passagem acima é válida porque <span class="math inline">\(\mu(C \cap C_n) \le \mu(C_n), \forall n\)</span>, e então (I) mostra que as duas séries do 2.<span class="math inline">\(^{\circ}\)</span> membro são absolutamente convergentes. Somando (II) e (III) temos: <span class="math display">\[ \mu^*(A \cap C) + \mu^*(A \cap C^c) \le \sum_{n=1}^{\infty} \mu(C_n) \le \mu^*(A) + \varepsilon, \quad c. q. d. \]</span></p>
+<p><strong>DEFINIÇÃO 2.2.5.</strong> Uma medida <span class="math inline">\(\mu\)</span> sobre um <span class="math inline">\(\sigma\)</span>-anel <span class="math inline">\(\mathscr{A}\)</span> é dita completa se, e somente se, <span class="math display">\[ B \subseteq A, \quad A \in \mathscr{A} \quad \text{e} \quad \mu(A) = 0 \Rightarrow B \in \mathscr{A}. \]</span> Então definindo <span class="math inline">\(\overline{\mu}\)</span> como a restrição de <span class="math inline">\(\mu^*\)</span> a <span class="math inline">\(\Lambda\)</span> demonstramos o seguinte:</p>
+<p><strong>TEOREMA 2.2.1</strong> (Teorema de Extensão). Dada uma medida <span class="math inline">\(\mu\)</span> sobre um semi-anel <span class="math inline">\(\mathbb{S}\)</span>, existem um <span class="math inline">\(\sigma\)</span>-anel <span class="math inline">\(\Lambda: \Lambda \supseteq \tilde{\sigma}(\mathbb{S})\)</span> (e portanto <span class="math inline">\(\Lambda \supseteq \mathbb{S}\)</span>) e uma medida completa <span class="math inline">\(\mu\)</span> sobre <span class="math inline">\(\Lambda\)</span> que é uma extensão de <span class="math inline">\(\mu\)</span>.</p>
+<p><strong>PROPOSIÇÃO 2.2.8.</strong> Se <span class="math inline">\(\mu\)</span> é <span class="math inline">\(\sigma\)</span>-finita, então a extensão de <span class="math inline">\(\mu\)</span> a <span class="math inline">\(\sigma(\mathbb{S})\)</span> é única. (A definição de medida <span class="math inline">\(\sigma\)</span>-finita sobre um semi-anel é análoga à Definição <a href="cap2e1e.html#cap2e1e">2.1.6</a>).</p>
+<p><strong>Demonstração</strong> Consideraremos inicialmente o caso em que <span class="math inline">\(\mathbb{S}\)</span> é uma semi-álgebra e <span class="math inline">\(\mu(\Omega) &lt; \infty\)</span>. Sejam <span class="math inline">\(\mu_1\)</span> e <span class="math inline">\(\mu_2\)</span> medidas sobre <span class="math inline">\(\sigma(\mathbb{S})\)</span> que estendam <span class="math inline">\(\mu\)</span>. Seja <span class="math inline">\(\mathscr{C} = \{A \in \sigma(\mathbb{S}); \mu_1(A) = \mu_2(A)\}\)</span>. Então <span class="math inline">\(\mathscr{C}\)</span> é uma classe <span class="math inline">\(\sigma\)</span>-aditiva. Senão vejamos:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(A, B \in \mathscr{C}, A \supseteq B\)</span> então, <span class="math inline">\(\mu_i(B) \le \mu_i(A) \le \mu_i(\Omega) &lt; \infty, i=1, 2 \Rightarrow \mu_1(A-B) = \mu_1(A) - \mu_1(B) = \mu_2(A) - \mu_2(B) = \mu_2(A-B) \Rightarrow A-B \in \mathscr{C}\)</span>.</p></li>
+<li><p><span class="math inline">\(A, B \in \mathscr{C}, A \cap B = \varnothing \Rightarrow A+B \in \mathscr{C}\)</span>, de modo análogo.</p></li>
+<li><p>Se <span class="math inline">\(A_n \uparrow A\)</span> e <span class="math inline">\(A_n \in \mathscr{C}\)</span>, temos <span class="math inline">\(\mu_1(A) = \lim_n \mu_1(A_n) = \lim_n \mu_2(A_n) = \mu_2(A)\)</span>. Além disso, <span class="math inline">\(\mathscr{C} \supseteq \mathbb{S}\)</span>. Então, pela Prop. <a href="cap1e.html#cap1e">1.6</a>, como <span class="math inline">\(\mathbb{S}\)</span> é fechado por interseção finita, <span class="math inline">\(\mathscr{C} \supseteq \sigma(\mathbb{S})\)</span>, ou seja, <span class="math inline">\(\mu_1\)</span> e <span class="math inline">\(\mu_2\)</span> coincidem em <span class="math inline">\(\sigma(\mathbb{S})\)</span>. No caso geral é suficiente provar que <span class="math inline">\(\forall C \in \mathbb{S}\)</span> com <span class="math inline">\(\mu(C) &lt; \infty, \mu_1\)</span> e <span class="math inline">\(\mu_2\)</span> coincidem em <span class="math inline">\(\tilde{\sigma}(\mathbb{S}) \cap C\)</span>, porque: <span class="math display">\[ A \in \tilde{\sigma}(\mathbb{S}) \Rightarrow A \subseteq \sum\limits_{n=1}^{\infty} C_n, \quad C_n \in \mathbb{S} \forall n, \quad \text{e} \quad \mu(C_n) &lt; \infty \]</span> e <span class="math display">\[ \mu_i(A) = \sum\limits_{n=1}^{\infty} \mu_i(C_n \cap A), \quad i=1, 2. \]</span> Seja <span class="math inline">\(C \in \mathbb{S}\)</span>, <span class="math inline">\(\tilde{\sigma}(\mathbb{S}) \cap C = \tilde{\sigma}(\mathbb{S} \cap C)\)</span>, pelo Exerc. 9 do <a href="cap1e.html#cap1e">Cap. 1</a>, e então basta mostrar que <span class="math inline">\(\mu_1\)</span> e <span class="math inline">\(\mu_2\)</span> coincidem em <span class="math inline">\(\sigma(\mathbb{S} \cap C)\)</span>. <em>(Note que</em> <span class="math inline">\(\sigma(\mathbb{S} \cap C) = \tilde{\sigma}(\mathbb{S} \cap C)\)</span> porque <span class="math inline">\(C \in \mathbb{S}\)</span>). Como <span class="math inline">\(\mathbb{S} \cap C\)</span> é uma semi-álgebra, o que é facilmente verificável, e <span class="math inline">\(\mathbb{S} \cap C \subseteq \mathbb{S}\)</span>, porque <span class="math inline">\(\mathbb{S}\)</span> é semi-anel, resulta que <span class="math inline">\(\mu_1|_{\mathbb{S} \cap C} = \mu_2|_{\mathbb{S} \cap C}\)</span> e então, pela 1.<span class="math inline">\(^{\text{a}}\)</span> parte, <span class="math inline">\(\mu_1|_{\sigma(\mathbb{S} \cap C)} = \mu_2|_{\sigma(\mathbb{S} \cap C)}\)</span>, c. q. d.</p></li>
+</ol>
+<p>As extensões que temos conseguido até agora estão ilustradas na seguinte figura:</p>
+<p><img src="figures/figure-02-02-01.png" width="284" style="display: block; margin: auto;" /></p>
+<p>Note-se que temos usado a mesma letra <span class="math inline">\(\mu\)</span> para indicar a extensão de <span class="math inline">\(\mu\)</span> sobre <span class="math inline">\(\mathbb{S}\)</span> a <span class="math inline">\(\mathbb{R}(\mathbb{S})\)</span> e a <span class="math inline">\(\tilde{\sigma}(\mathbb{S})\)</span>. Tanto <span class="math inline">\(\mu\)</span> quanto <span class="math inline">\(\overline{\mu}\)</span> são iguais a <span class="math inline">\(\mu^*\)</span> sobre os <span class="math inline">\(\sigma\)</span>-anéis sobre os quais estão definidas.</p>
+<p>As seguintes proposições agregam mais informação sobre a relação entre <span class="math inline">\(\tilde{\sigma}(\mathbb{S})\)</span> e <span class="math inline">\(\Lambda\)</span>. De modo impreciso, <span class="math inline">\(\tilde{\sigma}(\mathbb{S})\)</span> difere de <span class="math inline">\(\Lambda\)</span> em conjuntos de medida nula, ou de outra forma agregando conjuntos de medida 0 a <span class="math inline">\(\tilde{\sigma}(\mathbb{S})\)</span> obtemos <span class="math inline">\(\Lambda\)</span>.</p>
+<p><strong>PROPOSIÇÃO 2.2.9.</strong> Seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida. Então, se definirmos <span class="math display">\[ \overline{\mathscr{A}} = \{A \cup N: A \in \mathscr{A}, N \in \mathscr{M} \text{ para algum } M \in \mathscr{A} \text{ tal que } \mu(M) = 0\} \text{ e} \]</span> <span class="math display">\[ \overline{\mu}: \overline{\mathscr{A}} \to \mathbb{R}^1 \text{ tal que } \]</span> <span class="math display">\[ \overline{\mu}(A \cup N) = \mu(A), \]</span> teremos que <span class="math inline">\((\Omega, \overline{\mathscr{A}}, \overline{\mu})\)</span> é um espaço de medida completo. Nessas condições diz-se que <span class="math inline">\(\overline{\mathscr{A}}\)</span> é o completamento de <span class="math inline">\(\mathscr{A}\)</span> com respeito a <span class="math inline">\(\mu\)</span>.</p>
+<p><em>(Nota. A proposição é válida se</em> <span class="math inline">\(\mathscr{A}\)</span> é <span class="math inline">\(\sigma\)</span>-anel, com praticamente a mesma demonstração).</p>
+<p><strong>Demonstração</strong> Demonstração Vamos mostrar inicialmente que <span class="math inline">\(\overline{\mathscr{A}}\)</span> é um <span class="math inline">\(\sigma\)</span>-anel. É fácil ver que <span class="math inline">\(\overline{\mathscr{A}}\)</span> é fechado por união enumerável.</p>
+<p>Basta provar que <span class="math inline">\(\overline{\mathscr{A}}\)</span> é fechado por diferença própria. Sejam <span class="math inline">\(A_1 \cup N_1\)</span> e <span class="math inline">\(A_2 \cup N_2\)</span> elementos de <span class="math inline">\(\overline{\mathscr{A}}\)</span>. <span class="math display">\[ (A_1 \cup N_1) - (A_2 \cup N_2) = (A_1 \cap A_2^c \cap N_2^c) \cup (N_1 \cap A_2^c \cap N_2^c). \]</span> Mas existe <span class="math inline">\(M_2 \in \mathscr{A}\)</span>, tal que <span class="math inline">\(\mu(M_2) = 0\)</span> e <span class="math inline">\(N_2 \subseteq M_2\)</span>, podendo-se escrever a expressão acima na forma <span class="math display">\[ (A_1 \cap A_2^c \cap M_2^c) \cup [(A_1 \cap A_2^c) \cap (M_2 - N_2)] \cup (N_1 \cap A_2^c \cap N_2^c), \]</span> na qual a 1.<span class="math inline">\(^{\text{a}}\)</span> expressão entre parênteses está em <span class="math inline">\(\mathscr{A}\)</span> e o restante está contido em um conjunto de medida nula.</p>
+<p>Mostraremos que <span class="math inline">\(\overline{\mu}\)</span> é uma medida, sendo necessário primeiramente ver se ela está bem definida. Sejam <span class="math inline">\(A_1 \cup N_1\)</span> e <span class="math inline">\(A_2 \cup N_2\)</span> elementos de <span class="math inline">\(\overline{\mathscr{A}}\)</span>, tais que <span class="math inline">\(A_1 \cup N_1 = A_2 \cup N_2\)</span>. Então existe <span class="math inline">\(M_i \in \mathscr{A}, \mu(M_i) = 0\)</span> e <span class="math inline">\(N_i \subseteq M_i, i=1, 2,\)</span> <span class="math display">\[ A_1 \subseteq A_1 \cup N_1 = A_2 \cup N_2 \subseteq A_2 \cup M_2, \]</span> o que implica que <span class="math display">\[ \mu(A_1) \le \mu(A_2 \cup M_2) \le \mu(A_2) + \mu(M_2) = \mu(A_2). \]</span> De modo análogo <span class="math inline">\(\mu(A_2) \le \mu(A_1)\)</span>. O fato de <span class="math inline">\(\mu\)</span> ser uma medida implica que <span class="math inline">\(\overline{\mu}\)</span> também o é. A definição de <span class="math inline">\(\overline{\mathscr{A}}\)</span> mostra que <span class="math inline">\((\Omega, \overline{\mathscr{A}}, \overline{\mu})\)</span> é completo.</p>
+<p>Ainda usaremos a letra <span class="math inline">\(\mu\)</span> para indicar a restrição de <span class="math inline">\(\overline{\mu}\)</span> a <span class="math inline">\(\tilde{\sigma}(\mathbb{S})\)</span>. Nosso objetivo agora é mostrar que <span class="math inline">\(\Lambda\)</span> é o completamento de <span class="math inline">\(\tilde{\sigma}(\mathbb{S})\)</span> em relação a <span class="math inline">\(\mu\)</span>.</p>
+<p><strong>PROPOSIÇÃO 2.2.10.</strong> Para todo <span class="math inline">\(A \in \mathscr{F}\)</span>, <span class="math display">\[ \mu^*(A) = \inf\{\overline{\mu}(B): A \subseteq B \in \Lambda\} = \inf\{\mu(B): A \subseteq B \in \tilde{\sigma}(\mathbb{S})\}. \]</span></p>
+<p><strong>Demonstração</strong> Como <span class="math inline">\(\overline{\mu}\)</span> é a restrição de <span class="math inline">\(\mu^*\)</span> a <span class="math inline">\(\Lambda\)</span>, e <span class="math inline">\(\mu^*\)</span> é monotônica, temos: <span class="math display">\[ \mu^*(A) \le \inf\{\overline{\mu}(B): A \subseteq B \in \Lambda\} \]</span> e, como <span class="math inline">\(\tilde{\sigma}(\mathbb{S}) \subseteq \Lambda\)</span>, <span class="math display">\[ \inf\{\overline{\mu}(B): A \subseteq B \in \Lambda\} \le \inf\{\mu(B): A \subseteq B \in \tilde{\sigma}(\mathbb{S})\}. \]</span> Além disso, dada uma seqüência <span class="math inline">\(C_n\)</span> de elementos de <span class="math inline">\(\mathbb{S}\)</span>, existe uma outra seqüência <span class="math inline">\(C_n&#39;\)</span> de elementos de <span class="math inline">\(\mathbb{S}\)</span>, tal que <span class="math display">\[ \bigcup\limits_{n=1}^{\infty} C_n = \sum\limits_{n=1}^{\infty} C_n&#39; \quad \text{e} \quad \sum\limits_{n=1}^{\infty} \mu(C_n) \ge \sum\limits_{n=1}^{\infty} \mu(C_n&#39;), \]</span> mostrando que <span class="math display">\[ \mu^*(A) = \inf\left\{\sum\limits_{n=1}^{\infty} \mu(C_n): A \subseteq \sum\limits_{n=1}^{\infty} C_n, \quad C_n \in \mathbb{S}\right\}. \]</span> Mas, <span class="math display">\[ \sum\limits_{n=1}^{\infty} C_n \in \tilde{\sigma}(\mathbb{S}) \quad \text{e} \]</span> <span class="math display">\[ \sum\limits_{n=1}^{\infty} \mu(C_n) = \mu\left(\sum\limits_{n=1}^{\infty} C_n\right), \]</span> demonstrando que <span class="math inline">\(\mu^*(A) \ge \inf\{\mu(B): A \subseteq B \in \tilde{\sigma}(\mathbb{S})\}\)</span>.</p>
+<p><strong>DEFINIÇÃO 2.2.6.</strong> Se <span class="math inline">\(A \in \mathscr{F}\)</span>, <span class="math inline">\(B\)</span> é dito uma cobertura mensurável de <span class="math inline">\(A\)</span> se, e somente se, <span class="math inline">\(B \in \tilde{\sigma}(\mathbb{S}), A \subseteq B\)</span>, e para todo <span class="math inline">\(C \in \tilde{\sigma}(\mathbb{S})\)</span>, tal que <span class="math inline">\(C \subseteq B-A, \mu(C)=0\)</span>.</p>
+<p><strong>PROPOSIÇÃO 2.2.11.</strong> Seja <span class="math inline">\(\mu\)</span> <span class="math inline">\(\sigma\)</span>-finita sobre <span class="math inline">\(\mathbb{S}\)</span>. Então para todo <span class="math inline">\(A \in \mathscr{F}\)</span>, existe uma cobertura mensurável de <span class="math inline">\(A\)</span>.</p>
+<p><strong>Demonstração</strong> Consideremos inicialmente o caso em que <span class="math inline">\(\mu^*(A) &lt; \infty\)</span>. Pela prop. anterior, para todo <span class="math inline">\(n\)</span> existe <span class="math inline">\(B_n \in \tilde{\sigma}(\mathbb{S}), B_n \supseteq A\)</span>, tal que <span class="math inline">\(\mu(B_n) &lt; \mu^*(A) + 1/n\)</span>. Além disso, podemos supor que a sucessão <span class="math inline">\(B_n\)</span> é decrescente, o que pode ser conseguido tomando interseções. Vamos mostrar que <span class="math inline">\(B = \bigcap\limits_{n=1}^{\infty} B_n\)</span> é uma cobertura mensurável de <span class="math inline">\(A\)</span>. É claro que <span class="math inline">\(B \in \tilde{\sigma}(\mathbb{S})\)</span> e <span class="math inline">\(B \supseteq A\)</span>. É fácil ver também que <span class="math inline">\(\mu(B) = \mu^*(A)\)</span>, o que implica na validade da 3.<span class="math inline">\(^{\text{a}}\)</span> condição da definição de cobertura mensurável.</p>
+<p>O caso geral recai no caso anterior, porque dado <span class="math inline">\(A \in \mathscr{F}\)</span>, existe uma seqüência <span class="math inline">\(\{C_n\}\)</span> de elementos de <span class="math inline">\(\mathscr{F}\)</span>, tal que <span class="math inline">\(\mu^*(C_n) &lt; \infty\)</span> para todo <span class="math inline">\(n\)</span> e <span class="math inline">\(A = \sum\limits_{n=1}^{\infty} C_n\)</span>, e então, se <span class="math inline">\(B_n\)</span> é cobertura mensurável de <span class="math inline">\(C_n\)</span>, <span class="math inline">\(\bigcup\limits_{n=1}^{\infty} B_n\)</span> é cobertura mensurável de <span class="math inline">\(A\)</span>.</p>
+<p><strong>PROPOSIÇÃO 2.2.12.</strong> Seja <span class="math inline">\(\mu\)</span> <span class="math inline">\(\sigma\)</span>-finita sobre <span class="math inline">\(\mathbb{S}\)</span>. Então, <span class="math inline">\(\Lambda\)</span> é o completamento de <span class="math inline">\(\tilde{\sigma}(\mathbb{S})\)</span> em relação a <span class="math inline">\(\mu\)</span>, ou seja, <span class="math inline">\(\Lambda = \overline{\tilde{\sigma}(\mathbb{S})}\)</span>.</p>
+<p><strong>Demonstração</strong> <span class="math inline">\(\tilde{\sigma}(\mathbb{S}) \subseteq \Lambda\)</span>, porque <span class="math inline">\((\Omega, \Lambda, \overline{\mu})\)</span> é completo. Para mostrar que <span class="math inline">\(\Lambda \subseteq \tilde{\sigma}(\mathbb{S})\)</span>, seja <span class="math inline">\(A \in \Lambda\)</span>, podendo-se supor como na proposição anterior que <span class="math inline">\(\overline{\mu}(A) &lt; \infty\)</span>, já que <span class="math inline">\(\overline{\mu}\)</span> é <span class="math inline">\(\sigma\)</span>-finita e <span class="math inline">\(\overline{\sigma}(\mathbb{S})\)</span> é um <span class="math inline">\(\sigma\)</span>-anel. Seja <span class="math inline">\(B\)</span> uma cobertura mensurável de <span class="math inline">\(A\)</span>. Então <span class="math display">\[ \overline{\mu}(B-A) = \mu(B) - \overline{\mu}(A) = 0. \]</span> Seja <span class="math inline">\(C\)</span> uma cobertura mensurável de <span class="math inline">\(B-A\)</span>. Então <span class="math display">\[ A = (B-C) + [A-(B-C)] \]</span> onde <span class="math display">\[ B-C \in \tilde{\sigma}(\mathbb{S}) \]</span> e <span class="math display">\[ A-(B-C) = A \cap C \subseteq C. \]</span> Como <span class="math inline">\(\mu(C) = \overline{\mu}(B-A) = 0, A \in \overline{\tilde{\sigma}(\mathbb{S})}\)</span>.</p>
+<p>A seguinte proposição dá uma idéia de quanto diferem em medida os conjuntos de <span class="math inline">\(\tilde{\sigma}(\mathbb{S})\)</span> e os de <span class="math inline">\(\mathbb{R}(\mathbb{S})\)</span>. De modo um pouco impreciso, diremos que os conjuntos de <span class="math inline">\(\tilde{\sigma}(\mathbb{S})\)</span> podem ser aproximados arbitrariamente, em medida, por conjuntos de <span class="math inline">\(\mathbb{R}(\mathbb{S})\)</span>. Uma conseqüência desta prop. é também a seguinte: seja <span class="math inline">\(A \in \Lambda\)</span>; então, se quisermos aproximar <span class="math inline">\(A\)</span> com conjuntos de <span class="math inline">\(\tilde{\sigma}(\mathbb{S})\)</span>, poderemos fazer isso com erro 0 em medida; (isto é, existe <span class="math inline">\(B \in \tilde{\sigma}(\mathbb{S})\)</span>, tal que <span class="math inline">\(\mu(B \Delta A) = 0\)</span>) se quisermos aproximar <span class="math inline">\(A\)</span> com conjuntos de <span class="math inline">\(\mathbb{R}(\mathbb{S})\)</span>, então dado <span class="math inline">\(\varepsilon &gt; 0\)</span> poderemos encontrar <span class="math inline">\(B \in \mathbb{R}(\mathbb{S})\)</span>, tal que <span class="math inline">\(\mu(A \Delta B) &lt; \varepsilon\)</span> (ou seja, poderemos aproximar cometendo um erro arbitrariamente pequeno).</p>
+<p><strong>PROPOSIÇÃO 2.2.13.</strong> (Teorema de aproximação). Se <span class="math inline">\(\mathbb{R}\)</span> é o anel gerado por <span class="math inline">\(\mathbb{S}\)</span>, então para todo <span class="math inline">\(A \in \tilde{\sigma}(\mathbb{S})\)</span> tal que <span class="math inline">\(\mu(A) &lt; \infty\)</span> e para todo <span class="math inline">\(\varepsilon &gt; 0\)</span>, existe <span class="math inline">\(B \in \mathbb{R}\)</span> tal que <span class="math inline">\(\mu(A \Delta B) &lt; \varepsilon\)</span>.</p>
+<p><strong>Demonstração</strong> Sejam <span class="math inline">\(A \in \tilde{\sigma}(\mathbb{S})\)</span> e <span class="math inline">\(\varepsilon &gt; 0, \mu(A) &lt; \infty\)</span>. Podemos tomar uma seqüência <span class="math inline">\(\{C_n\}\)</span> de elementos de <span class="math inline">\(\mathbb{S}\)</span> disjuntos dois a dois tal que <span class="math display">\[ A \subseteq \sum\limits_{n=1}^{\infty} C_n \quad \text{e} \quad \sum\limits_{n=1}^{\infty} \mu(C_n) &lt; \mu(A) + \frac{\varepsilon}{2}. \]</span> Como a série do 1.<span class="math inline">\(^{\circ}\)</span> membro converge, existe <span class="math inline">\(N\)</span> tal que <span class="math display">\[ \sum\limits_{n=N+1}^{\infty} \mu(C_n) &lt; \frac{\varepsilon}{2}. \]</span> Seja <span class="math inline">\(B = \sum\limits_{n=1}^{N} C_n \in \mathbb{R}\)</span>. <span class="math display">\[ \begin{aligned} B \Delta A &amp;= (B-A) + (A-B) \le \\ &amp;\le \left(\sum\limits_{n=1}^{\infty} C_n - A\right) \cup \left(\sum\limits_{n=1}^{\infty} C_n - B\right). \end{aligned} \]</span> Então <span class="math display">\[ \begin{aligned} \mu(B \Delta A) &amp;\le \mu\left(\sum\limits_{n=1}^{\infty} C_n - A\right) + \mu\left(\sum\limits_{n=N+1}^{\infty} C_n - B\right) = \\ &amp;= \left(\sum\limits_{n=1}^{\infty} \mu(C_n) - \mu(A)\right) + \sum\limits_{n=N+1}^{\infty} \mu(C_n) &lt; \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon. \end{aligned} \]</span></p>
+<p>Antes de passar à próxima seção, vamos esclarecer o uso da expressão conjunto mensurável. Em geral, dado um espaço mensurável <span class="math inline">\((\Omega, \mathscr{A})\)</span>, os elementos de <span class="math inline">\(\mathscr{A}\)</span> são chamados conjuntos mensuráveis (da mesma forma como os elementos de uma topologia são chamados conjuntos abertos). Vamos usar essa expressão da mesma forma. Na Definição <a href="cap2e2e.html#cap2e2e">2.2.4</a> foi introduzida a noção de conjunto mensurável. Foi utilizada a mesma expressão porque posteriormente construímos o <span class="math inline">\(\sigma\)</span>-anel <span class="math inline">\(\Lambda\)</span>, e esses “conjuntos mensuráveis” passaram a ser simplesmente elementos do espaço mensurável <span class="math inline">\((\Omega, \Lambda)\)</span>.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="cap2e1e.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cap2e3e.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "night",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/jcomicsutils/projeto-euclides-em-bookdown/edit/main/medida-e-integracao/02-medidas-e-extensao-de-medidas.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

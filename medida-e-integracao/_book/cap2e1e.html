@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.1 Medidas | Medida e Integração</title>
+  <meta name="description" content="2.1 Medidas | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.1 Medidas | Medida e Integração" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="2.1 Medidas | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="github-repo" content="jcomicsutils/projeto-euclides-em-bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.1 Medidas | Medida e Integração" />
+  
+  <meta name="twitter:description" content="2.1 Medidas | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  
+
+<meta name="author" content="Pedro J. Fernandez" />
+
+
+<meta name="date" content="1976-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="cap2e.html"/>
+<link rel="next" href="cap2e2e.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Medida e Integração</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i>Introdução</a></li>
+<li class="chapter" data-level="0" data-path="cap0e.html"><a href="cap0e.html"><i class="fa fa-check"></i><b>0</b> Conjuntos</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="cap0e1e.html"><a href="cap0e1e.html"><i class="fa fa-check"></i><b>0.1</b> Conjuntos</a></li>
+<li class="chapter" data-level="0.2" data-path="cap0e2e.html"><a href="cap0e2e.html"><i class="fa fa-check"></i><b>0.2</b> Operações com conjuntos</a></li>
+<li class="chapter" data-level="0.3" data-path="cap0e3e.html"><a href="cap0e3e.html"><i class="fa fa-check"></i><b>0.3</b> Limites e indicadores</a></li>
+<li class="chapter" data-level="0.4" data-path="cap0e4e.html"><a href="cap0e4e.html"><i class="fa fa-check"></i><b>0.4</b> Funções</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="cap1e.html"><a href="cap1e.html"><i class="fa fa-check"></i><b>1</b> Classes de Conjuntos</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-1"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="cap2e.html"><a href="cap2e.html"><i class="fa fa-check"></i><b>2</b> Medidas e Extensão de Medidas</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cap2e1e.html"><a href="cap2e1e.html"><i class="fa fa-check"></i><b>2.1</b> Medidas</a></li>
+<li class="chapter" data-level="2.2" data-path="cap2e2e.html"><a href="cap2e2e.html"><i class="fa fa-check"></i><b>2.2</b> Extensão de medidas</a></li>
+<li class="chapter" data-level="2.3" data-path="cap2e3e.html"><a href="cap2e3e.html"><i class="fa fa-check"></i><b>2.3</b> Medida interior</a></li>
+<li class="chapter" data-level="2.4" data-path="cap2e4e.html"><a href="cap2e4e.html"><i class="fa fa-check"></i><b>2.4</b> Construção de medidas sobre semi-anéis. Exemplos</a></li>
+<li class="chapter" data-level="2.5" data-path="cap2e5e.html"><a href="cap2e5e.html"><i class="fa fa-check"></i><b>2.5</b> Alguns comentários sobre o problema da medida</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-2"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cap3e.html"><a href="cap3e.html"><i class="fa fa-check"></i><b>3</b> Funções Mensuráveis</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-3"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="cap4e.html"><a href="cap4e.html"><i class="fa fa-check"></i><b>4</b> Integração</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="cap4e1e.html"><a href="cap4e1e.html"><i class="fa fa-check"></i><b>4.1</b> A integral. Teoremas básicos de convergência</a></li>
+<li class="chapter" data-level="4.2" data-path="cap4e2e.html"><a href="cap4e2e.html"><i class="fa fa-check"></i><b>4.2</b> Espaços <span class="math inline">\(L_p\)</span></a></li>
+<li class="chapter" data-level="4.3" data-path="cap4e3e.html"><a href="cap4e3e.html"><i class="fa fa-check"></i><b>4.3</b> Aplicações</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-4"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="cap5e.html"><a href="cap5e.html"><i class="fa fa-check"></i><b>5</b> Imagens de Medidas e Medidas-Produto</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="cap5e1e.html"><a href="cap5e1e.html"><i class="fa fa-check"></i><b>5.1</b> Imagens de medidas</a></li>
+<li class="chapter" data-level="5.2" data-path="cap5e2e.html"><a href="cap5e2e.html"><i class="fa fa-check"></i><b>5.2</b> Medidas-produto - Teorema de Fubini</a></li>
+<li class="chapter" data-level="5.3" data-path="cap5e3e.html"><a href="cap5e3e.html"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a></li>
+<li class="chapter" data-level="5.4" data-path="cap5e4e.html"><a href="cap5e4e.html"><i class="fa fa-check"></i><b>5.4</b> Produtos finitos e infinitos de espaços de medida</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-5"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="cap6e.html"><a href="cap6e.html"><i class="fa fa-check"></i><b>6</b> Medidas com Sinal</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="cap6e1e.html"><a href="cap6e1e.html"><i class="fa fa-check"></i><b>6.1</b> Generalidades</a></li>
+<li class="chapter" data-level="6.2" data-path="cap6e2e.html"><a href="cap6e2e.html"><i class="fa fa-check"></i><b>6.2</b> Decomposição de Hahn e Jordan</a></li>
+<li class="chapter" data-level="6.3" data-path="cap6e3e.html"><a href="cap6e3e.html"><i class="fa fa-check"></i><b>6.3</b> Continuidade absoluta. Teorema de Radon-Nikodym</a></li>
+<li class="chapter" data-level="6.4" data-path="cap6e4e.html"><a href="cap6e4e.html"><i class="fa fa-check"></i><b>6.4</b> Teorema de Representação de Riesz</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-6"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="cap7e.html"><a href="cap7e.html"><i class="fa fa-check"></i><b>7</b> Integração e Diferenciação</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="cap7e1e.html"><a href="cap7e1e.html"><i class="fa fa-check"></i><b>7.1</b> Diferenciação de funções monótonas</a></li>
+<li class="chapter" data-level="7.2" data-path="cap7e2e.html"><a href="cap7e2e.html"><i class="fa fa-check"></i><b>7.2</b> Funções de variação limitada</a></li>
+<li class="chapter" data-level="7.3" data-path="cap7e3e.html"><a href="cap7e3e.html"><i class="fa fa-check"></i><b>7.3</b> Teorema de diferenciação de Lebesgue</a></li>
+<li class="chapter" data-level="7.4" data-path="cap7e4e.html"><a href="cap7e4e.html"><i class="fa fa-check"></i><b>7.4</b> Continuidade absoluta</a></li>
+<li class="chapter" data-level="7.5" data-path="cap7e5e.html"><a href="cap7e5e.html"><i class="fa fa-check"></i><b>7.5</b> Alguns resultados e exemplos especiais</a></li>
+<li class="chapter" data-level="7.6" data-path="cap7e6e.html"><a href="cap7e6e.html"><i class="fa fa-check"></i><b>7.6</b> Mudança de variáveis em integrais</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-7"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/jcomicsutils/projeto-euclides-em-bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Medida e Integração</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cap2e1e" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Medidas<a href="cap2e1e.html#cap2e1e" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Seja <span class="math inline">\(\Omega\)</span> um conjunto e <span class="math inline">\(\varnothing \neq \mathscr{A} \subseteq \mathbb{P}(\Omega)\)</span>.</p>
+<p><strong>DEFINIÇÃO 2.1.1.</strong> Uma função <span class="math inline">\(\mu: \mathscr{A} \to (-\infty, +\infty]\)</span> é chamada uma <em>função de conjunto</em>.</p>
+<p><em>Nota.</em> Por motivos que veremos adiante, é necessário excluir um dos símbolos <span class="math inline">\(+\infty\)</span> ou <span class="math inline">\(-\infty\)</span>. Decidimos excluir o último.</p>
+<p><strong>DEFINIÇÃO 2.1.2.</strong> Seja <span class="math inline">\(\mu\)</span> uma função de conjunto. <span class="math inline">\(\mu\)</span> é finitamente aditiva se, e somente se, <span class="math inline">\(A = \sum\limits_{i=1}^{n} A_i, n \in \mathbb{N}, A_i \in \mathscr{A}, A \in \mathscr{A} \Rightarrow \mu(A) = \sum\limits_{i=1}^{n} \mu(A_i)\)</span>. <span class="math inline">\(\mu\)</span> é <span class="math inline">\(\sigma\)</span>-aditiva se, e somente se, <span class="math inline">\(A = \sum\limits_{i=1}^{\infty} A_i, A_i \in \mathscr{A}, A \in \mathscr{A} \Rightarrow \mu(A) = \sum\limits_{i=1}^{\infty} \mu(A_i)\)</span>.</p>
+<p><strong>DEFINIÇÃO 2.1.3.</strong> Se <span class="math inline">\(\mathbb{S}\)</span> é um semi-anel, <span class="math inline">\(\mu: \mathbb{S} \to [0, \infty]\)</span> é uma medida finitamente aditiva se, e somente se, <span class="math inline">\(\mu(\varnothing) = 0\)</span> e <span class="math inline">\(\mu\)</span> é finitamente aditiva.</p>
+<p>Uma medida finitamente aditiva que é <span class="math inline">\(\sigma\)</span>-aditiva é chamada uma <em>medida</em>.</p>
+<p><strong>Observação 1.</strong> A definição de medida sobre semi-álgebra, anel, álgebra, <span class="math inline">\(\sigma\)</span>-anel e <span class="math inline">\(\sigma\)</span>-álgebra, é a mesma.</p>
+<p><strong>DEFINIÇÃO 2.1.4.</strong> Uma terna <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span>, em que <span class="math inline">\(\Omega\)</span> é um conjunto, <span class="math inline">\(\mathscr{A}\)</span> é uma <span class="math inline">\(\sigma\)</span>-álgebra contida em <span class="math inline">\(\mathbb{P}(\Omega)\)</span> e <span class="math inline">\(\mu\)</span> é uma medida sobre <span class="math inline">\(\mathscr{A}\)</span>, é chamada um espaço de medida. O par <span class="math inline">\((\Omega, \mathscr{A})\)</span> é chamado um espaço mensurável.</p>
+<p><em>(Nota. Em vários resultados é suficiente ter uma terna</em> <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> em que <span class="math inline">\(\mathscr{A}\)</span> é só um <span class="math inline">\(\sigma\)</span>-anel. Nesses casos o fato de <span class="math inline">\(\mathscr{A}\)</span> ser <span class="math inline">\(\sigma\)</span>-anel será mencionado explicitamente).</p>
+<p><strong>DEFINIÇÃO 2.1.5.</strong> Um espaço de medida <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> tal que <span class="math inline">\(\mu(\Omega) = 1\)</span>, é denominado um espaço de probabilidades.</p>
+<p><strong>DEFINIÇÃO 2.1.6.</strong> Se <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> é um espaço de medida e <span class="math inline">\(\forall A \in \mathscr{A}, A \subseteq \bigcup\limits_{i=1}^{\infty} A_i\)</span> com <span class="math inline">\(\mu(A_i) &lt; \infty, \forall i\)</span>, então <span class="math inline">\(\mu\)</span> é chamada <span class="math inline">\(\sigma\)</span>-finita. Se <span class="math inline">\(\mu(A) &lt; \infty \forall A \in \mathscr{A}\)</span>, então <span class="math inline">\(\mu\)</span> é chamada finita.</p>
+<p>Em geral para uma classe arbitrária de conjuntos <span class="math inline">\(\mathscr{A}\)</span> contidos em <span class="math inline">\(\Omega\)</span> diremos que <span class="math inline">\(\mu: \mathscr{A} \to [-\infty, +\infty]\)</span> é <span class="math inline">\(\sigma\)</span>-finita (resp. finita) se <span class="math inline">\(\forall A \in \mathscr{A}, \exists\)</span> uma seqüência de elementos de <span class="math inline">\(\mathscr{A}, \{A_i\}_{i=1,2,...}\)</span> tal que <span class="math inline">\(A \subseteq \bigcup\limits_{i=1}^{\infty} A_i\)</span> e <span class="math inline">\(|\mu(A_i)| &lt; \infty \forall i\)</span> (resp. <span class="math inline">\(|\mu(A)| &lt; \infty, \forall A \in \mathscr{A}\)</span>).</p>
+<p><strong>PROPOSIÇÃO 2.1.1. Seja</strong> <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(A \subseteq B, \mu(B) &lt; \infty \Rightarrow \mu(B-A) = \mu(B) - \mu(A).\)</span></p></li>
+<li><p><span class="math inline">\(A_n \uparrow A \Rightarrow \mu(A) = \lim_n \mu(A_n).\)</span></p></li>
+<li><p><span class="math inline">\(A_n \downarrow A\)</span> e <span class="math inline">\(\exists n_0 \in \mathbb{N}\)</span> tal que <span class="math inline">\(\mu(A_{n_0}) &lt; \infty \Rightarrow \mu(A) = \lim_n \mu(A_n).\)</span></p></li>
+<li><p><span class="math inline">\(\mu\left(\bigcup\limits_{n=1}^{\infty} A_n\right) \le \sum\limits_{n=1}^{\infty} \mu(A_n).\)</span></p></li>
+<li><p>Para toda sucessão <span class="math inline">\(\{A_n\}\)</span> de elementos de <span class="math inline">\(\mathscr{A}\)</span>, <span class="math inline">\(\mu(\lim \inf A_n) \le \lim \inf \mu(A_n)\)</span> e se, para algum <span class="math inline">\(n_0\)</span>, <span class="math inline">\(\mu\left(\bigcup\limits_{n=n_0}^{\infty} A_n\right) &lt; \infty\)</span>, então <span class="math inline">\(\lim \sup \mu(A_n) \le \mu(\lim \sup A_n)\)</span>. Em particular se <span class="math inline">\((\Omega, \mathscr{A}, P)\)</span> é um espaço de probabilidades, <span class="math inline">\(A_n \to A \Rightarrow P(A_n) \to P(A).\)</span></p></li>
+<li><p><span class="math inline">\(\sum\limits_{n=1}^{\infty} \mu(A_n) &lt; \infty \Rightarrow \mu(\lim \sup A_n) = 0.\)</span></p></li>
+</ol>
+<p><em>(Nota. A Prop. <a href="cap2e1e.html#cap2e1e">2.1.1</a> continuaria válida se</em> <span class="math inline">\(\mathscr{A}\)</span> fosse só um <span class="math inline">\(\sigma\)</span>-anel).</p>
+<p><strong>Demonstração</strong></p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(B = A + (B-A) \Rightarrow \mu(B) = \mu(A) + \mu(B-A)\)</span> e como <span class="math inline">\(\mu(A) \le \mu(B) &lt; \infty\)</span>, podemos subtrair <span class="math inline">\(\mu(A)\)</span> de ambos os membros, obtendo o resultado desejado.</p></li>
+<li><p><span class="math inline">\(A = A_1 + \sum\limits_{i=2}^{\infty} (A_i - A_{i-1}) \Rightarrow\)</span> <span class="math display">\[ \begin{aligned} \Rightarrow \mu(A) &amp;= \mu(A_1) + \sum_{i=2}^{\infty} \mu(A_i - A_{i-1}) = \\ &amp;= \lim_{n \to \infty} \left[ \mu(A_1) + \sum_{i=2}^{n} \mu(A_i - A_{i-1}) \right] = \\ &amp;= \lim_{n \to \infty} \mu \left[ A_1 + \sum_{i=2}^{n} (A_i - A_{i-1}) \right] = \\ &amp;= \lim_{n \to \infty} \mu(A_n). \end{aligned} \]</span></p></li>
+<li><p><span class="math display">\[ A = A_{n_0} - \bigcup_{n=n_0}^{\infty} (A_{n_0} - A_n). \]</span> Então, por 1, <span class="math inline">\(\mu(A) = \mu(A_{n_0}) - \mu\left[\bigcup_{n=n_0}^{\infty} (A_{n_0} - A_n)\right]\)</span>. Mas, como <span class="math inline">\(\{A_{n_0} - A_n\}_{n \ge n_0}\)</span> é uma sucessão crescente, por 2, <span class="math display">\[ \mu\left[\bigcup_{n=n_0}^{\infty} (A_{n_0} - A_n)\right] = \lim_n \mu(A_{n_0} - A_n) \]</span> e então, <span class="math display">\[ \mu(A) = \mu(A_{n_0}) - \lim_n[\mu(A_{n_0}) - \mu(A_n)] = \lim_n \mu(A_n). \]</span></p></li>
+<li><p><span class="math display">\[ \bigcup_{n=1}^{\infty} A_n = A_1 + \sum_{n=2}^{\infty} \left(A_n - \bigcup_{i=1}^{n-1} A_i\right) \]</span> <span class="math display">\[ \mu\left(\bigcup_{n=1}^{\infty} A_n\right) = \mu(A_1) + \sum_{n=2}^{\infty} \mu\left(A_n - \bigcup_{i=1}^{n-1} A_i\right) \le \]</span> <span class="math display">\[ \le \mu(A_1) + \sum_{n=2}^{\infty} \mu(A_n) = \sum_{n=1}^{\infty} \mu(A_n). \]</span></p></li>
+<li><p><span class="math display">\[ \lim \inf A_n = \bigcup_{n=1}^{\infty} \bigcap_{i=n}^{\infty} A_i. \]</span> Como <span class="math inline">\(\left\{\bigcap\limits_{i=n}^{\infty} A_i\right\}_{n \in \mathbb{N}}\)</span> é uma sucessão crescente, por 2, <span class="math inline">\(\mu(\lim \inf A_n) = \lim_n \mu\left(\bigcap\limits_{i=n}^{\infty} A_i\right) = \lim \inf_n \mu\left(\bigcap\limits_{i=n}^{\infty} A_i\right) \le \lim \inf \mu(A_n)\)</span>, pois <span class="math inline">\(\bigcap\limits_{i=n}^{\infty} A_i \subseteq A_n\)</span>. O caso de limite superior é análogo, e como obtemos uma seqüência decrescente, para usar o item 3 precisamos da hipótese de que para algum <span class="math inline">\(n_0\)</span>, <span class="math inline">\(\mu(\bigcup\limits_{n=n_0}^{\infty} A_n) &lt; \infty\)</span>. Se <span class="math inline">\((\Omega, \mathscr{A}, P)\)</span> é um espaço de probabilidade esta hipótese é desnecessária, porque a medida de qualquer conjunto é <span class="math inline">\(\le 1\)</span>. Nesse caso temos, <span class="math inline">\(P(\lim \inf A_n) \le \lim \inf P(A_n) \le \lim \sup P(A_n) \le P(\lim \sup A_n)\)</span>. Então, se <span class="math inline">\(A_n\)</span> converge, <span class="math inline">\(\lim \inf A_n = \lim \sup A_n\)</span> e todas as desigualdades se transformam em igualdades, o que implica que <span class="math inline">\(\lim P(A_n) = P(\lim A_n)\)</span>.</p></li>
+<li><p><span class="math display">\[ \lim \sup A_n = \bigcap_{n=1}^{\infty} \bigcup_{i=n}^{\infty} A_i. \]</span> Como <span class="math inline">\(\{\bigcup_{i=n}^{\infty} A_i\}_{n \in \mathbb{N}}\)</span> é uma sucessão decrescente e <span class="math display">\[ \mu\left(\bigcup_{i=1}^{\infty} A_i\right) \le \sum_{i=1}^{\infty} \mu(A_i) &lt; \infty, \]</span> pelo item 3 temos: <span class="math display">\[ \mu(\lim \sup A_n) = \lim_{n \to \infty} \mu\left(\bigcup_{i=n}^{\infty} A_i\right) \le \lim_{n \to \infty} \sum_{i=n}^{\infty} \mu(A_i) = 0, \]</span> porque <span class="math inline">\(\sum_{i=1}^{\infty} \mu(A_n) &lt; \infty\)</span>.</p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="cap2e.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cap2e2e.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "night",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/jcomicsutils/projeto-euclides-em-bookdown/edit/main/medida-e-integracao/02-medidas-e-extensao-de-medidas.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

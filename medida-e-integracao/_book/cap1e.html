@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 1 Classes de Conjuntos | Medida e Integração</title>
+  <meta name="description" content="Capítulo 1 Classes de Conjuntos | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 1 Classes de Conjuntos | Medida e Integração" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Capítulo 1 Classes de Conjuntos | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="github-repo" content="jcomicsutils/projeto-euclides-em-bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 1 Classes de Conjuntos | Medida e Integração" />
+  
+  <meta name="twitter:description" content="Capítulo 1 Classes de Conjuntos | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  
+
+<meta name="author" content="Pedro J. Fernandez" />
+
+
+<meta name="date" content="1976-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="exercícios.html"/>
+<link rel="next" href="exercícios-1.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Medida e Integração</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i>Introdução</a></li>
+<li class="chapter" data-level="0" data-path="cap0e.html"><a href="cap0e.html"><i class="fa fa-check"></i><b>0</b> Conjuntos</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="cap0e1e.html"><a href="cap0e1e.html"><i class="fa fa-check"></i><b>0.1</b> Conjuntos</a></li>
+<li class="chapter" data-level="0.2" data-path="cap0e2e.html"><a href="cap0e2e.html"><i class="fa fa-check"></i><b>0.2</b> Operações com conjuntos</a></li>
+<li class="chapter" data-level="0.3" data-path="cap0e3e.html"><a href="cap0e3e.html"><i class="fa fa-check"></i><b>0.3</b> Limites e indicadores</a></li>
+<li class="chapter" data-level="0.4" data-path="cap0e4e.html"><a href="cap0e4e.html"><i class="fa fa-check"></i><b>0.4</b> Funções</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="cap1e.html"><a href="cap1e.html"><i class="fa fa-check"></i><b>1</b> Classes de Conjuntos</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-1"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="cap2e.html"><a href="cap2e.html"><i class="fa fa-check"></i><b>2</b> Medidas e Extensão de Medidas</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cap2e1e.html"><a href="cap2e1e.html"><i class="fa fa-check"></i><b>2.1</b> Medidas</a></li>
+<li class="chapter" data-level="2.2" data-path="cap2e2e.html"><a href="cap2e2e.html"><i class="fa fa-check"></i><b>2.2</b> Extensão de medidas</a></li>
+<li class="chapter" data-level="2.3" data-path="cap2e3e.html"><a href="cap2e3e.html"><i class="fa fa-check"></i><b>2.3</b> Medida interior</a></li>
+<li class="chapter" data-level="2.4" data-path="cap2e4e.html"><a href="cap2e4e.html"><i class="fa fa-check"></i><b>2.4</b> Construção de medidas sobre semi-anéis. Exemplos</a></li>
+<li class="chapter" data-level="2.5" data-path="cap2e5e.html"><a href="cap2e5e.html"><i class="fa fa-check"></i><b>2.5</b> Alguns comentários sobre o problema da medida</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-2"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cap3e.html"><a href="cap3e.html"><i class="fa fa-check"></i><b>3</b> Funções Mensuráveis</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-3"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="cap4e.html"><a href="cap4e.html"><i class="fa fa-check"></i><b>4</b> Integração</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="cap4e1e.html"><a href="cap4e1e.html"><i class="fa fa-check"></i><b>4.1</b> A integral. Teoremas básicos de convergência</a></li>
+<li class="chapter" data-level="4.2" data-path="cap4e2e.html"><a href="cap4e2e.html"><i class="fa fa-check"></i><b>4.2</b> Espaços <span class="math inline">\(L_p\)</span></a></li>
+<li class="chapter" data-level="4.3" data-path="cap4e3e.html"><a href="cap4e3e.html"><i class="fa fa-check"></i><b>4.3</b> Aplicações</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-4"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="cap5e.html"><a href="cap5e.html"><i class="fa fa-check"></i><b>5</b> Imagens de Medidas e Medidas-Produto</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="cap5e1e.html"><a href="cap5e1e.html"><i class="fa fa-check"></i><b>5.1</b> Imagens de medidas</a></li>
+<li class="chapter" data-level="5.2" data-path="cap5e2e.html"><a href="cap5e2e.html"><i class="fa fa-check"></i><b>5.2</b> Medidas-produto - Teorema de Fubini</a></li>
+<li class="chapter" data-level="5.3" data-path="cap5e3e.html"><a href="cap5e3e.html"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a></li>
+<li class="chapter" data-level="5.4" data-path="cap5e4e.html"><a href="cap5e4e.html"><i class="fa fa-check"></i><b>5.4</b> Produtos finitos e infinitos de espaços de medida</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-5"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="cap6e.html"><a href="cap6e.html"><i class="fa fa-check"></i><b>6</b> Medidas com Sinal</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="cap6e1e.html"><a href="cap6e1e.html"><i class="fa fa-check"></i><b>6.1</b> Generalidades</a></li>
+<li class="chapter" data-level="6.2" data-path="cap6e2e.html"><a href="cap6e2e.html"><i class="fa fa-check"></i><b>6.2</b> Decomposição de Hahn e Jordan</a></li>
+<li class="chapter" data-level="6.3" data-path="cap6e3e.html"><a href="cap6e3e.html"><i class="fa fa-check"></i><b>6.3</b> Continuidade absoluta. Teorema de Radon-Nikodym</a></li>
+<li class="chapter" data-level="6.4" data-path="cap6e4e.html"><a href="cap6e4e.html"><i class="fa fa-check"></i><b>6.4</b> Teorema de Representação de Riesz</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-6"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="cap7e.html"><a href="cap7e.html"><i class="fa fa-check"></i><b>7</b> Integração e Diferenciação</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="cap7e1e.html"><a href="cap7e1e.html"><i class="fa fa-check"></i><b>7.1</b> Diferenciação de funções monótonas</a></li>
+<li class="chapter" data-level="7.2" data-path="cap7e2e.html"><a href="cap7e2e.html"><i class="fa fa-check"></i><b>7.2</b> Funções de variação limitada</a></li>
+<li class="chapter" data-level="7.3" data-path="cap7e3e.html"><a href="cap7e3e.html"><i class="fa fa-check"></i><b>7.3</b> Teorema de diferenciação de Lebesgue</a></li>
+<li class="chapter" data-level="7.4" data-path="cap7e4e.html"><a href="cap7e4e.html"><i class="fa fa-check"></i><b>7.4</b> Continuidade absoluta</a></li>
+<li class="chapter" data-level="7.5" data-path="cap7e5e.html"><a href="cap7e5e.html"><i class="fa fa-check"></i><b>7.5</b> Alguns resultados e exemplos especiais</a></li>
+<li class="chapter" data-level="7.6" data-path="cap7e6e.html"><a href="cap7e6e.html"><i class="fa fa-check"></i><b>7.6</b> Mudança de variáveis em integrais</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-7"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/jcomicsutils/projeto-euclides-em-bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Medida e Integração</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cap1e" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Capítulo 1</span> Classes de Conjuntos<a href="cap1e.html#cap1e" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Neste capítulo estudaremos certas classes de conjuntos sobre as quais, nos capítulos seguintes, definiremos diversos tipos de funções. Entre esses tipos têm destaque muito especial as medidas finitamente aditivas e <span class="math inline">\(\sigma\)</span>-aditivas positivas e com sinal, que estudaremos posteriormente. As Props. 1.6 e 1.7 são as mais importantes. Os Exemplos 1.1 e 1.2 devem ser bem analisados e lembrados juntamente com as diversas classes de conjuntos gerados por eles.</p>
+<p><strong>DEFINIÇÃO 1.1.</strong> <span class="math inline">\(\mathbb{S}\)</span> é um semi-anel se, e somente se,</p>
+<p><span class="math display">\[\text{i) } A, B \in \mathbb{S} \Rightarrow A \cap B \in \mathbb{S};\]</span></p>
+<p><span class="math inline">\(\text{ii) } A, B \in \mathbb{S} \Rightarrow A-B = \sum\limits_{i=1}^{n} C_i\)</span>, para algum <span class="math inline">\(n \in \mathbb{N}\)</span> e para alguns <span class="math inline">\(C_i \in \mathbb{S}, 1 \le i \le n\)</span> (O sinal <span class="math inline">\(\sum\)</span> indica união disjunta). Decorre de ii) que <span class="math inline">\(\varnothing \in \mathbb{S}\)</span>.</p>
+<p><strong>EXEMPLO 1.1.</strong> <span class="math inline">\(\Omega = \mathbb{R}^1\)</span> <span class="math display">\[\mathbb{S} = \{(a, b]: a, b \in \mathbb{R}^1, a \le b\}.\]</span></p>
+<p><strong>EXEMPLO 1.2.</strong> <span class="math inline">\(\Omega = \mathbb{R}^n\)</span> <span class="math display">\[\mathbb{S} = \{(a_1, b_1] \times \dots \times (a_n, b_n]: a_i, b_i \in \mathbb{R}^1, a_i \le b_i, 1 \le i \le n\}.\]</span></p>
+<p><strong>EXEMPLO 1.3.</strong> <span class="math inline">\(\Omega\)</span> qualquer; <span class="math display">\[\mathbb{S} = \{A \subseteq \Omega: A \text{ é unitário ou vazio}\}.\]</span></p>
+<p><strong>EXEMPLO 1.4.</strong> <span class="math inline">\(\Omega = \mathbb{R}^1\)</span>, <span class="math display">\[\mathbb{S} = \{(a, b], (a, b), [a, b), [a, b], a \in \mathbb{R}^1, b \in \mathbb{R}, a \le b\}.\]</span></p>
+<p><strong>DEFINIÇÃO 1.2.</strong> <span class="math inline">\(\mathbb{S}\)</span> é semi-álgebra se é semi-anel e <span class="math inline">\(\Omega \in \mathbb{S}\)</span>.</p>
+<p><strong>Observação 1.</strong> <span class="math display">\[\mathbb{S} \text{ é semi-álgebra se, e somente se,}\]</span></p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(\Omega \in \mathbb{S}\)</span>;</p></li>
+<li><p><span class="math inline">\(A, B \in \mathbb{S} \Rightarrow A \cap B \in \mathbb{S}\)</span>;</p></li>
+<li><p><span class="math inline">\(A \in \mathbb{S} \Rightarrow A^c = \sum\limits_{i=1}^{n} C_i, \ C_i \in \mathbb{S}\)</span> (<span class="math inline">\(A^c\)</span> é o complementar de <span class="math inline">\(A\)</span> em relação a <span class="math inline">\(\Omega\)</span>).</p></li>
+</ol>
+<p>Seja agora <span class="math inline">\(\mathbb{R}\)</span> uma classe de conjuntos tal que <span class="math inline">\(\varnothing \notin \mathbb{R} \subseteq \mathbb{P}(\Omega)\)</span>.</p>
+<p><strong>PROPOSIÇÃO 1.1. São equivalentes as seguintes afirmações:</strong> <span class="math display">\[\mathbb{R} \text{ é fechada com relação a:}\]</span></p>
+<ol style="list-style-type: lower-roman">
+<li><p>união finita e diferença;</p></li>
+<li><p>união finita e diferença própria;</p></li>
+<li><p>diferença simétrica e interseção finita;</p></li>
+<li><p>união finita disjunta, diferença própria e interseção finita.</p></li>
+</ol>
+<p><strong>Demonstração.</strong> Decorre de identidades elementares da teoria dos conjuntos. Veja o Exerc. 2.</p>
+<p><strong>DEFINIÇÃO 1.3.</strong> <span class="math inline">\(\mathbb{R}\)</span> é anel se satisfaz alguma das condições da Prop. 1.1 (e conseqüentemente às quatro condições). <span class="math inline">\(\mathbb{R}\)</span> é álgebra se é anel e <span class="math inline">\(\Omega \in \mathbb{R}\)</span>.</p>
+<p><strong>Observação 2.</strong> <span class="math inline">\(\mathbb{R}\)</span> é álgebra se, e somente se, é fechada com relação à união finita e complementação.</p>
+<p><strong>Observação 3.</strong> A interseção de uma família qualquer de anéis é um anel. Portanto, dada uma classe não-vazia <span class="math inline">\(\mathscr{C}\)</span> de subconjuntos de <span class="math inline">\(\Omega\)</span>, podemos definir o anel gerado por <span class="math inline">\(\mathscr{C}\)</span>, como o menor anel que contém <span class="math inline">\(\mathscr{C}\)</span>, que, como é claro, coincide com a interseção de todos os anéis que contém <span class="math inline">\(\mathscr{C}\)</span>.</p>
+<p><strong>Observação 4.</strong> Análoga à observação 3 com álgebra no lugar do anel.</p>
+<p><strong>PROPOSIÇÃO 1.2.</strong> Se <span class="math inline">\(\mathbb{S}\)</span> é um semi-anel (resp. semi-álgebra), então a família <span class="math inline">\(\mathbb{R}(\mathbb{S})\)</span> das somas finitas disjuntas de elementos de <span class="math inline">\(\mathbb{S}\)</span> é um anel (resp. álgebra) e coincide com o anel (resp. álgebra) gerado por <span class="math inline">\(\mathbb{S}\)</span>.</p>
+<p><strong>Demonstração</strong> Provaremos apenas para anel, pois para álgebra o raciocínio é idêntico.</p>
+<p>Vamos ver que <span class="math inline">\(\mathbb{R}(\mathbb{S})\)</span> é um anel, o que prova uma das inclusões. A outra é imediata.</p>
+<p>Vamos usar a Prop. 1.1 (iv).</p>
+<p>Por definição, <span class="math inline">\(\mathbb{R}(\mathbb{S})\)</span> é fechado por união finita disjunta.</p>
+<p>Que <span class="math inline">\(\mathbb{R}(\mathbb{S})\)</span> é fechado em relação à interseção finita segue da identidade <span class="math display">\[ \left(\sum_{i=1}^{n} C_i\right) \cap \left(\sum_{j=1}^{m} B_j\right) = \sum_{i=1}^{n} \sum_{j=1}^{m} (C_i \cap B_j), \]</span> e do fato de que <span class="math inline">\(\mathbb{S}\)</span> é fechado por interseção finita.</p>
+<p>Vamos mostrar agora que <span class="math inline">\(\mathbb{R}(\mathbb{S})\)</span> é fechado por diferença própria.</p>
+<p>Sejam <span class="math inline">\(\sum\limits_{i=1}^{n} C_i\)</span>, <span class="math inline">\(\sum\limits_{j=1}^{m} B_j\)</span> com <span class="math inline">\(C_i, B_j \in \mathbb{S}\)</span> tais que: <span class="math display">\[ \sum_{j=1}^{m} B_j \subseteq \sum_{i=1}^{n} C_i. \]</span> <span class="math display">\[ \begin{aligned} \sum_{i=1}^{n} C_i - \sum_{j=1}^{m} B_j &amp;= \sum_{i=1}^{n} \left(C_i - \sum_{j=1}^{m} B_j\right) = \sum_{i=1}^{n} \left(C_i - \sum_{j=1}^{m} (B_j \cap C_i)\right) = \\ &amp;= \sum_{i=1}^{n} \left(C_i - \bigcup_{j=1}^{m} (B_j \cap C_i)\right). \end{aligned} \]</span></p>
+<p>Como <span class="math inline">\(B_j \cap C_i \in \mathbb{S}\)</span>, <span class="math inline">\(C_i - (B_j \cap C_i)\)</span> é uma soma finita de elementos de <span class="math inline">\(\mathbb{S}\)</span>, ou seja, um elemento de <span class="math inline">\(\mathbb{R}(\mathbb{S})\)</span>. Agora basta usar o fato de que <span class="math inline">\(\mathbb{R}(\mathbb{S})\)</span> é fechado em relação à soma finita.</p>
+<p>Seja agora <span class="math inline">\(\mathscr{A}\)</span> tal que <span class="math inline">\(\varnothing \neq \mathscr{A} \subseteq \mathbb{P}(\Omega)\)</span>.</p>
+<p><strong>DEFINIÇÃO 1.4.</strong> <span class="math inline">\(\mathscr{A}\)</span> é <span class="math inline">\(\sigma\)</span>-anel se, e somente se, é fechada por diferença e por união enumerável. Se <span class="math inline">\(\mathscr{A}\)</span> é <span class="math inline">\(\sigma\)</span>-anel e <span class="math inline">\(\Omega \in \mathscr{A}\)</span>, <span class="math inline">\(\mathscr{A}\)</span> é dita <span class="math inline">\(\sigma\)</span>-álgebra.</p>
+<p><strong>PROPOSIÇÃO 1.3.</strong> <span class="math inline">\(\mathscr{A}\)</span> é <span class="math inline">\(\sigma\)</span>-anel se, e somente se, é fechado por interseção finita, diferença própria e soma enumerável. (Isto é, união enumerável disjunta).</p>
+<p><strong>Demonstração</strong> Suponhamos que <span class="math inline">\(\mathscr{A}\)</span> seja <span class="math inline">\(\sigma\)</span>-anel. Como <span class="math inline">\(\mathscr{A} \neq \varnothing\)</span>, e é fechado por diferença, <span class="math inline">\(\varnothing = A - A \in \mathscr{A}\)</span>, para <span class="math inline">\(A \in \mathscr{A}\)</span>. Então <span class="math inline">\(\mathscr{A}\)</span> é fechado por união finita, pois toda união finita é igual a uma união enumerável, onde todos os conjuntos, menos um número finito, são o vazio. Então <span class="math inline">\(\mathscr{A}\)</span> é anel, e portanto fechado por interseção finita. Além disso <span class="math inline">\(\mathscr{A}\)</span> é fechado por soma enumerável pela definição de <span class="math inline">\(\sigma\)</span>-anel. Suponhamos agora que <span class="math inline">\(\mathscr{A}\)</span> seja fechado por interseção finita, diferença própria e soma enumerável. Exatamente como na 1.<span class="math inline">\(^{\text{a}}\)</span> parte prova-se que <span class="math inline">\(\varnothing \in \mathscr{A}\)</span>, e como ele é fechado por soma enumerável, é fechado por soma finita. Então <span class="math inline">\(\mathscr{A}\)</span> é anel. Agora para provar que <span class="math inline">\(\mathscr{A}\)</span> é fechado por união enumerável basta usar a identidade: <span class="math display">\[ \bigcup_{i=1}^{\infty} A_i = A_1 + \sum_{i=2}^{\infty} \left(A_i - \bigcup_{j=1}^{i-1} A_j\right). \]</span></p>
+<p><strong>PROPOSIÇÃO 1.4.</strong> Todo <span class="math inline">\(\sigma\)</span>-anel é fechado por interseção enumerável.</p>
+<p><strong>Demonstração</strong> Basta ver que <span class="math inline">\(\bigcap\limits_{i=1}^{\infty} A_i = A_1 - \bigcup\limits_{i=1}^{\infty} (A_1 - A_i).\)</span></p>
+<p><strong>Observação 5.</strong> Decorre da definição e da proposição anterior que todo <span class="math inline">\(\sigma\)</span>-anel é fechado em relação ao lim sup e lim inf.</p>
+<p><strong>PROPOSIÇÃO 1.5.</strong> <span class="math inline">\(\mathscr{A}\)</span> é <span class="math inline">\(\sigma\)</span>-álgebra se, e somente se, é fechada por uniões enumeráveis e complementos.</p>
+<p><strong>Demonstração</strong> Veja Exerc. 3. (Lembre-se que <span class="math inline">\(\mathscr{A} \neq \varnothing\)</span>).</p>
+<p><strong>Observação 6.</strong> A interseção de uma família qualquer de <span class="math inline">\(\sigma\)</span>-anéis (<span class="math inline">\(\sigma\)</span>-álgebras) e um <span class="math inline">\(\sigma\)</span>-anel (<span class="math inline">\(\sigma\)</span>-álgebra). Portanto, dada uma classe não-vazia <span class="math inline">\(\mathscr{C}\)</span> de subconjuntos de <span class="math inline">\(\Omega\)</span>, podemos definir o <span class="math inline">\(\sigma\)</span>-anel (<span class="math inline">\(\sigma\)</span>-álgebra) gerado por <span class="math inline">\(\mathscr{C}\)</span> como o menor <span class="math inline">\(\sigma\)</span>-anel (<span class="math inline">\(\sigma\)</span>-álgebra) que contém <span class="math inline">\(\mathscr{C}\)</span>, e que, como é claro, coincide com a interseção de todos os <span class="math inline">\(\sigma\)</span>-anéis (<span class="math inline">\(\sigma\)</span>-álgebras) que contém <span class="math inline">\(\mathscr{C}\)</span>.</p>
+<p><em>Notação.</em> Adotaremos o símbolo <span class="math inline">\(\sigma(\mathscr{C})\)</span> (<span class="math inline">\(\tilde{\sigma}(\mathscr{C})\)</span>) para denotar a <span class="math inline">\(\sigma\)</span>-álgebra (<span class="math inline">\(\sigma\)</span>-anel) gerada pela família de conjuntos <span class="math inline">\(\mathscr{C}\)</span>.</p>
+<p><strong>DEFINIÇÃO 1.5.</strong> <span class="math inline">\(\mathscr{A}\)</span> é uma classe <span class="math inline">\(\sigma\)</span>-aditiva se, e somente se, <span class="math inline">\(\Omega \in \mathscr{A}\)</span>, e é fechada por diferença própria, soma finita, e união crescente (i. e., <span class="math inline">\(A_1 \subseteq A_2 \subseteq \dots, A_i \in \mathscr{A}, \forall i\)</span>, implica <span class="math inline">\(\bigcup\limits_{i=1}^{\infty} A_i \in \mathscr{A}\)</span>).</p>
+<p><strong>Observação 7.</strong> Análoga à Obs. 6 com classe <span class="math inline">\(\sigma\)</span>-aditiva em lugar de <span class="math inline">\(\sigma\)</span>-anel.</p>
+<p><strong>PROPOSIÇÃO 1.6.</strong> Se <span class="math inline">\(\mathscr{C}\)</span> é uma classe não-vazia de conjuntos, fechada por interseção finita, então a classe <span class="math inline">\(\sigma\)</span>-aditiva gerada por <span class="math inline">\(\mathscr{C}\)</span> é igual a <span class="math inline">\(\sigma(\mathscr{C})\)</span>.</p>
+<p><strong>Demonstração</strong> Seja <span class="math inline">\(\mathbb{F}\)</span> a classe <span class="math inline">\(\sigma\)</span>-aditiva gerada por <span class="math inline">\(\mathscr{C}\)</span>. Como <span class="math inline">\(\sigma(\mathscr{C})\)</span> é uma classe <span class="math inline">\(\sigma\)</span>-aditiva, o que é fácil de verificar, <span class="math inline">\(\mathbb{F} \subseteq \sigma(\mathscr{C})\)</span>. De modo análogo, se provarmos que <span class="math inline">\(\mathbb{F}\)</span> é <span class="math inline">\(\sigma\)</span>-álgebra, teremos <span class="math inline">\(\sigma(\mathscr{C}) \subseteq \mathbb{F}\)</span>, terminando a prova.</p>
+<p>Observémos inicialmente que toda classe <span class="math inline">\(\sigma\)</span>-aditiva fechada por interseção finita, é uma <span class="math inline">\(\sigma\)</span>-álgebra pela Prop. 1.3: para provar isso basta usar o fato de que <span class="math display">\[ \sum\limits_{i=1}^{\infty} A_i = \bigcup\limits_{i=1}^{\infty} \sum\limits_{n=1}^{i} A_n \text{ (note que no membro direito temos uma união crescente)}. \]</span></p>
+<p>Portanto, basta provar que <span class="math inline">\(\mathbb{F}\)</span> é fechada por interseção finita.</p>
+<p>Seja <span class="math inline">\(\mathbb{H} = \{A \subseteq \Omega; \forall B \in \mathbb{F}, A \cap B \in \mathbb{F}\}\)</span>. É suficiente provar que <span class="math inline">\(\mathbb{F} \subseteq \mathbb{H}\)</span>. Ao mostrarmos, porém, que <span class="math inline">\(\mathbb{H}\)</span> é uma classe <span class="math inline">\(\sigma\)</span>-aditiva e <span class="math inline">\(\mathscr{C} \subseteq \mathbb{H}\)</span>, <span class="math inline">\(\mathbb{F} \subseteq \mathbb{H}\)</span> estará provada. Usando as identidades: <span class="math display">\[ (A_1 - A_2) \cap B = (A_1 \cap B) - (A_2 \cap B), \]</span> <span class="math display">\[ (A_1 + A_2) \cap B = (A_1 \cap B) + (A_2 \cap B), \]</span> <span class="math display">\[ (\bigcup\limits_{i=1}^{\infty} A_i) \cap B = \bigcup\limits_{i=1}^{\infty} (A_i \cap B) \]</span> vemos que <span class="math inline">\(\mathbb{H}\)</span> é classe <span class="math inline">\(\sigma\)</span>-aditiva.</p>
+<p>Para mostrar que <span class="math inline">\(\mathbb{H} \supseteq \mathscr{C}\)</span>, seja <span class="math inline">\(C \in \mathscr{C}\)</span> e constrói-se a coleção: <span class="math display">\[ \mathbb{D} = \{A \subseteq \Omega: A \cap C \in \mathbb{F}\}. \]</span></p>
+<p>É suficiente provar que <span class="math inline">\(\mathbb{F} \subseteq \mathbb{D}\)</span> para obtermos <span class="math inline">\(C \in \mathbb{H}\)</span>. Novamente isso se reduz a mostrar que <span class="math inline">\(\mathbb{D}\)</span> é uma classe <span class="math inline">\(\sigma\)</span>-aditiva (modo análogo ao que usamos para <span class="math inline">\(\mathbb{H}\)</span>) e que <span class="math inline">\(\mathbb{D} \supseteq \mathscr{C}\)</span>. Este último fato decorre da hipótese de <span class="math inline">\(\mathscr{C}\)</span> ser fechada por interseção finita.</p>
+<p><strong>DEFINIÇÃO 1.7.</strong> <span class="math inline">\(\mathscr{A}\)</span> é uma classe monotônica se é fechada por união enumerável crescente e por interseção enumerável decrescente.</p>
+<p><strong>Observação 8.</strong> Análoga à observação 6 com classe monotônica em lugar de <span class="math inline">\(\sigma\)</span>-anel.</p>
+<p><strong>PROPOSIÇÃO 1.7.</strong> Se <span class="math inline">\(\mathbb{R}\)</span> é uma álgebra (anel), então a classe monotônica gerada por <span class="math inline">\(\mathbb{R}\)</span> é <span class="math inline">\(\sigma(\mathbb{R}) \ (\tilde{\sigma}(\mathbb{R}))\)</span>.</p>
+<p><strong>Demonstração</strong> A demonstração dessa proposição é análoga à da proposição anterior. (Veja Halmos [1], p. 27, Teor. B). (Veja o Exerc. 4).</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exercícios.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercícios-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "night",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/jcomicsutils/projeto-euclides-em-bookdown/edit/main/medida-e-integracao/01-classes-de-conjuntos.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

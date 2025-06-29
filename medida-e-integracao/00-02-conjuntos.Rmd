@@ -4,9 +4,9 @@ editor_options:
     wrap: sentence
 ---
 
-# Conjuntos {#cap0}
+# Conjuntos {#cap0e}
 
-## Conjuntos {#cap01}
+## Conjuntos {#cap0e1e}
 
 Neste livro, toda vez que usamos a palavra conjunto queremos significar um subconjunto de um conjunto fixo, que em geral designaremos por $\Omega$.
 
@@ -18,7 +18,7 @@ A notação $A \subset B$ indicará que $A \subseteq B$, porém existe algum pon
 
 Com o objetivo de facilitar a notação, usaremos um conjunto que não contenha nenhum elemento, ao qual chamaremos conjunto vazio, e denotaremos por $\varnothing$.
 
-Usaremos as palavras <i>classe</i> ou <i>família</i>, para um conjunto de conjuntos.
+Usaremos as palavras *classe* ou *família*, para um conjunto de conjuntos.
 A classe de todos os subconjuntos de um conjunto $A$ será indicada por $\mathbb{P}(A)$ (partes de $A$).
 
 Para indicar um conjunto, também usaremos a notação $\{\omega: p(\omega)\}$, onde $p(\omega)$ é uma proposição concernente a $\omega$, e o conjunto consiste de todos os elementos para os quais $p(\omega)$ é verdadeira.
@@ -29,10 +29,10 @@ Assim, o conjunto que consiste nos números 0, 2 e 4 será indicado $\{0, 2, 4\}
 
 É importante distinguir entre o ponto $\omega$ e o conjunto $\{\omega\}$, cujo único elemento é $\omega$.
 
-## Operações com conjuntos {#cap02}
+## Operações com conjuntos {#cap0e2e}
 
 Seja $\Gamma$ um certo conjunto de índices e, para cada $\gamma \in \Gamma$, consideremos $A_{\gamma}$, um subconjunto de $\Omega$.
-Chamaremos de <i>união da família</i> $\{A_{\gamma}: \gamma \in \Gamma\}$ o conjunto de todos os pontos que pertencem a pelo menos um dos conjuntos $A_{\gamma}$.
+Chamaremos de *união da família* $\{A_{\gamma}: \gamma \in \Gamma\}$ o conjunto de todos os pontos que pertencem a pelo menos um dos conjuntos $A_{\gamma}$.
 Esse conjunto será simbolizado por: $$ \bigcup_{\gamma \in \Gamma} A_{\gamma} = \{\omega: \exists \gamma \in \Gamma, \text{ tal que } \omega \in A_{\gamma}\}. $$
 
 Se o conjunto $\Gamma$ for enumerável, pode-se dizer que a família $\{A_{\gamma}: \gamma \in \Gamma\}$ é uma sucessão $\{A_n\}_{n=1,2,...}$.
@@ -45,7 +45,7 @@ A união de dois conjuntos $A$ e $B$, será indicada por $A \cup B$.
 
 Se $\Gamma = \varnothing$, $\bigcup\limits_{\gamma \in \Gamma} A_{\gamma} = \varnothing$ por convenção.
 
-Se $\{A_{\gamma}: \gamma \in \Gamma\}$ é uma família de conjuntos, o conjunto de todos os elementos que pertencem a todos os $A_{\gamma}$ será chamado <i>interseção da família</i>, e simbolizado por: $$ \bigcap_{\gamma \in \Gamma} A_{\gamma} = \{\omega: \forall \gamma, \omega \in A_{\gamma}\}. $$
+Se $\{A_{\gamma}: \gamma \in \Gamma\}$ é uma família de conjuntos, o conjunto de todos os elementos que pertencem a todos os $A_{\gamma}$ será chamado *interseção da família*, e simbolizado por: $$ \bigcap_{\gamma \in \Gamma} A_{\gamma} = \{\omega: \forall \gamma, \omega \in A_{\gamma}\}. $$
 
 Se $\Gamma = \varnothing$, estabelecemos por convenção que $\bigcap\limits_{\gamma \in \Gamma} A_{\gamma} = \Omega$.
 
@@ -96,12 +96,12 @@ Suas demonstrações são deixadas como exercícios.
 
 **0.2.13.** $A \Delta B \subseteq (A \Delta C) \cup (B \Delta C), \forall C \subseteq \Omega$.
 
-## Limites e indicadores {#cap03}
+## Limites e indicadores {#cap0e3e}
 
-Se $\{A_n\}_{n=1,2,...}$ é uma sucessão de conjuntos, chamaremos <i>limite superior</i> da sucessão $\{A_n\}_{n=1,2,...}$ ao conjunto de todos os pontos $\omega$ que pertençam a $A_n$, para infinitos valores de $n$.
+Se $\{A_n\}_{n=1,2,...}$ é uma sucessão de conjuntos, chamaremos *limite superior* da sucessão $\{A_n\}_{n=1,2,...}$ ao conjunto de todos os pontos $\omega$ que pertençam a $A_n$, para infinitos valores de $n$.
 É fácil ver que: $$ \lim_n \sup A_n = \bigcap_{n=1}^{\infty} \bigcup_{i=n}^{\infty} A_i. $$
 
-O conjunto de todos os pontos de $\Omega$ que pertencem a todos os $A_n$, a menos de um número finito de tais $A_n$, é chamado <i>limite inferior</i> da sucessão $\{A_n\}_{n=1,2,...}$, e simbolizado por $\lim_n \inf A_n$.
+O conjunto de todos os pontos de $\Omega$ que pertencem a todos os $A_n$, a menos de um número finito de tais $A_n$, é chamado *limite inferior* da sucessão $\{A_n\}_{n=1,2,...}$, e simbolizado por $\lim_n \inf A_n$.
 É fácil provar, de maneira análoga ao caso anterior, que: $$ \lim_n \inf A_n = \bigcup_{n=1}^{\infty} \bigcap_{i=n}^{\infty} A_i. $$
 
 Uma sucessão $\{A_n\}_{n=1,2,...}$ é dita crescente (respectivamente, decrescente), se $A_n \subseteq A_{n+1}, n=1, 2, ...$ (resp. $A_n \supseteq A_{n+1}, n=1, 2, ...$).
@@ -110,7 +110,7 @@ Se para uma sucessão $\{A_n\}_{n=1,2,...}$, $\lim_n \sup A_n = \lim_n \inf A_n$
 Indicaremos sucessões crescentes (resp. decrescentes) de conjuntos com a notação $A_n \uparrow$ (resp. $A_n \downarrow$).
 Escreveremos $A_n \uparrow A$ (resp. $A_n \downarrow A$) se $A_n \uparrow$ (resp. $A_n \downarrow$), e $\bigcup\limits_{n=1}^{\infty} A_n = A$ (resp. $\bigcap\limits_{n=1}^{\infty} A_n = A$).
 
-Dado $A \subseteq \Omega$, chamaremos <i>indicador</i> de $A$, a função $I_A$ definida por: $$ I_A(\omega) = \begin{cases} 1, & \omega \in A \\ 0, & \omega \notin A \end{cases}. $$
+Dado $A \subseteq \Omega$, chamaremos *indicador* de $A$, a função $I_A$ definida por: $$ I_A(\omega) = \begin{cases} 1, & \omega \in A \\ 0, & \omega \notin A \end{cases}. $$
 
 Existe claramente uma correspondência biunívoca (bijeção) entre subconjuntos de $\Omega$ e seus indicadores correspondentes.
 Esta noção nos será extremamente útil nos capítulos seguintes.
@@ -131,7 +131,7 @@ A seguir, apresentaremos algumas fórmulas, que são deixadas a título de exerc
 
 **0.3.7.** $I_{\lim_n \sup A_n} = \lim_n \sup I_{A_n}$; $I_{\lim_n \inf A_n} = \lim_n \inf I_{A_n}$.
 
-## Funções {#cap04}
+## Funções {#cap0e4e}
 
 Sendo $X$ e $Y$ dois conjuntos, denotamos por $Y^X$ o conjunto de todas as funções de $X$ em $Y$.
 
@@ -154,8 +154,8 @@ $$f|_A(x) = f(x), \text{ onde chama-se } f|_A \text{ a restrição de } f \text{
 
 ## Exercícios {.unnumbered}
 
-1.  Provar as fórmulas das Seçs. \@ref(cap02), \@ref(cap03), \@ref(cap04).
+1.  Provar as fórmulas das Seçs. \@ref(cap0e2e), \@ref(cap0e3e), \@ref(cap0e4e).
 2.  Descrever por palavras o conjunto: $$ \lim_n \sup A_n - \lim_n \inf A_n. $$
 3.  Escrever a união e a diferença de dois conjuntos, utilizando as operações $\Delta$ e $\cap$.
 4.  Seja $\{x_1, x_2, ...\}$ uma enumeração dos racionais de $\mathbb{R}^1$. Seja $A_n = (x_n-1, x_n+1)$. Calcular $\lim_n \sup A_n$ e $\lim_n \inf A_n$.
-5.  Dar um exemplo para mostrar que a inclusão em [0.4.4](#cap04) pode ser estrita.
+5.  Dar um exemplo para mostrar que a inclusão em [0.4.4](#cap0e4e) pode ser estrita.

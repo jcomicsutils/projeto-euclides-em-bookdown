@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.4 Construção de medidas sobre semi-anéis. Exemplos | Medida e Integração</title>
+  <meta name="description" content="2.4 Construção de medidas sobre semi-anéis. Exemplos | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.4 Construção de medidas sobre semi-anéis. Exemplos | Medida e Integração" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="2.4 Construção de medidas sobre semi-anéis. Exemplos | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="github-repo" content="jcomicsutils/projeto-euclides-em-bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.4 Construção de medidas sobre semi-anéis. Exemplos | Medida e Integração" />
+  
+  <meta name="twitter:description" content="2.4 Construção de medidas sobre semi-anéis. Exemplos | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  
+
+<meta name="author" content="Pedro J. Fernandez" />
+
+
+<meta name="date" content="1976-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="cap2e3e.html"/>
+<link rel="next" href="cap2e5e.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Medida e Integração</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i>Introdução</a></li>
+<li class="chapter" data-level="0" data-path="cap0e.html"><a href="cap0e.html"><i class="fa fa-check"></i><b>0</b> Conjuntos</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="cap0e1e.html"><a href="cap0e1e.html"><i class="fa fa-check"></i><b>0.1</b> Conjuntos</a></li>
+<li class="chapter" data-level="0.2" data-path="cap0e2e.html"><a href="cap0e2e.html"><i class="fa fa-check"></i><b>0.2</b> Operações com conjuntos</a></li>
+<li class="chapter" data-level="0.3" data-path="cap0e3e.html"><a href="cap0e3e.html"><i class="fa fa-check"></i><b>0.3</b> Limites e indicadores</a></li>
+<li class="chapter" data-level="0.4" data-path="cap0e4e.html"><a href="cap0e4e.html"><i class="fa fa-check"></i><b>0.4</b> Funções</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="cap1e.html"><a href="cap1e.html"><i class="fa fa-check"></i><b>1</b> Classes de Conjuntos</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-1"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="cap2e.html"><a href="cap2e.html"><i class="fa fa-check"></i><b>2</b> Medidas e Extensão de Medidas</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cap2e1e.html"><a href="cap2e1e.html"><i class="fa fa-check"></i><b>2.1</b> Medidas</a></li>
+<li class="chapter" data-level="2.2" data-path="cap2e2e.html"><a href="cap2e2e.html"><i class="fa fa-check"></i><b>2.2</b> Extensão de medidas</a></li>
+<li class="chapter" data-level="2.3" data-path="cap2e3e.html"><a href="cap2e3e.html"><i class="fa fa-check"></i><b>2.3</b> Medida interior</a></li>
+<li class="chapter" data-level="2.4" data-path="cap2e4e.html"><a href="cap2e4e.html"><i class="fa fa-check"></i><b>2.4</b> Construção de medidas sobre semi-anéis. Exemplos</a></li>
+<li class="chapter" data-level="2.5" data-path="cap2e5e.html"><a href="cap2e5e.html"><i class="fa fa-check"></i><b>2.5</b> Alguns comentários sobre o problema da medida</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-2"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cap3e.html"><a href="cap3e.html"><i class="fa fa-check"></i><b>3</b> Funções Mensuráveis</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-3"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="cap4e.html"><a href="cap4e.html"><i class="fa fa-check"></i><b>4</b> Integração</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="cap4e1e.html"><a href="cap4e1e.html"><i class="fa fa-check"></i><b>4.1</b> A integral. Teoremas básicos de convergência</a></li>
+<li class="chapter" data-level="4.2" data-path="cap4e2e.html"><a href="cap4e2e.html"><i class="fa fa-check"></i><b>4.2</b> Espaços <span class="math inline">\(L_p\)</span></a></li>
+<li class="chapter" data-level="4.3" data-path="cap4e3e.html"><a href="cap4e3e.html"><i class="fa fa-check"></i><b>4.3</b> Aplicações</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-4"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="cap5e.html"><a href="cap5e.html"><i class="fa fa-check"></i><b>5</b> Imagens de Medidas e Medidas-Produto</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="cap5e1e.html"><a href="cap5e1e.html"><i class="fa fa-check"></i><b>5.1</b> Imagens de medidas</a></li>
+<li class="chapter" data-level="5.2" data-path="cap5e2e.html"><a href="cap5e2e.html"><i class="fa fa-check"></i><b>5.2</b> Medidas-produto - Teorema de Fubini</a></li>
+<li class="chapter" data-level="5.3" data-path="cap5e3e.html"><a href="cap5e3e.html"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a></li>
+<li class="chapter" data-level="5.4" data-path="cap5e4e.html"><a href="cap5e4e.html"><i class="fa fa-check"></i><b>5.4</b> Produtos finitos e infinitos de espaços de medida</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-5"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="cap6e.html"><a href="cap6e.html"><i class="fa fa-check"></i><b>6</b> Medidas com Sinal</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="cap6e1e.html"><a href="cap6e1e.html"><i class="fa fa-check"></i><b>6.1</b> Generalidades</a></li>
+<li class="chapter" data-level="6.2" data-path="cap6e2e.html"><a href="cap6e2e.html"><i class="fa fa-check"></i><b>6.2</b> Decomposição de Hahn e Jordan</a></li>
+<li class="chapter" data-level="6.3" data-path="cap6e3e.html"><a href="cap6e3e.html"><i class="fa fa-check"></i><b>6.3</b> Continuidade absoluta. Teorema de Radon-Nikodym</a></li>
+<li class="chapter" data-level="6.4" data-path="cap6e4e.html"><a href="cap6e4e.html"><i class="fa fa-check"></i><b>6.4</b> Teorema de Representação de Riesz</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-6"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="cap7e.html"><a href="cap7e.html"><i class="fa fa-check"></i><b>7</b> Integração e Diferenciação</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="cap7e1e.html"><a href="cap7e1e.html"><i class="fa fa-check"></i><b>7.1</b> Diferenciação de funções monótonas</a></li>
+<li class="chapter" data-level="7.2" data-path="cap7e2e.html"><a href="cap7e2e.html"><i class="fa fa-check"></i><b>7.2</b> Funções de variação limitada</a></li>
+<li class="chapter" data-level="7.3" data-path="cap7e3e.html"><a href="cap7e3e.html"><i class="fa fa-check"></i><b>7.3</b> Teorema de diferenciação de Lebesgue</a></li>
+<li class="chapter" data-level="7.4" data-path="cap7e4e.html"><a href="cap7e4e.html"><i class="fa fa-check"></i><b>7.4</b> Continuidade absoluta</a></li>
+<li class="chapter" data-level="7.5" data-path="cap7e5e.html"><a href="cap7e5e.html"><i class="fa fa-check"></i><b>7.5</b> Alguns resultados e exemplos especiais</a></li>
+<li class="chapter" data-level="7.6" data-path="cap7e6e.html"><a href="cap7e6e.html"><i class="fa fa-check"></i><b>7.6</b> Mudança de variáveis em integrais</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-7"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/jcomicsutils/projeto-euclides-em-bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Medida e Integração</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cap2e4e" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Construção de medidas sobre semi-anéis. Exemplos<a href="cap2e4e.html#cap2e4e" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>PROPOSIÇÃO 2.4.1.</strong> Seja <span class="math inline">\(\mu\)</span> uma medida finitamente aditiva e finita sobre um anel <span class="math inline">\(\mathbb{R}\)</span>. Se para toda sucessão <span class="math inline">\(\{A_n\}_{n \in \mathbb{N}}\)</span> de elementos de <span class="math inline">\(\mathbb{R}\)</span>, tal que <span class="math inline">\(A_n \downarrow \varnothing\)</span> vale <span class="math inline">\(\mu(A_n) \downarrow 0\)</span> então <span class="math inline">\(\mu\)</span> é uma medida.</p>
+<p><strong>Demonstração</strong> Temos que mostrar que <span class="math inline">\(\mu\)</span> é <span class="math inline">\(\sigma\)</span>-aditiva. Seja <span class="math inline">\(\{A_n\}_{n \in \mathbb{N}}\)</span> uma sucessão de elementos de <span class="math inline">\(\mathbb{R}\)</span>, tal que <span class="math inline">\(A_i \cap A_j = \varnothing\)</span>, se <span class="math inline">\(i \neq j\)</span> e <span class="math inline">\(\sum\limits_{n=1}^{\infty} A_n \in \mathbb{R}\)</span>.</p>
+<p>Para todo <span class="math inline">\(N\)</span> natural
+<span class="math display">\[ \begin{aligned} \sum\limits_{n=1}^{\infty} A_n &amp;= \sum\limits_{n=1}^{N} A_n + \sum\limits_{n=N+1}^{\infty} A_n; \\ \mu\left(\sum\limits_{n=1}^{\infty} A_n\right) &amp;= \mu\left(\sum\limits_{n=1}^{N} A_n\right) + \mu\left(\sum\limits_{n=N+1}^{\infty} A_n\right) = \\ &amp;= \sum\limits_{n=1}^{N} \mu(A_n) + \mu\left(\sum\limits_{n=N+1}^{\infty} A_n\right). \end{aligned} \]</span>
+Como a sucessão <span class="math inline">\(\left\{\sum\limits_{n=N+1}^{\infty} A_n\right\}_{N \in \mathbb{N}}\)</span> é decrescente, tendendo ao vazio,
+tomando o limite quando <span class="math inline">\(N \to \infty\)</span> obtemos
+<span class="math display">\[ \mu\left(\sum\limits_{n=1}^{\infty} A_n\right) = \sum\limits_{n=1}^{\infty} \mu(A_n). \]</span></p>
+<p><strong>DEFINIÇÃO 2.4.1. </strong> Uma função de conjunto finita com a propriedade descrita na Prop. <a href="cap2e4e.html#cap2e4e">2.4.1</a> é chamada contínua superiormente no vazio.</p>
+<p><strong>DEFINIÇÃO 2.4.2. </strong> Uma família <span class="math inline">\(\mathscr{C}\)</span> de subconjuntos de <span class="math inline">\(\Omega\)</span> diz-se uma <em>classe compacta</em> se, e somente se, para toda sucessão <span class="math inline">\(\{C_n\}_{n \in \mathbb{N}}\)</span> de elementos de <span class="math inline">\(\mathscr{C}\)</span>, tal que <span class="math inline">\(\bigcap\limits_{i=1}^n C_i \neq \varnothing \forall n\)</span>, tivermos <span class="math inline">\(\bigcap\limits_{i=1}^{\infty} C_i \neq \varnothing\)</span>.</p>
+<p>Os intervalos fechados em <span class="math inline">\(\mathbb{R}^1\)</span>, os cubos fechados em <span class="math inline">\(\mathbb{R}^n\)</span> e os compactos em um espaço topológico, são exemplos de classes compactas.</p>
+<p><strong>PROPOSIÇÃO 2.4.2. </strong> Se <span class="math inline">\(\mathscr{C}\)</span> é uma classe compacta, então a família <span class="math inline">\(\mathscr{C}_f\)</span> das uniões finitas de elementos de <span class="math inline">\(\mathscr{C}\)</span> é uma classe compacta. (Veja o Exerc. 29 para uma demonstração que não usa argumentos de compacidade).</p>
+<p><strong>Demonstração</strong> Seja <span class="math inline">\(\{A_n\}_{n \in \mathbb{N}}\)</span> uma sucessão de elementos de <span class="math inline">\(\mathscr{C}_f\)</span>, tal que <span class="math inline">\(\bigcap\limits_{i=1}^n A_i \neq \varnothing, \forall n\)</span>. Escrevemos <span class="math inline">\(A_j\)</span> como <span class="math inline">\(A_j = \bigcup\limits_{i=1}^{k_j} C_{ji}\)</span>, para algum <span class="math inline">\(k_j \in \mathbb{N}\)</span> e para alguns <span class="math inline">\(C_{ji} \in \mathscr{C}, 1 \le i \le k_j\)</span>.
+Seja <span class="math inline">\(K_j = \{1, 2, ..., k_j\}\)</span>. <span class="math inline">\(K_j\)</span> é um espaço topológico compacto, com a topologia discreta <span class="math inline">\(\forall j=1, 2, ...\)</span>.
+Seja <span class="math inline">\(K = K_1 \times K_2 \times \dots\)</span> é um espaço topológico compacto, com a topologia-produto.
+Vamos construir uma seqüência <span class="math inline">\(\{F_n\}_{n \in \mathbb{N}}\)</span> de fechados não-vazios em <span class="math inline">\(K\)</span> tal que <span class="math inline">\(F_1 \supseteq F_2 \supseteq \dots\)</span>.
+Seja <span class="math inline">\(F_n = \{(x_1, x_2, ...) \in K: \bigcap\limits_{j=1}^n C_{j x_j} \neq \varnothing \}, \quad n=1, 2, ...\)</span>. Por hipótese <span class="math inline">\(F_n \neq \varnothing, \forall n\)</span>.
+Para ver que <span class="math inline">\(F_n\)</span> é fechado, observemos que <span class="math inline">\(F_n^c\)</span> é uma união finita de conjuntos da forma
+<span class="math display">\[ \{x_1\} \times \dots \times \{x_n\} \times K_{n+1} \times K_{n+2} \dots, \]</span>
+com <span class="math inline">\(x_j \in K_j, 1 \le j \le n\)</span>, ou seja, <span class="math inline">\(F_n\)</span> é uma união finita de conjuntos fechados em <span class="math inline">\(K\)</span>: [Por serem interseções de fechados do tipo <span class="math inline">\(\Pi_i^{-1}(\{x_i\})\)</span> (imagem inversa de um conjunto unitário de <span class="math inline">\(K_i\)</span>, pela projeção de <span class="math inline">\(K\)</span> sobre <span class="math inline">\(K_j\)</span>)].
+Além disso, conclui-se da definição dos <span class="math inline">\(F_n\)</span> que <span class="math inline">\(F_1 \supseteq F_2 \supseteq \dots\)</span>.
+Então, como <span class="math inline">\(K\)</span> é compacto, <span class="math inline">\(\bigcap\limits_{n=1}^{\infty} F_n \neq \varnothing\)</span>. Seja então <span class="math inline">\((a_1, a_2, ...) \in \bigcap\limits_{n=1}^{\infty} F_n\)</span>. Então <span class="math inline">\(\bigcap\limits_{j=1}^n C_{j a_j} \neq \varnothing\)</span>, para todo <span class="math inline">\(n\)</span> e, como <span class="math inline">\(\mathscr{C}\)</span> é classe compacta, <span class="math inline">\(\bigcap\limits_{j=1}^{\infty} C_{j a_j} \neq \varnothing\)</span>. Como <span class="math inline">\(C_{j a_j} \subseteq A_j, \forall j\)</span>, temos que <span class="math inline">\(\bigcap\limits_{j=1}^{\infty} A_j \neq \varnothing, \quad\)</span> c. q. d.</p>
+<p><strong>TEOREMA 2.4.1. </strong> Seja <span class="math inline">\(\mu\)</span> uma medida finitamente aditiva e finita sobre um semi-anel <span class="math inline">\(\mathbb{S}\)</span>, e <span class="math inline">\(\mathscr{C}\)</span> uma classe compacta, <span class="math inline">\(\mathscr{C} \subseteq \mathbb{S}\)</span>, tal que <span class="math inline">\(\forall A \in \mathbb{S}, \mu(A) = \sup\{\mu(C): C \subseteq A, C \in \mathscr{C}\}\)</span>. Então <span class="math inline">\(\mu\)</span> é uma medida.</p>
+<p><strong>Demonstração</strong> Sejam <span class="math inline">\(\mathbb{R}\)</span> o anel gerado por <span class="math inline">\(\mathbb{S}\)</span>, <span class="math inline">\(\overline{\mu}\)</span> a extensão de <span class="math inline">\(\mu\)</span> a <span class="math inline">\(\mathbb{R}\)</span> e <span class="math inline">\(\mathscr{C}_f\)</span> como na proposição anterior; portanto <span class="math inline">\(\mathscr{C}_f\)</span> é classe compacta. Note-se que <span class="math inline">\(\mathbb{R} \subseteq \mathscr{C}_f\)</span>.
+Vamos mostrar que <span class="math inline">\(\forall A \in \mathbb{R}\)</span>,
+<span class="math display">\[ \overline{\mu}(A) = \sup\{\overline{\mu}(C): C \subseteq A \text{ e } C \in \mathscr{C}_f\}. \]</span>
+Seja <span class="math inline">\(A \in \mathbb{R}\)</span>. Então <span class="math inline">\(A = \sum\limits_{i=1}^{n} A_i, A_i \in \mathbb{S}\)</span>. Basta mostrar que dado <span class="math inline">\(\varepsilon &gt; 0\)</span>, <span class="math inline">\(\exists C \in \mathscr{C}_f, C \subseteq A\)</span> tal que <span class="math inline">\(\overline{\mu}(C) &gt; \overline{\mu}(A) - \varepsilon\)</span>.
+Seja <span class="math inline">\(\varepsilon &gt; 0\)</span>. Então, pela hipótese, <span class="math inline">\(\exists C_i \in \mathscr{C}, C_i \subseteq A_i\)</span> tal que <span class="math inline">\(\mu(C_i) &gt; \mu(A_i) - \varepsilon/n, 1 \le i \le n\)</span>.
+Seja <span class="math inline">\(C = \sum\limits_{i=1}^{n} C_i \in \mathscr{C}_f, \overline{\mu}(C) = \sum\limits_{i=1}^{n} \mu(C_i) &gt; \sum\limits_{i=1}^{n} \mu(A_i) - \varepsilon = \overline{\mu}(A) - \varepsilon\)</span>.
+Vamos mostrar que <span class="math inline">\(\overline{\mu}\)</span> é uma medida sobre <span class="math inline">\(\mathbb{R}\)</span>, o que implicará que <span class="math inline">\(\mu\)</span> será medida sobre <span class="math inline">\(\mathbb{S}\)</span>. Basta usar a Prop. <a href="cap2e4e.html#cap2e4e">2.4.1</a>.
+Seja <span class="math inline">\(\{A_n\}_{n \in \mathbb{N}}\)</span> uma sucessão de elementos de <span class="math inline">\(\mathbb{R}\)</span> decrescente, tendente ao vazio. Queremos mostrar que <span class="math inline">\(\forall \varepsilon &gt; 0, \exists N \in \mathbb{N}\)</span>, tal que <span class="math inline">\(n \ge N \Rightarrow \overline{\mu}(A_n) &lt; \varepsilon\)</span>.
+Seja <span class="math inline">\(\varepsilon &gt; 0\)</span>. Para cada <span class="math inline">\(n\)</span>, <span class="math inline">\(\exists C_n \in \mathscr{C}_f, C_n \subseteq A_n\)</span> tal que <span class="math inline">\(\overline{\mu}(C_n) &gt; \overline{\mu}(A_n) - \varepsilon/2^n\)</span>, temos que
+<span class="math display">\[ \bigcap\limits_{n=1}^{\infty} C_n \subseteq \bigcap\limits_{n=1}^{\infty} A_n = \varnothing. \]</span>
+Como <span class="math inline">\(\mathscr{C}_f\)</span> é classe compacta, <span class="math inline">\(\exists N \in \mathbb{N}\)</span> tal que <span class="math inline">\(\bigcap\limits_{n=1}^{N} C_n = \varnothing\)</span>.
+<span class="math display">\[ \begin{aligned} \overline{\mu}(A_N) &amp;= \overline{\mu}\left(A_N - \bigcap\limits_{n=1}^{N} C_n\right) = \overline{\mu}\left(\bigcup\limits_{n=1}^{N} (A_N - C_n)\right) \le \sum\limits_{n=1}^{N} \overline{\mu}(A_N - C_n) \\ &amp;\le \sum\limits_{n=1}^{N} (\overline{\mu}(A_n) - \overline{\mu}(C_n)) &lt; \sum\limits_{n=1}^{N} \varepsilon/2^n = \varepsilon. \end{aligned} \]</span>
+Então como <span class="math inline">\(\{A_n\}\)</span> é decrescente, <span class="math inline">\(\forall n \ge N \overline{\mu}(A_n) \le \overline{\mu}(A_N)\)</span>, mostrando que <span class="math inline">\(\lim_{n \to \infty} \overline{\mu}(A_n) = 0, \quad\)</span> c. q. d.</p>
+<p>O Teorema 2.4.1 fornece uma ferramenta muito conveniente para a construção de medidas. O mecanismo é o seguinte: dá-se uma função de conjunto <span class="math inline">\(\mu\)</span> não-negativa e finita sobre um semi-anel <span class="math inline">\(\mathbb{S}\)</span>. Usualmente é fácil verificar que a função é finitamente aditiva e <span class="math inline">\(\mu(\varnothing)=0\)</span>. A maior dificuldade consiste em provar a <span class="math inline">\(\sigma\)</span>-aditividade sobre <span class="math inline">\(\mathbb{S}\)</span>. Na maior parte dos exemplos, <span class="math inline">\(\mathbb{S}\)</span> contém uma classe compacta que determina a medida <span class="math inline">\(\mu\)</span> sobre <span class="math inline">\(\mathbb{S}\)</span> no sentido do Teor. <a href="cap2e4e.html#cap2e4e">2.4.1</a>. Por esse teorema, então, <span class="math inline">\(\mu\)</span> é <span class="math inline">\(\sigma\)</span>-aditiva. Pelo Teorema de Extensão, <span class="math inline">\(\mu\)</span> pode ser estendida a <span class="math inline">\(\tilde{\sigma}(\mathbb{S})\)</span> de forma única. A seguir damos alguns exemplos para ilustrar o procedimento:</p>
+<p><strong>EXEMPLO 2.4.1. </strong> Seja <span class="math inline">\(\Omega = \mathbb{R}^n\)</span> e <span class="math inline">\(\mathbb{S} = \{\prod\limits_{i=1}^{n} D_i: D_i \text{ intervalo de } \mathbb{R}^1\}\)</span> (onde por intervalo de <span class="math inline">\(\mathbb{R}^1\)</span> entendemos qualquer intervalo aberto, fechado ou semi-aberto de <span class="math inline">\(\mathbb{R}^1\)</span>). Se <span class="math inline">\(D_i\)</span> tem extremos <span class="math inline">\(a_i\)</span> e <span class="math inline">\(b_i\)</span>, definimos <span class="math inline">\(\mu(\prod\limits_{i=1}^{n} D_i) = \prod\limits_{i=1}^{n} (b_i - a_i)\)</span>. É fácil ver que <span class="math inline">\(\mu(\varnothing)=0\)</span>, e que <span class="math inline">\(\mu\)</span> é finitamente aditiva. Seja <span class="math inline">\(\mathscr{C} = \{\prod\limits_{i=1}^{n} D_i: D_i \text{ intervalo fechado de } \mathbb{R}^1\}\)</span>. Como os conjuntos de <span class="math inline">\(\mathscr{C}\)</span> são compactos, <span class="math inline">\(\mathscr{C}\)</span> é uma classe compacta. Claramente <span class="math inline">\(\forall A \in \mathbb{S}, \mu(A) = \sup\{\mu(C): C \subseteq A, C \in \mathscr{C}\}\)</span>. Portanto as hipóteses do Teorema <a href="cap2e4e.html#cap2e4e">2.4.1</a> são satisfeitas e então <span class="math inline">\(\mu\)</span> é <span class="math inline">\(\sigma\)</span>-aditiva sobre <span class="math inline">\(\mathbb{S}\)</span>. Pelo Teorema de Extensão, <span class="math inline">\(\mu\)</span> pode ser estendida a uma medida <span class="math inline">\(\lambda\)</span> sobre <span class="math inline">\(\overline{\sigma}(\mathbb{S})\)</span>. A <span class="math inline">\(\sigma\)</span>-álgebra <span class="math inline">\(\overline{\sigma}(\mathbb{S})\)</span> é chamada <span class="math inline">\(\sigma\)</span>-álgebra de Lebesgue de <span class="math inline">\(\mathbb{R}^n\)</span>, os conjuntos de <span class="math inline">\(\overline{\sigma}(\mathbb{S})\)</span> conjuntos mensuráveis Lebesgue e a medida <span class="math inline">\(\lambda\)</span>, medida de Lebesgue. Essa <span class="math inline">\(\sigma\)</span>-álgebra contém a <span class="math inline">\(\sigma\)</span>-álgebra <span class="math inline">\(\sigma(\mathbb{S})\)</span> que coincide com a <span class="math inline">\(\sigma\)</span>-álgebra gerada pela topologia de <span class="math inline">\(\mathbb{R}^n\)</span> (veja o Exerc. 7 do <a href="cap1e.html#cap1e">Cap. 1</a>).</p>
+<p><strong>EXEMPLO 2.4.2 </strong> (Medida de Borel-Stieltjes e medida de Lebesgue-Stieltjes). Seja <span class="math inline">\(\Omega = \mathbb{R}^1\)</span> e <span class="math inline">\(\mathbb{S} = \{D: D \text{ intervalo finito aberto, fechado ou semi-aberto de } \mathbb{R}^1\}\)</span>. Sabemos que <span class="math inline">\(\sigma(\mathbb{S})\)</span> coincide com a <span class="math inline">\(\sigma\)</span>-álgebra de Borel de <span class="math inline">\(\mathbb{R}^1\)</span>. Seja <span class="math inline">\(\mathscr{C} = \{D: D \text{ intervalo fechado de } \mathbb{R}^1\}\)</span>.
+Como os conjuntos de <span class="math inline">\(\mathscr{C}\)</span> são compactos, <span class="math inline">\(\mathscr{C}\)</span> é uma classe compacta. Seja agora <span class="math inline">\(F: \mathbb{R}^1 \to \mathbb{R}^1\)</span> uma função não-decrescente e contínua à direita. Para <span class="math inline">\(x \in \mathbb{R}^1\)</span> definimos:
+<span class="math display">\[ F(x+0) = \lim_{y&gt;x} F(y) \quad ; \quad F(x-0) = \lim_{y&lt;x} F(y) \]</span>
+e <span class="math inline">\(\mu_F: \mathbb{S} \to [0, +\infty)\)</span> pelas fórmulas
+<span class="math display">\[ \begin{aligned} \mu_F((a, b]) &amp;= F(b) - F(a); \\ \mu_F([a, b]) &amp;= F(b) - F(a-0); \\ \mu_F((a, b)) &amp;= F(b-0) - F(a) \quad \text{e} \\ \mu_F([a, b)) &amp;= F(b-0) - F(a-0). \end{aligned} \]</span>
+Verificando que <span class="math inline">\(\mu_F(\varnothing)=0, \mu_F\)</span> é não-negativa (<span class="math inline">\(F\)</span> não-decrescente) e finitamente aditiva sobre <span class="math inline">\(\mathbb{S}\)</span>. A continuidade à direita de <span class="math inline">\(F\)</span> implica que:
+<span class="math display">\[ \mu_F(D) = \sup\{\mu_F(C): C \subseteq D, C \text{ intervalo fechado}\}. \]</span></p>
+<p>O Teorema <a href="cap2e4e.html#cap2e4e">2.4.1</a> pode então ser utilizado e resulta que <span class="math inline">\(\mu_F\)</span> é uma medida sobre <span class="math inline">\(\mathbb{S}\)</span>. Pelo Teorema de Extensão esta medida pode ser estendida de forma única a <span class="math inline">\(\sigma(\mathbb{S})\)</span>. Vamos denotar essa extensão com <span class="math inline">\(\mu_F\)</span>. É chamada usualmente de medida de Borel-Stieltjes gerada por F. Esta medida pode ser estendida de maneira única a <span class="math inline">\(\sigma\)</span>-álgebra completada de <span class="math inline">\(\sigma(\mathbb{S})\)</span> com respeito a <span class="math inline">\(\mu_F, \overline{\sigma}(\mathbb{S})\)</span>. Note-se que esta notação oculta o fato de que a <span class="math inline">\(\sigma\)</span>-álgebra <span class="math inline">\(\overline{\sigma}(\mathbb{S})\)</span> depende da medida <span class="math inline">\(\mu_F\)</span>; pode ser, por exemplo, diferente da <span class="math inline">\(\sigma\)</span>-álgebra de Lebesgue (dependendo de F), que é obtida completando também a <span class="math inline">\(\sigma\)</span>-álgebra <span class="math inline">\(\sigma(\mathbb{S})\)</span> mas em relação à medida <span class="math inline">\(\mu_F\)</span> com <span class="math inline">\(F(x)=x, \forall x \in \mathbb{R}^1\)</span>. A extensão de <span class="math inline">\(\mu_F\)</span> a <span class="math inline">\(\sigma(\mathbb{S})\)</span> é chamada de medida de Lebesgue-Stieltjes gerada por <span class="math inline">\(F\)</span>.</p>
+<p>Passamos agora a provar uma importante propriedade da medida de Lebesgue: a sua invariância por translações. Seja <span class="math inline">\(\mathbb{S}\)</span> o semi-anel usual de <span class="math inline">\(\mathbb{R}^1, \mathscr{B}\)</span> a <span class="math inline">\(\sigma\)</span>-álgebra de Borel, <span class="math inline">\(\Lambda\)</span> a <span class="math inline">\(\sigma\)</span>-álgebra de Lebesgue e <span class="math inline">\(\phi: \mathbb{R}^1 \to \mathbb{R}^1\)</span> definida por <span class="math inline">\(\phi(x) = ax+b\)</span> com <span class="math inline">\(a \in \mathbb{R}^1\)</span> e <span class="math inline">\(b \in \mathbb{R}^1\)</span>.</p>
+<p><strong>PROPOSIÇÃO 2.4.3</strong></p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(C \in \mathbb{S} \Rightarrow \phi(C) \in \mathbb{S}, \phi^{-1}(C) \in \mathbb{S}\)</span> ou <span class="math inline">\(\phi^{-1}(C) = \mathbb{R}^1\)</span>, e <span class="math inline">\(\lambda(\phi(C)) = |a|\lambda(C)\)</span>,</li>
+<li><span class="math inline">\(\forall B \in \mathscr{B}, \phi(B) \in \mathscr{B}\)</span> e <span class="math inline">\(\phi^{-1}(B) \in \mathscr{B}\)</span></li>
+<li>Se <span class="math inline">\(a \neq 0, \phi\)</span> tem inversa (<span class="math inline">\(\phi^{-1}\)</span>) e essa inversa é também mensurável.</li>
+</ol>
+<p><em>(Nota. A propriedade que <span class="math inline">\(\forall B \in \mathscr{B}, \phi^{-1}(B) \in \mathscr{B}\)</span> diz que <span class="math inline">\(\phi\)</span> é <span class="math inline">\(\mathscr{B}\)</span>-mensurável (veja o [Cap. 3(#cap3e)]);</em></p>
+<p><strong>Demonstração</strong></p>
+<ol style="list-style-type: lower-roman">
+<li><p>é imediata.</p></li>
+<li><p>Seja <span class="math inline">\(\mathscr{H} = \{A: A \in \mathscr{B}\)</span> e <span class="math inline">\(\phi^{-1}(A) \in \mathscr{B}\}\)</span>. É fácil verificar que <span class="math inline">\(\mathscr{H}\)</span> é uma <span class="math inline">\(\sigma\)</span>-álgebra; por i), <span class="math inline">\(\mathscr{H} \supseteq \mathbb{S}\)</span> e portanto <span class="math inline">\(\mathscr{H} \supseteq \sigma(\mathbb{S}) = \mathscr{B}\)</span>. A outra parte é análoga. iii) É imediato ver que se <span class="math inline">\(a \neq 0, \phi\)</span> tem inversa. Essa inversa é da mesma forma que <span class="math inline">\(\phi\)</span>, e por ii) é então mensurável.</p></li>
+</ol>
+<p><strong>PROPOSIÇÃO 2.4.4</strong></p>
+<ol style="list-style-type: lower-roman">
+<li>Para todo <span class="math inline">\(A \subseteq \mathbb{R}^1, \lambda_*(\phi(A)) = |a| \cdot \lambda_*(A)\)</span> e <span class="math inline">\(\lambda^*(\phi(A)) = |a| \cdot \lambda^*(A)\)</span>.</li>
+<li>Se <span class="math inline">\(A \in \Lambda\)</span> então <span class="math inline">\(\phi(A) \in \Lambda\)</span> e <span class="math inline">\(\lambda(\phi(A)) = |a| \cdot \lambda(A)\)</span>.
+Em particular (<span class="math inline">\(a=1\)</span>) <span class="math inline">\(\lambda\)</span> é invariante por translação sobre <span class="math inline">\(\Lambda\)</span>.</li>
+</ol>
+<p><strong>Demonstração</strong> O caso <span class="math inline">\(a=0\)</span> é trivial. Seja <span class="math inline">\(a \neq 0\)</span>, i) <span class="math inline">\(B \in \mathscr{B} \mapsto |a|\lambda(\phi(B))\)</span> e <span class="math inline">\(B \in \mathscr{B} \mapsto |a|\cdot\lambda(B)\)</span> são medidas sobre <span class="math inline">\(\mathscr{B}\)</span> que coincidem em <span class="math inline">\(\mathbb{S}\)</span> e, portanto, são iguais. Então, se <span class="math inline">\(A \subseteq \mathbb{R}^1\)</span>,
+<span class="math display">\[ \begin{aligned} \lambda^*(\phi(A)) &amp;= \inf\{\lambda(\phi(B)): A \subseteq \phi^{-1}(B) \text{ e } B \in \mathscr{B}\} \\ &amp;= \inf\{|a|\cdot\lambda(\phi^{-1}(B)): A \subseteq \phi^{-1}(B) \text{ e } B \in \mathscr{B}\} \\ &amp;= |a|\cdot\inf\{\lambda(\phi^{-1}(B)): A \subseteq \phi^{-1}(B) \text{ e } B \in \mathscr{B}\} \\ &amp;= |a|\cdot\inf\{\lambda(D): A \subseteq D \in \mathscr{B}\} = |a|\cdot\lambda^*(A). \end{aligned} \]</span>
+A prova é análoga para <span class="math inline">\(\lambda_*\)</span>.
+ii) Se <span class="math inline">\(A \in \Lambda\)</span> e <span class="math inline">\(\lambda(A) &lt; \infty\)</span>, a afirmação decorre da Prop. <a href="cap2e3e.html#cap2e3e">2.3.1</a> g) e de i).
+Se <span class="math inline">\(A \in \Lambda\)</span> e <span class="math inline">\(\lambda(A) = \infty\)</span>, <span class="math inline">\(A = \sum\limits_{n=1}^{\infty} A_n\)</span>, com <span class="math inline">\(A_n \in \Lambda\)</span> e <span class="math inline">\(\lambda(A_n) &lt; \infty\)</span>, então <span class="math inline">\(\phi(A) = \sum\limits_{n=1}^{\infty} \phi(A_n)\)</span>, porque <span class="math inline">\(\phi\)</span> é 1-1, e o caso geral reduz-se ao caso anterior.</p>
+<p>Vamos, agora, dar um exemplo indicando que conjuntos “pequenos” topologicamente podem ser “grandes” em termos da medida de Lebesgue. Mais precisamente, trata-se de um exemplo de um conjunto de 1.<span class="math inline">\(^{\text{a}}\)</span> categoria (na topologia usual de <span class="math inline">\(\mathbb{R}^1\)</span>) contido em <span class="math inline">\([0, 1]\)</span>, que tem medida 1.</p>
+<p><strong>EXEMPLO 2.4.3. </strong> <span class="math inline">\(\forall \varepsilon &gt; 0\)</span>, existe um conjunto <span class="math inline">\(F \in \mathscr{B}\)</span>, fechado e magro, tal que <span class="math inline">\(\lambda(F) &gt; 1 - 2\varepsilon\)</span>. Seja <span class="math inline">\(\{x_1, x_2, \dots\}\)</span> uma enumeração dos racionais de <span class="math inline">\([0, 1]\)</span>.
+Tomar <span class="math inline">\(F = [0, 1] - \bigcup\limits_{n=1}^{\infty} \left(x_n - \frac{\varepsilon}{2^n}, x_n + \frac{\varepsilon}{2^n}\right)\)</span>.
+<span class="math inline">\(F\)</span> é fechado e magro (porque não contém racionais) e
+<span class="math display">\[ \lambda(F) &gt; 1 - \lambda\left(\bigcup\limits_{n=1}^{\infty} \left(x_n - \frac{\varepsilon}{2^n}, x_n + \frac{\varepsilon}{2^n}\right)\right) \ge 1 - \sum\limits_{n=1}^{\infty} 2\frac{\varepsilon}{2^n} = 1 - 2\varepsilon. \]</span>
+Seja <span class="math inline">\(F_n \in \mathscr{B}\)</span>, fechado e magro, e tal que <span class="math inline">\(\lambda(F_n) &gt; 1 - \frac{1}{n}\)</span> para todo <span class="math inline">\(n\)</span>. Seja <span class="math inline">\(G = \bigcup\limits_{n=1}^{\infty} F_n\)</span>. Então <span class="math inline">\(G\)</span> é de 1.<span class="math inline">\(^{\text{a}}\)</span> categoria e <span class="math inline">\(1 \ge \lambda(G) \ge \lambda(F_n) &gt; 1 - \frac{1}{n} \forall n\)</span>; ou seja <span class="math inline">\(\lambda(G) = 1\)</span>.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="cap2e3e.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cap2e5e.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "night",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/jcomicsutils/projeto-euclides-em-bookdown/edit/main/medida-e-integracao/02-medidas-e-extensao-de-medidas.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

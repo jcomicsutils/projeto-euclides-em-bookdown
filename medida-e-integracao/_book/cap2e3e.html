@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.3 Medida interior | Medida e Integração</title>
+  <meta name="description" content="2.3 Medida interior | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.3 Medida interior | Medida e Integração" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="2.3 Medida interior | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="github-repo" content="jcomicsutils/projeto-euclides-em-bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.3 Medida interior | Medida e Integração" />
+  
+  <meta name="twitter:description" content="2.3 Medida interior | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  
+
+<meta name="author" content="Pedro J. Fernandez" />
+
+
+<meta name="date" content="1976-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="cap2e2e.html"/>
+<link rel="next" href="cap2e4e.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Medida e Integração</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i>Introdução</a></li>
+<li class="chapter" data-level="0" data-path="cap0e.html"><a href="cap0e.html"><i class="fa fa-check"></i><b>0</b> Conjuntos</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="cap0e1e.html"><a href="cap0e1e.html"><i class="fa fa-check"></i><b>0.1</b> Conjuntos</a></li>
+<li class="chapter" data-level="0.2" data-path="cap0e2e.html"><a href="cap0e2e.html"><i class="fa fa-check"></i><b>0.2</b> Operações com conjuntos</a></li>
+<li class="chapter" data-level="0.3" data-path="cap0e3e.html"><a href="cap0e3e.html"><i class="fa fa-check"></i><b>0.3</b> Limites e indicadores</a></li>
+<li class="chapter" data-level="0.4" data-path="cap0e4e.html"><a href="cap0e4e.html"><i class="fa fa-check"></i><b>0.4</b> Funções</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="cap1e.html"><a href="cap1e.html"><i class="fa fa-check"></i><b>1</b> Classes de Conjuntos</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-1"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="cap2e.html"><a href="cap2e.html"><i class="fa fa-check"></i><b>2</b> Medidas e Extensão de Medidas</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cap2e1e.html"><a href="cap2e1e.html"><i class="fa fa-check"></i><b>2.1</b> Medidas</a></li>
+<li class="chapter" data-level="2.2" data-path="cap2e2e.html"><a href="cap2e2e.html"><i class="fa fa-check"></i><b>2.2</b> Extensão de medidas</a></li>
+<li class="chapter" data-level="2.3" data-path="cap2e3e.html"><a href="cap2e3e.html"><i class="fa fa-check"></i><b>2.3</b> Medida interior</a></li>
+<li class="chapter" data-level="2.4" data-path="cap2e4e.html"><a href="cap2e4e.html"><i class="fa fa-check"></i><b>2.4</b> Construção de medidas sobre semi-anéis. Exemplos</a></li>
+<li class="chapter" data-level="2.5" data-path="cap2e5e.html"><a href="cap2e5e.html"><i class="fa fa-check"></i><b>2.5</b> Alguns comentários sobre o problema da medida</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-2"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cap3e.html"><a href="cap3e.html"><i class="fa fa-check"></i><b>3</b> Funções Mensuráveis</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-3"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="cap4e.html"><a href="cap4e.html"><i class="fa fa-check"></i><b>4</b> Integração</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="cap4e1e.html"><a href="cap4e1e.html"><i class="fa fa-check"></i><b>4.1</b> A integral. Teoremas básicos de convergência</a></li>
+<li class="chapter" data-level="4.2" data-path="cap4e2e.html"><a href="cap4e2e.html"><i class="fa fa-check"></i><b>4.2</b> Espaços <span class="math inline">\(L_p\)</span></a></li>
+<li class="chapter" data-level="4.3" data-path="cap4e3e.html"><a href="cap4e3e.html"><i class="fa fa-check"></i><b>4.3</b> Aplicações</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-4"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="cap5e.html"><a href="cap5e.html"><i class="fa fa-check"></i><b>5</b> Imagens de Medidas e Medidas-Produto</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="cap5e1e.html"><a href="cap5e1e.html"><i class="fa fa-check"></i><b>5.1</b> Imagens de medidas</a></li>
+<li class="chapter" data-level="5.2" data-path="cap5e2e.html"><a href="cap5e2e.html"><i class="fa fa-check"></i><b>5.2</b> Medidas-produto - Teorema de Fubini</a></li>
+<li class="chapter" data-level="5.3" data-path="cap5e3e.html"><a href="cap5e3e.html"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a></li>
+<li class="chapter" data-level="5.4" data-path="cap5e4e.html"><a href="cap5e4e.html"><i class="fa fa-check"></i><b>5.4</b> Produtos finitos e infinitos de espaços de medida</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-5"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="cap6e.html"><a href="cap6e.html"><i class="fa fa-check"></i><b>6</b> Medidas com Sinal</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="cap6e1e.html"><a href="cap6e1e.html"><i class="fa fa-check"></i><b>6.1</b> Generalidades</a></li>
+<li class="chapter" data-level="6.2" data-path="cap6e2e.html"><a href="cap6e2e.html"><i class="fa fa-check"></i><b>6.2</b> Decomposição de Hahn e Jordan</a></li>
+<li class="chapter" data-level="6.3" data-path="cap6e3e.html"><a href="cap6e3e.html"><i class="fa fa-check"></i><b>6.3</b> Continuidade absoluta. Teorema de Radon-Nikodym</a></li>
+<li class="chapter" data-level="6.4" data-path="cap6e4e.html"><a href="cap6e4e.html"><i class="fa fa-check"></i><b>6.4</b> Teorema de Representação de Riesz</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-6"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="cap7e.html"><a href="cap7e.html"><i class="fa fa-check"></i><b>7</b> Integração e Diferenciação</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="cap7e1e.html"><a href="cap7e1e.html"><i class="fa fa-check"></i><b>7.1</b> Diferenciação de funções monótonas</a></li>
+<li class="chapter" data-level="7.2" data-path="cap7e2e.html"><a href="cap7e2e.html"><i class="fa fa-check"></i><b>7.2</b> Funções de variação limitada</a></li>
+<li class="chapter" data-level="7.3" data-path="cap7e3e.html"><a href="cap7e3e.html"><i class="fa fa-check"></i><b>7.3</b> Teorema de diferenciação de Lebesgue</a></li>
+<li class="chapter" data-level="7.4" data-path="cap7e4e.html"><a href="cap7e4e.html"><i class="fa fa-check"></i><b>7.4</b> Continuidade absoluta</a></li>
+<li class="chapter" data-level="7.5" data-path="cap7e5e.html"><a href="cap7e5e.html"><i class="fa fa-check"></i><b>7.5</b> Alguns resultados e exemplos especiais</a></li>
+<li class="chapter" data-level="7.6" data-path="cap7e6e.html"><a href="cap7e6e.html"><i class="fa fa-check"></i><b>7.6</b> Mudança de variáveis em integrais</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-7"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/jcomicsutils/projeto-euclides-em-bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Medida e Integração</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cap2e3e" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Medida interior<a href="cap2e3e.html#cap2e3e" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Incluímos esta seção com o propósito de completar nossa exposição. Não é necessária para os capítulos seguintes, e a utilizamos apenas na Prop. <a href="cap2e4e.html#cap2e4e">2.4.4</a>. A Prop. <a href="cap2e3e.html#cap2e3e">2.3.1</a>, g) sugere outra definição de conjunto mensurável; a construção da teoria a partir dessa definição pode ser realizada sem dificuldade.</p>
+<p>Usaremos nesta seção a seguinte notação: <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> é um espaço de medida (<span class="math inline">\(\mathscr{A}\)</span> <span class="math inline">\(\sigma\)</span>-anel) <span class="math inline">\(\sigma\)</span>-finito, isto é, <span class="math inline">\(\forall A \in \mathscr{A}\)</span>, <span class="math inline">\(\exists \{A_n\}\)</span> tal que <span class="math inline">\(A \subseteq \bigcup\limits_{n=1}^{\infty} A_n, A_n \in \mathscr{A}\)</span> e <span class="math inline">\(\mu(A_n) &lt; \infty\)</span>, para todo <span class="math inline">\(n\)</span>. <span class="math inline">\(\mu^*\)</span> é a medida exterior induzida por <span class="math inline">\(\mu\)</span> sobre o <span class="math inline">\(\sigma\)</span>-anel hereditário <span class="math inline">\(\mathscr{F}\)</span> gerado por <span class="math inline">\(\mathscr{A}\)</span>, isto é, <span class="math inline">\(\mathscr{F} = \{A \subseteq \Omega: A \subseteq B, B \in \mathscr{A}\}\)</span> e <span class="math inline">\(\forall A \in \mathscr{F}, \mu^*(A) = \inf\{\mu(B): A \subseteq B \in \mathscr{A}\}\)</span>. <span class="math inline">\(\overline{\mathscr{A}}\)</span> é o <span class="math inline">\(\sigma\)</span>-anel obtido por completamento de <span class="math inline">\(\mathscr{A}\)</span> em relação a <span class="math inline">\(\mu\)</span> (que, pela Prop. <a href="cap2e2e.html#cap2e2e">2.2.12</a>, coincide com a classe dos conjuntos <span class="math inline">\(\mu^*\)</span>-mensuráveis). <span class="math inline">\(\overline{\mu}\)</span> é a extensão de <span class="math inline">\(\mu\)</span> a <span class="math inline">\(\overline{\mathscr{A}}\)</span>.</p>
+<p><strong>DEFINIÇÃO 2.3.1.</strong> Dado <span class="math inline">\(A \in \mathscr{F}\)</span> vamos definir: <span class="math display">\[ \mu_*(A) = \sup\{\mu(B): B \subseteq A, B \in \mathscr{A}\}. \]</span> <span class="math inline">\(\mu_*: \mathscr{F} \to \overline{\mathbb{R}}\)</span> assim definida é chamada a medida interior induzida por <span class="math inline">\(\mu\)</span> sobre <span class="math inline">\(\mathscr{F}\)</span>.</p>
+<p><strong>Observação.</strong> Se <span class="math inline">\(A \in \mathscr{A}, \mu_*(A) = \mu(A)\)</span>.</p>
+<p><strong>PROPOSIÇÃO 2.3.1</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\mu_*(\varnothing) = 0, 0 \le \mu_*(A) \le \infty, \forall A \in \mathscr{F}\)</span>;</p></li>
+<li><p><span class="math inline">\(A \subseteq B \Rightarrow \mu_*(A) \le \mu_*(B), A, B \in \mathscr{F}\)</span>;</p></li>
+<li><p><span class="math inline">\(\mu_*(A) = \sup\{\overline{\mu}(B): B \in \overline{\mathscr{A}}, B \subseteq A\}, \forall A \in \mathscr{F}\)</span>;</p></li>
+<li><p><span class="math inline">\(\forall A \in \mathscr{F}, \exists B \in \mathscr{A}\)</span> tal que <span class="math inline">\(B \subseteq A\)</span> e <span class="math inline">\(\forall C \in \mathscr{A}\)</span>, com <span class="math inline">\(C \subseteq A-B\)</span>, temos <span class="math inline">\(\mu(C) = 0\)</span>. Nestas condições <span class="math inline">\(B\)</span> é dito um núcleo mensurável de <span class="math inline">\(A\)</span>, e, como no caso de cobertura mensurável, temos <span class="math inline">\(\mu(B) = \mu_*(A)\)</span>;</p></li>
+<li><p>Para toda seqüência <span class="math inline">\(\{A_n\}\)</span> de elementos de <span class="math inline">\(\mathscr{F}\)</span> disjuntos dois a dois, <span class="math inline">\(\mu_*(\sum\limits_{n=1}^{\infty} A_n) \ge \sum\limits_{n=1}^{\infty} \mu_*(A_n)\)</span>;</p></li>
+<li><p>Para toda seqüência <span class="math inline">\(\{B_n\}\)</span> de elementos de <span class="math inline">\(\mathscr{A}\)</span> disjuntos dois a dois e para todo <span class="math inline">\(A \in \mathscr{F}\)</span>, <span class="math inline">\(\mu_*(A \cap \sum\limits_{n=1}^{\infty} B_n) = \sum\limits_{n=1}^{\infty} \mu_*(A \cap B_n)\)</span>;</p></li>
+<li><p><span class="math inline">\(\forall B \in \overline{\mathscr{A}}, \mu_*(B) = \overline{\mu}(B) = \mu^*(B)\)</span> e <span class="math inline">\(\forall A \in \mathscr{F}\)</span> com <span class="math inline">\(\mu(A) = \mu^*(A) &lt; \infty\)</span>, temos <span class="math inline">\(A \in \overline{\mathscr{A}}\)</span>;</p></li>
+<li><p><span class="math inline">\(\forall A, D \in \mathscr{F}\)</span> tais que <span class="math inline">\(A \cap D = \varnothing\)</span>; <span class="math inline">\(\mu_*(A+D) \ge \mu_*(A) + \mu_*(D) \le \mu^*(A+D)\)</span>;</p></li>
+<li><p><span class="math inline">\(\forall B \in \overline{\mathscr{A}}, \forall A \in \mathscr{F}, \overline{\mu}(B) = \mu_*(A \cap B) + \mu^*(A^c \cap B)\)</span>.</p></li>
+</ol>
+<p><strong>Demonstração</strong> a) e b) decorrem imediatamente da definição de <span class="math inline">\(\mu_*\)</span> e a demonstração de c) usa o fato de que <span class="math inline">\(\forall \overline{B} \in \overline{\mathscr{A}}\)</span> existe <span class="math inline">\(B \in \mathscr{A}\)</span> com <span class="math inline">\(B \subseteq \overline{B}\)</span> e <span class="math inline">\(\overline{\mu}(\overline{B}-B) = 0\)</span>.<br> d) Basta tomar uma cobertura mensurável <span class="math inline">\(F\)</span> de <span class="math inline">\(A\)</span>, uma cobertura mensurável <span class="math inline">\(N\)</span> de <span class="math inline">\(F-A\)</span> e fazer <span class="math inline">\(B = F-N\)</span>.<br> e) Seja <span class="math inline">\(B_n\)</span> um núcleo mensurável de <span class="math inline">\(A_n\)</span>, para cada <span class="math inline">\(n\)</span>. Então <span class="math display">\[ \sum\limits_{n=1}^{\infty} \mu_*(A_n) = \sum\limits_{n=1}^{\infty} \mu(B_n) = \mu\left(\sum\limits_{n=1}^{\infty} B_n\right) \le \mu_*\left(\sum\limits_{n=1}^{\infty} A_n\right). \]</span><br> f) Se <span class="math inline">\(B\)</span> é um núcleo mensurável de <span class="math inline">\(A \cap \sum\limits_{n=1}^{\infty} B_n\)</span>, <span class="math display">\[ \begin{aligned} \mu_*\left(A \cap \sum\limits_{n=1}^{\infty} \overline{B}_n\right) &amp;= \mu(B) = \mu\left(B \cap \sum\limits_{n=1}^{\infty} \overline{B}_n\right) = \\ &amp;= \sum\limits_{n=1}^{\infty} \mu(B \cap \overline{B}_n) \le \sum\limits_{n=1}^{\infty} \mu_*(A \cap \overline{B}_n), \end{aligned} \]</span> a última desigualdade decorrendo do item c). A desigualdade, no sentido contrário, é conseqüência do item e).<br> g) A 1.<span class="math inline">\(^{\text{a}}\)</span> afirmação decorre do item c). Para a 2.<span class="math inline">\(^{\text{a}}\)</span> afirmação, sejam <span class="math inline">\(B\)</span> uma cobertura mensurável de <span class="math inline">\(A\)</span> e <span class="math inline">\(C\)</span> um núcleo mensurável de <span class="math inline">\(A\)</span>. <span class="math inline">\(A = C + (A-C)\)</span>, onde <span class="math inline">\(C \in \overline{\mathscr{A}}\)</span> e <span class="math inline">\(A-C \subseteq B-C\)</span>, que tem medida nula, porque <span class="math display">\[ \mu(B-C) = \mu(B) - \mu(C) = \mu^*(A) - \mu_*(A) = 0, \]</span> o que mostra que <span class="math inline">\(A \in \overline{\mathscr{A}}\)</span>.<br> h) Sejam <span class="math inline">\(B\)</span> um núcleo mensurável de <span class="math inline">\(A+D\)</span> e <span class="math inline">\(C\)</span> uma cobertura mensurável de <span class="math inline">\(D\)</span>. Como <span class="math inline">\(B-C \subseteq A\)</span>, temos: <span class="math display">\[ \mu_*(A+D) = \mu(B) = \mu(B-C) + \mu(B \cap C) \le \mu(B-C) + \mu(C) \le \mu_*(A) + \mu^*(D). \]</span>A outra desigualdade é análoga.<br> i) Decorre de g) e h).</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="cap2e2e.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cap2e4e.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "night",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/jcomicsutils/projeto-euclides-em-bookdown/edit/main/medida-e-integracao/02-medidas-e-extensao-de-medidas.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
