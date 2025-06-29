@@ -1,0 +1,161 @@
+---
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+# Conjuntos {#cap0}
+
+## Conjuntos {#cap01}
+
+Neste livro, toda vez que usamos a palavra conjunto queremos significar um subconjunto de um conjunto fixo, que em geral designaremos por $\Omega$.
+
+$\Omega$ é chamado espaço, e seus elementos, pontos.
+Se $A$ é um subconjunto de $\Omega$, a notação $\omega \in A$ significa que $\omega$ é um elemento de $A$.
+O fato de $\omega$ não pertencer a $A$ será indicado com a notação $\omega \notin A$.
+Se $A$ e $B$ são subconjuntos de $\Omega$, a notação $A \subseteq B$ indicará que todo elemento de $A$ também pertence a $B$.
+A notação $A \subset B$ indicará que $A \subseteq B$, porém existe algum ponto de $B$ que não é elemento de $A$.
+
+Com o objetivo de facilitar a notação, usaremos um conjunto que não contenha nenhum elemento, ao qual chamaremos conjunto vazio, e denotaremos por $\varnothing$.
+
+Usaremos as palavras <i>classe</i> ou <i>família</i>, para um conjunto de conjuntos.
+A classe de todos os subconjuntos de um conjunto $A$ será indicada por $\mathbb{P}(A)$ (partes de $A$).
+
+Para indicar um conjunto, também usaremos a notação $\{\omega: p(\omega)\}$, onde $p(\omega)$ é uma proposição concernente a $\omega$, e o conjunto consiste de todos os elementos para os quais $p(\omega)$ é verdadeira.
+Por exemplo, $\{\omega: \omega = 2k; k=1, 2, ...\}$ é o conjunto de todos os inteiros positivos pares.
+
+Conjuntos finitos serão por vezes indicados pela designação de seus elementos.
+Assim, o conjunto que consiste nos números 0, 2 e 4 será indicado $\{0, 2, 4\}$.
+
+É importante distinguir entre o ponto $\omega$ e o conjunto $\{\omega\}$, cujo único elemento é $\omega$.
+
+## Operações com conjuntos {#cap02}
+
+Seja $\Gamma$ um certo conjunto de índices e, para cada $\gamma \in \Gamma$, consideremos $A_{\gamma}$, um subconjunto de $\Omega$.
+Chamaremos de <i>união da família</i> $\{A_{\gamma}: \gamma \in \Gamma\}$ o conjunto de todos os pontos que pertencem a pelo menos um dos conjuntos $A_{\gamma}$.
+Esse conjunto será simbolizado por: $$ \bigcup_{\gamma \in \Gamma} A_{\gamma} = \{\omega: \exists \gamma \in \Gamma, \text{ tal que } \omega \in A_{\gamma}\}. $$
+
+Se o conjunto $\Gamma$ for enumerável, pode-se dizer que a família $\{A_{\gamma}: \gamma \in \Gamma\}$ é uma sucessão $\{A_n\}_{n=1,2,...}$.
+
+Indicaremos, neste caso, a união por $\bigcup\limits_{n=1}^{\infty} A_n$.
+
+Se $\Gamma = \{1, 2, ..., k\}$, a união será indicada por $\bigcup\limits_{n=1}^{k} A_n$.
+
+A união de dois conjuntos $A$ e $B$, será indicada por $A \cup B$.
+
+Se $\Gamma = \varnothing$, $\bigcup\limits_{\gamma \in \Gamma} A_{\gamma} = \varnothing$ por convenção.
+
+Se $\{A_{\gamma}: \gamma \in \Gamma\}$ é uma família de conjuntos, o conjunto de todos os elementos que pertencem a todos os $A_{\gamma}$ será chamado <i>interseção da família</i>, e simbolizado por: $$ \bigcap_{\gamma \in \Gamma} A_{\gamma} = \{\omega: \forall \gamma, \omega \in A_{\gamma}\}. $$
+
+Se $\Gamma = \varnothing$, estabelecemos por convenção que $\bigcap\limits_{\gamma \in \Gamma} A_{\gamma} = \Omega$.
+
+Como no caso da união de conjuntos, conforme $\Gamma$ seja enumerável, finito, ou conste de dois elementos, usaremos as notações: $$\bigcap\limits_{n=1}^{\infty} A_n, \bigcap\limits_{n=1}^{k} A_n, A \cap B.$$
+
+Quando falarmos de interseção finita ficará subentendido que $\Gamma \neq \varnothing$.
+
+Dois conjuntos são ditos disjuntos, se $A \cap B = \varnothing$.
+Uma família $\{A_{\gamma}: \gamma \in \Gamma\}$ se diz disjunta, se para todo par de elementos $\gamma, \gamma' \in \Gamma$, com $\gamma \neq \gamma'$, $A_{\gamma} \cap A_{\gamma'} = \varnothing$.
+
+Neste caso, usaremos a notação $\sum\limits_{\gamma \in \Gamma} A_{\gamma}$, em lugar de $\bigcup\limits_{\gamma \in \Gamma} A_{\gamma}$, para indicar a união da família.
+
+Dado $A \subseteq \Omega, A^c$ denotará o conjunto dos pontos que não pertencem a $A$.
+Em símbolos, $A^c = \{\omega: \omega \notin A\}$.
+$A^c$ é chamado complemento de $A$.
+
+A diferença entre $A$ e $B$, simbolizada por $A-B$, é, por definição, o conjunto $A-B = A \cap B^c$.
+
+Tal diferença será chamada própria, se $B \subseteq A$.
+Ao conjunto $(A-B) + (B-A)$, designado por $A \Delta B$, chamaremos diferença simétrica entre $A$ e $B$.
+
+Apresentamos, a seguir, uma série de importantes relações que serão usadas sem menções explícitas, nos capítulos seguintes.
+Suas demonstrações são deixadas como exercícios.
+
+**0.2.1.** $\forall A, A \subseteq \Omega; A \cup \varnothing = A, A \cap \varnothing = \varnothing$.
+
+**0.2.2.** $A \subseteq B$ se, e somente se, $A \cup B = B$.
+
+**0.2.3.** $A \cup (B \cup C) = (A \cup B) \cup C$.
+
+**0.2.4.** $A \cap (B \cap C) = (A \cap B) \cap C$.
+
+**0.2.5.** $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
+
+**0.2.6.** $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$.
+
+**0.2.7.** $A \cap (\bigcup\limits_{\gamma \in \Gamma} A_{\gamma}) = \bigcup\limits_{\gamma \in \Gamma} (A \cap A_{\gamma})$.
+
+**0.2.8.** $A \cup (\bigcap\limits_{\gamma \in \Gamma} A_{\gamma}) = \bigcap\limits_{\gamma \in \Gamma} (A \cup A_{\gamma})$.
+
+**0.2.9.** $A + A^c = \Omega, A \cap A^c = \varnothing, \Omega^c = \varnothing, \varnothing^c = \Omega$.
+
+**0.2.10.** $(A^c)^c = A$; $A \subseteq B$ se, e somente se, $B^c \subseteq A^c$.
+
+**0.2.11.** $(\bigcup\limits_{\gamma \in \Gamma} A_{\gamma})^c = \bigcap\limits_{\gamma \in \Gamma} (A_{\gamma}^c)$.
+
+**0.2.12.** $(\bigcap\limits_{\gamma \in \Gamma} A_{\gamma})^c = \bigcup\limits_{\gamma \in \Gamma} (A_{\gamma}^c)$.
+
+**0.2.13.** $A \Delta B \subseteq (A \Delta C) \cup (B \Delta C), \forall C \subseteq \Omega$.
+
+## Limites e indicadores {#cap03}
+
+Se $\{A_n\}_{n=1,2,...}$ é uma sucessão de conjuntos, chamaremos <i>limite superior</i> da sucessão $\{A_n\}_{n=1,2,...}$ ao conjunto de todos os pontos $\omega$ que pertençam a $A_n$, para infinitos valores de $n$.
+É fácil ver que: $$ \lim_n \sup A_n = \bigcap_{n=1}^{\infty} \bigcup_{i=n}^{\infty} A_i. $$
+
+O conjunto de todos os pontos de $\Omega$ que pertencem a todos os $A_n$, a menos de um número finito de tais $A_n$, é chamado <i>limite inferior</i> da sucessão $\{A_n\}_{n=1,2,...}$, e simbolizado por $\lim_n \inf A_n$.
+É fácil provar, de maneira análoga ao caso anterior, que: $$ \lim_n \inf A_n = \bigcup_{n=1}^{\infty} \bigcap_{i=n}^{\infty} A_i. $$
+
+Uma sucessão $\{A_n\}_{n=1,2,...}$ é dita crescente (respectivamente, decrescente), se $A_n \subseteq A_{n+1}, n=1, 2, ...$ (resp. $A_n \supseteq A_{n+1}, n=1, 2, ...$).
+
+Se para uma sucessão $\{A_n\}_{n=1,2,...}$, $\lim_n \sup A_n = \lim_n \inf A_n$, diremos que tal sucessão tem limite, e então empregaremos apenas a notação $\lim_n A_n$.
+Indicaremos sucessões crescentes (resp. decrescentes) de conjuntos com a notação $A_n \uparrow$ (resp. $A_n \downarrow$).
+Escreveremos $A_n \uparrow A$ (resp. $A_n \downarrow A$) se $A_n \uparrow$ (resp. $A_n \downarrow$), e $\bigcup\limits_{n=1}^{\infty} A_n = A$ (resp. $\bigcap\limits_{n=1}^{\infty} A_n = A$).
+
+Dado $A \subseteq \Omega$, chamaremos <i>indicador</i> de $A$, a função $I_A$ definida por: $$ I_A(\omega) = \begin{cases} 1, & \omega \in A \\ 0, & \omega \notin A \end{cases}. $$
+
+Existe claramente uma correspondência biunívoca (bijeção) entre subconjuntos de $\Omega$ e seus indicadores correspondentes.
+Esta noção nos será extremamente útil nos capítulos seguintes.
+A seguir, apresentaremos algumas fórmulas, que são deixadas a título de exercício.
+É importante que o leitor se familiarize com o manejo de indicadores.
+
+**0.3.1.** $A \subseteq B$ se, e somente se, $I_A \le I_B, I_{A^c} = 1 - I_A$.
+
+**0.3.2.** $I_{A \cap B} = I_A \wedge I_B = I_A I_B$; $I_{\bigcap\limits_{i=1}^n A_i} = \prod\limits_{i=1}^n I_{A_i}$.
+
+**0.3.3.** $I_{A \cup B} = I_A + I_B - I_A I_B = I_A \vee I_B$.
+
+**0.3.4.** $I_{(\bigcup\limits_{i=1}^n A_i)} = 1 - \prod\limits_{i=1}^n (1-I_{A_i}) = \sum\limits_{k=1}^n (-1)^{k-1} \sum\limits_{1 \le i_1 < i_2 < \dots < i_k \le n} \quad \prod\limits_{j=1}^k I_{A_{i_j}}$.
+
+**0.3.5.** $I_{(A \Delta B)} = I_A + I_B - 2 I_A I_B = |I_A - I_B|$.
+
+**0.3.6.** $I_{(A-B)} = I_A(1 - I_B)$.
+
+**0.3.7.** $I_{\lim_n \sup A_n} = \lim_n \sup I_{A_n}$; $I_{\lim_n \inf A_n} = \lim_n \inf I_{A_n}$.
+
+## Funções {#cap04}
+
+Sendo $X$ e $Y$ dois conjuntos, denotamos por $Y^X$ o conjunto de todas as funções de $X$ em $Y$.
+
+Se $A \subseteq Y$ e $f$ é uma função, usamos a notação $f^{-1}(A)$, ou às vezes $[f \in A]$, para indicar o conjunto $\{x: f(x) \in A\}$.
+Se $B \subseteq X$, $f(B)$ representará o conjunto $\{y: \exists x \in B: y = f(x)\}$.
+
+Usaremos, sem menção explícita, as seguintes fórmulas facilmente verificáveis:
+
+**0.4.1.** $f^{-1}(A^c) = [f^{-1}(A)]^c$; $A \subseteq Y$.
+
+**0.4.2.** $f^{-1}(\bigcap\limits_{\alpha \in I} A_{\alpha}) = \bigcap\limits_{\alpha \in I} f^{-1}(A_{\alpha})$, $f^{-1}(\bigcup\limits_{\alpha \in I} A_{\alpha}) = \bigcup\limits_{\alpha \in I} f^{-1}(A_{\alpha})$, onde $\{A_{\alpha}\}_{\alpha \in I}$ é uma família de subconjuntos de $Y$.
+
+**0.4.3.** $f(\bigcup\limits_{\alpha \in I} B_{\alpha}) = \bigcup\limits_{\alpha \in I} f(B_{\alpha})$, $\{B_{\alpha}\}_{\alpha \in I}$ é uma família de subconjuntos de $X$.
+
+**0.4.4.** $f(\bigcap\limits_{\alpha \in I} A_{\alpha}) \subseteq \bigcap\limits_{\alpha \in I} f(A_{\alpha})$.
+
+Se $A \subseteq X$ e $f: X \to Y$, a notação $f|_A$ é a função pertinente a $Y^A$, definida por:
+
+$$f|_A(x) = f(x), \text{ onde chama-se } f|_A \text{ a restrição de } f \text{ a } A.$$
+
+## Exercícios {.unnumbered}
+
+1.  Provar as fórmulas das Seçs. \@ref(cap02), \@ref(cap03), \@ref(cap04).
+2.  Descrever por palavras o conjunto: $$ \lim_n \sup A_n - \lim_n \inf A_n. $$
+3.  Escrever a união e a diferença de dois conjuntos, utilizando as operações $\Delta$ e $\cap$.
+4.  Seja $\{x_1, x_2, ...\}$ uma enumeração dos racionais de $\mathbb{R}^1$. Seja $A_n = (x_n-1, x_n+1)$. Calcular $\lim_n \sup A_n$ e $\lim_n \inf A_n$.
+5.  Dar um exemplo para mostrar que a inclusão em [0.4.4](#cap04) pode ser estrita.

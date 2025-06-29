@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>0.2 Operações com conjuntos | Medida e Integração (Segunda Edição)</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="0.2 Operações com conjuntos | Medida e Integração (Segunda Edição)" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="0.2 Operações com conjuntos | Medida e Integração (Segunda Edição)" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Pedro J. Fernandez" />
+
+
+<meta name="date" content="1976-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="cap01.html"/>
+<link rel="next" href="cap03.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Medida e Integração (Segunda Edição)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path=""><a href="#pref%C3%A1cio"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#introdu%C3%A7%C3%A3o"><i class="fa fa-check"></i>Introdução</a></li>
+<li class="chapter" data-level="0" data-path="cap0.html"><a href="cap0.html"><i class="fa fa-check"></i><b>0</b> Conjuntos</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="cap01.html"><a href="cap01.html"><i class="fa fa-check"></i><b>0.1</b> Conjuntos</a></li>
+<li class="chapter" data-level="0.2" data-path="cap02.html"><a href="cap02.html"><i class="fa fa-check"></i><b>0.2</b> Operações com conjuntos</a></li>
+<li class="chapter" data-level="0.3" data-path="cap03.html"><a href="cap03.html"><i class="fa fa-check"></i><b>0.3</b> Limites e indicadores</a></li>
+<li class="chapter" data-level="0.4" data-path="cap04.html"><a href="cap04.html"><i class="fa fa-check"></i><b>0.4</b> Funções</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="classes-de-conjuntos.html"><a href="classes-de-conjuntos.html"><i class="fa fa-check"></i><b>1</b> Classes de Conjuntos</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-1"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="00-02-conjuntos.html"><a href="#medidas-e-extens%C3%A3o-de-medidas"><i class="fa fa-check"></i><b>2</b> Medidas e Extensão de Medidas</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="medidas.html"><a href="medidas.html"><i class="fa fa-check"></i><b>2.1</b> Medidas</a></li>
+<li class="chapter" data-level="2.2" data-path="00-02-conjuntos.html"><a href="#extens%C3%A3o-de-medidas"><i class="fa fa-check"></i><b>2.2</b> Extensão de medidas</a></li>
+<li class="chapter" data-level="2.3" data-path="medida-interior.html"><a href="medida-interior.html"><i class="fa fa-check"></i><b>2.3</b> Medida interior</a></li>
+<li class="chapter" data-level="2.4" data-path="00-02-conjuntos.html"><a href="#constru%C3%A7%C3%A3o-de-medidas-sobre-semi-an%C3%A9is.-exemplos"><i class="fa fa-check"></i><b>2.4</b> Construção de medidas sobre semi-anéis. Exemplos</a></li>
+<li class="chapter" data-level="2.5" data-path="00-02-conjuntos.html"><a href="#alguns-coment%C3%A1rios-sobre-o-problema-da-medida"><i class="fa fa-check"></i><b>2.5</b> Alguns comentários sobre o problema da medida</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-2"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="00-02-conjuntos.html"><a href="#fun%C3%A7%C3%B5es-mensur%C3%A1veis"><i class="fa fa-check"></i><b>3</b> Funções Mensuráveis</a>
+<ul>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-3"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="00-02-conjuntos.html"><a href="#integra%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>4</b> Integração</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="00-02-conjuntos.html"><a href="#a-integral.-teoremas-b%C3%A1sicos-de-converg%C3%AAncia"><i class="fa fa-check"></i><b>4.1</b> A integral. Teoremas básicos de convergência</a></li>
+<li class="chapter" data-level="4.2" data-path="00-02-conjuntos.html"><a href="#espa%C3%A7os-l_p"><i class="fa fa-check"></i><b>4.2</b> Espaços <span class="math inline">\(L_p\)</span></a></li>
+<li class="chapter" data-level="4.3" data-path="00-02-conjuntos.html"><a href="#aplica%C3%A7%C3%B5es"><i class="fa fa-check"></i><b>4.3</b> Aplicações</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-4"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="imagens-de-medidas-e-medidas-produto.html"><a href="imagens-de-medidas-e-medidas-produto.html"><i class="fa fa-check"></i><b>5</b> Imagens de Medidas e Medidas-Produto</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="imagens-de-medidas.html"><a href="imagens-de-medidas.html"><i class="fa fa-check"></i><b>5.1</b> Imagens de medidas</a></li>
+<li class="chapter" data-level="5.2" data-path="medidas-produto---teorema-de-fubini.html"><a href="medidas-produto---teorema-de-fubini.html"><i class="fa fa-check"></i><b>5.2</b> Medidas-produto - Teorema de Fubini</a></li>
+<li class="chapter" data-level="5.3" data-path="00-02-conjuntos.html"><a href="#exemplos-e-aplica%C3%A7%C3%B5es"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a></li>
+<li class="chapter" data-level="5.4" data-path="00-02-conjuntos.html"><a href="#produtos-finitos-e-infinitos-de-espa%C3%A7os-de-medida"><i class="fa fa-check"></i><b>5.4</b> Produtos finitos e infinitos de espaços de medida</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-5"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="medidas-com-sinal.html"><a href="medidas-com-sinal.html"><i class="fa fa-check"></i><b>6</b> Medidas com Sinal</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="generalidades.html"><a href="generalidades.html"><i class="fa fa-check"></i><b>6.1</b> Generalidades</a></li>
+<li class="chapter" data-level="6.2" data-path="00-02-conjuntos.html"><a href="#decomposi%C3%A7%C3%A3o-de-hahn-e-jordan"><i class="fa fa-check"></i><b>6.2</b> Decomposição de Hahn e Jordan</a></li>
+<li class="chapter" data-level="6.3" data-path="continuidade-absoluta.-teorema-de-radon-nikodym.html"><a href="continuidade-absoluta.-teorema-de-radon-nikodym.html"><i class="fa fa-check"></i><b>6.3</b> Continuidade absoluta. Teorema de Radon-Nikodym</a></li>
+<li class="chapter" data-level="6.4" data-path="00-02-conjuntos.html"><a href="#teorema-de-representa%C3%A7%C3%A3o-de-riesz"><i class="fa fa-check"></i><b>6.4</b> Teorema de Representação de Riesz</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-6"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="00-02-conjuntos.html"><a href="#integra%C3%A7%C3%A3o-e-diferencia%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>7</b> Integração e Diferenciação</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="00-02-conjuntos.html"><a href="#diferencia%C3%A7%C3%A3o-de-fun%C3%A7%C3%B5es-mon%C3%B3tonas"><i class="fa fa-check"></i><b>7.1</b> Diferenciação de funções monótonas</a></li>
+<li class="chapter" data-level="7.2" data-path="00-02-conjuntos.html"><a href="#fun%C3%A7%C3%B5es-de-varia%C3%A7%C3%A3o-limitada"><i class="fa fa-check"></i><b>7.2</b> Funções de variação limitada</a></li>
+<li class="chapter" data-level="7.3" data-path="00-02-conjuntos.html"><a href="#teorema-de-diferencia%C3%A7%C3%A3o-de-lebesgue"><i class="fa fa-check"></i><b>7.3</b> Teorema de diferenciação de Lebesgue</a></li>
+<li class="chapter" data-level="7.4" data-path="continuidade-absoluta.html"><a href="continuidade-absoluta.html"><i class="fa fa-check"></i><b>7.4</b> Continuidade absoluta</a></li>
+<li class="chapter" data-level="7.5" data-path="alguns-resultados-e-exemplos-especiais.html"><a href="alguns-resultados-e-exemplos-especiais.html"><i class="fa fa-check"></i><b>7.5</b> Alguns resultados e exemplos especiais</a></li>
+<li class="chapter" data-level="7.6" data-path="00-02-conjuntos.html"><a href="#mudan%C3%A7a-de-vari%C3%A1veis-em-integrais"><i class="fa fa-check"></i><b>7.6</b> Mudança de variáveis em integrais</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#exerc%C3%ADcios-7"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Medida e Integração (Segunda Edição)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cap02" class="section level2 hasAnchor" number="0.2">
+<h2><span class="header-section-number">0.2</span> Operações com conjuntos<a href="cap02.html#cap02" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Seja <span class="math inline">\(\Gamma\)</span> um certo conjunto de índices e, para cada <span class="math inline">\(\gamma \in \Gamma\)</span>, consideremos <span class="math inline">\(A_{\gamma}\)</span>, um subconjunto de <span class="math inline">\(\Omega\)</span>.
+Chamaremos de <i>união da família</i> <span class="math inline">\(\{A_{\gamma}: \gamma \in \Gamma\}\)</span> o conjunto de todos os pontos que pertencem a pelo menos um dos conjuntos <span class="math inline">\(A_{\gamma}\)</span>.
+Esse conjunto será simbolizado por: <span class="math display">\[ \bigcup_{\gamma \in \Gamma} A_{\gamma} = \{\omega: \exists \gamma \in \Gamma, \text{ tal que } \omega \in A_{\gamma}\}. \]</span></p>
+<p>Se o conjunto <span class="math inline">\(\Gamma\)</span> for enumerável, pode-se dizer que a família <span class="math inline">\(\{A_{\gamma}: \gamma \in \Gamma\}\)</span> é uma sucessão <span class="math inline">\(\{A_n\}_{n=1,2,...}\)</span>.</p>
+<p>Indicaremos, neste caso, a união por <span class="math inline">\(\bigcup\limits_{n=1}^{\infty} A_n\)</span>.</p>
+<p>Se <span class="math inline">\(\Gamma = \{1, 2, ..., k\}\)</span>, a união será indicada por <span class="math inline">\(\bigcup\limits_{n=1}^{k} A_n\)</span>.</p>
+<p>A união de dois conjuntos <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>, será indicada por <span class="math inline">\(A \cup B\)</span>.</p>
+<p>Se <span class="math inline">\(\Gamma = \varnothing\)</span>, <span class="math inline">\(\bigcup\limits_{\gamma \in \Gamma} A_{\gamma} = \varnothing\)</span> por convenção.</p>
+<p>Se <span class="math inline">\(\{A_{\gamma}: \gamma \in \Gamma\}\)</span> é uma família de conjuntos, o conjunto de todos os elementos que pertencem a todos os <span class="math inline">\(A_{\gamma}\)</span> será chamado <i>interseção da família</i>, e simbolizado por: <span class="math display">\[ \bigcap_{\gamma \in \Gamma} A_{\gamma} = \{\omega: \forall \gamma, \omega \in A_{\gamma}\}. \]</span></p>
+<p>Se <span class="math inline">\(\Gamma = \varnothing\)</span>, estabelecemos por convenção que <span class="math inline">\(\bigcap\limits_{\gamma \in \Gamma} A_{\gamma} = \Omega\)</span>.</p>
+<p>Como no caso da união de conjuntos, conforme <span class="math inline">\(\Gamma\)</span> seja enumerável, finito, ou conste de dois elementos, usaremos as notações: <span class="math display">\[\bigcap\limits_{n=1}^{\infty} A_n, \bigcap\limits_{n=1}^{k} A_n, A \cap B.\]</span></p>
+<p>Quando falarmos de interseção finita ficará subentendido que <span class="math inline">\(\Gamma \neq \varnothing\)</span>.</p>
+<p>Dois conjuntos são ditos disjuntos, se <span class="math inline">\(A \cap B = \varnothing\)</span>.
+Uma família <span class="math inline">\(\{A_{\gamma}: \gamma \in \Gamma\}\)</span> se diz disjunta, se para todo par de elementos <span class="math inline">\(\gamma, \gamma&#39; \in \Gamma\)</span>, com <span class="math inline">\(\gamma \neq \gamma&#39;\)</span>, <span class="math inline">\(A_{\gamma} \cap A_{\gamma&#39;} = \varnothing\)</span>.</p>
+<p>Neste caso, usaremos a notação <span class="math inline">\(\sum\limits_{\gamma \in \Gamma} A_{\gamma}\)</span>, em lugar de <span class="math inline">\(\bigcup\limits_{\gamma \in \Gamma} A_{\gamma}\)</span>, para indicar a união da família.</p>
+<p>Dado <span class="math inline">\(A \subseteq \Omega, A^c\)</span> denotará o conjunto dos pontos que não pertencem a <span class="math inline">\(A\)</span>.
+Em símbolos, <span class="math inline">\(A^c = \{\omega: \omega \notin A\}\)</span>.
+<span class="math inline">\(A^c\)</span> é chamado complemento de <span class="math inline">\(A\)</span>.</p>
+<p>A diferença entre <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>, simbolizada por <span class="math inline">\(A-B\)</span>, é, por definição, o conjunto <span class="math inline">\(A-B = A \cap B^c\)</span>.</p>
+<p>Tal diferença será chamada própria, se <span class="math inline">\(B \subseteq A\)</span>.
+Ao conjunto <span class="math inline">\((A-B) + (B-A)\)</span>, designado por <span class="math inline">\(A \Delta B\)</span>, chamaremos diferença simétrica entre <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>.</p>
+<p>Apresentamos, a seguir, uma série de importantes relações que serão usadas sem menções explícitas, nos capítulos seguintes.
+Suas demonstrações são deixadas como exercícios.</p>
+<p><strong>0.2.1.</strong> <span class="math inline">\(\forall A, A \subseteq \Omega; A \cup \varnothing = A, A \cap \varnothing = \varnothing\)</span>.</p>
+<p><strong>0.2.2.</strong> <span class="math inline">\(A \subseteq B\)</span> se, e somente se, <span class="math inline">\(A \cup B = B\)</span>.</p>
+<p><strong>0.2.3.</strong> <span class="math inline">\(A \cup (B \cup C) = (A \cup B) \cup C\)</span>.</p>
+<p><strong>0.2.4.</strong> <span class="math inline">\(A \cap (B \cap C) = (A \cap B) \cap C\)</span>.</p>
+<p><strong>0.2.5.</strong> <span class="math inline">\(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\)</span>.</p>
+<p><strong>0.2.6.</strong> <span class="math inline">\(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\)</span>.</p>
+<p><strong>0.2.7.</strong> <span class="math inline">\(A \cap (\bigcup\limits_{\gamma \in \Gamma} A_{\gamma}) = \bigcup\limits_{\gamma \in \Gamma} (A \cap A_{\gamma})\)</span>.</p>
+<p><strong>0.2.8.</strong> <span class="math inline">\(A \cup (\bigcap\limits_{\gamma \in \Gamma} A_{\gamma}) = \bigcap\limits_{\gamma \in \Gamma} (A \cup A_{\gamma})\)</span>.</p>
+<p><strong>0.2.9.</strong> <span class="math inline">\(A + A^c = \Omega, A \cap A^c = \varnothing, \Omega^c = \varnothing, \varnothing^c = \Omega\)</span>.</p>
+<p><strong>0.2.10.</strong> <span class="math inline">\((A^c)^c = A\)</span>; <span class="math inline">\(A \subseteq B\)</span> se, e somente se, <span class="math inline">\(B^c \subseteq A^c\)</span>.</p>
+<p><strong>0.2.11.</strong> <span class="math inline">\((\bigcup\limits_{\gamma \in \Gamma} A_{\gamma})^c = \bigcap\limits_{\gamma \in \Gamma} (A_{\gamma}^c)\)</span>.</p>
+<p><strong>0.2.12.</strong> <span class="math inline">\((\bigcap\limits_{\gamma \in \Gamma} A_{\gamma})^c = \bigcup\limits_{\gamma \in \Gamma} (A_{\gamma}^c)\)</span>.</p>
+<p><strong>0.2.13.</strong> <span class="math inline">\(A \Delta B \subseteq (A \Delta C) \cup (B \Delta C), \forall C \subseteq \Omega\)</span>.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="cap01.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cap03.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/00-02-conjuntos.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.epub", "_main.tex"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
