@@ -152,7 +152,7 @@ Se $A \subseteq X$ e $f: X \to Y$, a notação $f|_A$ é a função pertinente a
 
 $$f|_A(x) = f(x), \text{ onde chama-se } f|_A \text{ a restrição de } f \text{ a } A.$$
 
-## Exercícios {.unnumbered}
+## Exercícios {.unnumbered #ex0}
 
 1.  Provar as fórmulas das Seçs. \@ref(cap0e2e), \@ref(cap0e3e), \@ref(cap0e4e).
 2.  Descrever por palavras o conjunto: $$ \lim_n \sup A_n - \lim_n \inf A_n. $$

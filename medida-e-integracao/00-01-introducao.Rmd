@@ -38,7 +38,7 @@ O problema então pode ser formulado da seguinte maneira. Dado um semi-anel $\ma
 
 O resultado mais importante é o seguinte:
 
-**Teorema** (Teorema de extensão) Dada uma medida $\mu$ sobre um semi-anel $\mathbb{S}$, existem um $\sigma$-anel $\Lambda, \Lambda \supseteq \mathbb{S}$, e uma medida completa $\mu$ sobre $\Lambda$ que é uma extensão de $\mu$. Se $\mu$ é $\sigma$-finita sobre $\mathbb{S}$ então a extensão é única.
+**Teorema.** (Teorema de extensão) Dada uma medida $\mu$ sobre um semi-anel $\mathbb{S}$, existem um $\sigma$-anel $\Lambda, \Lambda \supseteq \mathbb{S}$, e uma medida completa $\mu$ sobre $\Lambda$ que é uma extensão de $\mu$. Se $\mu$ é $\sigma$-finita sobre $\mathbb{S}$ então a extensão é única.
 
 O [Cap. 1](#cap1e) estuda diferentes classes de conjuntos sobre as quais as funções de conjunto introduzidas no [Cap. 2](#cap2e) vão ser definidas. O teorema enunciado acima está contido no [Cap. 2](#cap2e) e é obtido depois de uma série de resultados técnicos muitos deles com interesse independente. O procedimento de extensão é trabalhoso e vai requerer do leitor atenção, concentração e força de vontade para ler os detalhes até o fim. Na minha opinião vale a pena fazer o esforço logo no início pela familiaridade que se obtém na manipulação de conjuntos mensuráveis, facilitando dessa forma a leitura dos capítulos seguintes.
 

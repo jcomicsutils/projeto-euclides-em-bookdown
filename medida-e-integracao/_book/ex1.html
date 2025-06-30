@@ -4,20 +4,20 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7.6 Mudança de variáveis em integrais | Medida e Integração</title>
-  <meta name="description" content="7.6 Mudança de variáveis em integrais | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <title>Exercícios | Medida e Integração</title>
+  <meta name="description" content="Exercícios | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7.6 Mudança de variáveis em integrais | Medida e Integração" />
+  <meta property="og:title" content="Exercícios | Medida e Integração" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="7.6 Mudança de variáveis em integrais | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta property="og:description" content="Exercícios | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
   <meta name="github-repo" content="jcomicsutils/projeto-euclides-em-bookdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7.6 Mudança de variáveis em integrais | Medida e Integração" />
+  <meta name="twitter:title" content="Exercícios | Medida e Integração" />
   
-  <meta name="twitter:description" content="7.6 Mudança de variáveis em integrais | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="twitter:description" content="Exercícios | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
   
 
 <meta name="author" content="Pedro J. Fernandez" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="cap7e5e.html"/>
-<link rel="next" href="ex7.html"/>
+<link rel="prev" href="cap1e.html"/>
+<link rel="next" href="cap2e.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -180,16 +180,67 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="cap7e6e" class="section level2 hasAnchor" number="7.6">
-<h2><span class="header-section-number">7.6</span> Mudança de variáveis em integrais<a href="cap7e6e.html#cap7e6e" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ex1" class="section level2 unnumbered hasAnchor">
+<h2>Exercícios<a href="ex1.html#ex1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\{\Omega_i\}_{i \in I}\)</span> uma família de conjuntos e <span class="math inline">\(\mathbb{S}_i\)</span> uma semi-álgebra sobre <span class="math inline">\(\Omega_i\)</span>. Seja <span class="math inline">\(\Omega = \prod\limits_{i \in I} \Omega_i\)</span> e <span class="math inline">\(\mathbb{S} = \{\prod\limits_{i \in I} B_i \text{ onde } B_i = \Omega_i \text{ para todos os índices, salvo um número finito nos quais } B_i \in \mathbb{S}_i \}\)</span>. Então <span class="math inline">\(\mathbb{S}\)</span> é uma semi-álgebra sobre <span class="math inline">\(\Omega\)</span> (Essa semi-álgebra é chamada semi-álgebra produto).</li>
+<li>Demonstrar a Prop. <a href="cap1e.html#cap1e">1.1.</a></li>
+<li>Demonstrar a Prop. <a href="cap1e.html#cap1e">1.5.</a></li>
+<li>Demonstrar a Prop. <a href="cap1e.html#cap1e">1.7.</a></li>
+<li>Calcular <span class="math inline">\(\sigma(\mathbb{S})\)</span> e <span class="math inline">\(\overline{\sigma}(\mathbb{S})\)</span> onde <span class="math inline">\(\mathbb{S}\)</span> é o semi-anel descrito no Exemplo <a href="cap1e.html#cap1e">1.3.</a></li>
+<li>Seja <span class="math inline">\(\mathscr{C}\)</span> uma classe de conjuntos tal que <span class="math inline">\(\varnothing \in \mathscr{C}\)</span>. Seja <span class="math inline">\(\tilde{\mathscr{C}}\)</span> a classe dos conjuntos que são uniões finitas de diferenças de elementos de <span class="math inline">\(\mathscr{C}\)</span>. Definimos <span class="math inline">\(\mathscr{C}_0 = \mathscr{C}\)</span> e para <span class="math inline">\(n \ge 1\)</span>, <span class="math inline">\(\mathscr{C}_n = \tilde{\mathscr{C}}_{n-1}\)</span>. Provar:</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\mathbb{R}(\mathscr{C}) = \bigcup\limits_{n=0}^{\infty} \mathscr{C}_n\)</span>.</p></li>
+<li><p>se <span class="math inline">\(\mathscr{C}\)</span> é enumerável, <span class="math inline">\(\mathbb{R}(\mathscr{C})\)</span> também o é.</p></li>
+</ol>
+<!-- -->
+<ol start="7" style="list-style-type: decimal">
+<li>Se <span class="math inline">\((X, \tau)\)</span> é um espaço topológico, denotaremos com <span class="math inline">\(\mathscr{B}(X, \tau)\)</span> ou <span class="math inline">\(\mathscr{B}(\tau)\)</span> simplesmente a <span class="math inline">\(\sigma\)</span>-álgebra gerada pela topologia. Essa <span class="math inline">\(\sigma\)</span>-álgebra é chamada <span class="math inline">\(\sigma\)</span>-álgebra de Borel. Provar que a <span class="math inline">\(\sigma\)</span>-álgebra de Borel de <span class="math inline">\(\mathbb{R}^n\)</span> coincide com a <span class="math inline">\(\sigma\)</span>-álgebra gerada pelos conjuntos descritos no Exemplo <a href="cap1e.html#cap1e">1.2.</a></li>
+<li>Seja <span class="math inline">\(\mathscr{C}\)</span> uma classe de conjuntos não-vazia. Seja <span class="math inline">\(A \in \sigma(\mathscr{C})\)</span>. Então existe uma classe enumerável <span class="math inline">\(\mathscr{D} \subseteq \mathscr{C}\)</span>, tal que <span class="math inline">\(A \in \sigma(\mathscr{D})\)</span>.</li>
+<li>Seja <span class="math inline">\(\mathscr{C}\)</span> uma classe não-vazia de conjuntos, e <span class="math inline">\(A \subseteq \Omega\)</span>. Denotamos com <span class="math inline">\(\mathscr{C} \cap A = \{C \cap A: C \in \mathscr{C}\}\)</span>. Provar que <span class="math inline">\(\sigma(\mathscr{C} \cap A) = \sigma(\mathscr{C}) \cap A\)</span> onde <span class="math inline">\(\sigma(\mathscr{C} \cap A)\)</span> indica a <span class="math inline">\(\sigma\)</span>-álgebra gerada em <span class="math inline">\(A\)</span> por <span class="math inline">\(\mathscr{C} \cap A\)</span>. O resultado continua válido se <span class="math inline">\(\sigma\)</span> for trocado por <span class="math inline">\(\overline{\sigma}\)</span>.</li>
+<li>Uma <span class="math inline">\(\sigma\)</span>-álgebra <span class="math inline">\(\mathscr{A}\)</span> é chamada separável, se <span class="math inline">\(\exists \mathscr{A}_0 \subseteq \mathscr{A}, \mathscr{A}_0\)</span> enumerável, e tal que <span class="math inline">\(\sigma(\mathscr{A}_0) = \mathscr{A}\)</span>.</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>provar que a <span class="math inline">\(\sigma\)</span>-álgebra de Borel de <span class="math inline">\(\mathbb{R}^n\)</span> é separável;</li>
+<li>provar que a <span class="math inline">\(\sigma\)</span>-álgebra de Borel de um espaço métrico separável é separável;</li>
+<li>provar que a <span class="math inline">\(\sigma\)</span>-álgebra de Borel de um espaço topológico com base enumerável é separável e</li>
+<li>dar um exemplo de uma <span class="math inline">\(\sigma\)</span>-álgebra <span class="math inline">\(\mathscr{A}\)</span> separável, e uma sub-<span class="math inline">\(\sigma\)</span>-álgebra <span class="math inline">\(\mathscr{B} \subseteq \mathscr{A}\)</span>, tal que <span class="math inline">\(\mathscr{B}\)</span> não é separável.</li>
+</ol>
+<!-- -->
+<ol start="11" style="list-style-type: decimal">
+<li>Dado um conjunto <span class="math inline">\(\Omega\)</span> e uma <span class="math inline">\(\sigma\)</span>-álgebra <span class="math inline">\(\mathscr{A}\)</span> em <span class="math inline">\(\Omega\)</span>, chamaremos espaço mensurável ao par <span class="math inline">\((\Omega, \mathscr{A})\)</span>. Seja <span class="math inline">\((\Omega, \mathscr{A})\)</span> um espaço mensurável; <span class="math inline">\(\mathscr{B} \subseteq \mathscr{A}\)</span> uma álgebra enumerável, tal que <span class="math inline">\(\sigma(\mathscr{B}) = \mathscr{A}\)</span>. Para <span class="math inline">\(\omega \in \Omega\)</span>; <span class="math display">\[ A(\omega) = \cap \{A: A \in \mathscr{A}, \omega \in A\}. \]</span> Provar que <span class="math inline">\(A(\omega) = \cap \{B: B \in \mathscr{B}, \omega \in B\}\)</span>. Em particular <span class="math inline">\(A(\omega) \in \mathscr{A}\)</span>.</li>
+<li>Seja <span class="math inline">\(\Omega = \mathbb{R}^2\)</span> e <span class="math inline">\(R(y) = \{(x, y): x \in \mathbb{R}^1\}\)</span> (reta horizontal). Seja <span class="math inline">\(\mathscr{C} = \{R(y): y \in \mathbb{R}^1\}\)</span>. Calcular:</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\sigma\)</span>-anel gerado por <span class="math inline">\(\mathscr{C}\)</span>;</li>
+<li><span class="math inline">\(\sigma\)</span>-álgebra gerada por <span class="math inline">\(\mathscr{C}\)</span> e</li>
+<li>a classe monotônica gerada por <span class="math inline">\(\mathscr{C}\)</span>.</li>
+</ol>
+<!-- -->
+<ol start="14" style="list-style-type: decimal">
+<li>Seja <span class="math inline">\(\Omega\)</span> um conjunto não-enumerável. <span class="math inline">\(\mathbb{S} = \{\{\omega\}: \omega \in \Omega\} \cup \{\phi\}\)</span>. Provar que <span class="math inline">\(\mathbb{S}\)</span> é semi-anel. Descrever <span class="math inline">\(\tilde{\sigma}(\mathbb{S})\)</span> e <span class="math inline">\(\sigma(\mathbb{S})\)</span>.</li>
+<li>Consideremos em <span class="math inline">\(\mathbb{R}^2\)</span> as seguintes classes de conjuntos: <span class="math inline">\(\mathscr{C}_1 = \{x \times \mathbb{R}^1: x \in \mathbb{R}^1\}\)</span>; <span class="math inline">\(\mathscr{C}_2 = \{\mathbb{R}^1 \times y: y \in \mathbb{R}^1\}\)</span>; <span class="math inline">\(\mathscr{B}_1 = \{A \times \mathbb{R}^1: A \text{ boreliano de } \mathbb{R}^1\}\)</span>; <span class="math inline">\(\mathscr{B}_2 = \{\mathbb{R}_1 \times A: A \text{ boreliano de } \mathbb{R}^1\}\)</span>. Calcular:</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\mathscr{B}_1 \cap \mathscr{B}_2\)</span>;</li>
+<li><span class="math inline">\(\tilde{\sigma}(\mathscr{C}_1), \tilde{\sigma}(\mathscr{C}_2), \sigma(\mathscr{C}_1), \sigma(\mathscr{C}_2)\)</span>;</li>
+<li><span class="math inline">\(\sigma(\mathscr{B}_1) \cap \sigma(\mathscr{C}_2)\)</span>.</li>
+</ol>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="cap7e5e.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ex7.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="cap1e.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cap2e.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -210,7 +261,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/jcomicsutils/projeto-euclides-em-bookdown/edit/main/medida-e-integracao/07-integracao-e-diferenciacao.Rmd",
+    "link": "https://github.com/jcomicsutils/projeto-euclides-em-bookdown/edit/main/medida-e-integracao/01-classes-de-conjuntos.Rmd",
     "text": "Edit"
   },
   "history": {

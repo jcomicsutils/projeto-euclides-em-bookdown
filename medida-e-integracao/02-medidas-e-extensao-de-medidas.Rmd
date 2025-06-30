@@ -46,7 +46,7 @@ Em geral para uma classe arbitrária de conjuntos $\mathscr{A}$ contidos em $\Om
 
 *(Nota. A Prop. [2.1.1](#cap2e1e) continuaria válida se* $\mathscr{A}$ fosse só um $\sigma$-anel).
 
-**Demonstração**
+**Demonstração.**
 
 1)  $B = A + (B-A) \Rightarrow \mu(B) = \mu(A) + \mu(B-A)$ e como $\mu(A) \le \mu(B) < \infty$, podemos subtrair $\mu(A)$ de ambos os membros, obtendo o resultado desejado.
 
@@ -64,7 +64,7 @@ Em geral para uma classe arbitrária de conjuntos $\mathscr{A}$ contidos em $\Om
 
 **PROPOSIÇÃO 2.2.1.** Seja $\mu$ uma medida finitamente aditiva sobre o semi-anel $\mathbb{S}$. Então existe uma única medida $\overline{\mu}$ finitamente aditiva sobre o anel gerado por $\mathbb{S}$, que é uma extensão de $\mu$.
 
-**Demonstração** Observemos inicialmente que se $\sum\limits_{i=1}^{n} C_i = \sum\limits_{j=1}^{m} B_j$, com $C_i$ e $B_j \in \mathbb{S}$, então: $$ \sum_{i=1}^{n} \mu(C_i) = \sum_{i=1}^{n} \sum_{j=1}^{m} \mu(C_i \cap B_j) = \sum_{j=1}^{m} \sum_{i=1}^{n} \mu(C_i \cap B_j) = \sum_{j=1}^{m} \mu(B_j). $$ Definimos então para todo $A$ no anel gerado por $\mathbb{S}$, com $$ A = \sum_{i=1}^{n} C_i \quad \text{e} \quad C_i \in \mathbb{S}, $$ $$ \overline{\mu}(A) = \sum_{i=1}^{n} \mu(C_i), $$ o que é possível pela observação acima (isto é, $\overline{\mu}$ está bem definida). É fácil ver que $\overline{\mu}$ é finitamente aditiva sobre o anel gerado. A unicidade é evidente.
+**Demonstração.** Observemos inicialmente que se $\sum\limits_{i=1}^{n} C_i = \sum\limits_{j=1}^{m} B_j$, com $C_i$ e $B_j \in \mathbb{S}$, então: $$ \sum_{i=1}^{n} \mu(C_i) = \sum_{i=1}^{n} \sum_{j=1}^{m} \mu(C_i \cap B_j) = \sum_{j=1}^{m} \sum_{i=1}^{n} \mu(C_i \cap B_j) = \sum_{j=1}^{m} \mu(B_j). $$ Definimos então para todo $A$ no anel gerado por $\mathbb{S}$, com $$ A = \sum_{i=1}^{n} C_i \quad \text{e} \quad C_i \in \mathbb{S}, $$ $$ \overline{\mu}(A) = \sum_{i=1}^{n} \mu(C_i), $$ o que é possível pela observação acima (isto é, $\overline{\mu}$ está bem definida). É fácil ver que $\overline{\mu}$ é finitamente aditiva sobre o anel gerado. A unicidade é evidente.
 
 **PROPOSIÇÃO 2.2.2.** Seja $\mu$ uma medida sobre um semi-anel $\mathbb{S}$. Então:
 
@@ -72,7 +72,7 @@ i)  $A \subseteq B \Rightarrow \mu(A) \le \mu(B), \quad A, B \in \mathbb{S} \qua
 
 ii) $A \subseteq \bigcup\limits_{n=1}^{\infty} A_n \Rightarrow \mu(A) \le \sum\limits_{n=1}^{\infty} \mu(A_n); \quad A, A_n \in \mathbb{S}$.
 
-**Demonstração**
+**Demonstração.**
 
 i)  $$ B-A = \sum_{i=1}^{n} C_i, \quad C_i \in \mathbb{S} $$ $$ B = A + \sum_{i=1}^{n} C_i, $$ $$ \mu(B) = \mu(A) + \sum_{i=1}^{n} \mu(C_i) \ge \mu(A); $$
 
@@ -82,7 +82,7 @@ Seja $\mu$ uma medida sobre um semi-anel $\mathbb{S}$.
 
 **PROPOSIÇÃO 2.2.3.** Dada uma seqüência $\{C_n\}, C_n \in \mathbb{S} \forall n$, existe uma seqüência $\{C_n'\}, C_n' \in \mathbb{S} \forall n$, tal que: $$ \bigcup_{n=1}^{\infty} C_n = \sum_{n=1}^{\infty} C_n' \quad \text{e} \quad \sum_{n=1}^{\infty} \mu(C_n') \le \sum_{n=1}^{\infty} \mu(C_n). $$
 
-**Demonstração** $$ \bigcup_{n=1}^{\infty} C_n = C_1 + \sum_{n=2}^{\infty} \left[C_n - \left(\bigcup_{i=1}^{n-1} C_i\right)\right] \qquad \text{(I)} $$ Porém, $\forall n \ge 2, C_n - \bigcup_{i=1}^{n-1} C_i$ pertence ao anel gerado por $\mathbb{S}$, e pela Prop. [1.2](#cap1e) pode ser escrito como uma soma finita de elementos de $\mathbb{S}$, ou seja, $$ C_n - \bigcup_{i=1}^{n-1} C_i = \sum_{j=1}^{k_n} B_{nj} $$ onde $B_{nj} \in \mathbb{S}$. Substituindo em $\text{(I)}$, obtemos uma soma enumerável de elementos de $\mathbb{S}$. Como $\sum_{j=1}^{k_n} B_{nj} \subseteq C_n$, temos que $$ \mu(C_n) \ge \sum_{j=1}^{k_n} \mu(B_{nj}). $$ Temos também que $$ \sum_{n=1}^{\infty} \mu(C_n) \ge \sum_{n=1}^{\infty} \mu(C_n'). $$
+**Demonstração.** $$ \bigcup_{n=1}^{\infty} C_n = C_1 + \sum_{n=2}^{\infty} \left[C_n - \left(\bigcup_{i=1}^{n-1} C_i\right)\right] \qquad \text{(I)} $$ Porém, $\forall n \ge 2, C_n - \bigcup_{i=1}^{n-1} C_i$ pertence ao anel gerado por $\mathbb{S}$, e pela Prop. [1.2](#cap1e) pode ser escrito como uma soma finita de elementos de $\mathbb{S}$, ou seja, $$ C_n - \bigcup_{i=1}^{n-1} C_i = \sum_{j=1}^{k_n} B_{nj} $$ onde $B_{nj} \in \mathbb{S}$. Substituindo em $\text{(I)}$, obtemos uma soma enumerável de elementos de $\mathbb{S}$. Como $\sum_{j=1}^{k_n} B_{nj} \subseteq C_n$, temos que $$ \mu(C_n) \ge \sum_{j=1}^{k_n} \mu(B_{nj}). $$ Temos também que $$ \sum_{n=1}^{\infty} \mu(C_n) \ge \sum_{n=1}^{\infty} \mu(C_n'). $$
 
 **DEFINIÇÃO 2.2.1.** Seja $\mathbb{S}$ um semi-anel. $\mu$ é uma medida sobre $\mathbb{S}$. Definimos: $$ \mathscr{F} = \{A \subseteq \Omega: A \subseteq \bigcup\limits_{n=1}^{\infty} C_n, \text{ para alguma seqüência } \{C_n\}_{n \in \mathbb{N}} \text{ onde } C_n \in \mathbb{S}, \forall n\}. $$
 
@@ -100,7 +100,7 @@ Seja $\mu$ uma medida sobre um semi-anel $\mathbb{S}$.
 
 4)  $\mu^*(\bigcup\limits_{n=1}^{\infty} A_n) \le \sum\limits_{n=1}^{\infty} \mu^*(A_n), \quad \forall \{A_n\}_{n \in \mathbb{N}}, \quad A_n \in \mathscr{F}, \forall n$.
 
-**Demonstração** Demonstração 1), 2) e 3) são fáceis. Vamos provar 4).
+**Demonstração.** Demonstração 1), 2) e 3) são fáceis. Vamos provar 4).
 
 Se $\mu^*(A_n) = \infty$ para algum $n \in \mathbb{N}$, ambos os membros são iguais a $+\infty$.
 
@@ -126,7 +126,7 @@ Logo, $\bigcup\limits_{n=1}^{\infty} A_n \subseteq \bigcup\limits_{n=1}^{\infty}
 
 Observe que 1) e 4) mostram que $\Lambda$ é um anel e 3) mostra que $\mu^*$, restrita a $\Lambda$, é finitamente aditiva.
 
-**Demonstração** Observemos inicialmente que se desejamos provar que um certo conjunto $M \in \mathscr{F}$ é mensurável, é suficiente mostrar que $$ \mu^*(A) \ge \mu^*(A \cap M) + \mu^*(A \cap M^c), $$ para todo $A \in \mathscr{F}$, tal que $\mu^*(A) < \infty$, pois a desigualdade no outro sentido é sempre válida pela Prop. [2.2.4](#cap2e2e), 4), e a desigualdade acima é verdadeira sempre que $\mu^*(A) = \infty$.
+**Demonstração.** Observemos inicialmente que se desejamos provar que um certo conjunto $M \in \mathscr{F}$ é mensurável, é suficiente mostrar que $$ \mu^*(A) \ge \mu^*(A \cap M) + \mu^*(A \cap M^c), $$ para todo $A \in \mathscr{F}$, tal que $\mu^*(A) < \infty$, pois a desigualdade no outro sentido é sempre válida pela Prop. [2.2.4](#cap2e2e), 4), e a desigualdade acima é verdadeira sempre que $\mu^*(A) = \infty$.
 
 Seja $A \in \mathscr{F}$, tal que $\mu^*(A) < \infty$.
 
@@ -148,7 +148,7 @@ Seja $A \in \mathscr{F}$, tal que $\mu^*(A) < \infty$.
 
 Observe que 1) mostra que $\Lambda$ é um $\sigma$-anel e 3) mostra que $\mu^*$ restrita a $\Lambda$ é $\sigma$-aditiva.
 
-**Demonstração**
+**Demonstração.**
 
 1)  É suficiente considerar o caso em que os $M_n$ são disjuntos dois a dois, porque $\Lambda$ é anel e $$ \bigcup_{n=1}^{\infty} M_n = M_1 + \sum_{n=2}^{\infty} \left(M_n - \bigcup_{i=1}^{n-1} M_i\right). $$ Seja $A \in \mathscr{F}$ e seja $n \in \mathbb{N}$: $$ \begin{aligned} \mu^*(A) &= \mu^*\left(A \cap \sum_{i=1}^{n} M_i\right) + \mu^*\left(A \cap \left(\sum_{i=1}^{n} M_i\right)^c\right) \\ &\ge \sum_{i=1}^{n} \mu^*(A \cap M_i) + \mu^*\left(A \cap \left(\sum_{i=1}^{\infty} M_i\right)^c\right). \end{aligned} $$ Para a igualdade, usamos o fato de que $\Lambda$ é um anel e portanto $\sum\limits_{i=1}^{n} M_i$ é mensurável, e para a desigualdade, usamos a Prop. [2.2.5](#cap2e2e), 2) e a Prop. [2.2.4](#cap2e2e), 3). Como a desigualdade obtida vale para todo $n \in \mathbb{N}$, $$ \begin{aligned} \mu^*(A) &\ge \sum_{i=1}^{\infty} \mu^*(A \cap M_i) + \mu^*\left(A \cap \left(\sum_{i=1}^{\infty} M_i\right)^c\right) \\ &\ge \mu^*\left(A \cap \sum_{i=1}^{\infty} M_i\right) + \mu^*\left(A \cap \left(\sum_{i=1}^{\infty} M_i\right)^c\right). \end{aligned} $$
 
@@ -158,7 +158,7 @@ Observe que 1) mostra que $\Lambda$ é um $\sigma$-anel e 3) mostra que $\mu^*$ 
 
 **PROPOSIÇÃO 2.2.7.** $\mathbb{S} \subseteq \Lambda$ (ou seja, os conjuntos do semi-anel $\mathbb{S}$ são mensuráveis).
 
-**Demonstração** Seja $C \in \mathbb{S}$. É suficiente provar que $\forall \varepsilon > 0, \forall A \in \mathscr{F}$ com $\mu^*(A) < \infty$, $$ \mu^*(A \cap C) + \mu^*(A \cap C^c) \le \mu^*(A) + \varepsilon $$ Sejam $\varepsilon > 0$ e $A \in \mathscr{F}$. Então existe uma seqüência $\{C_n\}$, com $C_n \in \mathbb{S} \forall n$, tal que: $$ A \subseteq \bigcup_{n=1}^{\infty} C_n \quad \text{e} \quad \sum_{n=1}^{\infty} \mu(C_n) < \mu^*(A) + \varepsilon. \quad \text{(I)} $$ $$ \mu^*(A \cap C) \le \mu^*(C \cap \bigcup_{n=1}^{\infty} C_n) \le \sum_{n=1}^{\infty} \mu^*(C \cap C_n) = \sum_{n=1}^{\infty} \mu(C \cap C_n) \quad \text{(II)} $$ pela Prop. [2.2.4](#cap2e2e), 3) e 4), e pela Prop. [2.2.4](#cap2e2e), 1). Agora $A \cap C^c \subseteq \bigcup_{n=1}^{\infty} [C_n \cap C^c] = \bigcup_{n=1}^{\infty} (C_n - C).$ Como $\mathbb{S}$ é semi-anel, $\forall n$, $$ C_n - C = \sum_{j=1}^{k_n} B_{nj} $$ para algum $k_n \in \mathbb{N}$ e para alguns $B_{nj} \in \mathbb{S}, 1 \le j \le k_n$. Observe que daí decorre que $$ \mu(C_n) = \mu(C \cap C_n) + \sum_{j=1}^{k_n} \mu(B_{nj}), \quad \forall n. $$ Então, $$ \begin{aligned} \mu^*(A \cap C^c) &\le \sum_{n=1}^{\infty} \sum_{j=1}^{k_n} \mu(B_{nj}) = \sum_{n=1}^{\infty} [\mu(C_n) - \mu(C \cap C_n)] = \\ &= \sum_{n=1}^{\infty} \mu(C_n) - \sum_{n=1}^{\infty} \mu(C \cap C_n) \end{aligned} \quad \text{(III)} $$ A última passagem acima é válida porque $\mu(C \cap C_n) \le \mu(C_n), \forall n$, e então (I) mostra que as duas séries do 2.$^{\circ}$ membro são absolutamente convergentes. Somando (II) e (III) temos: $$ \mu^*(A \cap C) + \mu^*(A \cap C^c) \le \sum_{n=1}^{\infty} \mu(C_n) \le \mu^*(A) + \varepsilon, \quad c. q. d. $$
+**Demonstração.** Seja $C \in \mathbb{S}$. É suficiente provar que $\forall \varepsilon > 0, \forall A \in \mathscr{F}$ com $\mu^*(A) < \infty$, $$ \mu^*(A \cap C) + \mu^*(A \cap C^c) \le \mu^*(A) + \varepsilon $$ Sejam $\varepsilon > 0$ e $A \in \mathscr{F}$. Então existe uma seqüência $\{C_n\}$, com $C_n \in \mathbb{S} \forall n$, tal que: $$ A \subseteq \bigcup_{n=1}^{\infty} C_n \quad \text{e} \quad \sum_{n=1}^{\infty} \mu(C_n) < \mu^*(A) + \varepsilon. \quad \text{(I)} $$ $$ \mu^*(A \cap C) \le \mu^*(C \cap \bigcup_{n=1}^{\infty} C_n) \le \sum_{n=1}^{\infty} \mu^*(C \cap C_n) = \sum_{n=1}^{\infty} \mu(C \cap C_n) \quad \text{(II)} $$ pela Prop. [2.2.4](#cap2e2e), 3) e 4), e pela Prop. [2.2.4](#cap2e2e), 1). Agora $A \cap C^c \subseteq \bigcup_{n=1}^{\infty} [C_n \cap C^c] = \bigcup_{n=1}^{\infty} (C_n - C).$ Como $\mathbb{S}$ é semi-anel, $\forall n$, $$ C_n - C = \sum_{j=1}^{k_n} B_{nj} $$ para algum $k_n \in \mathbb{N}$ e para alguns $B_{nj} \in \mathbb{S}, 1 \le j \le k_n$. Observe que daí decorre que $$ \mu(C_n) = \mu(C \cap C_n) + \sum_{j=1}^{k_n} \mu(B_{nj}), \quad \forall n. $$ Então, $$ \begin{aligned} \mu^*(A \cap C^c) &\le \sum_{n=1}^{\infty} \sum_{j=1}^{k_n} \mu(B_{nj}) = \sum_{n=1}^{\infty} [\mu(C_n) - \mu(C \cap C_n)] = \\ &= \sum_{n=1}^{\infty} \mu(C_n) - \sum_{n=1}^{\infty} \mu(C \cap C_n) \end{aligned} \quad \text{(III)} $$ A última passagem acima é válida porque $\mu(C \cap C_n) \le \mu(C_n), \forall n$, e então (I) mostra que as duas séries do 2.$^{\circ}$ membro são absolutamente convergentes. Somando (II) e (III) temos: $$ \mu^*(A \cap C) + \mu^*(A \cap C^c) \le \sum_{n=1}^{\infty} \mu(C_n) \le \mu^*(A) + \varepsilon, \quad c. q. d. $$
 
 **DEFINIÇÃO 2.2.5.** Uma medida $\mu$ sobre um $\sigma$-anel $\mathscr{A}$ é dita completa se, e somente se, $$ B \subseteq A, \quad A \in \mathscr{A} \quad \text{e} \quad \mu(A) = 0 \Rightarrow B \in \mathscr{A}. $$ Então definindo $\overline{\mu}$ como a restrição de $\mu^*$ a $\Lambda$ demonstramos o seguinte:
 
@@ -166,7 +166,7 @@ Observe que 1) mostra que $\Lambda$ é um $\sigma$-anel e 3) mostra que $\mu^*$ 
 
 **PROPOSIÇÃO 2.2.8.** Se $\mu$ é $\sigma$-finita, então a extensão de $\mu$ a $\sigma(\mathbb{S})$ é única. (A definição de medida $\sigma$-finita sobre um semi-anel é análoga à Definição [2.1.6](#cap2e1e)).
 
-**Demonstração** Consideraremos inicialmente o caso em que $\mathbb{S}$ é uma semi-álgebra e $\mu(\Omega) < \infty$. Sejam $\mu_1$ e $\mu_2$ medidas sobre $\sigma(\mathbb{S})$ que estendam $\mu$. Seja $\mathscr{C} = \{A \in \sigma(\mathbb{S}); \mu_1(A) = \mu_2(A)\}$. Então $\mathscr{C}$ é uma classe $\sigma$-aditiva. Senão vejamos:
+**Demonstração.** Consideraremos inicialmente o caso em que $\mathbb{S}$ é uma semi-álgebra e $\mu(\Omega) < \infty$. Sejam $\mu_1$ e $\mu_2$ medidas sobre $\sigma(\mathbb{S})$ que estendam $\mu$. Seja $\mathscr{C} = \{A \in \sigma(\mathbb{S}); \mu_1(A) = \mu_2(A)\}$. Então $\mathscr{C}$ é uma classe $\sigma$-aditiva. Senão vejamos:
 
 i)  $A, B \in \mathscr{C}, A \supseteq B$ então, $\mu_i(B) \le \mu_i(A) \le \mu_i(\Omega) < \infty, i=1, 2 \Rightarrow \mu_1(A-B) = \mu_1(A) - \mu_1(B) = \mu_2(A) - \mu_2(B) = \mu_2(A-B) \Rightarrow A-B \in \mathscr{C}$.
 
@@ -188,7 +188,7 @@ As seguintes proposições agregam mais informação sobre a relação entre $\t
 
 *(Nota. A proposição é válida se* $\mathscr{A}$ é $\sigma$-anel, com praticamente a mesma demonstração).
 
-**Demonstração** Demonstração Vamos mostrar inicialmente que $\overline{\mathscr{A}}$ é um $\sigma$-anel. É fácil ver que $\overline{\mathscr{A}}$ é fechado por união enumerável.
+**Demonstração.** Demonstração Vamos mostrar inicialmente que $\overline{\mathscr{A}}$ é um $\sigma$-anel. É fácil ver que $\overline{\mathscr{A}}$ é fechado por união enumerável.
 
 Basta provar que $\overline{\mathscr{A}}$ é fechado por diferença própria. Sejam $A_1 \cup N_1$ e $A_2 \cup N_2$ elementos de $\overline{\mathscr{A}}$. $$ (A_1 \cup N_1) - (A_2 \cup N_2) = (A_1 \cap A_2^c \cap N_2^c) \cup (N_1 \cap A_2^c \cap N_2^c). $$ Mas existe $M_2 \in \mathscr{A}$, tal que $\mu(M_2) = 0$ e $N_2 \subseteq M_2$, podendo-se escrever a expressão acima na forma $$ (A_1 \cap A_2^c \cap M_2^c) \cup [(A_1 \cap A_2^c) \cap (M_2 - N_2)] \cup (N_1 \cap A_2^c \cap N_2^c), $$ na qual a 1.$^{\text{a}}$ expressão entre parênteses está em $\mathscr{A}$ e o restante está contido em um conjunto de medida nula.
 
@@ -198,25 +198,25 @@ Ainda usaremos a letra $\mu$ para indicar a restrição de $\overline{\mu}$ a $\
 
 **PROPOSIÇÃO 2.2.10.** Para todo $A \in \mathscr{F}$, $$ \mu^*(A) = \inf\{\overline{\mu}(B): A \subseteq B \in \Lambda\} = \inf\{\mu(B): A \subseteq B \in \tilde{\sigma}(\mathbb{S})\}. $$
 
-**Demonstração** Como $\overline{\mu}$ é a restrição de $\mu^*$ a $\Lambda$, e $\mu^*$ é monotônica, temos: $$ \mu^*(A) \le \inf\{\overline{\mu}(B): A \subseteq B \in \Lambda\} $$ e, como $\tilde{\sigma}(\mathbb{S}) \subseteq \Lambda$, $$ \inf\{\overline{\mu}(B): A \subseteq B \in \Lambda\} \le \inf\{\mu(B): A \subseteq B \in \tilde{\sigma}(\mathbb{S})\}. $$ Além disso, dada uma seqüência $C_n$ de elementos de $\mathbb{S}$, existe uma outra seqüência $C_n'$ de elementos de $\mathbb{S}$, tal que $$ \bigcup\limits_{n=1}^{\infty} C_n = \sum\limits_{n=1}^{\infty} C_n' \quad \text{e} \quad \sum\limits_{n=1}^{\infty} \mu(C_n) \ge \sum\limits_{n=1}^{\infty} \mu(C_n'), $$ mostrando que $$ \mu^*(A) = \inf\left\{\sum\limits_{n=1}^{\infty} \mu(C_n): A \subseteq \sum\limits_{n=1}^{\infty} C_n, \quad C_n \in \mathbb{S}\right\}. $$ Mas, $$ \sum\limits_{n=1}^{\infty} C_n \in \tilde{\sigma}(\mathbb{S}) \quad \text{e} $$ $$ \sum\limits_{n=1}^{\infty} \mu(C_n) = \mu\left(\sum\limits_{n=1}^{\infty} C_n\right), $$ demonstrando que $\mu^*(A) \ge \inf\{\mu(B): A \subseteq B \in \tilde{\sigma}(\mathbb{S})\}$.
+**Demonstração.** Como $\overline{\mu}$ é a restrição de $\mu^*$ a $\Lambda$, e $\mu^*$ é monotônica, temos: $$ \mu^*(A) \le \inf\{\overline{\mu}(B): A \subseteq B \in \Lambda\} $$ e, como $\tilde{\sigma}(\mathbb{S}) \subseteq \Lambda$, $$ \inf\{\overline{\mu}(B): A \subseteq B \in \Lambda\} \le \inf\{\mu(B): A \subseteq B \in \tilde{\sigma}(\mathbb{S})\}. $$ Além disso, dada uma seqüência $C_n$ de elementos de $\mathbb{S}$, existe uma outra seqüência $C_n'$ de elementos de $\mathbb{S}$, tal que $$ \bigcup\limits_{n=1}^{\infty} C_n = \sum\limits_{n=1}^{\infty} C_n' \quad \text{e} \quad \sum\limits_{n=1}^{\infty} \mu(C_n) \ge \sum\limits_{n=1}^{\infty} \mu(C_n'), $$ mostrando que $$ \mu^*(A) = \inf\left\{\sum\limits_{n=1}^{\infty} \mu(C_n): A \subseteq \sum\limits_{n=1}^{\infty} C_n, \quad C_n \in \mathbb{S}\right\}. $$ Mas, $$ \sum\limits_{n=1}^{\infty} C_n \in \tilde{\sigma}(\mathbb{S}) \quad \text{e} $$ $$ \sum\limits_{n=1}^{\infty} \mu(C_n) = \mu\left(\sum\limits_{n=1}^{\infty} C_n\right), $$ demonstrando que $\mu^*(A) \ge \inf\{\mu(B): A \subseteq B \in \tilde{\sigma}(\mathbb{S})\}$.
 
 **DEFINIÇÃO 2.2.6.** Se $A \in \mathscr{F}$, $B$ é dito uma cobertura mensurável de $A$ se, e somente se, $B \in \tilde{\sigma}(\mathbb{S}), A \subseteq B$, e para todo $C \in \tilde{\sigma}(\mathbb{S})$, tal que $C \subseteq B-A, \mu(C)=0$.
 
 **PROPOSIÇÃO 2.2.11.** Seja $\mu$ $\sigma$-finita sobre $\mathbb{S}$. Então para todo $A \in \mathscr{F}$, existe uma cobertura mensurável de $A$.
 
-**Demonstração** Consideremos inicialmente o caso em que $\mu^*(A) < \infty$. Pela prop. anterior, para todo $n$ existe $B_n \in \tilde{\sigma}(\mathbb{S}), B_n \supseteq A$, tal que $\mu(B_n) < \mu^*(A) + 1/n$. Além disso, podemos supor que a sucessão $B_n$ é decrescente, o que pode ser conseguido tomando interseções. Vamos mostrar que $B = \bigcap\limits_{n=1}^{\infty} B_n$ é uma cobertura mensurável de $A$. É claro que $B \in \tilde{\sigma}(\mathbb{S})$ e $B \supseteq A$. É fácil ver também que $\mu(B) = \mu^*(A)$, o que implica na validade da 3.$^{\text{a}}$ condição da definição de cobertura mensurável.
+**Demonstração.** Consideremos inicialmente o caso em que $\mu^*(A) < \infty$. Pela prop. anterior, para todo $n$ existe $B_n \in \tilde{\sigma}(\mathbb{S}), B_n \supseteq A$, tal que $\mu(B_n) < \mu^*(A) + 1/n$. Além disso, podemos supor que a sucessão $B_n$ é decrescente, o que pode ser conseguido tomando interseções. Vamos mostrar que $B = \bigcap\limits_{n=1}^{\infty} B_n$ é uma cobertura mensurável de $A$. É claro que $B \in \tilde{\sigma}(\mathbb{S})$ e $B \supseteq A$. É fácil ver também que $\mu(B) = \mu^*(A)$, o que implica na validade da 3.$^{\text{a}}$ condição da definição de cobertura mensurável.
 
 O caso geral recai no caso anterior, porque dado $A \in \mathscr{F}$, existe uma seqüência $\{C_n\}$ de elementos de $\mathscr{F}$, tal que $\mu^*(C_n) < \infty$ para todo $n$ e $A = \sum\limits_{n=1}^{\infty} C_n$, e então, se $B_n$ é cobertura mensurável de $C_n$, $\bigcup\limits_{n=1}^{\infty} B_n$ é cobertura mensurável de $A$.
 
 **PROPOSIÇÃO 2.2.12.** Seja $\mu$ $\sigma$-finita sobre $\mathbb{S}$. Então, $\Lambda$ é o completamento de $\tilde{\sigma}(\mathbb{S})$ em relação a $\mu$, ou seja, $\Lambda = \overline{\tilde{\sigma}(\mathbb{S})}$.
 
-**Demonstração** $\tilde{\sigma}(\mathbb{S}) \subseteq \Lambda$, porque $(\Omega, \Lambda, \overline{\mu})$ é completo. Para mostrar que $\Lambda \subseteq \tilde{\sigma}(\mathbb{S})$, seja $A \in \Lambda$, podendo-se supor como na proposição anterior que $\overline{\mu}(A) < \infty$, já que $\overline{\mu}$ é $\sigma$-finita e $\overline{\sigma}(\mathbb{S})$ é um $\sigma$-anel. Seja $B$ uma cobertura mensurável de $A$. Então $$ \overline{\mu}(B-A) = \mu(B) - \overline{\mu}(A) = 0. $$ Seja $C$ uma cobertura mensurável de $B-A$. Então $$ A = (B-C) + [A-(B-C)] $$ onde $$ B-C \in \tilde{\sigma}(\mathbb{S}) $$ e $$ A-(B-C) = A \cap C \subseteq C. $$ Como $\mu(C) = \overline{\mu}(B-A) = 0, A \in \overline{\tilde{\sigma}(\mathbb{S})}$.
+**Demonstração.** $\tilde{\sigma}(\mathbb{S}) \subseteq \Lambda$, porque $(\Omega, \Lambda, \overline{\mu})$ é completo. Para mostrar que $\Lambda \subseteq \tilde{\sigma}(\mathbb{S})$, seja $A \in \Lambda$, podendo-se supor como na proposição anterior que $\overline{\mu}(A) < \infty$, já que $\overline{\mu}$ é $\sigma$-finita e $\overline{\sigma}(\mathbb{S})$ é um $\sigma$-anel. Seja $B$ uma cobertura mensurável de $A$. Então $$ \overline{\mu}(B-A) = \mu(B) - \overline{\mu}(A) = 0. $$ Seja $C$ uma cobertura mensurável de $B-A$. Então $$ A = (B-C) + [A-(B-C)] $$ onde $$ B-C \in \tilde{\sigma}(\mathbb{S}) $$ e $$ A-(B-C) = A \cap C \subseteq C. $$ Como $\mu(C) = \overline{\mu}(B-A) = 0, A \in \overline{\tilde{\sigma}(\mathbb{S})}$.
 
 A seguinte proposição dá uma idéia de quanto diferem em medida os conjuntos de $\tilde{\sigma}(\mathbb{S})$ e os de $\mathbb{R}(\mathbb{S})$. De modo um pouco impreciso, diremos que os conjuntos de $\tilde{\sigma}(\mathbb{S})$ podem ser aproximados arbitrariamente, em medida, por conjuntos de $\mathbb{R}(\mathbb{S})$. Uma conseqüência desta prop. é também a seguinte: seja $A \in \Lambda$; então, se quisermos aproximar $A$ com conjuntos de $\tilde{\sigma}(\mathbb{S})$, poderemos fazer isso com erro 0 em medida; (isto é, existe $B \in \tilde{\sigma}(\mathbb{S})$, tal que $\mu(B \Delta A) = 0$) se quisermos aproximar $A$ com conjuntos de $\mathbb{R}(\mathbb{S})$, então dado $\varepsilon > 0$ poderemos encontrar $B \in \mathbb{R}(\mathbb{S})$, tal que $\mu(A \Delta B) < \varepsilon$ (ou seja, poderemos aproximar cometendo um erro arbitrariamente pequeno).
 
 **PROPOSIÇÃO 2.2.13.** (Teorema de aproximação). Se $\mathbb{R}$ é o anel gerado por $\mathbb{S}$, então para todo $A \in \tilde{\sigma}(\mathbb{S})$ tal que $\mu(A) < \infty$ e para todo $\varepsilon > 0$, existe $B \in \mathbb{R}$ tal que $\mu(A \Delta B) < \varepsilon$.
 
-**Demonstração** Sejam $A \in \tilde{\sigma}(\mathbb{S})$ e $\varepsilon > 0, \mu(A) < \infty$. Podemos tomar uma seqüência $\{C_n\}$ de elementos de $\mathbb{S}$ disjuntos dois a dois tal que $$ A \subseteq \sum\limits_{n=1}^{\infty} C_n \quad \text{e} \quad \sum\limits_{n=1}^{\infty} \mu(C_n) < \mu(A) + \frac{\varepsilon}{2}. $$ Como a série do 1.$^{\circ}$ membro converge, existe $N$ tal que $$ \sum\limits_{n=N+1}^{\infty} \mu(C_n) < \frac{\varepsilon}{2}. $$ Seja $B = \sum\limits_{n=1}^{N} C_n \in \mathbb{R}$. $$ \begin{aligned} B \Delta A &= (B-A) + (A-B) \le \\ &\le \left(\sum\limits_{n=1}^{\infty} C_n - A\right) \cup \left(\sum\limits_{n=1}^{\infty} C_n - B\right). \end{aligned} $$ Então $$ \begin{aligned} \mu(B \Delta A) &\le \mu\left(\sum\limits_{n=1}^{\infty} C_n - A\right) + \mu\left(\sum\limits_{n=N+1}^{\infty} C_n - B\right) = \\ &= \left(\sum\limits_{n=1}^{\infty} \mu(C_n) - \mu(A)\right) + \sum\limits_{n=N+1}^{\infty} \mu(C_n) < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon. \end{aligned} $$
+**Demonstração.** Sejam $A \in \tilde{\sigma}(\mathbb{S})$ e $\varepsilon > 0, \mu(A) < \infty$. Podemos tomar uma seqüência $\{C_n\}$ de elementos de $\mathbb{S}$ disjuntos dois a dois tal que $$ A \subseteq \sum\limits_{n=1}^{\infty} C_n \quad \text{e} \quad \sum\limits_{n=1}^{\infty} \mu(C_n) < \mu(A) + \frac{\varepsilon}{2}. $$ Como a série do 1.$^{\circ}$ membro converge, existe $N$ tal que $$ \sum\limits_{n=N+1}^{\infty} \mu(C_n) < \frac{\varepsilon}{2}. $$ Seja $B = \sum\limits_{n=1}^{N} C_n \in \mathbb{R}$. $$ \begin{aligned} B \Delta A &= (B-A) + (A-B) \le \\ &\le \left(\sum\limits_{n=1}^{\infty} C_n - A\right) \cup \left(\sum\limits_{n=1}^{\infty} C_n - B\right). \end{aligned} $$ Então $$ \begin{aligned} \mu(B \Delta A) &\le \mu\left(\sum\limits_{n=1}^{\infty} C_n - A\right) + \mu\left(\sum\limits_{n=N+1}^{\infty} C_n - B\right) = \\ &= \left(\sum\limits_{n=1}^{\infty} \mu(C_n) - \mu(A)\right) + \sum\limits_{n=N+1}^{\infty} \mu(C_n) < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon. \end{aligned} $$
 
 Antes de passar à próxima seção, vamos esclarecer o uso da expressão conjunto mensurável. Em geral, dado um espaço mensurável $(\Omega, \mathscr{A})$, os elementos de $\mathscr{A}$ são chamados conjuntos mensuráveis (da mesma forma como os elementos de uma topologia são chamados conjuntos abertos). Vamos usar essa expressão da mesma forma. Na Definição [2.2.4](#cap2e2e) foi introduzida a noção de conjunto mensurável. Foi utilizada a mesma expressão porque posteriormente construímos o $\sigma$-anel $\Lambda$, e esses “conjuntos mensuráveis” passaram a ser simplesmente elementos do espaço mensurável $(\Omega, \Lambda)$.
 
@@ -250,13 +250,13 @@ h)  $\forall A, D \in \mathscr{F}$ tais que $A \cap D = \varnothing$; $\mu_*(A+D
 
 i)  $\forall B \in \overline{\mathscr{A}}, \forall A \in \mathscr{F}, \overline{\mu}(B) = \mu_*(A \cap B) + \mu^*(A^c \cap B)$.
 
-**Demonstração** a) e b) decorrem imediatamente da definição de $\mu_*$ e a demonstração de c) usa o fato de que $\forall \overline{B} \in \overline{\mathscr{A}}$ existe $B \in \mathscr{A}$ com $B \subseteq \overline{B}$ e $\overline{\mu}(\overline{B}-B) = 0$.<br> d) Basta tomar uma cobertura mensurável $F$ de $A$, uma cobertura mensurável $N$ de $F-A$ e fazer $B = F-N$.<br> e) Seja $B_n$ um núcleo mensurável de $A_n$, para cada $n$. Então $$ \sum\limits_{n=1}^{\infty} \mu_*(A_n) = \sum\limits_{n=1}^{\infty} \mu(B_n) = \mu\left(\sum\limits_{n=1}^{\infty} B_n\right) \le \mu_*\left(\sum\limits_{n=1}^{\infty} A_n\right). $$<br> f) Se $B$ é um núcleo mensurável de $A \cap \sum\limits_{n=1}^{\infty} B_n$, $$ \begin{aligned} \mu_*\left(A \cap \sum\limits_{n=1}^{\infty} \overline{B}_n\right) &= \mu(B) = \mu\left(B \cap \sum\limits_{n=1}^{\infty} \overline{B}_n\right) = \\ &= \sum\limits_{n=1}^{\infty} \mu(B \cap \overline{B}_n) \le \sum\limits_{n=1}^{\infty} \mu_*(A \cap \overline{B}_n), \end{aligned} $$ a última desigualdade decorrendo do item c). A desigualdade, no sentido contrário, é conseqüência do item e).<br> g) A 1.$^{\text{a}}$ afirmação decorre do item c). Para a 2.$^{\text{a}}$ afirmação, sejam $B$ uma cobertura mensurável de $A$ e $C$ um núcleo mensurável de $A$. $A = C + (A-C)$, onde $C \in \overline{\mathscr{A}}$ e $A-C \subseteq B-C$, que tem medida nula, porque $$ \mu(B-C) = \mu(B) - \mu(C) = \mu^*(A) - \mu_*(A) = 0, $$ o que mostra que $A \in \overline{\mathscr{A}}$.<br> h) Sejam $B$ um núcleo mensurável de $A+D$ e $C$ uma cobertura mensurável de $D$. Como $B-C \subseteq A$, temos: $$ \mu_*(A+D) = \mu(B) = \mu(B-C) + \mu(B \cap C) \le \mu(B-C) + \mu(C) \le \mu_*(A) + \mu^*(D). $$A outra desigualdade é análoga.<br> i) Decorre de g) e h).
+**Demonstração.** a) e b) decorrem imediatamente da definição de $\mu_*$ e a demonstração de c) usa o fato de que $\forall \overline{B} \in \overline{\mathscr{A}}$ existe $B \in \mathscr{A}$ com $B \subseteq \overline{B}$ e $\overline{\mu}(\overline{B}-B) = 0$.<br> d) Basta tomar uma cobertura mensurável $F$ de $A$, uma cobertura mensurável $N$ de $F-A$ e fazer $B = F-N$.<br> e) Seja $B_n$ um núcleo mensurável de $A_n$, para cada $n$. Então $$ \sum\limits_{n=1}^{\infty} \mu_*(A_n) = \sum\limits_{n=1}^{\infty} \mu(B_n) = \mu\left(\sum\limits_{n=1}^{\infty} B_n\right) \le \mu_*\left(\sum\limits_{n=1}^{\infty} A_n\right). $$<br> f) Se $B$ é um núcleo mensurável de $A \cap \sum\limits_{n=1}^{\infty} B_n$, $$ \begin{aligned} \mu_*\left(A \cap \sum\limits_{n=1}^{\infty} \overline{B}_n\right) &= \mu(B) = \mu\left(B \cap \sum\limits_{n=1}^{\infty} \overline{B}_n\right) = \\ &= \sum\limits_{n=1}^{\infty} \mu(B \cap \overline{B}_n) \le \sum\limits_{n=1}^{\infty} \mu_*(A \cap \overline{B}_n), \end{aligned} $$ a última desigualdade decorrendo do item c). A desigualdade, no sentido contrário, é conseqüência do item e).<br> g) A 1.$^{\text{a}}$ afirmação decorre do item c). Para a 2.$^{\text{a}}$ afirmação, sejam $B$ uma cobertura mensurável de $A$ e $C$ um núcleo mensurável de $A$. $A = C + (A-C)$, onde $C \in \overline{\mathscr{A}}$ e $A-C \subseteq B-C$, que tem medida nula, porque $$ \mu(B-C) = \mu(B) - \mu(C) = \mu^*(A) - \mu_*(A) = 0, $$ o que mostra que $A \in \overline{\mathscr{A}}$.<br> h) Sejam $B$ um núcleo mensurável de $A+D$ e $C$ uma cobertura mensurável de $D$. Como $B-C \subseteq A$, temos: $$ \mu_*(A+D) = \mu(B) = \mu(B-C) + \mu(B \cap C) \le \mu(B-C) + \mu(C) \le \mu_*(A) + \mu^*(D). $$A outra desigualdade é análoga.<br> i) Decorre de g) e h).
 
 ## Construção de medidas sobre semi-anéis. Exemplos {#cap2e4e}
 
 **PROPOSIÇÃO 2.4.1.** Seja $\mu$ uma medida finitamente aditiva e finita sobre um anel $\mathbb{R}$. Se para toda sucessão $\{A_n\}_{n \in \mathbb{N}}$ de elementos de $\mathbb{R}$, tal que $A_n \downarrow \varnothing$ vale $\mu(A_n) \downarrow 0$ então $\mu$ é uma medida.
 
-**Demonstração** Temos que mostrar que $\mu$ é $\sigma$-aditiva. Seja $\{A_n\}_{n \in \mathbb{N}}$ uma sucessão de elementos de $\mathbb{R}$, tal que $A_i \cap A_j = \varnothing$, se $i \neq j$ e $\sum\limits_{n=1}^{\infty} A_n \in \mathbb{R}$.
+**Demonstração.** Temos que mostrar que $\mu$ é $\sigma$-aditiva. Seja $\{A_n\}_{n \in \mathbb{N}}$ uma sucessão de elementos de $\mathbb{R}$, tal que $A_i \cap A_j = \varnothing$, se $i \neq j$ e $\sum\limits_{n=1}^{\infty} A_n \in \mathbb{R}$.
 
 Para todo $N$ natural
 $$ \begin{aligned} \sum\limits_{n=1}^{\infty} A_n &= \sum\limits_{n=1}^{N} A_n + \sum\limits_{n=N+1}^{\infty} A_n; \\ \mu\left(\sum\limits_{n=1}^{\infty} A_n\right) &= \mu\left(\sum\limits_{n=1}^{N} A_n\right) + \mu\left(\sum\limits_{n=N+1}^{\infty} A_n\right) = \\ &= \sum\limits_{n=1}^{N} \mu(A_n) + \mu\left(\sum\limits_{n=N+1}^{\infty} A_n\right). \end{aligned} $$
@@ -272,7 +272,7 @@ Os intervalos fechados em $\mathbb{R}^1$, os cubos fechados em $\mathbb{R}^n$ e 
 
 **PROPOSIÇÃO 2.4.2. ** Se $\mathscr{C}$ é uma classe compacta, então a família $\mathscr{C}_f$ das uniões finitas de elementos de $\mathscr{C}$ é uma classe compacta. (Veja o Exerc. 29 para uma demonstração que não usa argumentos de compacidade).
 
-**Demonstração** Seja $\{A_n\}_{n \in \mathbb{N}}$ uma sucessão de elementos de $\mathscr{C}_f$, tal que $\bigcap\limits_{i=1}^n A_i \neq \varnothing, \forall n$. Escrevemos $A_j$ como $A_j = \bigcup\limits_{i=1}^{k_j} C_{ji}$, para algum $k_j \in \mathbb{N}$ e para alguns $C_{ji} \in \mathscr{C}, 1 \le i \le k_j$.
+**Demonstração.** Seja $\{A_n\}_{n \in \mathbb{N}}$ uma sucessão de elementos de $\mathscr{C}_f$, tal que $\bigcap\limits_{i=1}^n A_i \neq \varnothing, \forall n$. Escrevemos $A_j$ como $A_j = \bigcup\limits_{i=1}^{k_j} C_{ji}$, para algum $k_j \in \mathbb{N}$ e para alguns $C_{ji} \in \mathscr{C}, 1 \le i \le k_j$.
 Seja $K_j = \{1, 2, ..., k_j\}$. $K_j$ é um espaço topológico compacto, com a topologia discreta $\forall j=1, 2, ...$.
 Seja $K = K_1 \times K_2 \times \dots$ é um espaço topológico compacto, com a topologia-produto.
 Vamos construir uma seqüência $\{F_n\}_{n \in \mathbb{N}}$ de fechados não-vazios em $K$ tal que $F_1 \supseteq F_2 \supseteq \dots$.
@@ -285,7 +285,7 @@ Então, como $K$ é compacto, $\bigcap\limits_{n=1}^{\infty} F_n \neq \varnothin
 
 **TEOREMA 2.4.1. ** Seja $\mu$ uma medida finitamente aditiva e finita sobre um semi-anel $\mathbb{S}$, e $\mathscr{C}$ uma classe compacta, $\mathscr{C} \subseteq \mathbb{S}$, tal que $\forall A \in \mathbb{S}, \mu(A) = \sup\{\mu(C): C \subseteq A, C \in \mathscr{C}\}$. Então $\mu$ é uma medida.
 
-**Demonstração** Sejam $\mathbb{R}$ o anel gerado por $\mathbb{S}$, $\overline{\mu}$ a extensão de $\mu$ a $\mathbb{R}$ e $\mathscr{C}_f$ como na proposição anterior; portanto $\mathscr{C}_f$ é classe compacta. Note-se que $\mathbb{R} \subseteq \mathscr{C}_f$.
+**Demonstração.** Sejam $\mathbb{R}$ o anel gerado por $\mathbb{S}$, $\overline{\mu}$ a extensão de $\mu$ a $\mathbb{R}$ e $\mathscr{C}_f$ como na proposição anterior; portanto $\mathscr{C}_f$ é classe compacta. Note-se que $\mathbb{R} \subseteq \mathscr{C}_f$.
 Vamos mostrar que $\forall A \in \mathbb{R}$,
 $$ \overline{\mu}(A) = \sup\{\overline{\mu}(C): C \subseteq A \text{ e } C \in \mathscr{C}_f\}. $$
 Seja $A \in \mathbb{R}$. Então $A = \sum\limits_{i=1}^{n} A_i, A_i \in \mathbb{S}$. Basta mostrar que dado $\varepsilon > 0$, $\exists C \in \mathscr{C}_f, C \subseteq A$ tal que $\overline{\mu}(C) > \overline{\mu}(A) - \varepsilon$.
@@ -323,7 +323,7 @@ iii) Se $a \neq 0, \phi$ tem inversa ($\phi^{-1}$) e essa inversa é também men
 
 *(Nota. A propriedade que $\forall B \in \mathscr{B}, \phi^{-1}(B) \in \mathscr{B}$ diz que $\phi$ é $\mathscr{B}$-mensurável (veja o [Cap. 3(#cap3e)]);*
 
-**Demonstração** 
+**Demonstração.** 
 
 i) é imediata. 
 
@@ -335,7 +335,7 @@ i) Para todo $A \subseteq \mathbb{R}^1, \lambda_*(\phi(A)) = |a| \cdot \lambda_*
 ii) Se $A \in \Lambda$ então $\phi(A) \in \Lambda$ e $\lambda(\phi(A)) = |a| \cdot \lambda(A)$.
 Em particular ($a=1$) $\lambda$ é invariante por translação sobre $\Lambda$.
 
-**Demonstração** O caso $a=0$ é trivial. Seja $a \neq 0$, i) $B \in \mathscr{B} \mapsto |a|\lambda(\phi(B))$ e $B \in \mathscr{B} \mapsto |a|\cdot\lambda(B)$ são medidas sobre $\mathscr{B}$ que coincidem em $\mathbb{S}$ e, portanto, são iguais. Então, se $A \subseteq \mathbb{R}^1$,
+**Demonstração.** O caso $a=0$ é trivial. Seja $a \neq 0$, i) $B \in \mathscr{B} \mapsto |a|\lambda(\phi(B))$ e $B \in \mathscr{B} \mapsto |a|\cdot\lambda(B)$ são medidas sobre $\mathscr{B}$ que coincidem em $\mathbb{S}$ e, portanto, são iguais. Então, se $A \subseteq \mathbb{R}^1$,
 $$ \begin{aligned} \lambda^*(\phi(A)) &= \inf\{\lambda(\phi(B)): A \subseteq \phi^{-1}(B) \text{ e } B \in \mathscr{B}\} \\ &= \inf\{|a|\cdot\lambda(\phi^{-1}(B)): A \subseteq \phi^{-1}(B) \text{ e } B \in \mathscr{B}\} \\ &= |a|\cdot\inf\{\lambda(\phi^{-1}(B)): A \subseteq \phi^{-1}(B) \text{ e } B \in \mathscr{B}\} \\ &= |a|\cdot\inf\{\lambda(D): A \subseteq D \in \mathscr{B}\} = |a|\cdot\lambda^*(A). \end{aligned} $$
 A prova é análoga para $\lambda_*$.
 ii) Se $A \in \Lambda$ e $\lambda(A) < \infty$, a afirmação decorre da Prop. [2.3.1](#cap2e3e) g) e de i).
@@ -357,17 +357,17 @@ Este problema é chamado por alguns autores de *problema difícil da medida* e c
 
 **PROPOSIÇÃO 2.5.1.** O problema formulado anteriormente (problema difícil da medida) não tem solução.
 
-**Demonstração** Consideremos sobre $[-1/2, 1/2]$ a seguinte relação de equivalência: $x \sim y \leftrightarrow x-y$ é racional. Claramente só precisamos de racionais do intervalo $[-1, 1]$. Seja $\{a_1, a_2, \dots\}$ uma enumeração dos racionais do intervalo $[-1, 1]$. Seja $C$ um conjunto obtido da escolha de um ponto em cada classe de equivalência; definamos $C_k = a_k + C$. Temos, como é fácil verificar, que: $$ [-1/2, 1/2] \subseteq \sum\limits_{k=1}^{\infty} C_k \subseteq [-3/2, 3/2]. $$ Por i) e ii) temos que $\mu([-1/2, 1/2]) = 1, \mu([-3/2, 3/2])=3$ e $\forall k \mu(C_k) = \mu(C)$. Temos então, por iii), que $$ 1 \le \sum\limits_{k=1}^{\infty} \mu(C_k) \le 3, $$ ou seja, $$ 1 \le \mu(C) + \mu(C) + \dots \le 3. $$ A primeira desigualdade implica que $\mu(C) > 0$, e a segunda que $\mu(C) = 0$, resultando em uma contradição e provando a proposição.
+**Demonstração.** Consideremos sobre $[-1/2, 1/2]$ a seguinte relação de equivalência: $x \sim y \leftrightarrow x-y$ é racional. Claramente só precisamos de racionais do intervalo $[-1, 1]$. Seja $\{a_1, a_2, \dots\}$ uma enumeração dos racionais do intervalo $[-1, 1]$. Seja $C$ um conjunto obtido da escolha de um ponto em cada classe de equivalência; definamos $C_k = a_k + C$. Temos, como é fácil verificar, que: $$ [-1/2, 1/2] \subseteq \sum\limits_{k=1}^{\infty} C_k \subseteq [-3/2, 3/2]. $$ Por i) e ii) temos que $\mu([-1/2, 1/2]) = 1, \mu([-3/2, 3/2])=3$ e $\forall k \mu(C_k) = \mu(C)$. Temos então, por iii), que $$ 1 \le \sum\limits_{k=1}^{\infty} \mu(C_k) \le 3, $$ ou seja, $$ 1 \le \mu(C) + \mu(C) + \dots \le 3. $$ A primeira desigualdade implica que $\mu(C) > 0$, e a segunda que $\mu(C) = 0$, resultando em uma contradição e provando a proposição.
 
 Outra pergunta natural seria a da possibilidade de se construir uma função de conjunto $\mu$, satisfazendo i) e ii), mas exigindo somente que $\mu$ fosse finitamente aditiva em lugar de iii). Este problema (chamado por alguns autores *problema fácil da medida*) tem solução (não única) positiva em $\mathbb{R}^1$ e $\mathbb{R}^2$, (S. Banach), e negativa em $\mathbb{R}^n$ com $n \ge 3$ (F. Hausdorff).
 
 **COROLÁRIO 2.5.1.** Existem conjuntos não-mensuráveis Lebesgue.
 
-**Demonstração** Caso contrário $\Lambda = \mathbb{P}(\mathbb{R}^1)$ e $\lambda$ seria uma solução ao problema difícil da medida contradizendo a Prop. [2.5.1](#cap2e5e).
+**Demonstração.** Caso contrário $\Lambda = \mathbb{P}(\mathbb{R}^1)$ e $\lambda$ seria uma solução ao problema difícil da medida contradizendo a Prop. [2.5.1](#cap2e5e).
 
 Uma demonstração diferente deste fato incluindo a “construção” (via Axioma de Eleção) de um conjunto não-mensurável está contida no [Cap. 4](#cap4e), como uma das aplicações da Teoria da Integral de Lebesgue.
 
-## Exercícios {.unnumbered}
+## Exercícios {.unnumbered #ex2}
 
 1.  $(\Omega, \mathscr{A})$ espaço mensurável; $\mu_1, \mu_2, \ldots, \mu_n$ medidas sobre $\mathscr{A}$. Se $a_1, a_2, \ldots, a_n$ são números reais não-negativos; então $\mu = \sum\limits_{i=1}^{n} a_i\mu_i$ é uma medida.
 2.  $(\Omega, \mathscr{A})$ espaço mensurável; $P_1, P_2, \ldots$ uma seqüência de probabilidades sobre $\mathscr{A}$. Se $\alpha_1, \alpha_2, \ldots$ é uma seqüência de números não-negativos tais que $\sum\limits_{i=1}^{\infty} \alpha_i = 1$, então $\sum\limits_{i=1}^{\infty} \alpha_i P_i$ é uma probabilidade.
@@ -468,4 +468,4 @@ vi) Se $A$ é um conjunto mensurável Lebesgue limitado, então $\mu(A) = \lambd
 
     Então existe um índice $i, 1 \leq i \leq k$, tal que $B_1, B_2, \ldots, B_{n_0-1}, C_i, B_{n_0+1}, \ldots$ tem a p.i.f.
 
-    **Demonstração** Caso contrário $\forall i, \exists n_i > n_0$, tal que $B_1 \cap B_2 \cap \ldots \cap B_{n_0-1} \cap C_i \cap \ldots \cap B_{n_i} = \varnothing$. Seja $n = \max\limits_{1 \leq i \leq k} n_i$. Temos então $\forall i, \quad i = 1, 2, \ldots, k, \quad B_1 \cap B_2 \cap \ldots \cap B_{n_0-1} \cap C_i \cap \ldots \cap B_n = \varnothing$.
+    **Demonstração.** Caso contrário $\forall i, \exists n_i > n_0$, tal que $B_1 \cap B_2 \cap \ldots \cap B_{n_0-1} \cap C_i \cap \ldots \cap B_{n_i} = \varnothing$. Seja $n = \max\limits_{1 \leq i \leq k} n_i$. Temos então $\forall i, \quad i = 1, 2, \ldots, k, \quad B_1 \cap B_2 \cap \ldots \cap B_{n_0-1} \cap C_i \cap \ldots \cap B_n = \varnothing$.

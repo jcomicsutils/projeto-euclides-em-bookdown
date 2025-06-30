@@ -12,4 +12,4 @@
 
 ## Mudança de variáveis em integrais {#cap7e6e}
 
-## Exercícios {-}
+## Exercícios {- #ex7}

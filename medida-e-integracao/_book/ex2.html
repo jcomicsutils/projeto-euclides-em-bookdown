@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercícios | Medida e Integração</title>
+  <meta name="description" content="Exercícios | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Exercícios | Medida e Integração" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Exercícios | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="github-repo" content="jcomicsutils/projeto-euclides-em-bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Exercícios | Medida e Integração" />
+  
+  <meta name="twitter:description" content="Exercícios | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  
+
+<meta name="author" content="Pedro J. Fernandez" />
+
+
+<meta name="date" content="1976-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="cap2e5e.html"/>
+<link rel="next" href="cap3e.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Medida e Integração</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i>Introdução</a></li>
+<li class="chapter" data-level="0" data-path="cap0e.html"><a href="cap0e.html"><i class="fa fa-check"></i><b>0</b> Conjuntos</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="cap0e1e.html"><a href="cap0e1e.html"><i class="fa fa-check"></i><b>0.1</b> Conjuntos</a></li>
+<li class="chapter" data-level="0.2" data-path="cap0e2e.html"><a href="cap0e2e.html"><i class="fa fa-check"></i><b>0.2</b> Operações com conjuntos</a></li>
+<li class="chapter" data-level="0.3" data-path="cap0e3e.html"><a href="cap0e3e.html"><i class="fa fa-check"></i><b>0.3</b> Limites e indicadores</a></li>
+<li class="chapter" data-level="0.4" data-path="cap0e4e.html"><a href="cap0e4e.html"><i class="fa fa-check"></i><b>0.4</b> Funções</a></li>
+<li class="chapter" data-level="" data-path="ex0.html"><a href="ex0.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="cap1e.html"><a href="cap1e.html"><i class="fa fa-check"></i><b>1</b> Classes de Conjuntos</a>
+<ul>
+<li class="chapter" data-level="" data-path="ex1.html"><a href="ex1.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="cap2e.html"><a href="cap2e.html"><i class="fa fa-check"></i><b>2</b> Medidas e Extensão de Medidas</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cap2e1e.html"><a href="cap2e1e.html"><i class="fa fa-check"></i><b>2.1</b> Medidas</a></li>
+<li class="chapter" data-level="2.2" data-path="cap2e2e.html"><a href="cap2e2e.html"><i class="fa fa-check"></i><b>2.2</b> Extensão de medidas</a></li>
+<li class="chapter" data-level="2.3" data-path="cap2e3e.html"><a href="cap2e3e.html"><i class="fa fa-check"></i><b>2.3</b> Medida interior</a></li>
+<li class="chapter" data-level="2.4" data-path="cap2e4e.html"><a href="cap2e4e.html"><i class="fa fa-check"></i><b>2.4</b> Construção de medidas sobre semi-anéis. Exemplos</a></li>
+<li class="chapter" data-level="2.5" data-path="cap2e5e.html"><a href="cap2e5e.html"><i class="fa fa-check"></i><b>2.5</b> Alguns comentários sobre o problema da medida</a></li>
+<li class="chapter" data-level="" data-path="ex2.html"><a href="ex2.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cap3e.html"><a href="cap3e.html"><i class="fa fa-check"></i><b>3</b> Funções Mensuráveis</a>
+<ul>
+<li class="chapter" data-level="" data-path="ex3.html"><a href="ex3.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="cap4e.html"><a href="cap4e.html"><i class="fa fa-check"></i><b>4</b> Integração</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="cap4e1e.html"><a href="cap4e1e.html"><i class="fa fa-check"></i><b>4.1</b> A integral. Teoremas básicos de convergência</a></li>
+<li class="chapter" data-level="4.2" data-path="cap4e2e.html"><a href="cap4e2e.html"><i class="fa fa-check"></i><b>4.2</b> Espaços <span class="math inline">\(L_p\)</span></a></li>
+<li class="chapter" data-level="4.3" data-path="cap4e3e.html"><a href="cap4e3e.html"><i class="fa fa-check"></i><b>4.3</b> Aplicações</a></li>
+<li class="chapter" data-level="" data-path="ex4.html"><a href="ex4.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="cap5e.html"><a href="cap5e.html"><i class="fa fa-check"></i><b>5</b> Imagens de Medidas e Medidas-Produto</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="cap5e1e.html"><a href="cap5e1e.html"><i class="fa fa-check"></i><b>5.1</b> Imagens de medidas</a></li>
+<li class="chapter" data-level="5.2" data-path="cap5e2e.html"><a href="cap5e2e.html"><i class="fa fa-check"></i><b>5.2</b> Medidas-produto - Teorema de Fubini</a></li>
+<li class="chapter" data-level="5.3" data-path="cap5e3e.html"><a href="cap5e3e.html"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a></li>
+<li class="chapter" data-level="5.4" data-path="cap5e4e.html"><a href="cap5e4e.html"><i class="fa fa-check"></i><b>5.4</b> Produtos finitos e infinitos de espaços de medida</a></li>
+<li class="chapter" data-level="" data-path="ex5.html"><a href="ex5.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="cap6e.html"><a href="cap6e.html"><i class="fa fa-check"></i><b>6</b> Medidas com Sinal</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="cap6e1e.html"><a href="cap6e1e.html"><i class="fa fa-check"></i><b>6.1</b> Generalidades</a></li>
+<li class="chapter" data-level="6.2" data-path="cap6e2e.html"><a href="cap6e2e.html"><i class="fa fa-check"></i><b>6.2</b> Decomposição de Hahn e Jordan</a></li>
+<li class="chapter" data-level="6.3" data-path="cap6e3e.html"><a href="cap6e3e.html"><i class="fa fa-check"></i><b>6.3</b> Continuidade absoluta. Teorema de Radon-Nikodym</a></li>
+<li class="chapter" data-level="6.4" data-path="cap6e4e.html"><a href="cap6e4e.html"><i class="fa fa-check"></i><b>6.4</b> Teorema de Representação de Riesz</a></li>
+<li class="chapter" data-level="" data-path="ex6.html"><a href="ex6.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="cap7e.html"><a href="cap7e.html"><i class="fa fa-check"></i><b>7</b> Integração e Diferenciação</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="cap7e1e.html"><a href="cap7e1e.html"><i class="fa fa-check"></i><b>7.1</b> Diferenciação de funções monótonas</a></li>
+<li class="chapter" data-level="7.2" data-path="cap7e2e.html"><a href="cap7e2e.html"><i class="fa fa-check"></i><b>7.2</b> Funções de variação limitada</a></li>
+<li class="chapter" data-level="7.3" data-path="cap7e3e.html"><a href="cap7e3e.html"><i class="fa fa-check"></i><b>7.3</b> Teorema de diferenciação de Lebesgue</a></li>
+<li class="chapter" data-level="7.4" data-path="cap7e4e.html"><a href="cap7e4e.html"><i class="fa fa-check"></i><b>7.4</b> Continuidade absoluta</a></li>
+<li class="chapter" data-level="7.5" data-path="cap7e5e.html"><a href="cap7e5e.html"><i class="fa fa-check"></i><b>7.5</b> Alguns resultados e exemplos especiais</a></li>
+<li class="chapter" data-level="7.6" data-path="cap7e6e.html"><a href="cap7e6e.html"><i class="fa fa-check"></i><b>7.6</b> Mudança de variáveis em integrais</a></li>
+<li class="chapter" data-level="" data-path="ex7.html"><a href="ex7.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/jcomicsutils/projeto-euclides-em-bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Medida e Integração</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ex2" class="section level2 unnumbered hasAnchor">
+<h2>Exercícios<a href="ex2.html#ex2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\((\Omega, \mathscr{A})\)</span> espaço mensurável; <span class="math inline">\(\mu_1, \mu_2, \ldots, \mu_n\)</span> medidas sobre <span class="math inline">\(\mathscr{A}\)</span>. Se <span class="math inline">\(a_1, a_2, \ldots, a_n\)</span> são números reais não-negativos; então <span class="math inline">\(\mu = \sum\limits_{i=1}^{n} a_i\mu_i\)</span> é uma medida.</li>
+<li><span class="math inline">\((\Omega, \mathscr{A})\)</span> espaço mensurável; <span class="math inline">\(P_1, P_2, \ldots\)</span> uma seqüência de probabilidades sobre <span class="math inline">\(\mathscr{A}\)</span>. Se <span class="math inline">\(\alpha_1, \alpha_2, \ldots\)</span> é uma seqüência de números não-negativos tais que <span class="math inline">\(\sum\limits_{i=1}^{\infty} \alpha_i = 1\)</span>, então <span class="math inline">\(\sum\limits_{i=1}^{\infty} \alpha_i P_i\)</span> é uma probabilidade.</li>
+<li>Seja <span class="math inline">\(\Omega\)</span> um conjunto enumerável e <span class="math inline">\(\mathscr{A} = \mathbb{P}(\Omega)\)</span>. Seja <span class="math inline">\(a_1, a_2, \ldots\)</span> uma seqüência de números não-negativos tais que <span class="math inline">\(\sum\limits_{i=1}^{\infty} a_i &lt; \infty\)</span>. Então a fórmula <span class="math inline">\(\mu(A) = \sum\limits_{i=1}^{\infty} a_i I_A(\omega_i)\)</span> define uma medida finita sobre <span class="math inline">\(\mathscr{A}\)</span>. Reciprocamente toda medida finita é desta forma para alguma seqüência apropriada.</li>
+<li>Dê um exemplo mostrando que a condição de finitude na Prop. <a href="cap2e1e.html#cap2e1e">2.1.1</a> parte 3) não pode ser eliminada.</li>
+<li>Seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida e sejam <span class="math display">\[\eta_{\mu} = \{A: \mu(A) = 0\},\]</span> <span class="math display">\[\mathcal{N}_{\mu} = \{A: \mu(A) = 0 \quad \text{ou} \quad \mu(A^c) = 0\}.\]</span> Prove que <span class="math inline">\(\eta_{\mu}\)</span> é <span class="math inline">\(\sigma\)</span>-anel e <span class="math inline">\(\mathcal{N}_{\mu}\)</span> é <span class="math inline">\(\sigma\)</span>-álgebra.</li>
+<li>Uma função <span class="math inline">\(\mu: \mathbb{S} \to [0, +\infty]\)</span> é uma medida sobre o semi-anel <span class="math inline">\(\mathbb{S}\)</span> se, e somente se,</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(\mu(\varnothing) = 0\)</span>;</li>
+<li><span class="math inline">\(A \in \mathbb{S}\)</span>, e <span class="math inline">\(A \subseteq \bigcup\limits_{n=1}^{\infty} A_n\)</span> com <span class="math inline">\(A_n \in \mathbb{S} \implies \mu(A) \leq \sum\limits_{n=1}^{\infty} \mu(A_n)\)</span>;</li>
+<li><span class="math inline">\(A \in \mathbb{S}\)</span>; <span class="math inline">\(A_1, A_2, \ldots, A_n \in \mathbb{S}\)</span> e <span class="math inline">\(A = \sum\limits_{i=1}^{n} A_i \implies \mu(A) = \sum\limits_{i=1}^{n} \mu(A_i)\)</span>.</li>
+</ol>
+<!-- -->
+<ol start="7" style="list-style-type: decimal">
+<li>Provar que a medida de Lebesgue do conjunto de Cantor é <span class="math inline">\(0\)</span>.</li>
+<li>Seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida. Seja <span class="math inline">\(\mathscr{A}_1 = \{A: A \in \mathscr{A} \text{ com } \mu(A) &lt; \infty\}\)</span>. Definimos para <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> em <span class="math inline">\(\mathscr{A}_1\)</span>, <span class="math display">\[d(A, B) = \mu(A \Delta B).\]</span> Provar que:</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\((\mathscr{A}_1, d)\)</span> é um espaço pseudométrico.</li>
+<li>Suponhamos que <span class="math inline">\(\mathscr{A}\)</span> é gerada por um semi-anel <span class="math inline">\(\mathbb{S}\)</span> finito ou enumerável, e que <span class="math inline">\(\mu\)</span> é finita sobre <span class="math inline">\(\mathbb{S}\)</span>. Então <span class="math inline">\((\mathscr{A}_1, d)\)</span> é um espaço topológico separável.</li>
+</ol>
+<!-- -->
+<ol start="9" style="list-style-type: decimal">
+<li>Provar que se <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> é um espaço de probabilidades, onde <span class="math inline">\(\Omega\)</span> é um espaço polonês (um espaço métrico separável e completo), e <span class="math inline">\(\mathscr{A}\)</span> é a <span class="math inline">\(\sigma\)</span>-álgebra de Borel de <span class="math inline">\(\Omega\)</span>, então <span class="math inline">\(\forall \varepsilon &gt; 0\)</span>, <span class="math inline">\(\exists K\)</span> compacto, tal que <span class="math inline">\(\mu(K) &gt; 1-\varepsilon\)</span>.</li>
+<li>Consideremos <span class="math inline">\((\mathbb{R}^d, \mathscr{A}, \lambda)\)</span>. Então, se <span class="math inline">\(A \in \mathscr{A}\)</span> (mensurável Lebesgue), <span class="math display">\[\lambda(A) = \inf\{\lambda(0): 0 \supseteq A, 0 \text{ aberto}\}\]</span> <span class="math display">\[= \sup\{\lambda(K): K \subseteq A, K \text{ compacto}\}.\]</span></li>
+<li>Seja <span class="math inline">\(\Omega = \{x: x \text{ racional}, 0 &lt; x \leq 1\}\)</span>, <span class="math inline">\(\mathbb{S} = \{ (a, b]: (a, b] \subseteq \Omega, a \leq b \}\)</span>, <span class="math inline">\(\lambda((a, b]) = b-a\)</span>. Então <span class="math inline">\(\mathbb{S}\)</span> é semi-álgebra, e <span class="math inline">\(\lambda\)</span> sobre <span class="math inline">\(\mathbb{S}\)</span> é uma função de conjunto, não-negativa e finitamente aditiva. Provar que <span class="math inline">\(\lambda\)</span> não é <span class="math inline">\(\sigma\)</span>-aditiva.</li>
+<li>Em <span class="math inline">\((\mathbb{R}^1, \lambda)\)</span>, construir <span class="math inline">\(\forall \varepsilon &gt; 0\)</span>, um conjunto fechado tal que</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(F = \varnothing\)</span>.</li>
+<li><span class="math inline">\(\lambda(F^c) &lt; \varepsilon\)</span>.</li>
+</ol>
+<!-- -->
+<ol start="13" style="list-style-type: decimal">
+<li>Seja <span class="math inline">\(\mathscr{A}\)</span> uma álgebra enumerável sobre <span class="math inline">\(\Omega\)</span>. Provar que <span class="math inline">\(\sigma(\mathscr{A})\)</span> tem a potência do contínuo.</li>
+<li>Provar que a <span class="math inline">\(\sigma\)</span>-álgebra de Lebesgue em <span class="math inline">\(\mathbb{R}^1\)</span> tem a mesma cardinalidade (<span class="math inline">\(2^c\)</span>) que a família de partes de <span class="math inline">\(\mathbb{R}^1\)</span>. Deduzir que existem conjuntos mensuráveis Lebesgue que não são Borelianos.</li>
+<li>(Critério de de la Vallée-Poussin). Provar que uma condição necessária e suficiente para que um conjunto limitado <span class="math inline">\(A\)</span> seja mensurável Lebesgue e que <span class="math inline">\(\forall \varepsilon &gt; 0\)</span>, <span class="math inline">\(\exists K\)</span> compacto, <span class="math inline">\(K \subseteq A\)</span> tal que <span class="math inline">\(\lambda^*(A-K) &lt; \varepsilon\)</span>.</li>
+<li>Construir um conjunto mensurável <span class="math inline">\(A \subseteq [0, 1]\)</span> tal que se <span class="math inline">\(U\)</span> é um intervalo aberto contido em <span class="math inline">\([0, 1]\)</span>, <span class="math inline">\(\lambda(U \cap A) &gt; 0\)</span> e <span class="math inline">\(\lambda(U \cap A^c) &gt; 0\)</span>.</li>
+<li>Seja <span class="math inline">\(\mu\)</span> uma solução do problema fácil da medida. Provar:</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-roman">
+<li>Se <span class="math inline">\(A \subseteq B \implies \mu(A) \leq \mu(B)\)</span>;</li>
+<li><span class="math inline">\(\forall a \in \mathbb{R}^1 \mu(\{a\}) = 0\)</span>;</li>
+<li><span class="math inline">\(\forall a, b \in \mathbb{R}^1\)</span>, <span class="math inline">\(a \leq b \mu([a, b]) = b-a\)</span>;</li>
+<li>Se <span class="math inline">\(\lambda\)</span> é a medida de Lebesgue e <span class="math inline">\(0\)</span> é um aberto, então <span class="math inline">\(\mu(0) \geq \lambda(0)\)</span>.</li>
+</ol>
+<p>Seja <span class="math inline">\(\mu\)</span>, tal que se <span class="math inline">\(0 = \sum\limits_{k=1}^{\infty} (a_k, b_k)\)</span>, então <span class="math inline">\(\mu(0) = \sum\limits_{k=1}^{\infty} (b_k - a_k)\)</span>. Uma tal <span class="math inline">\(\mu\)</span> é chamada regular.</p>
+<ol start="22" style="list-style-type: lower-alpha">
+<li>Se <span class="math inline">\(\mu\)</span> é regular, então <span class="math inline">\(\forall 0\)</span> aberto limitado <span class="math inline">\(\mu(0) = \lambda(0)\)</span>.</li>
+</ol>
+<!-- -->
+<ol start="6" style="list-style-type: lower-roman">
+<li>Se <span class="math inline">\(A\)</span> é um conjunto mensurável Lebesgue limitado, então <span class="math inline">\(\mu(A) = \lambda(A)\)</span> (Veja [9] p. 79).</li>
+</ol>
+<!-- -->
+<ol start="18" style="list-style-type: decimal">
+<li>Com referência ao Exerc. 14 do <a href="cap1e.html#cap1e">Cap. 1</a> consideremos <span class="math inline">\(\sigma(\mathbb{S}) = \{A: A\)</span> ou <span class="math inline">\(A^c\)</span> é mensurável}. Seja <span class="math display">\[\mu(A)=\begin{cases} 0 &amp; A \text{ enumerável} \\ 1 &amp; A^c \text{ enumerável} \end{cases}\]</span> Provar que <span class="math inline">\(\mu\)</span> é uma medida.</li>
+<li>Defina uma função <span class="math inline">\(F: \mathbb{R}^1 \to \mathbb{R}^1\)</span> tal que a medida de Lebesgue-Stieltjes gerada por <span class="math inline">\(F\)</span> tenha as seguintes propriedades: <span class="math display">\[\mu_F(\{0\}) = \frac{1}{2};\]</span> <span class="math display">\[\mu_F([0, \frac{1}{2}]) = 2;\]</span> <span class="math display">\[\mu_F((-\infty, -\frac{1}{2}]) = 0;\]</span> <span class="math display">\[\mu_F([1, x]) = 2x, \forall x &gt; 1.\]</span></li>
+<li>Seja <span class="math inline">\(\Omega\)</span> um conjunto. Para <span class="math inline">\(A \in \Omega\)</span> indicaremos com <span class="math inline">\(\#(A)\)</span> o número de elementos de <span class="math inline">\(A\)</span> (<span class="math inline">\(+\infty\)</span> se esse número não é finito). Provar que <span class="math inline">\((\Omega, \mathbb{P}(\Omega), \#)\)</span> é um espaço de medida. A medida <span class="math inline">\(\#\)</span> é chamada medida da contagem. Provar que <span class="math inline">\(\#\)</span> é <span class="math inline">\(\sigma\)</span>-finita se, e somente se, <span class="math inline">\(\Omega\)</span> é enumerável.</li>
+<li>Considere <span class="math inline">\((\mathbb{N}, \mathbb{P}(\mathbb{N}), \#)\)</span> (veja exerc. anterior). Definimos sobre <span class="math inline">\(\mathbb{P}(\mathbb{N})\)</span>, <span class="math display">\[\mu(A) = \lim_{n \to \infty} \frac{1}{n} \# (A \cap \{1, 2, \ldots, n\})).\]</span> Seja <span class="math inline">\(\mathscr{A} = \{A: A \subseteq \mathbb{N}, \lim_{n \to \infty} \frac{1}{n} \# (A \cap \{1, 2, \ldots, n\}) \text{ existe}\}\)</span>. Provar:</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\mathscr{A}\)</span> não é sequer uma semi-álgebra;</li>
+<li><span class="math inline">\(\mu\)</span> é finitamente aditiva sobre <span class="math inline">\(\mathscr{A}\)</span>;</li>
+<li>Se <span class="math inline">\(A\)</span> é finito <span class="math inline">\(\mu(A) = 0\)</span>;</li>
+<li><span class="math inline">\(\mu\)</span> não é <span class="math inline">\(\sigma\)</span>-aditiva sobre <span class="math inline">\(\mathscr{A}\)</span>;</li>
+<li><span class="math inline">\(\mu\)</span> é uma medida exterior?</li>
+</ol>
+<!-- -->
+<ol start="22" style="list-style-type: decimal">
+<li><p>Seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida com <span class="math inline">\(\mu\)</span> <span class="math inline">\(\sigma\)</span>-finita. Provar que o conjunto <span class="math inline">\(\{\omega: \mu(\{\omega\}) &gt; 0\}\)</span> é enumerável ao máximo (<span class="math inline">\(\{\omega\} \in \mathscr{A}, \forall \omega \in \Omega\)</span>).</p></li>
+<li><p>Seja <span class="math inline">\((\Omega, \mathscr{A})\)</span> um espaço mensurável e <span class="math inline">\(\{\mu_n\}_{n=1,2,\ldots}\)</span> uma seqüência de medidas sobre <span class="math inline">\(\mathscr{A}\)</span>, tais que <span class="math inline">\(\mu_1 \leq \mu_2 \leq \mu_3 \leq \ldots\)</span>. Então <span class="math inline">\(\mu\)</span> definida como o limite <span class="math inline">\(\mu(A) = \lim_n \mu_n(A)\)</span> é uma medida.</p></li>
+<li><p>Considere o espaço <span class="math inline">\((\mathbb{N}, \mathbb{P}(\mathbb{N}), \#)\)</span> (veja o Exerc. 20 do <a href="cap2e.html#cap2e">Cap. 2</a>). Prove <span class="math inline">\(A_n \downarrow \varnothing \implies \#(A_n) \downarrow 0\)</span>.</p></li>
+<li><p>Seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida. Um conjunto <span class="math inline">\(A \in \mathscr{A}\)</span> é chamado um átomo se <span class="math inline">\(\mu(A) &gt; 0\)</span> e para todo <span class="math inline">\(B, B \subseteq A\)</span> resulta <span class="math inline">\(\mu(B) = 0\)</span> ou <span class="math inline">\(\mu(B) = \mu(A)\)</span>, <span class="math inline">\(\mu\)</span> é chamada não-atômica se não tem átomos. Prove que se <span class="math inline">\(\mu\)</span> é não-atômica e <span class="math inline">\(A \in \mathscr{A}\)</span>, então <span class="math inline">\(\forall t, 0 \leq t \leq \mu(A)\)</span>, existe <span class="math inline">\(B \subseteq A\)</span>, tal que <span class="math inline">\(\mu(B) = t\)</span>.</p></li>
+<li><p>Sejam <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\nu\)</span> duas medidas finitas sobre <span class="math inline">\((\mathbb{R}^1, \mathscr{B}^1)\)</span>. Se para todo <span class="math inline">\(x \in \mathbb{R}^1\)</span>, <span class="math inline">\(\mu((-\infty, x]) = \nu((-\infty, x])\)</span>, então <span class="math inline">\(\mu = \nu\)</span> (<span class="math inline">\(\mathscr{B}^1 = \text{borelianos de } \mathbb{R}^1\)</span>).</p></li>
+<li><p>Seja <span class="math inline">\(\Omega\)</span> o conjunto dos racionais do intervalo <span class="math inline">\((0, 1]\)</span>. Seja <span class="math inline">\(\mathbb{S} = \{A: \text{existe } a \text{ e } b \in \Omega, a \leq b \text{ tal que } A = \{\omega: \omega \in \Omega, a &lt; \omega \leq b\}\}\)</span>. <span class="math inline">\(\mathbb{S}\)</span> é semi-álgebra. Seja <span class="math inline">\(\mathbb{R}\)</span> a <span class="math inline">\(\sigma\)</span>-álgebra gerada e <span class="math inline">\(\sigma(\mathbb{S})\)</span> a <span class="math inline">\(\sigma\)</span>-álgebra gerada, que neste caso coincide com <span class="math inline">\(\mathbb{P}(\Omega)\)</span>. Seja <span class="math inline">\(\mu_1 = \#\)</span> (medida da contagem), e <span class="math inline">\(\mu_2 = 2 \#\)</span>. Então <span class="math inline">\(\mu_1 = \mu_2\)</span> sobre <span class="math inline">\(\mathbb{R}\)</span> mas <span class="math inline">\(\mu_1 \neq \mu_2\)</span> (sobre <span class="math inline">\(\sigma(\mathbb{S}) = \mathbb{P}(\Omega)\)</span>). Este exemplo prova que a condição de <span class="math inline">\(\sigma\)</span>-finitude na Prop. <a href="cap2e2e.html#cap2e2e">2.2.8</a> é essencial.</p></li>
+<li><p>Provar que um conjunto <span class="math inline">\(A\)</span> tem medida de Lebesgue <span class="math inline">\(0\)</span> se, e somente se, pode ser coberto com uma família enumerável de intervalos abertos de forma tal que: i) a soma total dos comprimentos dos intervalos seja finita; ii) cada ponto de <span class="math inline">\(A\)</span> pertence a infinitos desses intervalos.</p></li>
+<li><p><strong>Definição</strong> Dizemos que uma sequência de conjuntos <span class="math inline">\(\{A_n\}_{n=1,2,\ldots}\)</span> tem a propriedade de interseção finita (p.i.f.) se <span class="math inline">\(\forall n, \bigcap\limits_{i=1}^{n} A_i \neq \varnothing\)</span>. Seja <span class="math inline">\(\mathscr{C}\)</span> uma classe compacta e consideremos em <span class="math inline">\(\mathscr{C}\)</span>, uma sequência de conjuntos <span class="math inline">\(A_1, A_2, \ldots\)</span> com a p.i.f.</p>
+<p>Para provar que <span class="math inline">\(\mathscr{C}_f\)</span> é uma classe compacta devemos verificar que <span class="math inline">\(\bigcap\limits_{i=1}^{\infty} A_i \neq \varnothing\)</span>. Agora, <span class="math inline">\(\forall j, A_j = C_{j1} \cup C_{j2} \cup \ldots \cup C_{jk_j}, C_{ji} \in \mathscr{C}\)</span>. Como <span class="math inline">\(\mathscr{C}\)</span> é classe compacta, basta obter uma sequência <span class="math inline">\(C_{1i_1}, C_{2i_2}, \ldots\)</span> com a p.i.f., porque <span class="math inline">\(\bigcap\limits_{j=1}^{\infty} C_{ji_j} \subseteq \bigcap\limits_{j=1}^{\infty} A_j\)</span>.</p>
+<p>Essa sequência pode ser obtida definindo-se, indutivamente, índices <span class="math inline">\(i_1, i_2, \ldots\)</span>, de forma tal que <span class="math inline">\(\forall n \quad C_{1i_1}, C_{2i_2}, \ldots, C_{ni_n}, A_{n+1}, A_{n+2}, \ldots\)</span> seja uma sequência com a p.i.f. Para construir essa sequência indutivamente, pode ser utilizado o seguinte:</p>
+<p><strong>Lema</strong> Seja <span class="math inline">\(B_1, B_2, \ldots\)</span> uma sequência com a p.i.f. Suponhamos que para um certo índice <span class="math inline">\(n_0\)</span>, <span class="math inline">\(B_{n_0} = C_1 \cup C_2 \cup \ldots \cup C_k\)</span>.</p>
+<p>Então existe um índice <span class="math inline">\(i, 1 \leq i \leq k\)</span>, tal que <span class="math inline">\(B_1, B_2, \ldots, B_{n_0-1}, C_i, B_{n_0+1}, \ldots\)</span> tem a p.i.f.</p>
+<p><strong>Demonstração.</strong> Caso contrário <span class="math inline">\(\forall i, \exists n_i &gt; n_0\)</span>, tal que <span class="math inline">\(B_1 \cap B_2 \cap \ldots \cap B_{n_0-1} \cap C_i \cap \ldots \cap B_{n_i} = \varnothing\)</span>. Seja <span class="math inline">\(n = \max\limits_{1 \leq i \leq k} n_i\)</span>. Temos então <span class="math inline">\(\forall i, \quad i = 1, 2, \ldots, k, \quad B_1 \cap B_2 \cap \ldots \cap B_{n_0-1} \cap C_i \cap \ldots \cap B_n = \varnothing\)</span>.</p></li>
+</ol>
+
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="cap2e5e.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cap3e.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "night",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/jcomicsutils/projeto-euclides-em-bookdown/edit/main/medida-e-integracao/02-medidas-e-extensao-de-medidas.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

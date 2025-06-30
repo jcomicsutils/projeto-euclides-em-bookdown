@@ -8,4 +8,4 @@
 
 ## Teorema de Representação de Riesz {#cap6e4e}
 
-## Exercícios {-}
+## Exercícios {- #ex6}

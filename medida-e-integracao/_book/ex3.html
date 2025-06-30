@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercícios | Medida e Integração</title>
+  <meta name="description" content="Exercícios | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Exercícios | Medida e Integração" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Exercícios | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="github-repo" content="jcomicsutils/projeto-euclides-em-bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Exercícios | Medida e Integração" />
+  
+  <meta name="twitter:description" content="Exercícios | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  
+
+<meta name="author" content="Pedro J. Fernandez" />
+
+
+<meta name="date" content="1976-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="cap3e.html"/>
+<link rel="next" href="cap4e.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Medida e Integração</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i>Introdução</a></li>
+<li class="chapter" data-level="0" data-path="cap0e.html"><a href="cap0e.html"><i class="fa fa-check"></i><b>0</b> Conjuntos</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="cap0e1e.html"><a href="cap0e1e.html"><i class="fa fa-check"></i><b>0.1</b> Conjuntos</a></li>
+<li class="chapter" data-level="0.2" data-path="cap0e2e.html"><a href="cap0e2e.html"><i class="fa fa-check"></i><b>0.2</b> Operações com conjuntos</a></li>
+<li class="chapter" data-level="0.3" data-path="cap0e3e.html"><a href="cap0e3e.html"><i class="fa fa-check"></i><b>0.3</b> Limites e indicadores</a></li>
+<li class="chapter" data-level="0.4" data-path="cap0e4e.html"><a href="cap0e4e.html"><i class="fa fa-check"></i><b>0.4</b> Funções</a></li>
+<li class="chapter" data-level="" data-path="ex0.html"><a href="ex0.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="cap1e.html"><a href="cap1e.html"><i class="fa fa-check"></i><b>1</b> Classes de Conjuntos</a>
+<ul>
+<li class="chapter" data-level="" data-path="ex1.html"><a href="ex1.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="cap2e.html"><a href="cap2e.html"><i class="fa fa-check"></i><b>2</b> Medidas e Extensão de Medidas</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cap2e1e.html"><a href="cap2e1e.html"><i class="fa fa-check"></i><b>2.1</b> Medidas</a></li>
+<li class="chapter" data-level="2.2" data-path="cap2e2e.html"><a href="cap2e2e.html"><i class="fa fa-check"></i><b>2.2</b> Extensão de medidas</a></li>
+<li class="chapter" data-level="2.3" data-path="cap2e3e.html"><a href="cap2e3e.html"><i class="fa fa-check"></i><b>2.3</b> Medida interior</a></li>
+<li class="chapter" data-level="2.4" data-path="cap2e4e.html"><a href="cap2e4e.html"><i class="fa fa-check"></i><b>2.4</b> Construção de medidas sobre semi-anéis. Exemplos</a></li>
+<li class="chapter" data-level="2.5" data-path="cap2e5e.html"><a href="cap2e5e.html"><i class="fa fa-check"></i><b>2.5</b> Alguns comentários sobre o problema da medida</a></li>
+<li class="chapter" data-level="" data-path="ex2.html"><a href="ex2.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cap3e.html"><a href="cap3e.html"><i class="fa fa-check"></i><b>3</b> Funções Mensuráveis</a>
+<ul>
+<li class="chapter" data-level="" data-path="ex3.html"><a href="ex3.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="cap4e.html"><a href="cap4e.html"><i class="fa fa-check"></i><b>4</b> Integração</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="cap4e1e.html"><a href="cap4e1e.html"><i class="fa fa-check"></i><b>4.1</b> A integral. Teoremas básicos de convergência</a></li>
+<li class="chapter" data-level="4.2" data-path="cap4e2e.html"><a href="cap4e2e.html"><i class="fa fa-check"></i><b>4.2</b> Espaços <span class="math inline">\(L_p\)</span></a></li>
+<li class="chapter" data-level="4.3" data-path="cap4e3e.html"><a href="cap4e3e.html"><i class="fa fa-check"></i><b>4.3</b> Aplicações</a></li>
+<li class="chapter" data-level="" data-path="ex4.html"><a href="ex4.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="cap5e.html"><a href="cap5e.html"><i class="fa fa-check"></i><b>5</b> Imagens de Medidas e Medidas-Produto</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="cap5e1e.html"><a href="cap5e1e.html"><i class="fa fa-check"></i><b>5.1</b> Imagens de medidas</a></li>
+<li class="chapter" data-level="5.2" data-path="cap5e2e.html"><a href="cap5e2e.html"><i class="fa fa-check"></i><b>5.2</b> Medidas-produto - Teorema de Fubini</a></li>
+<li class="chapter" data-level="5.3" data-path="cap5e3e.html"><a href="cap5e3e.html"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a></li>
+<li class="chapter" data-level="5.4" data-path="cap5e4e.html"><a href="cap5e4e.html"><i class="fa fa-check"></i><b>5.4</b> Produtos finitos e infinitos de espaços de medida</a></li>
+<li class="chapter" data-level="" data-path="ex5.html"><a href="ex5.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="cap6e.html"><a href="cap6e.html"><i class="fa fa-check"></i><b>6</b> Medidas com Sinal</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="cap6e1e.html"><a href="cap6e1e.html"><i class="fa fa-check"></i><b>6.1</b> Generalidades</a></li>
+<li class="chapter" data-level="6.2" data-path="cap6e2e.html"><a href="cap6e2e.html"><i class="fa fa-check"></i><b>6.2</b> Decomposição de Hahn e Jordan</a></li>
+<li class="chapter" data-level="6.3" data-path="cap6e3e.html"><a href="cap6e3e.html"><i class="fa fa-check"></i><b>6.3</b> Continuidade absoluta. Teorema de Radon-Nikodym</a></li>
+<li class="chapter" data-level="6.4" data-path="cap6e4e.html"><a href="cap6e4e.html"><i class="fa fa-check"></i><b>6.4</b> Teorema de Representação de Riesz</a></li>
+<li class="chapter" data-level="" data-path="ex6.html"><a href="ex6.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="cap7e.html"><a href="cap7e.html"><i class="fa fa-check"></i><b>7</b> Integração e Diferenciação</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="cap7e1e.html"><a href="cap7e1e.html"><i class="fa fa-check"></i><b>7.1</b> Diferenciação de funções monótonas</a></li>
+<li class="chapter" data-level="7.2" data-path="cap7e2e.html"><a href="cap7e2e.html"><i class="fa fa-check"></i><b>7.2</b> Funções de variação limitada</a></li>
+<li class="chapter" data-level="7.3" data-path="cap7e3e.html"><a href="cap7e3e.html"><i class="fa fa-check"></i><b>7.3</b> Teorema de diferenciação de Lebesgue</a></li>
+<li class="chapter" data-level="7.4" data-path="cap7e4e.html"><a href="cap7e4e.html"><i class="fa fa-check"></i><b>7.4</b> Continuidade absoluta</a></li>
+<li class="chapter" data-level="7.5" data-path="cap7e5e.html"><a href="cap7e5e.html"><i class="fa fa-check"></i><b>7.5</b> Alguns resultados e exemplos especiais</a></li>
+<li class="chapter" data-level="7.6" data-path="cap7e6e.html"><a href="cap7e6e.html"><i class="fa fa-check"></i><b>7.6</b> Mudança de variáveis em integrais</a></li>
+<li class="chapter" data-level="" data-path="ex7.html"><a href="ex7.html"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/jcomicsutils/projeto-euclides-em-bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Medida e Integração</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ex3" class="section level2 unnumbered hasAnchor">
+<h2>Exercícios<a href="ex3.html#ex3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Demonstrar a Prop. 3.1.</p></li>
+<li><p>Demonstrar a Prop. 3.5.</p></li>
+<li><p>Demonstrar a Prop. 3.7.</p></li>
+<li><p>Demonstrar a Prop. 3.8.</p></li>
+<li><p>Se <span class="math inline">\(f: \mathbb{R}^1 \to \mathbb{R}^1\)</span> é não-decrescente (ou não-crescente), então <span class="math inline">\(f\)</span> é mensurável Borel.</p></li>
+<li><p><span class="math inline">\(\{(\Omega_n, \tau_n)\}_{n=1,2,\ldots}\)</span> espaços topológicos com base enumerável; <span class="math inline">\(\tau\)</span> a topologia produto. Então <span class="math display">\[\sigma(\tau) = \prod\limits_{n=1}^{\infty} \sigma(\tau_n).\]</span></p></li>
+<li><p>Demonstrar a Prop. 3.13.</p></li>
+<li><p>Demonstrar a Prop. 3.16.</p></li>
+<li><p>Provar que o espaço pseudométrico descrito no Exerc. 8 do Cap. 2 é completo no sentido topológico. (Sugestão: se uma sequência de conjuntos é fundamental em relação a <span class="math inline">\(d\)</span>, então a sequência dos indicadores <span class="math inline">\(I_{A_n}\)</span>, é fundamental em medida).</p></li>
+<li><p>Provar que, se <span class="math inline">\(f\)</span> é uma função mensurável Lebesgue, existe uma função <span class="math inline">\(g\)</span> mensurável Borel, tal que o conjunto <span class="math inline">\([f \neq g]\)</span> é um conjunto mensurável Lebesgue de medida 0.</p></li>
+<li><p>Seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida finito e <span class="math inline">\(f_n \xrightarrow{\mu} f\)</span> e <span class="math inline">\(g_n \xrightarrow{\mu} g\)</span>. Provar:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\forall a\)</span> e <span class="math inline">\(\forall b\)</span> reais, <span class="math display">\[af_n + bg_n \xrightarrow{\mu} af + bg\]</span>;</li>
+<li><span class="math inline">\(f_n g_n \xrightarrow{\mu} fg\)</span>;</li>
+<li><span class="math inline">\(f_n^2 \xrightarrow{\mu} f^2\)</span>;</li>
+<li><span class="math inline">\(f_n g_n \xrightarrow{\mu} fg\)</span>.</li>
+</ol></li>
+<li><p>Provar que toda função mensurável real é o limite uniforme de funções elementares.</p></li>
+<li><p>Dar um exemplo de uma função não-mensurável sobre um espaço mensurável <span class="math inline">\((\Omega, \mathscr{A})\)</span> e tal que <span class="math inline">\(|f|\)</span> e <span class="math inline">\(f^2\)</span> sejam mensuráveis.</p></li>
+<li><p>Seja <span class="math inline">\((\Omega, \mathscr{A})\)</span> um espaço mensurável e <span class="math inline">\(\mathbb{H}\)</span> um espaço vetorial de funções limitadas sobre <span class="math inline">\(\Omega\)</span>, tal que:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(I_\Omega \in \mathbb{H}\)</span>;</li>
+<li><span class="math inline">\(f \in \mathbb{H} \implies f \vee g \in \mathbb{H}, f \wedge g \in \mathbb{H}\)</span>;</li>
+<li><span class="math inline">\(f_n \uparrow f\)</span>, <span class="math inline">\(f_n \in \mathbb{H}\)</span>, <span class="math inline">\(f_n \leq M\)</span> (uma constante) para todo <span class="math inline">\(n\)</span>, então <span class="math inline">\(f \in \mathbb{H}\)</span>. Provar que existe uma sub-<span class="math inline">\(\sigma\)</span>-álgebra de <span class="math inline">\(\mathscr{A}\)</span>, tal que <span class="math inline">\(\mathbb{H}\)</span> coincide com a família de todas as funções <span class="math inline">\(\mathscr{B}\)</span>-mensuráveis limitadas. Sugestão. Definir <span class="math inline">\(\mathscr{B} = \{B: I_B \in \mathbb{H}\}\)</span>. Para provar que <span class="math inline">\([f &gt; a] \in \mathscr{B}\)</span>, se <span class="math inline">\(f \in \mathbb{H}\)</span>, use o fato: <span class="math display">\[I_{[f &gt; a]} = \lim_{n \to \infty} I_\Omega \wedge n(f-a)^+.\]</span></li>
+</ol></li>
+<li><p>Seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida finito onde <span class="math inline">\(\Omega\)</span> é enumerável, <span class="math inline">\(\mathscr{A}\)</span> é a <span class="math inline">\(\sigma\)</span>-álgebra de todos os subconjuntos de <span class="math inline">\(\Omega\)</span> e <span class="math inline">\(\mu(\{\omega\}) &gt; 0 \forall \omega\)</span>. Provar que <span class="math inline">\(\xrightarrow{\mu}\)</span> é equivalente à convergência pontual.</p></li>
+<li><p>Seja <span class="math inline">\(\Omega = [0, 1]\)</span>, <span class="math inline">\(\mathscr{A} = \sigma\)</span>-álgebra de Borel de <span class="math inline">\([0, 1]\)</span> e <span class="math inline">\(\mu\)</span> a medida de Lebesgue em <span class="math inline">\([0, 1]\)</span>. Cada <span class="math inline">\(n \geq 1\)</span> pode ser escrito de maneira única como <span class="math inline">\(n = 2^p + q\)</span> em que <span class="math inline">\(p \geq 0\)</span>, <span class="math inline">\(0 \leq q &lt; 2^p\)</span>. Seja <span class="math inline">\(A_n = \left[\frac{q}{2^p}, \frac{q+1}{2^p}\right]\)</span>. Provar que <span class="math inline">\(I_{A_n} \xrightarrow{\mu} 0\)</span> mas <span class="math inline">\(\limsup I_{A_n} = 1\)</span> e <span class="math inline">\(\liminf I_{A_n} = 0\)</span>.</p></li>
+<li><p>Este exercício dá uma generalização do Teorema de Egorov devida a Lusin. Seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida <span class="math inline">\(\sigma\)</span>-finito e <span class="math inline">\(\{f_n\}_{n=1,2,\ldots}\)</span> uma sequência de funções mensuráveis finitas em q.t.p. que convergem em q.t.p. a uma função mensurável <span class="math inline">\(f\)</span> finita em q.t.p. Então <span class="math inline">\(\Omega = A_0 + \sum\limits_{i=1}^\infty A_i\)</span> onde <span class="math inline">\(\mu(A_0) = 0\)</span> e <span class="math inline">\(f_n\)</span> converge uniformemente a <span class="math inline">\(f\)</span> sobre todo <span class="math inline">\(A_i, i=1, 2, \ldots\)</span>.</p></li>
+<li><p>(Teorema de Lusin). Seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de probabilidades onde <span class="math inline">\(\Omega\)</span> é um espaço polonês e <span class="math inline">\(\mathscr{A}\)</span> é a <span class="math inline">\(\sigma\)</span>-álgebra de Borel. Provar que, se <span class="math inline">\(f\)</span> é uma função real mensurável, então <span class="math inline">\(\forall \varepsilon &gt; 0\)</span> <span class="math inline">\(\exists K(\varepsilon)\)</span> compacto, tal que <span class="math inline">\(\mu(K) \geq 1-\varepsilon\)</span> e <span class="math inline">\(f|_K\)</span> é contínua. <em>Roteiro de demonstração</em>:</p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: decimal">
+<li><p>Provar que <span class="math inline">\(\forall \varepsilon &gt; 0\)</span>, <span class="math inline">\(\exists K\)</span> compacto, tal que <span class="math inline">\(\mu(K) \geq 1-\varepsilon\)</span>. Seja <span class="math inline">\(x_1, x_2, \ldots\)</span> uma enumeração de um conjunto denso em <span class="math inline">\(\Omega\)</span>. Seja <span class="math inline">\(\{\delta_j\}_{j=1,2,\ldots}\)</span> uma sequência de números positivos, tais que <span class="math inline">\(\delta_j \to 0\)</span>. Seja <span class="math inline">\(\{\varepsilon_n\}_{n=1,2,\ldots}\)</span>, tal que <span class="math inline">\(\varepsilon_n &gt; 0\)</span> e <span class="math inline">\(\sum\limits_{n=1}^\infty \varepsilon_n &lt; \varepsilon\)</span>. Finalmente seja <span class="math inline">\(B(x_k, \delta_n) = \{y: y \in \Omega, d(y, x_k) \leq \delta_n\}\)</span> (bola fechada de centro <span class="math inline">\(x_k\)</span> e raio <span class="math inline">\(\delta_n\)</span>) onde <span class="math inline">\(d\)</span> é a métrica de <span class="math inline">\(\Omega\)</span>. Para cada <span class="math inline">\(n\)</span>, existe <span class="math inline">\(k_n\)</span>, tal que <span class="math display">\[\mu\left(\bigcup\limits_{k=1}^{k_n} B(x_k, \delta_n)\right) \geq 1-\varepsilon_n.\]</span> Seja <span class="math inline">\(K = \bigcap\limits_{n=1}^\infty \bigcup\limits_{k=1}^{k_n} B(x_k, \delta_n)\)</span>. <span class="math inline">\(K\)</span> é fechado e totalmente limitado (portanto compacto) e <span class="math inline">\(\mu(K) \geq 1-\varepsilon\)</span>.</p></li>
+<li><p>Provar que, se <span class="math inline">\(A \in \mathscr{A}\)</span>, <span class="math display">\[\mu(A) = \sup\{\mu(K): K \subseteq A, K \text{ compacto}\}.\]</span></p></li>
+<li><p>Consequência dos dois itens 1) e 2) é que o teorema de Lusin é válido para indicadores. Provar então que é válido para funções simples e depois, por aproximação, para funções mensuráveis em geral. Para esta última parte use o Teorema de Egorov.</p></li>
+</ol>
+<!-- -->
+<ol start="19" style="list-style-type: decimal">
+<li><p>Seja <span class="math inline">\((\Omega, \mathscr{A})\)</span> um espaço mensurável onde <span class="math inline">\(\Omega\)</span> é um espaço métrico e <span class="math inline">\(\mathscr{A}\)</span> é a <span class="math inline">\(\sigma\)</span>-álgebra de Borel. Se <span class="math inline">\(C^b(\Omega) = \{f: f:\Omega \to \mathbb{R}^1, \text{contínua e limitada}\}\)</span>, provar que <span class="math inline">\(\sigma(C^b(\Omega)) = \mathscr{A}\)</span>.</p></li>
+<li><p>Com referência ao Exerc. 14 do Cap. 1 (veja também o Exerc. 18 do Cap. 2) seja <span class="math inline">\(f: \Omega \to \mathbb{R}^1\)</span>. Então <span class="math inline">\(f\)</span> é <span class="math inline">\(\mathscr{A}\)</span>-mensurável se, e somente se, <span class="math inline">\(f\)</span> é constante sobre todo conjunto <span class="math inline">\(A\)</span>, tal que <span class="math inline">\(A^c\)</span> seja enumerável.</p></li>
+<li><p>Seja <span class="math inline">\((\Omega, \mathscr{A})\)</span> um espaço mensurável com <span class="math inline">\(\mathscr{A}\)</span> separável. Provar que existe <span class="math inline">\(f:\Omega \to \mathbb{R}^1\)</span>, tal que <span class="math inline">\(\mathscr{A} = f^{-1}(\mathscr{R}^1)\)</span>, onde <span class="math inline">\(\mathscr{R}^1\)</span> são os borelianos de <span class="math inline">\(\mathbb{R}^1\)</span>.</p></li>
+<li><p>Seja <span class="math inline">\((\Omega, \mathscr{A})\)</span> um espaço mensurável e seja <span class="math inline">\(\mathscr{B}\)</span> a <span class="math inline">\(\sigma\)</span>-álgebra de Borel em <span class="math inline">\([0, 1]\)</span>. Seja <span class="math inline">\(f: [0, 1] \times \Omega \to \mathbb{R}^1\)</span> uma função, tal que</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(\forall x \in [0, 1]\)</span>, <span class="math inline">\(f(x, \cdot)\)</span> é <span class="math inline">\(\mathscr{A}\)</span>-mensurável;</li>
+<li><span class="math inline">\(\forall \omega \in \Omega\)</span>, <span class="math inline">\(f(\cdot, \omega)\)</span> é contínua à direita. Então <span class="math inline">\(f\)</span> é <span class="math inline">\(\mathscr{B} \times \mathscr{A}\)</span>-mensurável.</li>
+</ol></li>
+<li><p>Considere no espaço <span class="math inline">\((\mathbb{N}, \mathbb{P}(\mathbb{N}), \#)\)</span> (veja o Exerc. 20 do Cap. 2) a sequência de funções <span class="math inline">\(f_n = I_{\{1,2,\ldots,n\}}\)</span>. Então <span class="math inline">\(f_n \to I_\Omega\)</span> mas <span class="math inline">\(f_n\)</span> não converge quase uniformemente. Ou seja, o Teorema de Egorov é falso, se a medida do espaço não é finita.</p></li>
+<li><p>Se <span class="math inline">\(f: \mathbb{R}^1 \to \mathbb{R}^1\)</span> é não-decrescente, então se <span class="math inline">\(B\)</span> é um conjunto mensurável Borel, <span class="math inline">\(f(B)\)</span> é também boreliano.</p></li>
+</ol>
+
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="cap3e.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cap4e.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "night",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/jcomicsutils/projeto-euclides-em-bookdown/edit/main/medida-e-integracao/03-funcoes-mensuraveis.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

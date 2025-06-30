@@ -6,4 +6,4 @@
 
 ## Aplicações {#cap4e3e}
 
-## Exercícios {-}
+## Exercícios {- #ex4}

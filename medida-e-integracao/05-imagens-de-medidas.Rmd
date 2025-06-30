@@ -8,4 +8,4 @@
 
 ## Produtos finitos e infinitos de espaços de medida {#cap5e4e}
 
-## Exercícios {-}
+## Exercícios {- #ex5}
