@@ -1,9 +1,619 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
 # Integração {#cap4e}
+
+Este capítulo é certamente o mais importante do livro. A Seção 4.1 contém os resultados mais usados da teoria. Toda esta seção é muito importante, merecendo especial destaque as Props. 4.1.6 e 4.1.7 e o Teor. 4.1.1. Na seção seguinte o Teor. 4.2.1 e as Props. 4.2.2 e 4.2.3 são as mais importantes. Na parte de aplicações, a Seção 4.3.1 deve ser estudada integralmente.
+
+Neste capítulo, $(\Omega, \mathscr{A}, \mu)$ será um espaço de medida fixo; $\mathscr{A}$ é uma $\sigma$-álgebra. Todas as funções consideradas são de $\Omega$ em $\overline{\mathbb{R}}$.
 
 ## A integral. Teoremas básicos de convergência {#cap4e1e}
 
+Repetimos de forma ligeiramente modificada a Definição 3.5.
+
+**DEFINIÇÃO 4.1.1.** Uma função mensurável é dita *simples* quando toma somente um número finito de valores finitos. Toda função simples pode ser representada na forma $$f = \sum\limits_{i=1}^n a_i I_{A_i}, \text{ onde os } A_i \in \mathscr{A}, \text{ são disjuntos e }$$ $$\sum\limits_{i=1}^n A_i = \Omega; a_i \in \mathbb{R}.$$ Esta representação não é única. (Se agregarmos a restrição $a_i \neq a_j$, se $i \neq j$, então seria única).
+
+**DEFINIÇÃO 4.1.2.** Se $f$ é uma função simples $\geq 0$, $f = \sum\limits_{i=1}^n a_i I_{A_i}$, define-se integral de $f$ como $$\sum\limits_{i=1}^n a_i\mu(A_i)$$ e usam-se indistintamente os símbolos $$I(f) = \int_\Omega f d\mu = \int_\Omega f(\omega) \mu(d\omega) = \int_\Omega f = \int f$$ para indicar este número (lembre-se que $+\infty \cdot 0 = 0$).
+
+*Observação.* $I(f)$ está bem definida, no seguinte sentido: Se $\sum\limits_{i=1}^n a_i I_{A_i} = \sum\limits_{j=1}^m b_j I_{B_j}$, então $\sum\limits_{i=1}^n a_i\mu(A_i) = \sum\limits_{j=1}^m b_j\mu(B_j)$ (Veja o Exerc. 1).
+
+**PROPOSIÇÃO 4.1.1.** Sejam $f, g$ funções simples $\geq 0$, e $a \geq 0$ um número real,
+
+a)  $I(f) \geq 0$;
+
+b)  $f \leq g \implies I(f) \leq I(g)$;
+
+c)  $I(af) = aI(f)$;
+
+d)  $I(f+g) = I(f) + I(g)$.
+
+**Demonstração.** Veja o Exerc. 2.
+
+**DEFINIÇÃO 4.1.3.** Se $A \in \mathscr{A}$ e $f$ é uma função simples $\geq 0$, por definição $$\int_A f = \int_\Omega f I_A.$$
+
+**PROPOSIÇÃO 4.1.2.** A função $$A \mapsto \int_A f d\mu$$ é uma medida sobre $\mathscr{A}$.
+
+**Demonstração.** Veja o Exerc. 3.
+
+**PROPOSIÇÃO 4.1.3.** Se $\{f_n\}$ é uma sucessão de funções simples $\geq 0$, tal que $f_n \downarrow 0$ e $\mu\left(\left[f_{n_1} > 0\right]\right) < \infty$, para algum $n_1 \in \mathbb{N}$, então $I(f_n) \downarrow 0$.
+
+**Demonstração.** Seja $B = \left[f_{n_1} > 0\right]$. Se $B = \varnothing$, o resultado é evidente. Suponhamos $B \neq \varnothing$ e consideremos o espaço de medida $(B, \mathscr{A}, \mu|_{B})$ induzido por $(\Omega, \mathscr{A}, \mu)$ sobre $B$. Como $\{f_n\}$ é decrescente, para $n \geq n_1$, temos $\int_B f_n = \int_B f_n$. Por outro lado, como $\{f_n\}_{n \geq n_1} \downarrow 0$ e $\mu(B) < \infty$, pelo Teorema de Egoroff a convergência é quase uniforme. Seja $\varepsilon > 0$. Então existe $A \subseteq B$, tal que $$\mu(A) < \frac{\varepsilon}{2 \cdot \max f_{n_1}}$$ e existe $n_0 \geq n_1$, tal que $$n \geq n_0 \implies f_n(\omega) < \frac{\varepsilon}{2\mu(B)}$$ para todo $\omega \in B-A$. Escolhendo este $n_0$, temos que $$n \geq n_0 \implies \int_B f_n = \int_A f_n + \int_{B-A} f_n \leq$$ $$\leq (\max f_{n_1}) \cdot \mu(A) + \frac{\varepsilon}{2\mu(B)} \cdot \mu(B-A) < \varepsilon.$$
+
+**PROPOSIÇÃO 4.1.4.** Se $\{f_n\}$ é uma sucessão crescente de funções simples $\geq 0$ e $g$ é uma função simples $\geq 0$, tal que $\lim f_n \geq g$, então $\lim \int f_n \geq \int g$.
+
+**Demonstração.** Suponhamos que $\mu\left(\left[g > 0\right]\right) < \infty$. Seja $h_n = g-(g \wedge f_n)$, para todo $n$. Então como $h_n \downarrow 0$ e $\mu\left(\left[h_1 > 0\right]\right) \leq \mu\left(\left[g > 0\right]\right) < \infty$, $\int h_n \downarrow 0$. Então $$\int g = \lim \int (g \wedge f_n) \leq \lim \int f_n.$$ Observe que esse último limite existe, porque a sucessão $\{f_n\}$ é crescente. Supondo agora que $\mu\left(\left[g > 0\right]\right) = \infty$, sejam $$m = \min\left\{g(\omega): \omega \in \left[g > 0\right]\right\} \text{ e } 0 < \varepsilon < m.$$ Consideremos a sucessão $\{A_n\}$, onde $$A_n = \left[\left. f_n > g-\varepsilon \right.\right] \cap \left[g > 0\right].$$ Então $A_n \uparrow \left[g > 0\right]$, como é fácil ver. Então $$\int f_n \geq \int_{A_n} f_n \geq (m-\varepsilon) \cdot \mu(A_n) \uparrow (m-\varepsilon)\mu\left(\left[g > 0\right]\right) = +\infty = \int g.$$
+
+**DEFINIÇÃO 4.1.4.** Se $f$ é uma função mensurável $\geq 0$ e $\{f_n\}$ é uma sucessão de funções simples $\geq 0$, tal que $f_n \uparrow f$, então, por definição, $\int f = \lim \int f_n$.
+
+*Observação.* $\int f$ está bem definida no seguinte sentido: se $\{g_n\}$ é uma sucessão de funções simples $\geq 0$, tal que $g_n \uparrow f$ então $$\lim \int f_n = \lim \int g_n.$$ Isto é uma consequência da proposição anterior. Porque $f = \lim f_n = \lim g_n \geq g_m \forall m$. Portanto $$\int f = \lim \int f_n \geq \int g_n \text{ (Prop. 4.1.4).}$$ Como a desigualdade é válida $\forall m$, temos que $\lim \int f_n \geq \lim \int g_m$. A desigualdade contrária é provada de forma análoga.
+
+**PROPOSIÇÃO 4.1.5.** Sejam $f, g$ funções mensuráveis $\geq 0$ e $a \geq 0$. Então valem as mesmas afirmações da Prop. 4.1.1.
+
+**Demonstração.** Veja o Exerc. 4.
+
+**PROPOSIÇÃO 4.1.6 (Teorema da Convergência Monótona).** Seja $\{f_n\}$ uma sucessão de funções, tais que $f_n \uparrow f$, sendo as $f_n$ e $f$ mensuráveis $\geq 0$. Então $$\int f_n \uparrow \int f.$$
+
+**Demonstração.** Seja $\{f_{n,m}\}$ uma sucessão de funções simples $\geq 0$, tal que $f_{n,m} \uparrow f_n$, para todo $n$. Seja $$g_m = \sup_{1 \leq n \leq m} f_{n,m},$$ para todo $m$. Então as $g_m$ são funções simples $\geq 0$ e a sucessão $\{g_m\}$ é crescente. Vamos mostrar que $g_m \uparrow f$. Se $1 \leq n \leq m$, $f_{n,m} \leq g_m \leq f_m$. Tomando o limite, quando $m \to \infty$, obtemos $$f_n \leq \lim_{m} g_m \leq f$$ e fazendo agora $n \to \infty$, $$f \leq \lim_{m} g_m \leq f.$$ Então $\int g_m \uparrow \int f$. Para $1 \leq n \leq m$ $$\int f_{n,m} \leq \int g_m \leq \int f_m.$$ Fazendo $m \to \infty$, $$\int f_n \leq \int f \leq \lim_{m} \int f_m$$ e, quando $n \to \infty$, $$\lim_{n} \int f_n \leq \int f \leq \lim_{m} \int f_m.$$ Então $\int f_n \uparrow \int f$.
+
+**COROLÁRIO 4.1.1.** Seja $\{f_n\}$ uma sucessão de funções mensuráveis $\geq 0$. Então $$\int \sum\limits_{n=1}^{\infty} f_n = \sum\limits_{n=1}^{\infty} \int f_n.$$
+
+**Demonstração.** Segue da proposição anterior observando que $\sum\limits_{n=1}^N f_n \uparrow \sum\limits_{n=1}^\infty f_n$.
+
+*Observação.* Decorre do corolário acima, que se $f$ é mensurável $\geq 0$, a função $$A \in \mathscr{A} \mapsto \int_A f$$ é $\sigma$-aditiva, porque $$\int_{\sum\limits_{n=1}^\infty A_n} f = \int_\Omega f \cdot I_{\sum\limits_{n=1}^\infty A_n} = \int_\Omega \sum\limits_{n=1}^\infty (f \cdot I_{A_n}) = \sum\limits_{n=1}^\infty \int_\Omega f \cdot I_{A_n} = \sum\limits_{n=1}^\infty \int_{A_n} f.$$ *Observação.* Este argumento proporciona outra demonstração da Prop. 4.1.2.
+
+**DEFINIÇÃO 4.1.5.** A função $A \mapsto \int_A f d\mu$ é chamada *integral indefinida* da função $f$. Denotaremos a função integral indefinida com os símbolos $\int f$, $\int f d\mu$, ou $\mu(f)$.
+
+**COROLÁRIO 4.1.2.** Se $f$ é mensurável $\geq 0$ e $\int f < \infty$, $\int f$ é *absolutamente contínua em relação a* $\mu$, ou seja, para todo $\varepsilon > 0$, existe $\delta > 0$, tal que $\mu(A) < \delta \implies \int_A f < \varepsilon$.
+
+**Demonstração.** Seja $g_n = f I_{\left[f < n\right]}$, para todo $n$. Então $0 \leq g_n \uparrow f$, implicando que $$\int f = \int g_n \uparrow \int f.$$ Como $$\int f = \int_{\left[f < n\right]} f + \int_{\left[f \geq n\right]} f,$$ $\int_{\left[f \geq n\right]} f \downarrow 0$. Então dado $\varepsilon > 0$, existe $n_0$, tal que $\int_{\left[f \geq n_0\right]} f < \varepsilon/2$. Ora, $$\int_A f = \int_{A \cap \left[f < n_0\right]} f + \int_{A \cap \left[f \geq n_0\right]} f \leq n_0\mu(A) + \frac{\varepsilon}{2}$$ e então, tomando $\delta = \frac{\varepsilon}{2n_0}$, $\mu(A) < \delta \implies \int_A f < \varepsilon$.
+
+**DEFINIÇÃO 4.1.6.** Seja $f$ uma função mensurável. Dizemos que $f$ é *integrável* (ou *integrável Lebesgue*) se, e somente se, $$\int f^+ < \infty \quad \text{e} \quad \int f^- < \infty;$$ ou seja, $\int |f| < \infty$. Dizemos que $f$ é *quase-integrável* se, e somente se, $$\int f^+ < \infty \quad \text{ou} \quad \int f^- < \infty.$$ Em qualquer dos casos acima, por definição, $$\int f = \int f^+ - \int f^-.$$
+
+**PROPOSIÇÃO 4.1.7.** Sejam $f$ e $g$ funções quase integráveis, $c \in \mathbb{R}^1$.
+
+a)  $\int f \in \mathbb{R}$; $\int f \in \mathbb{R}^1$ se, e somente se, $f$ é integrável;
+
+b)  $f \geq 0 \implies \int f \geq 0$;
+
+c)  $f \leq g \implies \int f \leq \int g$;
+
+d)  $\int cf = c \int f$;
+
+e)  Se $f+g$ está definida e $f^+$ e $g^+$ (ou $f^-$ e $g^-$ são integráveis, então $f+g$ é quase integrável e $\int f+g = \int f + \int g$;
+
+f)  $\left|\int f\right| \leq \int |f|$;
+
+g)  Se $\{f_n\}$ é uma sucessão de funções quase-integráveis, tal que $f_n \uparrow f$ (respectivamente $f_n \downarrow f$) e $f_{n_0}$ (respectivamente $f_{n_0}$) é integrável para algum $n_0$, então $\int f_n \uparrow \int f$ (respectivamente $\int f_n \downarrow \int f$).
+
+**Demonstração.** Vamos provar somente e) e g). Para provar e) é suficiente mostrar que, se $f_1, f_2$ são funções mensuráveis $\geq 0$, sendo uma delas integrável, e $f_1-f_2 \neq \infty - \infty$, então $f_1-f_2$ é quase-integrável e $$\int \left(f_1-f_2\right) = \int f_1 - \int f_2$$ porque $$f+g = \left(f^+-f^-\right) + \left(g^+-g^-\right) = \left(f^+ + g^+\right)-\left(f^- + g^-\right)$$ e então $f+g$ é quase-integrável e $$\int f+g = \int f^+ - \int f^- + \int g^+ - \int g^- = \int f + \int g.$$ Provemos então a afirmação acima. Como $$0 \leq \left(f_1-f_2\right)^+ \leq f_1 \quad \text{e} \quad 0 \leq \left(f_1-f_2\right)^- \leq f_2,$$ $f_1-f_2$ é quase-integrável. $f_1-f_2 = \left(f_1-f_2\right)^+-\left(f_1-f_2\right)^-$ $\implies \left(f_1-f_2\right)^+ + f_2 = \left(f_1-f_2\right)^- + f_1 \implies$ $\implies \int \left(f_1-f_2\right)^+ + \int f_2 = \int \left(f_1-f_2\right)^- + \int f_1 \implies$ $\implies \int f_1 - \int f_2 = \int \left(f_1-f_2\right)^+ - \int \left(f_1-f_2\right)^- = \int \left(f_1-f_2\right)$.
+
+Do item g) vamos provar apenas a 1ª afirmação, já que a prova da outra é análoga. Para todo $n \geq n_0$, $0 \leq f_n \leq f_{n_0}$ e isso implica que $0 \leq \int f^- \leq \int f_{n_0}^-$. Então $f$ e as $f_n(n \geq n_0)$ são quase-integráveis, e $f_n + f_{n_0}^- = f_n^- + f_{n_0}^- = f_n^+ + (f_{n_0}^- - f_n^-) \geq 0$ e $f_n \uparrow f$, $f_{n_0}^- \uparrow f_{n_0}^-$.
+
+Então, pelo Teorema da Convergência Monótona, $$\int \left(f_n + f_{n_0}^-\right) \uparrow \int \left(f + f_{n_0}^-\right),$$ ou seja, $$\int f_n + \int f_{n_0}^- \uparrow \int f + \int f_{n_0}^-,$$ e então $$\int f_n \uparrow \int f.$$
+
+**PROPOSIÇÃO 4.1.8.** Seja $f$ mensurável $\geq 0$. $f = 0$ q. t. p. se, e somente se, $$\int f d\mu = 0.$$
+
+**Demonstração.** Seja $A_n = \left[f > \frac{1}{n}\right]$. $$\mu(A_n) = \int_{A_n} I_{A_n} d\mu = \int_{A_n} n\left(\frac{1}{n}I_{A_n}\right) d\mu \leq$$ $$\leq n \int_{A_n} f d\mu = 0.$$ Ou seja, para todo $n \geq 1$, $\mu(A_n) = 0$ e portanto $\mu\left(\left[f > 0\right]\right) = 0$. Reciprocamente, se $f = 0$ q.t.p., seja $A = \left[f > 0\right]$; $\mu(A) = 0$. Agora se $$g(\omega) = \begin{cases} +\infty & \omega \in A \\ 0 & \omega \in A^c, \end{cases}$$ temos $0 \leq f \leq g$ e portanto $0 \leq \int f \leq \int g$. Como $0 \leq n I_A \uparrow g$, temos $$0 = \int n I_A d\mu \uparrow \int g d\mu$$ e portanto $\int g d\mu = 0$, o que prova a proposição.
+
+**COROLÁRIO 4.1.3.**
+
+a)  Seja $f \geq 0$ mensurável. $A \in \mathscr{A}$, tal que $\mu(A) = 0$. Então $\int_A f d\mu = 0$.
+
+Sejam $f$ e $g$ mensuráveis, e $f = g$ q. t. p., então
+
+b)  Se $f \geq 0$, $g \geq 0 \implies \int f d\mu = \int g d\mu$;
+
+c)  $\int f$ integrável $\implies g$ integrável e $\int f d\mu = \int g d\mu$.
+
+**Demonstração.** Veja o Exerc. 5.
+
+A seguinte proposição estende o Teorema da Convergência Monótona (e portanto a parte g) da Prop. 4.1.7), ao caso de convergência q. t. p.
+
+**PROPOSIÇÃO 4.1.9.** $0 \leq f_n \uparrow f$ em q. t. p., então $0 \leq \int f_n \uparrow \int f$.
+
+**Demonstração.** $A = \left[f_n \not\to f\right]$; $\mu(A) = 0$. Temos $$0 \leq I_{A^c} f_n \uparrow I_{A^c} f$$ e utilizando o Teorema da Convergência Monótona $$0 \leq \int I_{A^c} f_n \uparrow \int I_{A^c} f = \int f.$$ (A igualdade das integrais decorre do item b) do Cor. 4.1.3.
+
+**TEOREMA 4.1.1 (Fatou-Lebesgue).** Seja $\{f_n\}$ uma sucessão de funções mensuráveis e $g$ e $h$ são funções integráveis então:
+
+a)  $\int \liminf f_n \leq \liminf \int f_n$;
+
+b)  $\int \limsup f_n \geq \limsup \int f_n$;
+
+c)  Se $f_n \xrightarrow{\text{q.t.p.}} f$ e $|f_n| \leq g$ q. t. p. para todo $n$, então $\int f = \lim \int f_n$.
+
+Esse resultado é conhecido como *Teorema da Convergência Dominada*.
+
+**Demonstração.** Vamos provar apenas o item (a) porque (b) é análoga e (c) decorre de (a) e (b). Temos que $\left(\sup_{k \geq n} f_k\right)^+ \leq g^+$ em q. t. p e então, como $g^+$ é integrável, $\left(\sup_{k \geq n} f_k\right)^+$ é integrável para todo $n$. Além disso, $\left\{\sup_{k \geq n} f_k\right\}$ é uma sucessão decrescente que converge para $\limsup f_n$. Então, pela versão com convergência em q. t. p. da Prop. 4.1.7, item g) (veja o comentário que precede a Prop. 4.1.9), temos $$\int \limsup f_n = \int \inf_{n \geq 1} \sup_{k \geq n} f_k = \lim_{n \to \infty} \int \sup_{k \geq n} f_k = \limsup \int f_n.$$
+
+**Observações.**
+
+1)  Nas condições da parte c) do teorema, podemos concluir também que $\int |f_n-f| \to 0$, porque $|f_n-f| \to 0$ q. t. p. e $|f_n-f| \leq 2g$ q. t. p. Além disso vale também que $$\sup_{A \in \mathscr{A}} \left|\int_A f_n - \int_A f\right| \to 0,$$ porque $$\left|\int_A f_n - \int_A f\right| \leq \int_A |f_n-f| \leq \int |f_n-f|.$$
+
+2)  Em 1) a convergência q. t. p. pode ser substituída por convergência em medida. Senão vejamos:
+
+Se $\int |f_n-f| \not\to 0$, então existe $\varepsilon > 0$ e uma sequência $\{n_k\}$ de naturais, tal que $\int |f_{n_k}-f| \geq \varepsilon$, para todo $k$. Mas $f_{n_k} \xrightarrow{\mu} f$, e portanto existe subsequência $n_{k_j}$, tal que $f_{n_{k_j}} \to f$ q. t. p., (Cor. 3.5 da Prop. 3.2.1) e, como $|f_{n_{k_j}}| \leq g$, temos $\int |f_{n_{k_j}}-f| \to 0$, o que é uma contradição.
+
 ## Espaços $L_p$ {#cap4e2e}
+
+Seja $\mathbb{E}$ espaço vetorial real. Uma função real não-negativa $\left\|\cdot\right\|$ definida sobre $\mathbb{E}$ é chamada uma *norma* se, e somente se,
+
+1)  $\left\|x\right\| = 0 \iff x = 0$;
+
+2)  $\left\|x+y\right\| \leq \left\|x\right\| + \left\|y\right\|$;
+
+3)  $\alpha \in \mathbb{R}^1$, $x \in \mathbb{E}$, $\left\|\alpha x\right\| = |\alpha|\left\|x\right\|$.
+
+Se em 1) só requeremos que $\left\|0\right\| = 0$, a função $\left\|\cdot\right\|$ é chamada *seminorma*.
+
+Um *espaço normado* é um espaço vetorial previsto de uma *norma* $\left\|\cdot\right\|$. Uma norma induz uma métrica sobre $\mathbb{E}$ em forma natural; $d(x, y) = \left\|x-y\right\|$. Quando nos referirmos às propriedades métricas de um espaço normado, estaremos utilizando esta métrica.
+
+Quando um espaço normado é completo, é chamado *espaço de Banach*.
+
+**EXEMPLOS (de espaços de Banach):**
+
+1.  $\mathbb{E} = \mathbb{R}^n$. Se $x = (x_1, \ldots, x_n)$, definimos $\left\|x\right\|_1 = \sum\limits_{i=1}^n |x_i|$ e para $p \geq 1$, $$\left\|x\right\|_p = \left(\sum\limits_{i=1}^n |x_i|^p\right)^{1/p}.$$ Definimos também $\left\|x\right\|_\infty = \sup_{1 \leq i \leq n} \left\{|x_i|\right\}$.
+
+2.  $X$ um conjunto, $\mathbb{E} = \{f: X: \to \mathbb{R}^1, f \text{ limitada}\}$, $$\left\|f\right\| = \sup_{x \in X} |f(x)|.$$
+
+3.  $(X, \tau)$ espaço topológico. $\mathbb{E} = \{f: f: X \to \mathbb{R}^1 \text{ contínua e limitada}\}$, $$\left\|f\right\| = \sup_{x \in X} |f(x)|.$$
+
+Um exemplo muito importante de espaço de Banach, que estudaremos com detalhe, são os chamados espaços $L_p$. Seja $(\Omega, \mathscr{A}, \mu)$ espaço de medida. Seja $1 \leq p < \infty$, $p \in \mathbb{R}^1$. Define-se $\mathscr{L}_p = \left\{f: f \text{ mensurável}, f: \Omega \to \overline{\mathbb{R}}, \text{e } \int |f|^p < \infty\right\}$.
+
+$\mathscr{L}_p$ é um espaço vetorial real e $$f \in \mathscr{L}_p \mapsto \left(\int |f|^p\right)^{1/p}$$ é uma seminorma em $\mathscr{L}_p$. Passando ao quociente, isto é, identificando as funções que são iguais q. t. p. (observe que $f=0$ q. t. p. $\iff \int |f|^p = 0$), obtemos um espaço normado que denotaremos por $L_p$. A norma $p$ de $f$ é denotada por $\left\|f\right\|_p$.
+
+Por definição, $$\mathscr{L}_\infty(\Omega, \mathscr{A}, \mu) = \mathscr{L}_\infty = \left\{f: \mu\left(\left[|f| > a\right]\right) = 0, \text{ para algum } a > 0\right\}.$$ Da mesma forma $\mathscr{L}_\infty$ é um espaço vetorial real e $$f \in \mathscr{L}_\infty \mapsto \inf\left\{a > 0: \mu\left(\left[|f| > a\right]\right) = 0\right\}$$ é uma seminorma em $\mathscr{L}_\infty$, e por passagem ao quociente, obtemos o espaço normado $L_\infty$. A norma $\infty$ de $f$ é denotada por $\left\|f\right\|_\infty$. Se, em particular, $\Omega = \mathbb{N}$, $\mathscr{A} = \mathbb{P}(\mathbb{N})$ e $\mu$ é a medida da contagem, ou seja, a única medida tal que $\mu\left(\left\{i\right\}\right) = 1$, para todo $i \in \mathbb{N}$, obtemos os espaços: $$\ell_p = \left\{\left(x_n\right)_{n \in \mathbb{N}}: x_n \in \mathbb{R}^1 \quad \text{e} \quad \sum\limits_{n=1}^\infty |x_n|^p < \infty\right\}, 1 \leq p < \infty;$$ $$\ell_\infty = \left\{\left(x_n\right)_{n \in \mathbb{N}}: x_n \in \mathbb{R}^1 \text{ e } \left\{x_n: n \in \mathbb{N}\right\} \text{ é limitado em } \mathbb{R}^1\right\}.$$ Observe que, se $x = \{x_n\}_{n=1,2,\ldots}$, então $$\left\|x\right\|_p = \left(\sum\limits_{n=1}^\infty |x_n|^p\right)^{1/p}$$ e $$\left\|x\right\|_\infty = \sup_{n \geq 1} \left\{|x_n|\right\}.$$ Note-se que o espaço de Banach introduzido no exemplo 1 é também um caso particular de espaço $L_p$, se tomamos $\Omega = \{1, 2, \ldots, n\}$, e como medida, a da contagem. Vamos provar agora uma série de desigualdades e proposições que em conjunto permitirão verificar que os espaços $L_p$ são efetivamente espaços de Banach. Daremos também condições necessárias e suficientes para a convergência nesses espaços. Comecemos pela seguinte desigualdade:
+
+**PROPOSIÇÃO 4.2.1 (Desigualdade de Young).** Seja $\varphi: [0, +\infty) \text{ contínua, estritamente crescente } \varphi(u) \xrightarrow{u \to +\infty} +\infty, \varphi(0) = 0$. Seja $\Psi = \varphi^{-1}$. Definamos para todo $x \geq 0$ $$\Phi(x) = \int_0^x \varphi(u) du$$ $$\Psi(x) = \int_0^x \psi(u) du.$$ Então para todo $a, b \in [0, +\infty)$, $$ab \leq \Phi(a) + \Psi(b).$$ A igualdade vale se, e somente se, $b = \varphi(a)$.
+
+**Demonstração.** Claramente $$\int_0^a \varphi(u) du + \int_0^{\varphi(a)} \psi(v) dv = a\varphi(a).$$ Isto é, $$\Phi(a) + \Psi(\varphi(a)) = a\varphi(a).$$ De aqui $$\Phi(a) + \Psi(b) = a\varphi(a) + \Psi(b)-\Psi(\varphi(a)).$$
+
+Decorre da desigualdade considerando os casos $\varphi(a) \leq b$ e $\varphi(a) > b$ nas figuras
+
+```{r figure-04-02-01, fig.show='hold', fig.align='center', echo=FALSE, cache=TRUE}
+knitr::include_graphics(rep("figures/figure-04-02-01.png"))
+```
+
+Uma demonstração analítica pode ser encontrada no Exerc. 48.
+
+Para $p > 1$ se $q = \frac{p}{p-1}$ temos $\frac{1}{p} + \frac{1}{q} = 1$.
+
+$p$ e $q$ são chamados números conjugados. Se $p = 1$, o conjugado será $q = \infty$.
+
+**COROLÁRIO 4.2.1.** $$p > 1, \quad a \geq 0, \quad b \geq 0$$ $$ab \leq \frac{a^p}{p} + \frac{b^q}{q}$$ com igualdade, se, e somente se, $a^p = b^q$.
+
+**Demonstração.** Então $$\varphi(u) = u^{p-1}.$$ $$\Phi(a) = \int_0^a u^{p-1} du = \left.\frac{u^p}{p}\right|_0^a = \frac{a^p}{p}.$$ $$\psi(u) = u^{\frac{1}{p-1}}.$$ $$\Psi(b) = \int_0^b v^{\frac{1}{q-1}} dv = \left.\frac{v^q}{q}\right|_0^b = \frac{b^q}{q}.$$ Pela desigualdade de Young temos $ab \leq \frac{a^p}{p} + \frac{b^q}{q}$, com igualdade, se, e somente se, $b = \varphi(a) = a^{p-1}$. Isto é, $$b^{\frac{1}{p-1}} = a$$ que é equivalente a $$b^{\frac{q}{p}} = b^q = a^p.$$ Sejam $f$ e $g$ duas funções mensuráveis sobre $(\Omega, \mathscr{A}, \mu)$
+
+**TEOREMA 4.2.1 (Desigualdade de Hölder para p \> 1).** Se $f \in \mathscr{L}_p$ e $g \in \mathscr{L}_q$, onde $p > 1$ e $q = \frac{p}{p-1}$, temos $$\int_\Omega |fg| d\mu \leq \left\|f\right\|_p \left\|g\right\|_q.$$ A igualdade vale se, e somente se, existe $A \geq 0$ e $B \geq 0$, não simultaneamente nulos, tal que $$A|f|^p = B|g|^q \quad \text{q. t. p. } [\mu]$$
+
+**Demonstração.** Se $\left\|f\right\|_p = 0$ ou $\left\|g\right\|_q = 0$, a desigualdade é trivial. Se não é este o caso, pelo corolário temos $$\frac{|f|}{\left\|f\right\|_p} \frac{|g|}{\left\|g\right\|_q} \leq \frac{1}{p} \frac{|f|^p}{\left\|f\right\|_p^p} + \frac{1}{q} \frac{|g|^q}{\left\|g\right\|_q^q}$$ e integrando resulta: $$\int_\Omega \frac{|f||g|}{\left\|f\right\|_p \left\|g\right\|_q} d\mu \leq \frac{1}{p} + \frac{1}{q} = 1.$$
+
+**COROLÁRIO 4.2.2.** Se $p = q = 2$ temos $$\int_\Omega |fg| d\mu \leq \left\|f\right\|_2 \left\|g\right\|_2.$$ Esta é a chamada desigualdade de *Cauchy-Schwarz*.
+
+**Observações.**
+
+1)  A desigualdade de Hölder é válida também para $p = 1, q = \infty$ (veja o Exerc. 6).
+
+2)  Uma consequência da desigualdade de Hölder é que, se $f \in \mathscr{L}_p$ e $g \in \mathscr{L}_q$ com $\frac{1}{p} + \frac{1}{q} = 1$, o produto $fg \in \mathscr{L}_1$.
+
+A seguinte proposição prova a parte difícil da verificação, $L_p$ é um espaço normado.
+
+**PROPOSIÇÃO 4.2.2 (Desigualdade de Minkowski).**
+
+$f \in \mathscr{L}_p, g \in \mathscr{L}_p, p \geq 1$ então $f+g \in \mathscr{L}_p \text{ e } \left\|f+g\right\|_p \leq \left\|f\right\|_p + \left\|g\right\|_p$.
+
+**Demonstração.** Os casos $p=1$ e $p=\infty$ são imediatos. Tomamos portanto $1 < p < +\infty$. Como $$\left\|f+g\right\|^p \leq 2^p \left(\sup\left\{|f|, |g|\right\}\right)^p =$$ $$= 2^p \sup\left\{|f|^p, |g|^p\right\} \leq$$ $$\leq 2^p\left(|f|^p + |g|^p\right)$$ resulta que $f+g \in \mathscr{L}_p$.
+
+Temos também que $$\int |f+g|^p \leq \int |f+g|^{p-1}|f| + \int |f+g|^{p-1}|g|.$$ Agora $$\left\||f+g|^{p-1}\right\|_q = \left(\int \left(|f+g|^{p-1}\right)^q\right)^{1/q} =$$ $$= \left(\int |f+g|^{p}\right)^{1/q} = \left\|f+g\right\|_p^{p/q}.$$ Usando a desigualdade de Hölder resulta que: $$\int |f+g|^{p-1}|f| \leq \left\|f\right\|_p \left\||f+g|^{p-1}\right\|_q;$$ $$\int |f+g|^{p-1}|g| \leq \left\|g\right\|_p \left\||f+g|^{p-1}\right\|_q.$$ Temos portanto $$\left\|f+g\right\|_p^p \leq \left(\left\|f\right\|_p + \left\|g\right\|_p\right) \left\|f+g\right\|_p^{p/q}.$$ Como $p-\frac{p}{q}=1$, temos a desigualdade desejada.
+
+**COROLÁRIO 4.2.3.** Os espaços $L_p, 1 \leq p \leq \infty$ são espaços normados.
+
+**Demonstração.** Veja o Exerc. 7.
+
+**PROPOSIÇÃO 4.2.3 (Desigualdade de Markov).** Suponhamos que $g: \mathbb{R}^1 \to \mathbb{R}^1$ seja uma função par, $\geq 0$, $g(x) > 0$ se $x > 0$, e não-decrescente em $[0, +\infty)$. Se $f$ é uma função mensurável finita definida sobre $(\Omega, \mathscr{A}, \mu)$, então para todo $a > 0$. $$\mu([|f| \geq a]) \leq \frac{\int_\Omega (g \circ f) d\mu}{g(a)}$$
+
+**Demonstração.** $\frac{g(x)}{g(a)} \geq 1$, se $|x| \geq a$. Então $$\mu([|f| \geq a]) = \int_\Omega I_{[|x| \geq a]} (g \circ f) d\mu$$ $$= \int_\Omega \frac{I_{[|x| \geq a]} (g \circ f)}{g(a)} d\mu \leq \frac{\int_\Omega (g \circ f) d\mu}{g(a)}.$$
+
+A Desigualdade de Markov só será usada neste livro no caso $g(x) = |x|^p, p \geq 1$.
+
+**COROLÁRIO 4.2.4.** Se $\{f_n\}_{n=1,2,\ldots}$ é fundamental em $L_p, 1 \leq p \leq \infty$, então $\{f_n\}_{n=1,2,\ldots}$ é fundamental em medida.
+
+**Demonstração.** O caso $p = \infty$ é imediato. Para o caso $1 \leq p < \infty$ é suficiente usar a desigualdade $$\mu([|f_n-f_m| \geq \varepsilon]) \leq \frac{\int_\Omega |f_n-f_m|^p d\mu}{\varepsilon^p}.$$
+
+**PROPOSIÇÃO 4.2.4.** Se $1 \leq p \leq \infty$, $L_p$ é completo.
+
+**Demonstração.** Consideremos primeiro o caso $p = \infty$. Seja $\{f_n\}_{n=1,2,\ldots}$ uma sucessão fundamental e $0 < \varepsilon_{n,m} \xrightarrow[n,m \to \infty]{} 0$.
+
+Se $A_{n,m} = \left[\left. |f_n-f_m| > \left\|f_n-f_m\right\|_\infty + \varepsilon_{n,m}\right.\right]$, temos $\mu(A_{n,m}) = 0$. Se $A = \bigcup\limits_{n,m} A_{n,m}$, resulta que $\mu(A) = 0$ e $f_n$ converge uniformemente sobre $A^c$. Definimos então $$f(\omega) = \begin{cases} \lim\limits_n f_n(\omega) & \omega \in A^c \\ 0 & \omega \in A \end{cases}$$ é claramente $\left\|f_n-f\right\|_\infty \to 0$.
+
+Seja agora $1 \leq p < \infty$; e $\{f_n\}_{n=1,2,\ldots}$ uma sequência fundamental em $L_p$. Pela desigualdade de Markov é fundamental em medida. Então $f$ é mensurável, tal que $f_n \xrightarrow[\mu]{} f$ (Cor. 3.6) e pelo Cor. 3.5 existe uma subsequessão $\{f_{n_k}\}_{k=1,2,\ldots}$, tal que $f_{n_k} \to f$ q. t. p. Observemos que, como $f_n$ é fundamental em $L_p$ e uniformemente limitada em $L_p$, então existe $M > 0$, tal que $\left\|f_n\right\|_p < M$, para todo $n$.
+
+Como $f_{n_k} \to f$ q. t. p., temos também $|f_{n_k}|^p \to |f|^p$ q. t. p. e então, por Fatou-Lebesgue, $$\int |f|^p \leq \liminf \int |f_{n_k}|^p \leq M^p < \infty,$$ ou seja, $f \in \mathscr{L}_p$.
+
+Então $f_n-f_{n_k} \xrightarrow[k \to \infty]{\text{q.t.p.}} f_n-f \implies |f_n-f_{n_k}|^p \xrightarrow[k \to \infty]{} |f_n-f|^p$ q. t. p. para todo $n$. Pelo Teorema de Fatou-Lebesgue, item b, como $$0 \leq |f_n-f_{n_k}|^p, \quad \int |f_n-f|^p \leq \lim_{k} \inf \int |f_n-f_{n_k}|^p.$$ Mas do fato de $\{f_n\}$ ser fundamental em $L_p$, decorre que $$\lim_{n} \lim_{k} \inf \int |f_n-f_{n_k}|^p = 0.$$ Então $$\int |f_n-f|^p \to 0, \quad \text{ou seja, } \left\|f_n-f\right\|_p \xrightarrow[n \to \infty] 0.$$
+
+**PROPOSIÇÃO 4.2.5.** $f_n \in L_p$, $f_n$ converge uniformemente sobre $\Omega$ a $f$, $\mu(\Omega) < \infty$. Então $$f \in L_p \quad \text{e} \quad f_n \xrightarrow{L_p} f. \quad (1 \leq p \leq \infty).$$
+
+**Demonstração.** Dado $\varepsilon > 0$ $\exists n_0$, tal que $\forall n \geq n_0$ $|f_n-f| \leq \varepsilon \implies |f| \leq |f_{n_0}| + \varepsilon \implies f \in L_p$ $$\left(\int |f_n-f|^p\right)^{1/p} \leq (\varepsilon^p \mu(\Omega))^{1/p} = \varepsilon\mu(\Omega)^{1/p}$$ e, portanto, $f_n \xrightarrow{L_p} f$.
+
+*Nota.* Se $\mu(\Omega) = \infty$ o resultado da Prop. 4.2.5 poderia ser falso (veja o Exerc. 8).
+
+**PROPOSIÇÃO 4.2.6.** $f_n \in L_p, f_n \xrightarrow[\mu]{\text{q.t.p.}} f, |f_n| \leq g \in L_p \implies f \in L_p \text{ e } f_n \xrightarrow{L_p} f. (1 \leq p < \infty).$
+
+*Nota.* (*q.t.p.* está indicando que a convergência pode ser em q.t.p. ou em medida).
+
+**Demonstração.** Como $|f_n| \leq g \implies |f| \leq g \implies f \in L_p$ $$\left\{\begin{matrix} f_n-f \xrightarrow[\mu]{\text{q.t.p.}} 0 \\ |f_n-f|^p \leq 2^p g^p \in L_1 \end{matrix}\right\} \implies \int |f_n-f|^p \to 0.$$ A implicação é válida pelo Teorema da Convergência Dominada. A condição de dominação por uma função $g \in L_p$ não pode ser dispensada como mostra o exemplo contido no Exerc. 9.
+
+Vamos provar agora um teorema que inclui como casos particulares as duas proposições anteriores. Este teorema é devido a Vitali e dá condições necessárias e suficientes para convergência em $L_p$.
+
+**DEFINIÇÃO 4.2.1.** Uma família de funções $\mathscr{F}$ é dita *uniformemente absolutamente contínua* com respeito a $\mu$ se, e somente se, para todo $\varepsilon > 0$ existe $\delta > 0$, tal que $\mu(A) < \delta, A \in \mathscr{A} \implies \int_A |f| < \varepsilon$, para todo $f \in \mathscr{F}$.
+
+$\mathscr{F}$ é dita *equicontínua superiormente ao vazio* se, e somente se, para toda sucessão $\{C_k\}$ de elementos de $\mathscr{A}$ decrescente ao vazio, e para todo $\varepsilon > 0$, existe $k_0$, tal que $k \geq k_0 \implies \int_{C_k} |f| < \varepsilon$, para todo $f \in \mathscr{F}$.
+
+**TEOREMA 4.2.2 (Vitali).** Seja $\{f_n\}$ uma sequência de funções de $L_p$ e $f \in L_p, 1 \leq p < \infty$. Então $f_n \to f$ em $L_p$, se e somente se,
+
+i)  $f_n \xrightarrow[\mu]{} f$;
+
+ii) $\mathscr{F} = \{|f_n|^p: n \in \mathbb{N}\}$ é uniformemente absolutamente contínua e equicontínua superiormente ao vazio.
+
+**Demonstração.** Suponhamos que $f_n \to f$ em $L_p$. Então $f_n \xrightarrow[\mu]{} f$, pela Desigualdade de Markov.
+
+Para mostrar que $\mathscr{F}$ é uniformemente absolutamente contínua, observe que $$\int_A |f_n|^p = \int_A |f_n-f+f|^p \leq 2^p \left\{\int_A |f_n-f|^p + \int_A |f|^p\right\},$$ onde a desigualdade acima decorre do fato de $x \mapsto |x|^p$ ser uma função convexa.
+
+Na expressão entre chaves, a 1ª parcela é menor que $\int_\Omega |f_n-f|^p$ e então pode ser feita menor que $\varepsilon/2^p$, para todo $n$ a partir de um $n_0$ suficientemente grande, e o mesmo ocorre para a 2ª parcela se tomarmos $\mu(A) < \delta_0$, para um $\delta_0 > 0$ suficientemente pequeno (Cor. 4.1.2 da Prop. 4.1.6). Usando este mesmo corolário para as $f_i, 1 \leq i \leq n_0-1$ escolhemos $\delta_1, \ldots, \delta_{n_0-1} > 0$, tais que $$\mu(A) < \delta_i \implies \int_A |f_j|^p < \varepsilon.$$
+
+Então $\delta = \min \left\{\delta_0, \delta_1, \ldots, \delta_{n_0-1}\right\}$ satisfaz as exigências da definição. A prova de que $\mathscr{F}$ é equicontínua superiormente ao vazio, é análoga.
+
+Seja $A = \bigcup\limits_{n=1}^\infty \left[f_n \neq 0\right]$. Então $A$ é uma união enumerável de conjuntos de medida finita porque, para todo $\varepsilon > 0$, $$\mu\left(\left[f_n \geq \varepsilon\right]\right) \leq \frac{\int |f_n|^p}{\varepsilon^p} < \infty$$ e $$\left[f_n \neq 0\right] = \bigcup\limits_{j=1}^\infty \left[f_n \geq 1/j\right].$$
+
+Seja $\{B_k\}$ uma sucessão crescente, tal que $B_k \uparrow A$, onde $\mu(B_k) < \infty$, e seja $C_k = A-B_k$, para todo $k$. Então $\{C_k\} \downarrow \varnothing$. Vamos mostrar que $\{f_n\}$ é fundamental em $L_p$.
+
+$$\int |f_m-f_n|^p = \int_A |f_m-f_n|^p = \int_{B_k} |f_m-f_n|^p + \int_{C_k} |f_m-f_n|^p \leq$$ $$\leq \int_{B_k \cap A_{m,n}^c} |f_m-f_n|^p + \int_{A_{m,n}} |f_m-f_n|^p + \int_{C_k} |f_m-f_n|^p,$$ onde $A_{m,n} = \left[\left. |f_m-f_n| \geq \varepsilon \right.\right]$ (o valor de $\varepsilon$ será especificado posteriormente).
+
+Então $$\int |f_m-f_n|^p \leq \varepsilon^p \mu(B_k)$$ $$+ 2^{p-1} \left\{\int_{A_{m,n} \cap C_k} |f_m|^p + \int_{A_{m,n} \cap C_k} |f_n|^p\right\} + 2^{p-1} \left\{\int_{C_k} |f_m|^p + \int_{C_k} |f_n|^p\right\},$$
+
+usando a convexidade da função $x \mapsto |x|^p$. Porém na expressão acima para um $\delta > 0$ dado, podemos fazer com que cada uma das 3 parcelas seja $< \delta/3$. Senão vejamos. Existe $k$ tal que $$\int_{C_k} |f_n|^p < \frac{\delta}{2^{p-1}},$$ para todo $n$, pela equicontinuidade superior ao vazio. Fixado este $k$, tomemos $\varepsilon > 0$, tal que $\varepsilon^p \cdot \mu(B_k) < \delta/3$.
+
+Pela uniforme absoluta continuidade, existe $\alpha > 0$, tal que $$\mu(A) < \alpha \implies \int_A |f_n|^p < \frac{\delta}{2^{p-1}}$$ para todo $n$ e como $\{f_n\}$ é fundamental em medida, existe $n_0$ tal que $$m, n \geq n_0 \implies \mu([|f_n-f_m| \geq \varepsilon]) < \alpha.$$ Com este procedimento, provamos que para o citado $n_0$, $$m, n \geq n_0 \implies \int |f_m-f_n|^p < \delta.$$ Como $L_p$ é completo, existe $g \in L_p$, tal que $f_n \to g$ em $L_p$. Então, pela 1ª parte, $f_n \xrightarrow[\mu]{} g$, e como $f_n \xrightarrow[\mu]{} f$ em medida resulta $f=g$ em q. t. p.
+
+*Nota.* Em espaços de probabilidade se $\mathscr{F}$ é uniformemente absolutamente contínua, então $\mathscr{F}$ é equicontínua superiormente ao vazio. (Veja o Exerc. 11).
+
+**PROPOSIÇÃO 4.2.7.** Seja $f \in L_p, p > 0$. Então $$\lim_{q \to \infty} \left\|f\right\|_q = \left\|f\right\|_\infty.$$
+
+**Demonstração.** Podemos supor que $\left\|f\right\|_p > 0$. Caso contrário, a igualdade é trivial. Vamos mostrar inicialmente que $\limsup \left\|f\right\|_q \leq \left\|f\right\|_\infty$.
+
+Podemos supor que $0 < \left\|f\right\|_\infty < \infty$, pois caso contrário a desigualdade é trivial. Se $q \geq p$, temos $$|f|^q = |f|^p |f|^{q-p} \leq |f|^p \left\|f\right\|_\infty^{q-p} \quad \text{q. t. p.}$$ o que implica que $$\int |f|^q \leq \left\|f\right\|_\infty^{q-p} \int |f|^p$$ e extraindo a raiz $q$-ésima, $$\left\|f\right\|_q \leq \left\|f\right\|_\infty^{1-p/q} \left\|f\right\|_p^{p/q}.$$ Então, quando $q \to \infty$, obtemos $$\limsup \left\|f\right\|_q \leq \left\|f\right\|_\infty.$$ Mostremos agora que $\liminf \left\|f\right\|_q \geq \left\|f\right\|_\infty$.
+
+Se $\left\|f\right\|_\infty = 0$, então $\left\|f\right\|_q = 0$, para todo $q$. Caso contrário existe $c$ tal que $\left\|f\right\|_\infty > c > 0$ e então $$\int |f|^q \geq \int_{[|f|>c]} |f|^q \geq c^q \cdot \mu\left(\left[|f| > c\right]\right)$$ ou extraindo a raiz $q$-ésima, $$\left\|f\right\|_q \geq c\left(\mu\left(\left[|f| > c\right]\right)\right)^{1/q}.$$ Como $\mu\left(\left[|f| > c\right]\right) < \infty$ porque $f \in L_p$ e $\mu\left(\left[|f| > c\right]\right) > 0$ porque $\left\|f\right\|_\infty > c$, tomando o limite quando $q \to \infty$, obtemos $$\liminf \left\|f\right\|_q \geq c.$$ Mas $c$ é um número arbitrário menor que $\left\|f\right\|_\infty$ e então $$\liminf \left\|f\right\|_q \geq \left\|f\right\|_\infty, \quad \text{c.q.d.}$$
+
+**PROPOSIÇÃO 4.2.8.** Sejam $\mathscr{B}$ uma álgebra contida em $\mathscr{A}$, tal que $\sigma(\mathscr{B}) = \mathscr{A}$ e $$\mathbb{H} = \left\{h: \Omega \to \mathbb{R}^1: h \text{ da forma } \sum\limits_{i=1}^n a_i I_{B_i} \text{ onde } a_i \in \mathbb{R}^1, B_i \in \mathscr{B} \text{ disjuntos e } \mu(B_i) < \infty, 1 \leq i \leq n\right\}.$$ Então $\mathbb{H}$ é denso em $L_p, 1 \leq p < \infty$.
+
+**Demonstração.** Seja $\mathbb{H}' = \left\{h: \Omega \to \mathbb{R}^1: h \text{ da forma } \sum\limits_{i=1}^n a_i I_{A_i}, \text{ onde } a_i \in \mathbb{R}^1, A_i \in \mathscr{A} \text{ disjuntos e } \mu(A_i) < \infty, 1 \leq i \leq n\right\}$.
+
+Mostremos inicialmente que $\mathbb{H}'$ é denso em $L_p$. Seja $f \in L_p$ (podemos tomar $f \geq 0$, sem perda de generalidade) e $\{f_n\}$ uma sequência de funções simples, tal que $0 \leq f_n \uparrow f$. Como $|f_n-f|^p \leq 2^p |f|^p$ que é uma função integrável e $|f_n-f|^p \to 0$, pelo Teorema de Fatou-Lebesgue, $\left\|f_n-f\right\|_p \to 0$, quando $n \to \infty$. Por outro lado $\mathbb{H}$ é denso em $\mathbb{H}'$ porque se $\tilde{f} = \sum\limits_{i=1}^n a_i I_{A_i}$, com $A_i \in \mathscr{A}$ e $\mu(A_i) < \infty$, pelo teorema de aproximação, dado $\varepsilon > 0$, existe $B_j \in \mathscr{B}$, tal que $$\mu\left(A_j \ ?^* \ B_j\right) < \frac{1}{n} \left(\frac{\varepsilon}{\sum\limits_{i=1}^n |a_i|}\right)^p,$$ $1 \leq j \leq n$ e então $\overline{f} = \sum\limits_{i=1}^n a_i I_{B_i}$ é tal que $\left\|\tilde{f}-\overline{f}\right\|_p < \varepsilon$. [Para exibir $\overline{f}$ explicitamente como um elemento de $\mathbb{H}$, deveríamos escolher $\{\tilde{B}_j\}_{j=1 \leq m}$ e $\tilde{a}_j \in \mathbb{R}^1$, $\tilde{B}_j \in \mathscr{B}$ e disjuntos, tais que $\overline{f} = \sum\limits_{j=1}^m \tilde{a}_j I_{\tilde{B}_j}$ (representação padrão de $\overline{f}$). \*operação não identificada.
+
+Antes de começar com as aplicações vamos apresentar vários diagramas nos quais indicamos as relações entre os distintos tipos de convergência. A notação será a seguinte:
+
+::: {style="text-align: center;"}
+q.u. – convergência quase uniforme;
+
+r.t.p. – convergência em quase todo ponto;
+
+$\mu$ – convergência em medida;
+
+$L_p$ – convergência em $L_p$.
+:::
+
+```{r figure-04-02-02, fig.show='hold', fig.align='center', echo=FALSE, cache=TRUE}
+knitr::include_graphics(rep("figures/figure-04-02-02.png"))
+```
+
+A Fig. 4.2.2 corresponde ao caso de um espaço de medida arbitrário. Uma seta feita com linha cheia indica que a implicação no sentido da seta é verdadeira. Se a seta é feita com uma linha pontilhada significa que existe uma subsequência que converge da forma indicada. A ausência de seta indica que a implicação é falsa em geral. Nesse caso o leitor deve construir um contra-exemplo. (A maior parte dos contra-exemplos estão incluídos no texto ou nos exercícios).
+
+```{r figure-04-02-03, fig.show='hold', fig.align='center', echo=FALSE, cache=TRUE}
+knitr::include_graphics(rep("figures/figure-04-02-03.png"))
+```
+
+A Fig. 4.2.3 corresponde ao caso de um espaço de medida finito.
+
+```{r figure-04-02-04, fig.show='hold', fig.align='center', echo=FALSE, cache=TRUE}
+knitr::include_graphics(rep("figures/figure-04-02-04.png"))
+```
+
+Finalmente na Fig. 4.2.4 é considerado o caso no qual a sequência convergente no modo indicado $\{f_n\}_{n=1,2,\ldots}$, tem a propriedade $|f_n| \leq g$ em q.t.p. onde $g$ é uma função fixa pertencendo a $L_p$.
 
 ## Aplicações {#cap4e3e}
 
-## Exercícios {- #ex4}
+Antes de começar esta seção vamos indicar a notação que será usada. A integral sobre um intervalo $[a, b]$ de uma função $f$ será indicada por $$\int_a^b f d\mu \text{ em lugar de } \int_{[a,b]} f d\mu.$$
+
+Se $\mu$ é a medida de Lebesgue, a integral será indicada também com $$\int_a^b f(x) dx.$$ Quando uma função for integrável Riemann, e quisermos distinguir esta integral da integral de Lebesgue, usaremos também as notações $$(R) \int_a^b f(x) dx \text{ e } (L) \int_a^b f(x) dx.$$
+
+### Comparação das integrais de Riemann e Lebesgue {#cap4e3e1e}
+
+Seja $f: [a, b] \to \mathbb{R}^1$. Para cada $\delta > 0$ vamos definir duas funções sobre $[a, b]$: $$M_\delta(x) = \sup\{f(y): y \in [a, b] \cap (x-\delta, x+\delta)\};$$ $$m_\delta(x) = \inf\{f(y): y \in [a, b] \cap (x-\delta, x+\delta)\}.$$ Evidentemente se $\delta$ decresce, $M_\delta$ decresce e $m_\delta$ cresce. Temos também que $$\forall \delta > 0, \forall x \in [a, b]; m_\delta(x) \leq f(x) \leq M_\delta(x).$$ Definimos agora duas funções: $$M(x) = \inf_{\delta > 0} M_\delta(x); m(x) = \sup_{\delta > 0} m_\delta(x).$$
+
+**DEFINIÇÃO 4.3.1.1.** As funções $M$ e $m$ são chamadas *função superior de Baire* e *função inferior de Baire* respectivamente.
+
+Estas funções tem uma importante propriedade que está contida na seguinte proposição, cuja prova é deixada como exercício (veja o Exerc. 24).
+
+**PROPOSIÇÃO 4.3.1.1.** $f$ é contínua em $x \in [a, b]$ se, e somente se, $M(x) = m(x)$.
+
+A função $f$ que dá origem às funções $m$ e $M$ pode não ter nenhuma propriedade de mensurabilidade. Porém $M$ e $m$ são sempre mensuráveis (¡) como prova a proposição seguinte.
+
+**PROPOSIÇÃO 4.3.1.2.** $M$ e $m$ são funções mensuráveis Lebesgue.
+
+**Demonstração.** Para cada $n$ consideremos $\{x_{nk}\}_{n=1,2,\ldots}^{k=0,1,\ldots,n}$ tais que $$a = x_{n0} < x_{n1} < \ldots < x_{nn} = b$$ e $\alpha_n = \max_{0 \leq k \leq n-1} (x_{n(k+1)}-x_{nk}) \xrightarrow[n \to \infty]{} 0$.
+
+Seja $$m_{nk} = \inf \{f(y): y \in [x_{nk}, x_{n(k+1)}]\}.$$ e $$h_n = \sum_{k=0}^{i_n-1} m_{nk} I_{(x_{nk}, x_{n(k+1)})}.$$
+
+O que queremos provar agora é que, se $x$ é diferente de todos os pontos de subdivisão $x_{nk}$, para todo $n$ e $k$, então $$h_n(x) \to m(x).$$
+
+Como esse conjunto é enumerável, teríamos que $h_n \xrightarrow{\text{q.t.p.}} m$. Como $h_n$ é mensurável Borel (função escada) resulta que $m$ é mensurável Lebesgue. Um argumento semelhante provaria que $M$ é também mensurável Lebesgue e portanto a proposição. Seja então $x$ diferente de todos os pontos de subdivisão. Seja $n$ dado. Então para algum $k_n$, temos que $x \in (x_{nk_n}, x_{n(k_n+1)})$. Seja $\delta$, tal que $(x-\delta, x+\delta) \subseteq (x_{nk_n}, x_{n(k_n+1)})$. Temos: $$h_n(x) = \inf\left\{f(y): y \in [x_{nk_n}, x_{n(k_n+1)}]\right\} \leq m_\delta(x) \leq m(x).$$
+
+Ou seja, $\forall n, h_n(x) \leq m(x)$. Se $m(x) = -\infty$, então claramente $h_n(x) \to m(x)$. Se $m(x) > -\infty$, seja $a < m(x)$. Então existe $\delta > 0$, tal que $m_\delta(x) \geq a$. Como $\alpha_n \to 0 \exists n_0$, tal que $$\forall n \geq n_0 x \in [x_{nk_n}, x_{n(k_n+1)}] \subseteq (x-\delta, x+\delta)$$ e portanto $$m_{nk} = h_n(x) = \inf\left\{f(y): y \in [x_{nk_n}, x_{n(k_n+1)}]\right\}$$ $$\geq \inf\left\{f(y): y \in (x-\delta, x+\delta)\right\} = m_\delta(x).$$
+
+Ou seja, $\forall a < m(x) \exists n_0$, tal que $\forall n \geq n_0 h_n(x) > a$. Como $\forall n$, temos que $h_n(x) \leq m(x)$, resulta que $h_n(x) \to m(x)$. Passemos agora a provar o resultado mais importante desta seção.
+
+**TEOREMA 4.3.1.1.** Uma função $f$ limitada, definida sobre $[a, b]$, e integrável Riemann se, e somente se, $f$ é contínua em quase todo ponto.
+
+**Demonstração.** Se $|f| \leq K$ então $\forall n |h_n| \leq K$ e por convergência dominada $$(L) \int_a^b h_n(x) dx \to (L) \int_a^b m(x) dx.$$ Agora $$(L) \int_a^b h_n(x) dx = \sum_{k=0}^{i_n-1} m_{nk}(x_{n(k+1)}-x_{nk}) = s_n$$ onde $s_n$ indica uma soma inferior de Darboux correspondente a partição determinada pelos $\{x_{nk}\}_{k=0,1,\ldots,n}$.
+
+Temos portanto $$s_n \to (L) \int_a^b m(x) dx.$$
+
+Por um argumento semelhante $$S_n \to (L) \int_a^b M(x) dx$$ e então $$S_n-s_n \to (L) \int_a^b (M(x)-m(x)) dx.$$
+
+Agora uma condição necessária e suficiente para que $f$ seja integrável Riemann e que $S_n-s_n \to 0$. Ou seja, $f$ é integrável Riemann se, e somente se, $$(L) \int_a^b (M(x)-m(x)) dx = 0.$$
+
+Como $M \geq m$, esta condição é equivalente a $m=M$ em quase todo ponto. Pela Prop. 4.3.1.1 isto é equivalente a $f$ contínua em quase todo ponto, como queríamos provar.
+
+Este Teorema dá um critério para saber quando uma função é integrável Riemann. Intuitivamente, uma função é integrável Riemann quando não é “muito descontínua”.
+
+Temos finalmente o seguinte corolário.
+
+**COROLÁRIO 4.3.1.1.** Se $f$ é integrável Riemann, é integrável Lebesgue e as integrais coincidem.
+
+**Demonstração.** Como $f$ é integrável Riemann, ela é limitada. Temos também pelo Teorema anterior $M = m$ em q. t. p. Como $m \leq f \leq M$, resulta que $m=f$ q. t. p., e portanto $f$ é mensurável Lebesgue. Como é limitada, a função é integrável Lebesgue, o que prova a primeira parte do corolário. Como $m=f$ q. t. p., resulta que $$(L) \int_a^b f(x) dx = (L) \int_a^b m(x) dx \underset{n}{\approx} \lim s_n.$$
+
+Como $f$ é integrável Riemann, sabe-se que $$s_n \to (R) \int_a^b f(x) dx.$$
+
+Portanto $$(R) \int_a^b f(x) = (L) \int_a^b f(x) dx,$$ como queríamos provar.
+
+No Exerc. 25 é dado um exemplo de uma função integrável Lebesgue que não é integrável Riemann, o que prova que a classe das funções integráveis (R) está estritamente contida na classe das funções integráveis (L).
+
+### O Lema de Riemann – Lebesgue {#cap4e3e2e}
+
+**DEFINIÇÃO 4.3.2.** Se $f \in L_1(\mathbb{R}^1, \wedge, \lambda)$, define-se como *transformada de Fourier* de $f$ a função $\varphi_f: \mathbb{R}^1 \to \mathbb{C}$, tal que $$\varphi_f(t) = \int_{\mathbb{R}^1} \cos tx f(x) dx + i \int_{\mathbb{R}^1} \sin tx f(x) dx = \int_{\mathbb{R}^1} e^{itx} f(x) dx.$$
+
+**LEMA 4.3.2 (Riemann-Lebesgue).** Dada $f \in L_1(\mathbb{R}^1, \wedge, \lambda)$, $\varphi_f(t) \to 0$, quando $|t| \to \infty$.
+
+**Demonstração.** Observemos inicialmente que se $f, g \in L_1(\mathbb{R}^1, \wedge, \lambda)$, então $$\left|\varphi_f(t)-\varphi_g(t)\right| = \left|\int_{\mathbb{R}^1} \left(e^{itx} \left[f(x)-g(x)\right]\right) dx\right| \leq$$ $$\leq \int_{\mathbb{R}^1} \left|e^{itx} \left[f(x)-g(x)\right]\right| dx = \int_{\mathbb{R}^1} |f-g|.$$ Logo é suficiente mostrar o lema para um conjunto de funções denso em $L_1$, por exemplo, o conjunto $\mathbb{H}$ da Prop. 4.2.7 sendo $\mathscr{B}$ o conjunto dos intervalos em $\mathbb{R}^1$. Como a integral é linear, basta tomar $f = I_{[a, b]}$, e provar para este caso, Temos
+
+$$\int_{\mathbb{R}^1} \cos tx I_{[a,b]}(x) dx + i \int_{\mathbb{R}^1} \sin tx I_{[a,b]}(x) dx =$$ $$= \int_a^b \cos tx dx + i \int_a^b \sin tx dx.$$ Mas $$\left|\int_a^b \cos tx dx\right| = \frac{1}{|t|} |\operatorname{sen} tb - \operatorname{sen} ta| \leq \frac{1}{|t|} (|\operatorname{sen} tb| + |\operatorname{sen} ta|) \leq \frac{2}{|t|}$$ e a mesma majoração vale para $\left|\int_a^b \operatorname{sen} tx dx\right|$. Então quando $|t| \to \infty$, $\varphi_{I_{[a,b]}}(t) \to 0$.
+
+### Funções convexas. Desigualdade de Jensen {#cap4e3e3e}
+
+**DEFINIÇÃO 4.3.3.1.** Seja $f: (a, b) \to \mathbb{R}^1$. Se $\forall 0 \leq t \leq 1$, $\forall x, y \in (a, b)$, $$f((1-t)x + ty) \leq (1-t)f(x) + tf(y)$$ $f$ é chamada uma *função convexa*. Geometricamente a convexidade de $f$ é descrita ao se dizer que cada ponto da corda que une $(x, f(x))$ com $(y, f(y))$ está sobre o gráfico de $f$.
+
+A seguinte proposição contém as propriedades mais importantes de uma função convexa. A demonstração é deixada como exercício (veja o Exerc. 21).
+
+**PROPOSIÇÃO 4.3.3.1.** Seja $f: (a, b) \to \mathbb{R}^1$ uma função convexa. Então:
+
+1.  Se $x < y, x' < y', x \leq x'$ e $y \leq y'$, então $\frac{f(y)-f(x)}{y-x} \leq \frac{f(y')-f(x')}{y'-x'}$.
+
+(Basta estudar separadamente os casos $x=x'$ e $y \leq y'$ e depois $x \leq x'$ e $y=y'$). As seguintes afirmações decorrem sem dificuldades de 1:
+
+2.  $f$ é contínua. (É também absolutamente contínua em todo intervalo fechado contido em $(a, b)$).
+
+3.  $f$ tem derivada à direita e à esquerda em todo ponto.
+
+4.  A derivada à esquerda e a derivada à direita são funções crescentes.
+
+5.  Se uma das derivadas é contínua em um ponto $x_0$, então $f$ é derivável em $x_0$.
+
+6.  $f$ é derivável exceto em um conjunto enumerável de pontos.
+
+7.  Se $x_0 \in (a, b)$ e $D^-f(x_0) \leq m \leq D^+f(x_0)$ então $f(x) \geq m(x-x_0) + f(x_0)$, para todo $x \in (a, b)$. ($D^+$ e $D^-$ indicam as derivadas à direita e à esquerda respectivamente).
+
+**DEFINIÇÃO 4.3.3.2.** Seja $(\Omega, \mathscr{A}, P)$ é um espaço de probabilidade, uma função mensurável $X: \Omega \to \mathbb{R}$ é dita uma *variável aleatória*, e se $X$ é integrável (quase-integrável), $\int X dP$ é dita a *expectância* de $X$ ou a *esperança* de $X$ e denotada por $EX$.
+
+**TEOREMA 4.3.3.1 (Desigualdade de Jensen).** Seja $(\Omega, \mathscr{A}, P)$ um espaço de probabilidade, $X: \Omega \to \mathbb{R}^1$ uma variável aleatória integrável e $g: \mathbb{R}^1 \to \mathbb{R}^1$ uma função convexa. Então $$\int_\Omega g(X) dP \geq g\left(\int_\Omega X dP\right), \text{ isto é,}$$ $$E(g(X)) \geq g(EX).$$
+
+**Demonstração.** Sejam $x_0 = EX$ em tal que $$D^-g(x_0) \leq m \leq D^+g(x_0).$$ Por 7, $$g(x) \geq m(x-x_0) + g(x_0),$$ para todo $x$ real. Então $$g(X(\omega)) \geq m(X(\omega)-x_0) + g(x_0),$$ para todo $\omega \in \Omega$. Integrando, obtemos: $$E(g(X)) \geq m(EX-EX) + g(EX) = g(EX).$$ Observe que $g(X)$ é quase integrável porque se $f_1 \geq f_2$, e $f_2$ é integrável, então $f_1$ é quase integrável.
+
+**COROLÁRIO 4.3.3.1.** Sejam $a_1, \ldots, a_n$ números reais $> 0$, e $\alpha_1, \ldots, \alpha_n$ números reais $\geq 0$, tais que $\sum\limits_{i=1}^n \alpha_i = 1$. Então $$\prod\limits_{i=1}^n a_i^{\alpha_i} \leq \sum\limits_{i=1}^n \alpha_i a_i.$$
+
+Em particular, tomando os $\alpha_i = 1/n$, obtemos uma desigualdade que relaciona as médias geométrica e aritmética, a saber, $$\left[\prod\limits_{i=1}^n a_i\right]^{1/n} \leq \frac{\sum\limits_{i=1}^n a_i}{n}.$$
+
+**Demonstração.** Como a exponencial é uma função crescente, basta provar que $$\sum\limits_{i=1}^n \alpha_i \log (a_i) \leq \log \left(\sum\limits_{i=1}^n \alpha_i a_i\right).$$
+
+Considere o espaço de probabilidades $(\Omega, \mathscr{A}, P)$, onde $\Omega = \{1, 2, \ldots, n\}$, $\mathscr{A} = \mathbb{P}(\Omega)$ e $P(\{i\}) = \alpha_i$, $1 \leq i \leq n$. Como o logarítmo é uma função côncava, a desigualdade acima decorre da Desigualdade de Jensen se definirmos $$g(x) = -\log x, x > 0 \text{ e } X(i) = a_i, i = 1, 2, \ldots, n.$$
+
+### Conjuntos não-mensuráveis {#cap4e3e4e}
+
+O objetivo desta seção é construir um conjunto não-mensurável Lebesgue em $\mathbb{R}^1$. $(\mathbb{R}^1, \mathscr{A}, \lambda)$ indicará o espaço de medida, formado pela reta real, a $\sigma$-álgebra de Lebesgue e a medida de Lebesgue. Comecemos pela proposição seguinte.
+
+**PROPOSIÇÃO 4.3.4.1.** Seja $A$ um conjunto mensurável Lebesgue, tal que $\lambda(A) > 0$. Então $$A-A = \{x-y: x \in A, y \in A\}$$ e uma vizinhança da origem.
+
+**Demonstração.** Considerando interseções com intervalos, podemos supor sem perda de generalidade que $0 < \lambda(A) < +\infty$. Definamos $$h(t)=\int_{\mathbb{R}^1} I_A(x+t)I_A(x) dx.$$ Claramente $h$ é finita para todo $t$ e não-negativa. Vamos provar que $h$ é contínua. Seja $\varepsilon > 0$, e $\varphi$ uma função contínua de suporte compacto, tal que $\left\|I_A-\varphi\right\|_1 \leq \varepsilon$ (uma tal função existe pela densidade deste tipo de funções em $L_1(\mathbb{R}^1, \mathscr{A}, \lambda)$ (veja o Exerc. 14). Podemos supor também que $0 \leq \varphi \leq 1$ porque $0 \leq I_A \leq 1$. Seja $$\tilde{h}(t)=\int_{\mathbb{R}^1} \varphi(x+t)I_A(x) dx.$$ Usando por exemplo o teorema da convergência dominada, é fácil ver que $\tilde{h}$ é contínua.
+
+Agora $$\left|h(t)-\tilde{h}(t)\right| = \left|\int_{\mathbb{R}^1} I_A(x+t)I_A(x) dx-\int_{\mathbb{R}^1} \varphi(x+t)I_A(x) dx\right| \leq$$ $$\leq \int_{\mathbb{R}^1} \left|I_A(x+t)-\varphi(x+t)\right|I_A(x) dx \leq$$ $$\leq \int_{\mathbb{R}^1} \left|I_A(x+t)-\varphi(x+t)\right| dx = \int_{\mathbb{R}^1} \left|I_A(x)-\varphi(x)\right| dx =$$ $$= \left\|I_A-\varphi\right\|_1 \leq \varepsilon.$$ Portanto $h$ pode ser obtida como o limite uniforme de funções contínuas, e portanto é contínua.
+
+Como $h(0) = \mu(A) > 0$, existe um $\delta > 0$, tal que $\forall t$, com $|t| < \delta$, $h(t) > 0$, pela continuidade de $h$. Como $h$ é obtida através de um integral, o integrando tem que ser positivo para algum $x$. Isto é, para todo $t$, com $|t| < \delta$, existe $x_t$ tal que $$I_{A}(x_t+t)I_A(x_t) > 0.$$ Ou seja, $$x_t+t \in A \text{ e } x_t \in A,$$ e portanto $$(x_t+t)-x_t = t \in A-A.$$
+
+Temos então que $A-A$ contém o intervalo aberto com centro na origem e raio $\delta$, o que prova que $A-A$ é uma vizinhança da origem.
+
+Passemos agora à construção de um conjunto não-mensurável Lebesgue. Seja $Q$ o conjunto dos racionais da reta e definamos uma relação de equivalência $\sim$ em $\mathbb{R}^1$ da seguinte forma: $$x \sim y \iff x-y \in Q.$$ Escolhamos agora em cada classe de equivalência um ponto e seja $A$ o conjunto formado dessa forma. Temos a seguinte:
+
+**PROPOSIÇÃO 4.3.4.2.** O conjunto $A$ não é mensurável Lebesgue.
+
+**Demonstração.** Suponhamos $A$ mensurável. Como os conjuntos $\{A+r\}_{r \in Q}$ são uma família enumerável disjunta com união igual a $\mathbb{R}^1$, deveria existir $r \in Q$, tal que $\lambda(A+r) > 0$. Portanto como $\lambda(A+r) = \lambda(A)$, temos que $\lambda(A) > 0$. Pela proposição anterior, $A-A$ seria uma vizinhança da origem. Mas isso é impossível porque $A-A$ não contém nenhum racional. Esta contradição prova o resultado desejado.
+
+### Segunda fórmula da média {#cap4e3e5e}
+
+**TEOREMA 4.3.5.1 (Segunda fórmula da média).** Seja $f: [a, b] \to \overline{\mathbb{R}}$ uma função integrável Lebesgue. Seja $g: [a, b] \to \mathbb{R}^1$ uma função não-negativa e decrescente. Então existe um ponto $y \in [a, b]$, tal que $$\int_a^b fg dx = g(a) \int_a^y f(t) dt$$
+
+**Demonstração.** Seja $a = x_0 < x_1 < \ldots < x_n = b$ e seja $r = \sum\limits_{i=0}^{n-1} r_i I_{[x_i, x_{i+1})}$, onde $1 = r_0 \geq r_1 \geq r_2 \geq \ldots \geq r_{n-1} \geq r_n = 0$. Seja $F(x) = \int_a^x f(t) dt$. Agora $$\int_a^b fr dx = \sum_{i=0}^{n-1} r_i \int_{[x_i, x_{i+1})} f(t) dt = \sum_{i=0}^{n-1} r_i [F(x_{i+1})-F(x_i)] =$$ $$= \sum_{i=0}^{n-1} F(x_{i+1})(r_i-r_{i+1}).$$
+
+Agora os coeficientes de $F(x_{i+1})$ são não-negativos e com soma total igual a $r_0 = 1$. Portanto a última expressão é uma combinação convexa de $F(x_1), \ldots, F(x_n)$. Como $F$ é contínua, temos então que $$\int_a^b fr dx \in F([a, b]).$$
+
+Passemos agora a provar o Teorema. Se $g(a) = 0$, então $g \equiv 0$ e o Teorema é evidente. Podemos supor então que $g(a) > 0$ e, sem perda de generalidade, que $g(a) = 1$. Seja $$x_i = a + \frac{i}{n}(b-a) \quad i = 0, 1, \ldots, n, \text{ e }$$ $$g_n = \sum_{i=0}^{n-1} g(x_i)I_{[x_i, x_{i+1})}.$$
+
+Como $g$ é não-decrescente, o número de descontinuidades de $g$ é ao máximo enumerável, e para todo ponto de continuidade $c < b$ de $g$, temos que $g_n(c) \to g(c)$. Portanto $g_n \to g$ q.t.p. em relação à medida de Lebesgue. Temos também que $0 \leq g_n \leq 1$ e portanto, pelo Teorema da Convergência Dominada, que $$\int_a^b fg_n dx \to \int_a^b fg dx.$$
+
+Pelo que já foi provado anteriormente, temos que $$\forall n, \int_a^b fg_n dx \in F([a, b]).$$
+
+Mas $F([a, b])$ é compacto porque $F$ é contínua, e portanto o limite da sequência, ou seja, $\int_a^b fg dx$ também pertence a $F([a, b])$. Então, existe $y \in [a, b]$, tal que $$\int_a^b fg dx = \int_a^y f(t) dt,$$ como queríamos provar.
+
+**COROLÁRIO 4.3.5.1.** Seja $f: [a, b] \to \overline{\mathbb{R}}$ uma função integrável. Seja $g: [a, b] \to \mathbb{R}^1$ uma função monótona. Então existe $y \in [a, b]$, tal que $$\int_a^b fg dx = g(b) \int_y^b f(t) dt + g(a) \int_a^y f(t) dt.$$
+
+**Demonstração.** Multiplicando por $-1$, se necessário, podemos supor que $g$ é decrescente. Agora a função $g_1(x)=g(x)-g(b)$ é não-negativa e está nas condições do teorema anterior. Existe portanto um ponto $y \in [a, b]$, tal que $$\int_a^b fg_1 dx = g_1(a) \int_a^y f(t) dt.$$ Ou seja, $$\int_a^b f[g(x)-g(b)] dx = [g(a)-g(b)] \int_a^y f(t) dt.$$ Resulta então: $$\int_a^b fg dx = g(b) \int_y^b f(t) dt + g(a) \int_a^y f(t) dt - g(b) \int_a^y f(t) dt$$ $$= g(b) \int_y^b f(t) dt + g(a) \int_a^y f(t) dt,$$ o que prova o corolário.
+
+## Exercícios {#ex4 .unnumbered}
+
+1.  Provar que, se $\sum\limits_{i=1}^n a_i I_{A_i} = \sum\limits_{j=1}^m b_j I_{B_j}$, então $\sum\limits_{i=1}^n a_i\mu(A_i) = \sum\limits_{j=1}^m b_j\mu(B_j)$.
+
+2.  Provar a Prop. 4.1.1.
+
+3.  Provar a Prop. 4.1.2. (usar a Prop. 2.4.1.).
+
+4.  Provar a Prop. 4.1.5.
+
+5.  Provar o Cor. 4.1.3.
+
+6.  Provar a Observação 1) correspondente ao Teor. 4.2.1.
+
+7.  Provar o Cor. 4.2.3.
+
+8.  Seja $\Omega = (0, +\infty)$, $\mathscr{A} = \text{borelianos}$ e $\lambda$ a medida de Lebesgue em $(0, +\infty)$. Seja $$f_n(x) = \frac{1}{n} I_{[n, 2n]}(x)$$ $$f(x) = 0 \forall x \in (0, +\infty).$$ Verificar que $f_n \in L_1$, $f \in L_1$, $f_n$ converge uniformemente a $f$, mas $f_n \not\xrightarrow{L_1} f$.
+
+9.  Seja $\Omega = [0, 1]$, $\mathscr{A} = \text{borelianos}$ e $\lambda$ a medida de Lebesgue de $[0, 1]$. Seja $f_n = n I_{[1/n, 2/n]}$ e $f \equiv 0$. Então $f_n \in L_1, f \in L_1, f_n \xrightarrow{\text{q.t.p.}} f$ mas $f_n \not\xrightarrow{L_1} f$.
+
+10. Provar que as funções $$f(x)=\int_{-\infty}^x I_{[0, +\infty)}(y)e^{-y} dy$$ e $$g(x) = \int_{-\infty}^{\sqrt{\cos(x_1^2)+\cos(x_2^2)+\operatorname{sen} x_3}} I_{[0, +\infty)}(y)e^{-y} dy$$ são $\mathscr{R}^1$ e $\mathscr{R}^3$ mensuráveis respectivamente.
+
+11. Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida finito. Se $\mathscr{F}$ é uma família de funções uniformemente absolutamente contínua, então $\mathscr{F}$ é equicontínua superiormente ao vazio.
+
+12. Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida com $\mathscr{A}$ separável. Então $L_p$ para $1 \leq p < \infty$ é separável.
+
+13. Se $f_n$ é uma sequência fundamental em $L_1(\Omega, \mathscr{A}, \mu)$ então $\forall A \in \mathscr{A}$, $\nu(A) = \lim\limits_{n \to \infty} \int_A f_n d\mu$ existe, e é uma função de conjunto finita e $\sigma$-aditiva.
+
+14. Provar que em $L_p(\mathbb{R}^1, \mathscr{R}, \lambda)$, $1 \leq p < \infty$, as seguintes classes de funções são densas:
+
+    i)  As funções contínuas de $L_p$.
+
+    ii) As funções contínuas com suporte compacto.
+
+    iii) As funções da forma $I_{[-a,a]}(x) P(x)$, em que $a$ é real não-negativo e $P(x)$ é um polinômio em $x$.
+
+15. Seja $\Omega = \mathbb{N} = \{1, 2, \ldots\}$, $\mathscr{A}$ a $\sigma$-álgebra de partes de $\Omega$ e $\mu$ a medida da contagem. Provar:
+
+    i)  Se $f \geq 0$, então $\int f d\mu = \sum\limits_{n=1}^\infty f(n)$.
+
+    ii) $f$ é integrável se, e somente se, $\sum\limits_{n=1}^\infty |f(n)| < \infty$ e nesse caso $$\int f d\mu = \sum\limits_{n=1}^\infty f(n).$$
+
+16. Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida finito, $f_n \geq 0$, $f_n$ converge uniformemente a $f$. Então $f \geq 0$ e $$\int f_n d\mu \to \int f d\mu.$$
+
+17. Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida $f_n \geq 0, f \geq 0, f_n \xrightarrow{\text{q.t.p.}} f$ e $\lim \int f_n = \int f < \infty$. Então $f_n \xrightarrow{L_1} f$. (Sugestão. Use as identidades $$f_n+f = f_n \vee f + f_n \wedge f$$ e $$|f_n-f| = (f_n \vee f)-(f_n \wedge f)).$$
+
+18. Dar um contra-exemplo ao exercício anterior para o caso $$\lim_{n \to \infty} \int f_n = \int f = \infty \quad \text{e} \quad \mu(\Omega) < \infty.$$
+
+19. 
+
+    a)  Se $f$ é uma função integrável sobre $(\Omega, \mathscr{A}, \mu)$, então o conjunto $[f \neq 0]$ tem medida $\sigma$-finita.
+
+    b)  A mesma conclusão é válida, se $f \in L_p, 1 \leq p < \infty$.
+
+
+20. Se $f \in L_1(\Omega, \mathscr{A}, \mu)$, então $\forall \varepsilon > 0$, existe $A \in \mathscr{A}$ com $\mu(A) < \infty$, tal que $$\left|\int_\Omega f d\mu - \int_A f d\mu\right| < \varepsilon.$$
+
+21. Provar as sete afirmações contidas na Prop. 4.3.3.1.
+
+22. Seja $f$ uma função integrável sobre o espaço de probabilidades $(\Omega, \mathscr{A}, \mu)$. Provar que $$e^{\int_\Omega f d\mu} \leq \int_\Omega e^f d\mu.$$
+
+    (Sugestão. Use a Desigualdade de Jensen).
+
+23. Seja $\{\alpha_n\}_{n=1,2,\ldots}$ uma sequência de números não-negativos, tais que $\sum\limits_{i=1}^\infty \alpha_i = 1$. Seja $\{a_n\}_{n=1,2,\ldots}$ uma sequência de números positivos. Então $$\prod\limits_{n=1}^\infty a_n^{\alpha_n} \leq \sum\limits_{n=1}^\infty \alpha_n a_n.$$
+
+    (Sugestão. Use a Desigualdade de Jensen).
+
+24. Provar a Prop. 4.3.1.1.
+
+25. Seja $A$ o conjunto dos racionais de $[0, 1]$. Então $I_A$ é integrável Lebesgue e não é integrável Riemann.
+
+26. Seja $\{f_n\}$ uma sequência de funções integráveis sobre $(\Omega, \mathscr{A}, \mu)$ e $f$ uma função integrável, tal que $\left\|f_n-f\right\|_1 \to 0$. Então $\left\|f_n\right\|_1 \to \left\|f\right\|_1$.
+
+27. Se $f_n$ e $f$ pertencem a $L_p, 1 \leq p < \infty$ e $f_n \xrightarrow{\mu} f$, então $\left\|f_n\right\|_p \to \left\|f\right\|_p$.
+
+28. Se uma função $f \in L_p(\Omega, \mathscr{A}, \mu)$, $1 \leq p < \infty$, então $$\lim_{a \to \infty} \mu([|f| \geq a]) = 0.$$
+
+29. Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida finito, $f$ uma função real mensurável e $A_n = [n-1 \leq |f| < n], n = 1, 2, \ldots$. Então $f \in L_p(\Omega, \mathscr{A}, \mu)$, $1 \leq p < \infty$, se e somente se, $\sum\limits_{n=1}^\infty n^p\mu(A_n) < \infty$.
+
+30. Consideremos em $([0, 1], \mathscr{B}, \lambda)$ a função $f(x) = \frac{1}{x} I_{(0, 1]}(x)$. Seja $f_n = f I_{(0, 1/n)}$. Então $0 \leq f_n \downarrow 0$, mas $$\int_{[0, 1]} f_n dx \not\to 0.$$
+
+31. Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida finito. Seja $m(\Omega, \mathscr{A})$ o espaço de todas as funções reais $\mathscr{A}$-mensuráveis. Definimos para $f$ e $g \in m(\Omega, \mathscr{A})$ $$d(f, g) = \int_\Omega \frac{|f-g|}{1+|f-g|} d\mu.$$
+
+32. Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida. Seja $f$ uma função mensurável. Definimos: $$m(f) = \sup\left\{a: \mu\left(\left[f < a\right]\right) = 0\right\};$$ $$M(f) = \inf\left\{a: \mu\left(\left[f > a\right]\right) = 0\right\}.$$ Seja agora $f \in \mathscr{L}_\infty(\Omega, \mathscr{A}, \mu)$ e $g \in L_1(\Omega, \mathscr{A}, \mu)$ com $g \geq 0$. Provar a desigualdade (chamada da média) $$m(f) \int_\Omega g d\mu \leq \int_\Omega fg d\mu \leq M(f) \int_\Omega g d\mu.$$ (Esta desigualdade é também chamada primeira fórmula da média).
+
+33. Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida. Provar que $\mu$ é $\sigma$-finita se, e somente se, existe $f: \Omega \to (0, +\infty)$, tal que $\int_\Omega f d\mu < \infty$.
+
+34. Provar que as funções simples são densas em $L_\infty$.
+
+35. Seja $(\mathbb{N}, \mathbb{P}(\mathbb{N}), \#)$ como no Exerc. 20 do Cap. 2. Seja $f: \mathbb{N} \to \mathbb{R}^1$, tal que $f(2k) = \frac{1}{k}, f(2k-1) = -\frac{1}{2^k} k = 1, 2, \ldots$. É $f$ integrável? É $f$ quase-integrável?
+
+36. Considere o espaço de medida $(\mathbb{R}^1, \wedge, \lambda)$, em que $\lambda$ é a medida de Lebesgue em $\mathbb{R}^1$. Seja $c > 0$ e $f_n = \frac{1}{n} I_{[n, n+c]}$. Provar
+
+    1)  $f_n \in L_p, 1 \leq p \leq \infty$
+    2)  $\{f_n\}_{n=1,2,\ldots}$ é fundamental (Cauchy) em $L_p(1 \leq p \leq \infty)$
+    3)  Qual é o limite de $\{f_n\}_{n=1,2,\ldots}$ em $L_p$? $(1 \leq p \leq \infty)$
+    4)  Converge $\{f_n\}_{n=1,2,\ldots}$ uniformemente a esse limite?
+
+37. Consideremos o espaço de medida $([0, 1], \mathscr{B}, \lambda)$ (onde $\mathscr{B}$ é a $\sigma$-álgebra de Borel e $\lambda$ a medida de Lebesgue). Para cada subconjunto finito $J = \{x_1, x_2, \ldots, x_n\} \subseteq [0, 1]$, consideremos a função $I_J$. A família $\{I_J\}_{J \subseteq [0, 1]}$ é uma sequência generalizada (rede), tal que $I_J \uparrow I_{[0, 1]}$ mas $\int_{[0, 1]} I_J d\lambda \not\uparrow 1$. Ou seja, o Teorema da Convergência Monótona não é válido para redes.
+
+38. Prove que a função $f(x) = \frac{1}{x^2}$ é integrável em relação à medida de Lebesgue em $[1, +\infty)$, mas não é integrável em relação à medida de Lebesgue-Stieltjes gerada por $F(x) = x^3$.
+
+39. Em $(\mathbb{R}^1, \wedge, \lambda)$, seja $\{f_n\}_{n=1,2,\ldots}$ uma sequência de funções mensuráveis tais que $f_n \xrightarrow{\text{q.t.p.}} f$. Provar que: $$\int_{\mathbb{R}^1} e^{-|x|} \operatorname{sen}(f_n(x)) dx \to \int_{\mathbb{R}^1} e^{-|x|} \operatorname{sen}(f(x)) dx.$$
+
+40. Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida finito. Provar que se $1 \leq p \leq q$, então $L_q \subseteq L_p$.
+
+41. Em $([0, 1], \mathscr{B}, \lambda)$ a função $f(x) = \frac{1}{\sqrt{x}} I_{(0, 1]}(x)$ pertence a $L_1$ mas não a $L_2$. Ou seja, a inclusão contrária está estabelecida no Exerc. 40 não é verdadeira.
+
+42. Em $([1, +\infty), \mathscr{B}, \lambda)$ a função $f(x) = \frac{1}{x}$ pertence a $L_2$ mas não a $L_1$. Ou seja, o resultado do Exerc. 40 não é válido se o espaço de medida não é finito.
+
+43. Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de probabilidades. Se $f$ é mensurável, provar que a função $$p \mapsto \left\|f\right\|_p, \quad 1 \leq p < \infty$$ é uma função não-decrescente.
+
+    (Sugestão. Seja $1 \leq q < p$. Seja $r$, tal que $\frac{1}{p} + \frac{1}{r} = \frac{1}{q}$. Portanto $\frac{q}{p} + \frac{q}{r} = 1$. Substitua agora na desigualdade de Hölder $f, g, p \text{ e } q \text{ por } |f|^q, 1, \frac{p}{q}, \text{ e } \frac{r}{q})$. Dê um contra-exemplo para o caso em que $\mu$ não seja uma probabilidade.
+
+44. Nas condições do Exerc. 43, prove que a função $$p \mapsto \left\|f\right\|_p$$ é contínua em todo ponto que ela é finita. Se $\left\|f\right\|_p = \infty$, então $\left\|f\right\|_p \uparrow \infty$ ($q < p$). Note que uma consequência dos Exercs. 43 e 44, é que o gráfico da função $p \mapsto \left\|f\right\|_p$ é o seguinte:
+
+```{r figure-04-ex-01, fig.show='hold', fig.align='center', echo=FALSE, cache=TRUE}
+knitr::include_graphics(rep("figures/figure-04-ex-01.png"))
+```
+    É possível que para todo $p$, $\left\|f\right\|_p < \infty$; em qualquer caso sabemos que $\lim_{p \to \infty} \left\|f\right\|_p = \left\|f\right\|_\infty$.
+    (Sugestão. Se $\left\|f\right\|_p < \infty$, seja $q < p$. Para provar que a função é contínua em $q$ tome $r < p$ e observe que $$|f|^r \xrightarrow{\mu} |f|^q$$ e que $|f|^r \leq (1 \vee |f|^p) \in L_1$. O resultado decorre agora usando o Teorema da Convergência Dominada. Se $\left\|f\right\|_p = \infty$, use o resultado obtido na função $|f|I_{[|f| \leq n]}$. Depois passe ao limite quando $n \to \infty$).
+
+45. Seja $f$ uma função integrável em relação à medida de Lebesgue em $[a, b]$. Prove que existe uma sequência de funções-escada $\{\varphi_n\}_{n=1,2,\ldots}$ tal que $\varphi_n \to f$ em q. t. p.
+
+    (Sugestão. Se $a \leq x_0 < x_1 < \ldots < x_n = b$ e $\varepsilon_1, \varepsilon_2, \ldots, \varepsilon_n$ são números reais, então $\sum\limits_{i=1}^n \varepsilon_i I_{(x_{i-1}, x_i]}$ é uma função-escada. Estas funções são densas em $L_p, 1 \leq p < \infty$ pela Prop. 4.2.7. Dada então $f \in L_1([a, b], \wedge, \lambda)$, existe uma sequência $\{\varphi_n\}_{n=1,2,\ldots}$ de funções-escada, tal que $\varphi_n \xrightarrow{L_1} f$. Então $\varphi_n \xrightarrow{\mu} f$. Pelo Cor. 3.5 existe então uma subsequência que converge em q. t. p.)
+
+46. Provar que se $A$ é um conjunto mensurável Lebesgue, tal que $\lambda(A) > 0$, então existe $B \subseteq A$, não-mensurável Lebesgue.
+
+    (Sugestão. Restringir a relação de equivalência $\sim$ definida antes da Prop. 4.3.4.2 ao conjunto $A$ e repetir o argumento dessa proposição).
+    
+47. Seja $f \in L_p([a, b], \Lambda, \lambda)$ com $1 < p < \infty$. Seja $$F(x) = \text{cte.} + \int_a^x f(y) dy$$ e $a = x_0 < x_1 < \ldots < x_n = b$. Prove que $$\sum_{i=0}^{n-1} \frac{|F(x_{i+1})-F(x_i)|^p}{(x_{i+1}-x_i)^{p-1}} \leq \int_a^b |f(y)|^p dy.$$ (Sugestão. Use a desigualdade de Hölder para provar que $$|F(x_{i+1})-F(x_i)| \leq (x_{i+1}-x_i)^{1/q} \left(\int_{x_i}^{x_{i+1}} |f(y)|^p dy\right)^{1/p}.$$    
+
+48. Podemos nos restringir ao caso em que $\varphi$ esteja definida num intervalo $[0, c]$. Neste caso provaremos que $$xy \leq \int_0^x \varphi(s) ds + \int_0^y \psi(t) dt, \quad x \in [0, c] \quad y \in [0, \varphi(c)].$$ A igualdade vale se, e somente se, $y = \varphi(x)$.
+
+    **Demonstração.** Utilizando o Exerc. 2 do Cap. 5, decorre imediatamente que $$\forall x \in [0, c], x\varphi(x) = \int_0^x \varphi(s) ds + \int_0^{\varphi(x)} \psi(t) dt.$$ Portanto, para provar o resultado, é suficiente provar que, se $y \neq \varphi(x)$ $$xy < \int_0^x \varphi(s) ds + \int_0^y \psi(t) dt.$$
+
+    Suponhamos $y > \varphi(x)$. Como $\psi$ é estritamente crescente se $t \in (\varphi(x), y)$, $x < \psi(t)$, e portanto
+    $$\int_{\varphi(x)}^y \psi(t) dt > x(y-\varphi(x)).$$
+    Então
+    $$xy = x\varphi(x) + x(y-\varphi(x)) < \int_0^x \varphi(s) ds + \int_0^{\varphi(x)} \psi(t) dt +$$
+    $$+ \int_{\varphi(x)}^y \psi(t) dt = \int_0^x \varphi(s) ds + \int_0^y \psi(t) dt.$$
+    Se $y < \varphi(x)$, temos
+    $$\int_y^{\varphi(x)} \psi(t) dt < x(\varphi(x)-y)$$
+    e portanto
+    $$xy = x\varphi(x)-x(\varphi(x)-y) < \int_0^x \varphi(s) ds +$$
+    $$+ \int_0^{\varphi(x)} \psi(t) dt - \int_y^{\varphi(x)} \psi(t) dt = \int_0^x \varphi(s) ds + \int_0^y \psi(t) dt,$$
+    o que prova o resultado.
