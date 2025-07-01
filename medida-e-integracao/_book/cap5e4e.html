@@ -5,19 +5,19 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5.4 Produtos finitos e infinitos de espaços de medida | Medida e Integração</title>
-  <meta name="description" content="5.4 Produtos finitos e infinitos de espaços de medida | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="description" content="5.4 Produtos finitos e infinitos de espaços de medida | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)." />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5.4 Produtos finitos e infinitos de espaços de medida | Medida e Integração" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="5.4 Produtos finitos e infinitos de espaços de medida | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta property="og:description" content="5.4 Produtos finitos e infinitos de espaços de medida | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)." />
   <meta name="github-repo" content="jcomicsutils/projeto-euclides-em-bookdown" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="5.4 Produtos finitos e infinitos de espaços de medida | Medida e Integração" />
   
-  <meta name="twitter:description" content="5.4 Produtos finitos e infinitos de espaços de medida | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="twitter:description" content="5.4 Produtos finitos e infinitos de espaços de medida | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)." />
   
 
 <meta name="author" content="Pedro J. Fernandez" />
@@ -99,7 +99,8 @@ div.csl-indent {
 <li><a href="./">Medida e Integração</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Aviso</a></li>
+<li class="chapter" data-level="" data-path="prefacio.html"><a href="prefacio.html"><i class="fa fa-check"></i>Prefácio</a></li>
 <li class="chapter" data-level="" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i>Introdução</a></li>
 <li class="chapter" data-level="0" data-path="cap0e.html"><a href="cap0e.html"><i class="fa fa-check"></i><b>0</b> Conjuntos</a>
 <ul>
@@ -144,7 +145,12 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="5.1" data-path="cap5e1e.html"><a href="cap5e1e.html"><i class="fa fa-check"></i><b>5.1</b> Imagens de medidas</a></li>
 <li class="chapter" data-level="5.2" data-path="cap5e2e.html"><a href="cap5e2e.html"><i class="fa fa-check"></i><b>5.2</b> Medidas-produto - Teorema de Fubini</a></li>
-<li class="chapter" data-level="5.3" data-path="cap5e3e.html"><a href="cap5e3e.html"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a></li>
+<li class="chapter" data-level="5.3" data-path="cap5e3e.html"><a href="cap5e3e.html"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="cap5e3e.html"><a href="cap5e3e.html#cap5e3e1e"><i class="fa fa-check"></i><b>5.3.1</b> O Teorema de Tonelli pode não ser aplicável se <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\gamma\)</span> não são <span class="math inline">\(\sigma\)</span>-finitos</a></li>
+<li class="chapter" data-level="5.3.2" data-path="cap5e3e.html"><a href="cap5e3e.html#cap5e3e2e"><i class="fa fa-check"></i><b>5.3.2</b> A hipótese de integrabilidade no Teorema de Fubini não pode ser eliminada</a></li>
+<li class="chapter" data-level="5.3.3" data-path="cap5e3e.html"><a href="cap5e3e.html#cap5e3e3e"><i class="fa fa-check"></i><b>5.3.3</b> Fórmula de Integração por partes</a></li>
+</ul></li>
 <li class="chapter" data-level="5.4" data-path="cap5e4e.html"><a href="cap5e4e.html"><i class="fa fa-check"></i><b>5.4</b> Produtos finitos e infinitos de espaços de medida</a></li>
 <li class="chapter" data-level="" data-path="ex5.html"><a href="ex5.html"><i class="fa fa-check"></i>Exercícios</a></li>
 </ul></li>
@@ -189,6 +195,57 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="cap5e4e" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Produtos finitos e infinitos de espaços de medida<a href="cap5e4e.html#cap5e4e" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Na Seção 5.2 foram apresentados os resultados correspondentes ao produto de dois espaços de medida. O número 2 não tem nada de especial e os teoremas e demonstrações para o caso do produto de um número <em>finito</em> de espaços de medida são inteiramente análogos. Para que a exposição fique mais completa, enunciaremos, sem demonstração, os principais resultados para o produto de um número finito de espaços de medida.</p>
+<p><strong>TEOREMA 5.4.1.</strong> Sejam <span class="math inline">\((\Omega_i, \mathscr{A}_i, \mu_i)_{i=1,2,\ldots,n}\)</span> <span class="math inline">\(n\)</span> espaços de medida. Seja <span class="math inline">\(\mathbb{S}\)</span> a semi-álgebra dos retângulos mensuráveis, ou seja,
+<span class="math display">\[\mathbb{S} = \left\{\prod_{i=1}^n A_i: A_i \in \mathscr{A}_i\right\}.\]</span>
+Então existe uma medida <span class="math inline">\(\mu\)</span> sobre <span class="math inline">\(\sigma(\mathbb{S}) = \prod_{i=1}^n \mathscr{A}_i\)</span>, tal que
+<span class="math display">\[\mu\left(\prod_{i=1}^n A_i\right) = \prod_{i=1}^n \mu_i(A_i); A_i \in \mathscr{A}_i, i = 1, 2, \ldots, n.\]</span>
+Se <span class="math inline">\(\mu_1, \mu_2, \ldots, \mu_n\)</span> são <span class="math inline">\(\sigma\)</span>-finitas, então <span class="math inline">\(\mu\)</span> é única. <span class="math inline">\(\mu\)</span> é chamada <em>medida-produto</em> e denotada com <span class="math inline">\(\mu = \prod_{i=1}^n \mu_i\)</span>.</p>
+<p><strong>TEOREMA 5.4.2 (Fubini).</strong> Sejam <span class="math inline">\(\{(\Omega_i, \mathscr{A}_i, \mu_i)\}_{i=1,2,\ldots,n}\)</span> espaços de medida <span class="math inline">\(\sigma\)</span>-finitos e <span class="math inline">\(\mu\)</span> a medida-produto.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Se <span class="math inline">\(f: \prod\limits_{i=1}^n \Omega_i \to \overline{\mathbb{R}}\)</span> é não-negativa e <span class="math inline">\(\prod\limits_{i=1}^n \mathscr{A}_i\)</span>-mensurável, então</p>
+<p><span class="math display">\[\int_{\prod\limits_{i=1}^n \Omega_i} f d\mu =\]</span>
+(a função produzida depois de cada integração é mensurável nas variáveis que restam).</p></li>
+<li><p>Se <span class="math inline">\(f: \prod\limits_{i=1}^n \Omega_i \to \overline{\mathbb{R}}\)</span> é <span class="math inline">\(\prod\limits_{i=1}^n \mathscr{A}_i\)</span>-mensurável e <span class="math inline">\(\mu\)</span>-integrável, a fórmula estabelecida em a) é válida novamente.</p></li>
+</ol>
+<p>Passemos agora ao caso de um número infinito de espaços. Seja
+<span class="math display">\[\{(\Omega_i, \mathscr{A}_i, \mu_i)\}_{i=1,2,\ldots}\]</span>
+uma sequência de espaços de medida, tais que <span class="math inline">\(\mu_i(\Omega_i) = 1\)</span>. (Ou seja, uma sequência de espaços de probabilidade). Seja
+<span class="math display">\[\mathbb{S} = \left\{\prod\limits_{i=1}^\infty A_i: A_i \in \mathscr{A}_i, A_i = \Omega_i \text{ salvo um número finito de índices }\right\}.\]</span>
+<span class="math inline">\(\mathbb{S}\)</span> é uma semi-álgebra; os elementos de <span class="math inline">\(\mathbb{S}\)</span> são chamados <em>retângulos mensuráveis</em>. Indicaremos com <span class="math inline">\(\Omega = \prod\limits_{i=1}^\infty \Omega_i\)</span> e com <span class="math inline">\(\mathscr{A}\)</span> a <span class="math inline">\(\sigma\)</span>-álgebra gerada por <span class="math inline">\(\mathbb{S}\)</span> (<span class="math inline">\(\mathscr{A} = \sigma(\mathbb{S})\)</span>); ou seja, <span class="math inline">\(\mathscr{A}\)</span> é a <span class="math inline">\(\sigma\)</span>-álgebra produto. Seja
+<span class="math display">\[\varphi_n: \Omega \to \prod\limits_{i=1}^n \Omega_i\]</span>
+<span class="math display">\[= \int_{\Omega_1} \mu_1(d\omega_1) \ldots \int_{\Omega_2} \int_{\Omega_{n-1}} \mu_{n-1}(d\omega_{n-1}) \int_{\Omega_n} f(\omega_1, \omega_2, \ldots, \omega_n)\mu_n(d\omega_n)\]</span>
+a função definida por
+<span class="math display">\[\varphi_n(\omega_1, \omega_2, \ldots) = (\omega_1, \omega_2, \ldots, \omega_n).\]</span>
+<span class="math inline">\(\varphi_n\)</span> é <span class="math inline">\(\mathscr{A}\)</span>-<span class="math inline">\(\prod\limits_{i=1}^n \mathscr{A}_i\)</span> mensurável. Vamos denotar com <span class="math inline">\(\mathscr{F}_n = \varphi_n^{-1}\left(\prod\limits_{i=1}^n \mathscr{A}_i\right)\)</span> a menor <span class="math inline">\(\sigma\)</span>-álgebra que faz <span class="math inline">\(\varphi_n\)</span> mensurável. Os elementos de <span class="math inline">\(\mathscr{F}_n\)</span> são chamados <span class="math inline">\(n\)</span>-cilindros. Se <span class="math inline">\(B\)</span> é um <span class="math inline">\(n\)</span>-cilindro, <span class="math inline">\(B\)</span> tem a seguinte propriedade: se <span class="math inline">\(\omega = (\omega_1, \omega_2, \ldots)\in B\)</span> e <span class="math inline">\(\omega&#39; = (\omega_1&#39;, \omega_2&#39;, \ldots)\)</span> é tal que <span class="math inline">\(\omega_1 = \omega_1&#39;, \ldots, \omega_n = \omega_n&#39;\)</span>, então <span class="math inline">\(\omega&#39; \in B\)</span>. Seja <span class="math inline">\(\mathscr{F} = \bigcup\limits_{n=1}^\infty \mathscr{F}_n\)</span>; os elementos de <span class="math inline">\(\mathscr{F}\)</span> são chamados <em>cilindros</em>. <span class="math inline">\(\mathscr{F}\)</span> é uma álgebra, como é fácil verificar. Vamos agora definir sobre <span class="math inline">\(\mathscr{F}\)</span> uma função de conjunto <span class="math inline">\(\mu\)</span> não-negativa, finita e finitamente aditiva. Seja <span class="math inline">\(B \in \mathscr{F}\)</span>. Então <span class="math inline">\(B \in \mathscr{F}_n\)</span> para algum <span class="math inline">\(n\)</span>, e portanto existe <span class="math inline">\(A \in \prod\limits_{i=1}^n \mathscr{A}_i\)</span>, tal que <span class="math inline">\(B = \varphi_n^{-1}(A)\)</span>. Definimos
+<span class="math display">\[\mu(B) = (\mu_1 \times \mu_2 \times \ldots \times \mu_n)(A).\]</span>
+Deixamos ao leitor a verificação de que o valor de <span class="math inline">\(\mu(B)\)</span> não depende do conjunto <span class="math inline">\(A\)</span>, tal que <span class="math inline">\(\varphi_n^{-1}(A) = B\)</span>, e das propriedades de <span class="math inline">\(\mu\)</span> enunciadas anteriormente. Finalmente seja <span class="math inline">\(\Omega^{(n)} = \prod\limits_{i=n+1}^\infty \Omega_i\)</span>, e <span class="math inline">\(\mathscr{F}^{(n)}\)</span> e <span class="math inline">\(\mu^{(n)}\)</span> os objetos correspondentes a <span class="math inline">\(\mathscr{F}\)</span> e <span class="math inline">\(\mu\)</span> em <span class="math inline">\(\Omega^{(n)}\)</span> (fazendo a construção anterior em <span class="math inline">\(\Omega^{(n)}\)</span>). Seja <span class="math inline">\(A \in \mathscr{F}\)</span>. Então <span class="math inline">\(A(\omega_1, \omega_2, \ldots, \omega_n) \in \mathscr{F}^{(n)}\)</span> (a seção de <span class="math inline">\(A\)</span> pelo ponto <span class="math inline">\((\omega_1, \omega_2, \ldots, \omega_n)\)</span>). Deixamos ao leitor a verificação da seguinte fórmula:
+<span class="math display">\[\mu(A) = \int \ldots \int \mu^{(n)}(A(\omega_1, \omega_2, \ldots, \omega_n)) d\mu_1 \ldots d\mu_n.\]</span>
+(Ou seja, a integral de <span class="math inline">\(\mu^{(n)}(A(\omega_1, \omega_2, \ldots, \omega_n))\)</span> em relação à medida produto <span class="math inline">\(\mu_1 \times \mu_2 \times \ldots \times \mu_n\)</span>). Vamos agora enunciar o resultado mais importante desta seção.</p>
+<p><strong>TEOREMA 5.4.3.</strong> Existe uma única medida <span class="math inline">\(\mu\)</span> sobre a <span class="math inline">\(\sigma\)</span>-álgebra produto <span class="math inline">\(\mathscr{A} = \prod\limits_{i=1}^\infty \mathscr{A}_i = \sigma(\mathbb{S}) = \sigma(\mathscr{F})\)</span>, tal que se <span class="math inline">\(A = \prod\limits_{i=1}^\infty A_i\)</span> e <span class="math inline">\(A \in \mathbb{S}\)</span>, então
+<span class="math display">\[\mu(A) = \prod\limits_{i=1}^\infty \mu_i(A_i).\]</span>
+(Note-se que <span class="math inline">\(\mu_i(A_i) = 1\)</span>, excepto para um número finito de índices).</p>
+<p><strong>Demonstração.</strong> Pelo Teorema de Extensão é suficiente provar que <span class="math inline">\(\mu\)</span> sobre <span class="math inline">\(\mathscr{F}\)</span> é <span class="math inline">\(\sigma\)</span>-aditiva ou, equivalentemente, que <span class="math inline">\(\mu\)</span> é contínua, superiormente, no vazio. Seja portanto <span class="math inline">\(\{A_n\}_{n=1,2,\ldots}\)</span> uma sequência decrescente de elementos de <span class="math inline">\(\mathscr{F}\)</span>, tais que <span class="math inline">\(\mu(A_n) \geq \varepsilon &gt; 0\)</span> para todo <span class="math inline">\(n\)</span>. É preciso provar que <span class="math inline">\(\bigcap\limits_{n=1}^\infty A_n \neq \varnothing\)</span>.</p>
+<p>Seja <span class="math inline">\(E_n = \left\{\omega_1: \mu^{(1)}(A_n(\omega_1)) &gt; \frac{\varepsilon}{2}\right\}\)</span>. Afirmamos que <span class="math inline">\(\mu_1(E_n) \geq \frac{\varepsilon}{2}\)</span>. Caso contrário,
+<span class="math display">\[\mu(A_n) = \int_{\Omega_1} \mu^{(1)}(A_n(\omega_1)) d\mu_1 =\]</span>
+<span class="math display">\[= \int_{E_n} \mu^{(1)}(A_n(\omega_1)) d\mu_1 + \int_{E_n^c} \mu^{(1)}(A_n(\omega_1)) d\mu_1 \leq\]</span>
+<span class="math display">\[\leq \mu_1(E_n) + \frac{\varepsilon}{2} \mu_1(E_n^c) &lt; \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon,\]</span>
+o que é uma contradição. Portanto para todo <span class="math inline">\(n\)</span>, <span class="math inline">\(\mu_1(E_n) \geq \varepsilon/2\)</span>. Como <span class="math inline">\(A_n\)</span> é uma sequência decrescente, <span class="math inline">\(E_n\)</span> é também decrescente e como <span class="math inline">\(\mu_1(E_n) \geq \varepsilon/2\)</span>, para todo <span class="math inline">\(n\)</span>, resulta que <span class="math inline">\(\bigcap\limits_{n=1}^\infty E_n \neq \varnothing\)</span> (<span class="math inline">\(\mu_1\)</span> é <span class="math inline">\(\sigma\)</span>-aditiva). Seja <span class="math inline">\(\tilde{\omega}_1 \in \bigcap\limits_{n=1}^\infty E_n\)</span>.
+Temos que <span class="math inline">\(E_n(\tilde{\omega}_1)\)</span> é uma sequência decrescente e <span class="math inline">\(\mu^{(1)}(E_n(\tilde{\omega}_1)) \geq \varepsilon/2\)</span> para todo <span class="math inline">\(n\)</span>. Podemos então aplicar o argumento anterior a essa sequência no espaço <span class="math inline">\(\Omega^{(1)}\)</span>. Obteríamos então outro ponto <span class="math inline">\(\tilde{\omega}_2 \in \Omega_2\)</span>, tal que para todo <span class="math inline">\(n\)</span>, <span class="math inline">\(\mu^{(2)}(A_n(\tilde{\omega}_1, \tilde{\omega}_2)) \geq \varepsilon/4\)</span>. Continuando dessa maneira podemos construir uma sequência <span class="math inline">\((\tilde{\omega}_1, \tilde{\omega}_2, \ldots)\)</span>, tal que <span class="math inline">\(\tilde{\omega}_n \in \Omega_n, n = 1, 2, \ldots\)</span> e <span class="math inline">\(\forall j = 1, 2, \ldots, \forall n, n = 1, 2, \ldots\)</span>
+<span class="math display">\[\mu^{(j)}(A_n(\tilde{\omega}_1, \tilde{\omega}_2, \ldots, \tilde{\omega}_j)) \geq \varepsilon/2^j!\]</span>
+Afirmamos que <span class="math inline">\((\tilde{\omega}_1, \tilde{\omega}_2, \ldots) \in \bigcap\limits_{n=1}^\infty A_n\)</span>. Fixemos <span class="math inline">\(n\)</span> e consideremos <span class="math inline">\(A_n\)</span>. Como <span class="math inline">\(A_n \in \mathscr{F}\)</span>, existe um <span class="math inline">\(m\)</span> tal que <span class="math inline">\(A_n\)</span> é um <span class="math inline">\(m\)</span>-cilindro. Como
+<span class="math display">\[\mu^{(m)}(A_n(\tilde{\omega}_1, \tilde{\omega}_2, \ldots, \tilde{\omega}_m)) \geq \varepsilon/2^m &gt; 0,\]</span>
+<span class="math inline">\(A_n(\tilde{\omega}_1, \tilde{\omega}_2, \ldots, \tilde{\omega}_m) \neq \varnothing\)</span>. Isto é, existe <span class="math inline">\((\omega_1, \omega_2, \ldots)\in A_n\)</span>, tal que <span class="math inline">\(\omega_1 = \tilde{\omega}_1, \ldots, \omega_m = \tilde{\omega}_m\)</span>. Mas como <span class="math inline">\(A_n\)</span> é um <span class="math inline">\(m\)</span>-cilindro, isso implica que <span class="math inline">\((\tilde{\omega}_1, \tilde{\omega}_2, \ldots)\in A_n\)</span>. Como <span class="math inline">\(n\)</span> foi escolhido arbitrariamente, resulta que <span class="math inline">\((\tilde{\omega}_1, \tilde{\omega}_2, \ldots) \in \bigcap\limits_{n=1}^\infty A_n\)</span>, o que prova o Teorema.</p>
+<p>A extensão deste resultado ao caso de um conjunto não-enumerável de espaços de probabilidade é imediata. Daremos aqui só o enunciado do resultado deixando a demonstração como exercício. Seja <span class="math inline">\(\{(\Omega_i, \mathscr{A}_i, \mu_i)\}_{i \in I}\)</span> uma família de espaços de probabilidades, onde <span class="math inline">\(I\)</span> é um conjunto de índices arbitrário. Seja
+<span class="math display">\[\mathbb{S} = \left\{\prod_{i \in I} A_i: A_i \in \mathscr{A}_i, A_i = \Omega_i \text{ exceto para um número finito de índices }\right\}\]</span>
+a semi-álgebra dos retângulos mensuráveis e
+<span class="math display">\[\mathscr{A} = \sigma(\mathbb{S}) = \prod_{i \in I} \mathscr{A}_i\]</span>
+a <span class="math inline">\(\sigma\)</span>-álgebra produto.</p>
+<p><strong>TEOREMA 5.4.4.</strong> Existe uma única probabilidade <span class="math inline">\(\mu\)</span> sobre <span class="math inline">\(\mathscr{A}\)</span>, tal que se <span class="math inline">\(A = \prod\limits_{i \in I} A_i \in \mathbb{S}\)</span>, então
+<span class="math display">\[\mu(A) = \prod_{i \in I} \mu_i(A_i).\]</span>
+(note-se que o produto só tem um número finito de fatores diferentes de 1)
+<span class="math inline">\(\mu\)</span> é chamada <em>medida (probabilidade) produto</em> e denotada com <span class="math inline">\(\prod_{i \in I} \mu_i\)</span>.</p>
+<p><strong>Demonstração.</strong> Veja o Exerc. 7.</p>
 </div>
             </section>
 

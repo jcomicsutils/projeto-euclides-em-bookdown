@@ -13,10 +13,14 @@ delete_merged_file: true
 url: https://jcomicsutils.github.io/projeto-euclides-em-bookdown/medida-e-integracao/_book
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)
+  Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA).
 link-citations: yes
 github-repo: jcomicsutils/projeto-euclides-em-bookdown
 ---
+
+# Aviso {-}
+
+Erros podem ocorrer, caso perceba algum, crie um issue no github e será corrigido.
 
 # Prefácio {.unnumbered #prefacio}
 

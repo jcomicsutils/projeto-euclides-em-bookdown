@@ -5,19 +5,19 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5.3 Exemplos e aplicações | Medida e Integração</title>
-  <meta name="description" content="5.3 Exemplos e aplicações | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="description" content="5.3 Exemplos e aplicações | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)." />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5.3 Exemplos e aplicações | Medida e Integração" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="5.3 Exemplos e aplicações | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta property="og:description" content="5.3 Exemplos e aplicações | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)." />
   <meta name="github-repo" content="jcomicsutils/projeto-euclides-em-bookdown" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="5.3 Exemplos e aplicações | Medida e Integração" />
   
-  <meta name="twitter:description" content="5.3 Exemplos e aplicações | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="twitter:description" content="5.3 Exemplos e aplicações | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)." />
   
 
 <meta name="author" content="Pedro J. Fernandez" />
@@ -99,7 +99,8 @@ div.csl-indent {
 <li><a href="./">Medida e Integração</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Aviso</a></li>
+<li class="chapter" data-level="" data-path="prefacio.html"><a href="prefacio.html"><i class="fa fa-check"></i>Prefácio</a></li>
 <li class="chapter" data-level="" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i>Introdução</a></li>
 <li class="chapter" data-level="0" data-path="cap0e.html"><a href="cap0e.html"><i class="fa fa-check"></i><b>0</b> Conjuntos</a>
 <ul>
@@ -144,7 +145,12 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="5.1" data-path="cap5e1e.html"><a href="cap5e1e.html"><i class="fa fa-check"></i><b>5.1</b> Imagens de medidas</a></li>
 <li class="chapter" data-level="5.2" data-path="cap5e2e.html"><a href="cap5e2e.html"><i class="fa fa-check"></i><b>5.2</b> Medidas-produto - Teorema de Fubini</a></li>
-<li class="chapter" data-level="5.3" data-path="cap5e3e.html"><a href="cap5e3e.html"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a></li>
+<li class="chapter" data-level="5.3" data-path="cap5e3e.html"><a href="cap5e3e.html"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="cap5e3e.html"><a href="cap5e3e.html#cap5e3e1e"><i class="fa fa-check"></i><b>5.3.1</b> O Teorema de Tonelli pode não ser aplicável se <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\gamma\)</span> não são <span class="math inline">\(\sigma\)</span>-finitos</a></li>
+<li class="chapter" data-level="5.3.2" data-path="cap5e3e.html"><a href="cap5e3e.html#cap5e3e2e"><i class="fa fa-check"></i><b>5.3.2</b> A hipótese de integrabilidade no Teorema de Fubini não pode ser eliminada</a></li>
+<li class="chapter" data-level="5.3.3" data-path="cap5e3e.html"><a href="cap5e3e.html#cap5e3e3e"><i class="fa fa-check"></i><b>5.3.3</b> Fórmula de Integração por partes</a></li>
+</ul></li>
 <li class="chapter" data-level="5.4" data-path="cap5e4e.html"><a href="cap5e4e.html"><i class="fa fa-check"></i><b>5.4</b> Produtos finitos e infinitos de espaços de medida</a></li>
 <li class="chapter" data-level="" data-path="ex5.html"><a href="ex5.html"><i class="fa fa-check"></i>Exercícios</a></li>
 </ul></li>
@@ -189,6 +195,54 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="cap5e3e" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Exemplos e aplicações<a href="cap5e3e.html#cap5e3e" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="cap5e3e1e" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> O Teorema de Tonelli pode não ser aplicável se <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\gamma\)</span> não são <span class="math inline">\(\sigma\)</span>-finitos<a href="cap5e3e.html#cap5e3e1e" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Seja <span class="math inline">\(\Omega = \Omega&#39; = [0, 1]\)</span>, <span class="math inline">\(\mathscr{A} = \mathscr{A}&#39; = \text{borelianos}\)</span>, <span class="math inline">\(\mu = \text{medida de Lebesgue}\)</span>, <span class="math inline">\(\gamma = \text{medida da contagem}\)</span>. Seja <span class="math inline">\(\Delta = \{(\omega, \omega&#39;): \omega = \omega&#39;\}\)</span>. Como <span class="math inline">\(\Delta\)</span> é fechado <span class="math inline">\(\in \mathscr{A} \times \mathscr{A}&#39;\)</span> e <span class="math inline">\(I_\Delta\)</span> é <span class="math inline">\(\mathscr{A} \times \mathscr{A}&#39;\)</span>-mensurável.
+<span class="math display">\[\int_\Omega \left[\int_{\Omega&#39;} I_\Delta(\omega, \cdot) d\gamma\right] d\mu = \int_\Omega 1 d\mu = 1\]</span>
+<span class="math display">\[\int_{\Omega&#39;} \left[\int_\Omega I_\Delta(\cdot, \omega&#39;) d\mu\right] d\gamma = \int_{\Omega&#39;} 0 d\gamma = 0.\]</span>
+O Exerc. 12 contém um exemplo de um produto de dois espaços de medida, um deles não-<span class="math inline">\(\sigma\)</span>-finito, no qual o Teorema de Tonelli ainda pode ser aplicado.</p>
+</div>
+<div id="cap5e3e2e" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> A hipótese de integrabilidade no Teorema de Fubini não pode ser eliminada<a href="cap5e3e.html#cap5e3e2e" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math inline">\(\Omega = \Omega&#39; = \{1, 2, \ldots\}\)</span>, <span class="math inline">\(\mathscr{A} = \mathscr{A}&#39; = \text{partes de } \Omega, \mu = \gamma = \text{medida da contagem}\)</span>.
+<span class="math display">\[f(\omega, \omega&#39;) = \begin{cases} 1 &amp; \omega = \omega&#39; \\ -1 &amp; \omega = 2i+1, \omega&#39; = 2i + 2 \\ &amp;\text{ou } \omega = 2i + 2 \text{ e } \omega&#39; = 2i + 1, \\ &amp;i = 0, 1, \ldots \\ 0 &amp; \text{em outros casos} \end{cases}\]</span></p>
+<p><img src="figures/figure-05-03-02-01.png" width="289" style="display: block; margin: auto;" /></p>
+<p>Então,
+<span class="math display">\[\int_\Omega \left[\int_{\Omega&#39;} f(\omega, \cdot) d\gamma\right] d\mu = \int_{\Omega&#39;} \left[\int_\Omega f(\cdot, \omega&#39;) d\mu\right] d\gamma = 0\]</span>
+e
+<span class="math display">\[\int_{\Omega \times \Omega&#39;} |f| d(\mu \times \gamma) = \int_{\Omega \times \Omega&#39;} f^+ d(\mu \times \gamma) =\]</span>
+<span class="math display">\[= \int_{\Omega \times \Omega&#39;} f^- d(\mu \times \gamma) = +\infty.\]</span></p>
+</div>
+<div id="cap5e3e3e" class="section level3 hasAnchor" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Fórmula de Integração por partes<a href="cap5e3e.html#cap5e3e3e" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Seja <span class="math inline">\(\Delta = [a, b]\)</span> um intervalo onde os extremos podem ser finitos ou não. Seja <span class="math inline">\(\mu\)</span> uma medida <span class="math inline">\(\sigma\)</span>-finita sobre os borelianos de <span class="math inline">\([a, b]\)</span> e <span class="math inline">\(f\)</span> e <span class="math inline">\(g\)</span> duas funções integráveis em relação a <span class="math inline">\(\mu\)</span>. Sejam
+<span class="math display">\[F(x) = \int_{[a, x]} f d\mu, G(x) = \int_{[a, x]} g d\mu,\]</span>
+<span class="math display">\[F(y-0) = \int_{[a, y)} f d\mu \text{ e } G(y-0) = \int_{[a, y)} g d\mu.\]</span>
+Temos o seguinte:</p>
+<p><strong>TEOREMA 5.3.3.1 (Integração por partes)</strong>
+<span class="math display">\[\int_\Delta f(x) G(x)d\mu = F(b)G(b)-\int_\Delta g(y) F(y-0) d\mu.\]</span></p>
+<p><strong>Demonstração.</strong> Seja <span class="math inline">\(E = \{ (x, y): y \leq x\}\)</span></p>
+<p><img src="figures/figure-05-03-03-01.png" width="141" style="display: block; margin: auto;" /></p>
+<p>Seja <span class="math inline">\(h: \Delta \times \Delta \to \mathbb{R}\)</span> definida por
+<span class="math display">\[h(x, y) = f(x) g(y) I_E(x, y)\]</span></p>
+<p>Agora <span class="math inline">\(h\)</span> é mensurável e temos
+<span class="math display">\[\int_{\Delta \times \Delta} |h| d(\mu \times \mu) = \int_{\Delta \times \Delta} |f(x)||g(y)|I_E(x, y) d(\mu \times \mu) \leq\]</span>
+<span class="math display">\[\leq \int_{\Delta \times \Delta} |f||g| d(\mu \times \mu) = \left(\int_\Delta |f| d\mu\right)\left(\int_\Delta |g| d\mu\right) &lt; \infty\]</span>
+Portanto <span class="math inline">\(h\)</span> é <span class="math inline">\(\mu \times \mu\)</span>-integrável. Por Fubini temos então
+<span class="math display">\[\int_{\Delta \times \Delta} h(x, y) d(\mu \times \mu) = \int_\Delta g(y)\left[\int_\Delta f(x) I_E(x, y) d\mu\right] d\mu =\]</span>
+<span class="math display">\[= \int_\Delta g(y)\left[\int_{[y,b]} f(x) d\mu\right] d\mu =\]</span>
+<span class="math display">\[= \int_\Delta g(y)\left[\int_{[a,b]} f(x) d\mu\right] - \int_{[a,y)} f(x) d \mu \quad d \mu =\]</span>
+<span class="math display">\[= \int_\Delta g(y)[F(b)-F(y-0)] d\mu =\]</span>
+<span class="math display">\[= \int_\Delta g(y)F(b) d\mu - \int_\Delta g(y)F(y-0) d\mu =\]</span>
+<span class="math display">\[= F(b)G(b)-\int_\Delta g(y)F(y-0) d\mu.\]</span></p>
+<p>Se agora integramos primeiro em relação a <span class="math inline">\(y\)</span> e depois em relação a <span class="math inline">\(x\)</span> temos
+<span class="math display">\[\int_{\Delta \times \Delta} h(x, y) d(\mu \times \mu) = \int_\Delta f(x)\left[\int_\Delta g(y)I_E(x, y) d\mu\right] d\mu =\]</span>
+<span class="math display">\[= \int_\Delta f(x)\left[\int_{[a,x]} g(y) d\mu\right] d\mu = \int_\Delta f(x)G(x) d\mu.\]</span>
+Temos portanto que
+<span class="math display">\[\int_\Delta f(x)G(x) d\mu = F(b)G(b)-\int_\Delta g(y)F(y-0) d\mu,\]</span>
+o que prova o Teorema.
+No Exerc. 15 encontra-se outra fórmula muito usada que é provada com a mesma técnica empregada neste Teorema.</p>
+</div>
 </div>
             </section>
 

@@ -5,19 +5,19 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5.1 Imagens de medidas | Medida e Integração</title>
-  <meta name="description" content="5.1 Imagens de medidas | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="description" content="5.1 Imagens de medidas | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)." />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5.1 Imagens de medidas | Medida e Integração" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="5.1 Imagens de medidas | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta property="og:description" content="5.1 Imagens de medidas | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)." />
   <meta name="github-repo" content="jcomicsutils/projeto-euclides-em-bookdown" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="5.1 Imagens de medidas | Medida e Integração" />
   
-  <meta name="twitter:description" content="5.1 Imagens de medidas | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)" />
+  <meta name="twitter:description" content="5.1 Imagens de medidas | Medida e Integração por Pedro J. Fernandez. Projeto Euclides (IMPA)." />
   
 
 <meta name="author" content="Pedro J. Fernandez" />
@@ -99,7 +99,8 @@ div.csl-indent {
 <li><a href="./">Medida e Integração</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Aviso</a></li>
+<li class="chapter" data-level="" data-path="prefacio.html"><a href="prefacio.html"><i class="fa fa-check"></i>Prefácio</a></li>
 <li class="chapter" data-level="" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i>Introdução</a></li>
 <li class="chapter" data-level="0" data-path="cap0e.html"><a href="cap0e.html"><i class="fa fa-check"></i><b>0</b> Conjuntos</a>
 <ul>
@@ -144,7 +145,12 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="5.1" data-path="cap5e1e.html"><a href="cap5e1e.html"><i class="fa fa-check"></i><b>5.1</b> Imagens de medidas</a></li>
 <li class="chapter" data-level="5.2" data-path="cap5e2e.html"><a href="cap5e2e.html"><i class="fa fa-check"></i><b>5.2</b> Medidas-produto - Teorema de Fubini</a></li>
-<li class="chapter" data-level="5.3" data-path="cap5e3e.html"><a href="cap5e3e.html"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a></li>
+<li class="chapter" data-level="5.3" data-path="cap5e3e.html"><a href="cap5e3e.html"><i class="fa fa-check"></i><b>5.3</b> Exemplos e aplicações</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="cap5e3e.html"><a href="cap5e3e.html#cap5e3e1e"><i class="fa fa-check"></i><b>5.3.1</b> O Teorema de Tonelli pode não ser aplicável se <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\gamma\)</span> não são <span class="math inline">\(\sigma\)</span>-finitos</a></li>
+<li class="chapter" data-level="5.3.2" data-path="cap5e3e.html"><a href="cap5e3e.html#cap5e3e2e"><i class="fa fa-check"></i><b>5.3.2</b> A hipótese de integrabilidade no Teorema de Fubini não pode ser eliminada</a></li>
+<li class="chapter" data-level="5.3.3" data-path="cap5e3e.html"><a href="cap5e3e.html#cap5e3e3e"><i class="fa fa-check"></i><b>5.3.3</b> Fórmula de Integração por partes</a></li>
+</ul></li>
 <li class="chapter" data-level="5.4" data-path="cap5e4e.html"><a href="cap5e4e.html"><i class="fa fa-check"></i><b>5.4</b> Produtos finitos e infinitos de espaços de medida</a></li>
 <li class="chapter" data-level="" data-path="ex5.html"><a href="ex5.html"><i class="fa fa-check"></i>Exercícios</a></li>
 </ul></li>
@@ -189,6 +195,19 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="cap5e1e" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Imagens de medidas<a href="cap5e1e.html#cap5e1e" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida, <span class="math inline">\((\Omega&#39;, \mathscr{A}&#39;)\)</span> um espaço mensurável e <span class="math inline">\(f: \Omega \to \Omega&#39;\)</span> uma função mensurável.</p>
+<p><strong>DEFINIÇÃO 5.1.1.</strong> <span class="math inline">\(\mu f^{-1}: \mathscr{A}&#39; \to \overline{\mathbb{R}}\)</span> definida por <span class="math display">\[(\mu f^{-1})(A&#39;) = \mu(f^{-1}(A&#39;))\]</span> é chamada imagem de <span class="math inline">\(\mu\)</span> por <span class="math inline">\(f\)</span>.</p>
+<p>É fácil ver que <span class="math inline">\(\mu f^{-1}\)</span> é uma medida sobre <span class="math inline">\(\mathscr{A}&#39;\)</span>.</p>
+<p><strong>TEOREMA 5.1.1 (Mudança de variáveis).</strong> Seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida, <span class="math inline">\((\Omega&#39;, \mathscr{A}&#39;)\)</span> um espaço mensurável, <span class="math inline">\(f: \Omega \to \Omega&#39;\)</span> mensurável e <span class="math inline">\(\mu f^{-1}\)</span> a medida-imagem.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Seja <span class="math inline">\(g: \Omega&#39; \to \overline{\mathbb{R}}\)</span> uma função mensurável <span class="math inline">\(\geq 0\)</span>. Então <span class="math display">\[\int_{\Omega&#39;} g d(\mu f^{-1}) = \int_\Omega (g \circ f) d\mu. \quad \text{(I)}\]</span></p></li>
+<li><p><span class="math inline">\(g: \Omega&#39; \to \overline{\mathbb{R}}\)</span> é <span class="math inline">\(\mu f^{-1}\)</span>-integrável, se, e somente se, <span class="math inline">\(g \circ f\)</span> é <span class="math inline">\(\mu\)</span>-integrável e nesse caso vale a fórmula (I). (Não exigimos aqui que <span class="math inline">\(g \geq 0\)</span>).</p></li>
+</ol>
+<p><strong>Demonstração.</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Consideremos primeiramente o caso em que <span class="math inline">\(g = I_{A&#39;}\)</span>, <span class="math inline">\(A&#39; \in \mathscr{A}&#39;\)</span> <span class="math display">\[\int_{\Omega&#39;} I_{A&#39;} d(\mu f^{-1}) = \mu f^{-1}(A&#39;) =\]</span> <span class="math display">\[= \mu(f^{-1}(A&#39;)) = \int_\Omega I_{f^{-1}(A&#39;)} d\mu =\]</span> <span class="math display">\[= \int_\Omega (I_{A&#39;} \circ f) d\mu.\]</span> O resultado se segue para funções simples por linearidade. No caso geral, seja <span class="math inline">\(\{g_n\}\)</span> uma sequência de funções simples, tal que <span class="math inline">\(0 \leq g_n \uparrow g\)</span>. Então <span class="math display">\[\int_{\Omega&#39;} gd(\mu f^{-1}) = \lim_{n \to \infty} \int_{\Omega&#39;} g_n d(\mu f^{-1}) =\]</span> <span class="math display">\[= \lim_{n \to \infty} \left(\int_\Omega (g_n \circ f) d\mu\right) = \int_\Omega \left(\lim_{n \to \infty} (g_n \circ f)\right) d\mu =\]</span> <span class="math display">\[= \int_\Omega g \circ f d\mu,\]</span> sendo que a penúltima igualdade decorre do Teorema da convergência monótona.</p></li>
+<li><p>Decorre de a) decompondo <span class="math inline">\(g\)</span> em <span class="math inline">\(g^+\)</span> e <span class="math inline">\(g^-\)</span>.</p></li>
+</ol>
 </div>
             </section>
 

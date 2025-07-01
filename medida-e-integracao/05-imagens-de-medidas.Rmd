@@ -2,10 +2,333 @@
 
 ## Imagens de medidas {#cap5e1e}
 
+Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida, $(\Omega', \mathscr{A}')$ um espaço mensurável e $f: \Omega \to \Omega'$ uma função mensurável.
+
+**DEFINIÇÃO 5.1.1.** $\mu f^{-1}: \mathscr{A}' \to \overline{\mathbb{R}}$ definida por $$(\mu f^{-1})(A') = \mu(f^{-1}(A'))$$ é chamada imagem de $\mu$ por $f$.
+
+É fácil ver que $\mu f^{-1}$ é uma medida sobre $\mathscr{A}'$.
+
+**TEOREMA 5.1.1 (Mudança de variáveis).** Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida, $(\Omega', \mathscr{A}')$ um espaço mensurável, $f: \Omega \to \Omega'$ mensurável e $\mu f^{-1}$ a medida-imagem.
+
+a)  Seja $g: \Omega' \to \overline{\mathbb{R}}$ uma função mensurável $\geq 0$. Então $$\int_{\Omega'} g d(\mu f^{-1}) = \int_\Omega (g \circ f) d\mu. \quad \text{(I)}$$
+
+b)  $g: \Omega' \to \overline{\mathbb{R}}$ é $\mu f^{-1}$-integrável, se, e somente se, $g \circ f$ é $\mu$-integrável e nesse caso vale a fórmula (I). (Não exigimos aqui que $g \geq 0$).
+
+**Demonstração.**
+
+a)  Consideremos primeiramente o caso em que $g = I_{A'}$, $A' \in \mathscr{A}'$ $$\int_{\Omega'} I_{A'} d(\mu f^{-1}) = \mu f^{-1}(A') =$$ $$= \mu(f^{-1}(A')) = \int_\Omega I_{f^{-1}(A')} d\mu =$$ $$= \int_\Omega (I_{A'} \circ f) d\mu.$$ O resultado se segue para funções simples por linearidade. No caso geral, seja $\{g_n\}$ uma sequência de funções simples, tal que $0 \leq g_n \uparrow g$. Então $$\int_{\Omega'} gd(\mu f^{-1}) = \lim_{n \to \infty} \int_{\Omega'} g_n d(\mu f^{-1}) =$$ $$= \lim_{n \to \infty} \left(\int_\Omega (g_n \circ f) d\mu\right) = \int_\Omega \left(\lim_{n \to \infty} (g_n \circ f)\right) d\mu =$$ $$= \int_\Omega g \circ f d\mu,$$ sendo que a penúltima igualdade decorre do Teorema da convergência monótona.
+
+b)  Decorre de a) decompondo $g$ em $g^+$ e $g^-$.
+
 ## Medidas-produto - Teorema de Fubini {#cap5e2e}
+
+Sejam $(\Omega, \mathscr{A})$ e $(\Omega', \mathscr{A}')$ dois espaços mensuráveis e $\mathscr{A} \times \mathscr{A}'$ é a $\sigma$-álgebra-produto sobre $\Omega \times \Omega'$ (que é a $\sigma$-álgebra gerada pela semi-álgebra dos “retângulos mensuráveis” $A \times A'$, onde $A \in \mathscr{A}$ e $A' \in \mathscr{A}'$). Seja $(\Omega \times \Omega', \mathscr{A} \times \mathscr{A}')$ o espaço mensurável-produto.
+
+**PROPOSIÇÃO 5.2.1.** Seja $f: \Omega \times \Omega' \to \overline{\mathbb{R}}$ uma função $\mathscr{A} \times \mathscr{A}'$-mensurável. Então, para cada $\omega \in \Omega$, $f(\omega, \cdot): \Omega' \to \overline{\mathbb{R}}$, dita a *seção de f* com respeito a $\omega$, é uma função $\mathscr{A}'$-mensurável e para cada $\omega' \in \Omega'$, $f(\cdot, \omega'): \Omega \to \overline{\mathbb{R}}$ é $\mathscr{A}$-mensurável. *Nota.* $f(\omega, \cdot)$ é a função em que $\omega' \in \Omega'$ toma o valor $f(\omega, \omega')$.
+
+**Demonstração.** O problema reduz-se a provar o resultado, no caso em que $f$ é uma função indicador, porque por linearidade estendemos para as simples, por aproximação monótona crescente com funções simples para as mensuráveis $\geq 0$, e usando a decomposição $f = f^+-f^-$ para as mensuráveis. Então, é preciso provar que, se $f = I_A$, $A \in \mathscr{A} \times \mathscr{A}'$ e $\omega \in \Omega$, $\{\omega' \in \Omega': I_A(\omega, \omega') \leq x\} \in \mathscr{A}'$ para todo $x \in \mathbb{R}^1$. Como $I_A$ toma só os valores 0 e 1, o problema recai em mostrar que $A_\omega$ (chamado seção de A por $\omega$) = $\{\omega' \in \Omega': (\omega, \omega') \in A\} \in \mathscr{A}'$.
+
+```{r figure-05-02-01, fig.show='hold', fig.align='center', echo=FALSE, cache=TRUE}
+knitr::include_graphics(rep("figures/figure-05-02-01.png"))
+```
+
+**TEOREMA 5.2.1.** Sejam $(\Omega, \mathscr{A}, \mu)$ e $(\Omega', \mathscr{A}', \gamma)$ dois espaços de medida. Existe sobre $\mathscr{A} \times \mathscr{A}'$ uma medida $\nu$, tal que $$\forall A \in \mathscr{A}, \forall A' \in \mathscr{A}' \nu(A \times A') = \mu(A)\gamma(A').$$ Se $\mu$ e $\gamma$ são $\sigma$-finitas, então $\nu$ é única.
+
+**Demonstração.**
+
+a)  Consideremos primeiramente o caso em que $g = I_{A'}$, $A' \in \mathscr{A}'$ $$\int_{\Omega'} I_{A'} d(\mu f^{-1}) = \mu f^{-1}(A') =$$ $$= \mu(f^{-1}(A')) = \int_\Omega I_{f^{-1}(A')} d\mu =$$ $$= \int_\Omega (I_{A'} \circ f) d\mu.$$ O resultado se segue para funções simples por linearidade. No caso geral, seja $\{g_n\}$ uma sequência de funções simples, tal que $0 \leq g_n \uparrow g$. Então $$\int_{\Omega'} gd(\mu f^{-1}) = \lim_{n \to \infty} \int_{\Omega'} g_n d(\mu f^{-1}) =$$ $$= \lim_{n \to \infty} \left(\int_\Omega (g_n \circ f) d\mu\right) = \int_\Omega \left(\lim_{n \to \infty} (g_n \circ f)\right) d\mu =$$ $$= \int_\Omega g \circ f d\mu,$$ sendo que a penúltima igualdade decorre do Teorema da convergência monótona.
+
+b)  Decorre de a) decompondo $g$ em $g^+$ e $g^-$.
+
+**Demonstração.** Seja $\mathbb{S} = \{A \times A': A \in \mathscr{A}, A' \in \mathscr{A}'\}$. $\mathbb{S}$ é semi-álgebra. Vamos provar que $\nu$ é uma medida sobre $\mathbb{S}$. É claro que $\nu \geq 0$ e $\nu(\varnothing) = 0$. Seja agora $A \times A' = \sum\limits_{j=1}^\infty (A_j \times A_j')$.
+
+Temos $$I_A(\omega)I_{A'}(\omega') = \sum_{j=1}^\infty I_{A_j}(\omega)I_{A_j'}(\omega').$$
+
+Fixamos $\omega$ e integramos em relação a $\gamma$ em $\omega'$. Por convergência monótona temos $$I_A(\omega)\gamma(A') = \sum_{j=1}^\infty I_{A_j}(\omega)\gamma(A_j').$$
+
+Integramos agora com respeito a $\mu$ em $\omega$ e utilizamos novamente o teorema da convergência monótona. $$\mu(A)\gamma(A') = \sum_{j=1}^\infty \mu(A_j)\gamma(A_j'),$$ ou seja, $$\nu(A \times A') = \sum\limits_{j=1}^\infty \nu(A_j \times A_j').$$ Portanto $\nu$ é uma medida sobre $\mathbb{S}$ e pelo Teorema de Extensão pode ser estendida a uma medida sobre $\mathscr{A} \times \mathscr{A}'$. Se $\mu$ e $\gamma$ são $\sigma$-finitas, $\nu$ é $\sigma$-finita sobre $\mathbb{S}$ e portanto a extensão é única, o que prova a unicidade de $\nu$.
+
+*Nota.* $\nu$ é chamada *medida-produto* de $\mu$ e $\gamma$ e é denotada por $\mu \times \gamma$.
+
+**PROPOSIÇÃO 5.2.2.** Sejam $(\Omega, \mathscr{A}, \mu)$ e $(\Omega', \mathscr{A}', \gamma)$ dois espaços de medida $\sigma$-finita, então, $\forall B \in \mathscr{A} \times \mathscr{A}'$, as funções $\omega \mapsto \gamma(B_\omega)$ e $\omega' \mapsto \mu(B_{\omega'})$ são $\mathscr{A}$ e $\mathscr{A}'$ mensuráveis respectivamente e $$(\mu \times \gamma)(B) = \int_\Omega \gamma(B_\omega) \mu(d\omega) = \int_{\Omega'} \mu(B_{\omega'}) \gamma(d\omega').$$
+
+**Demonstração.** Vamos provar só a primeira igualdade. Seja $\{A_j\}_{j=1,2,\ldots}$ (resp. $\{A_j'\}_{j=1,2,\ldots}$) uma família de subconjuntos disjuntos de $\Omega$ (resp. de $\Omega'$), tais que $\sum\limits_{j=1}^\infty A_j = \Omega$ e $\mu(A_j) < \infty$ (resp. $\sum\limits_{j=1}^\infty A_j' = \Omega'$, $\gamma(A_j') < \infty$). Pelo Teorema da Convergência Monotônica é suficiente provar que, para cada $j$ e $k$ fixos, $\omega \mapsto \gamma(B_\omega \cap A_k')$ e $\mathscr{A}$-mensurável e $$(\mu \times \gamma)(B \cap (A_j \times A_k')) = \int_{A_j} \gamma(B_\omega \cap A_k') \mu(d\omega).$$
+
+```{r figure-05-02-02, fig.show='hold', fig.align='center', echo=FALSE, cache=TRUE}
+knitr::include_graphics(rep("figures/figure-05-02-02.png"))
+```
+
+Seja $\mathbb{H}$ a classe do conjunto de $\mathscr{A} \times \mathscr{A}'$, tais que essas duas propriedades sejam verdadeiras. Como $\mathbb{S} \subseteq \mathbb{H}$, se provarmos que $\mathbb{H}$ é uma classe $\sigma$-aditiva, teremos que $\mathbb{H} \supseteq \mathscr{A} \times \mathscr{A}'$ e o resultado ficará provado. Vamos verificar só que $\mathbb{H}$ é fechada em relação à diferença própria. Sejam $B \in \mathbb{H}, C \in \mathbb{H}$, e $B \supseteq C$: $$\gamma((B-C)_\omega \cap A_k') = \gamma((B_\omega \cap A_k')-(C_\omega \cap A_k')] =$$ $$= \gamma(B_\omega \cap A_k') - \gamma(C_\omega \cap A_k').$$ Esta última igualdade usa o fato $\gamma(A_k') < \infty$, e prova que a função $\omega \to \gamma((B-C)_\omega \cap A_k')$ é $\mathscr{A}$-mensurável.
+
+Como as funções $I_{A_j}(\omega)\gamma(B_\omega \cap A_k')$ e $I_{A_j}(\omega)\gamma(C_\omega \cap A_k')$ são $\mu$-integráveis, temos $$\int_{A_j} \gamma((B-C)_\omega \cap A_k')\mu(d\omega) = $$ $$= \int_{A_j} \gamma(B_\omega \cap A_k')\mu(d\omega) - \int_{A_j} \gamma(C_\omega \cap A_k')\mu(d\omega) = $$ $$= (\mu \times \gamma)(B \cap (A_j \times A_k')) - (\mu \times \gamma)(C \cap (A_j \times A_k')) = $$ $$= (\mu \times \gamma)((B-C) \cap (A_j \times A_k')),$$ provando que $\mathbb{H}$ é fechada em relação à diferença.
+
+A expressão “em quase todo ponto” (q. t. p.) dependerá da medida em consideração; quando for necessário tornar explícita essa dependência, escreveremos q. t. p. $[\mu]$.
+
+**TEOREMA 5.2.2 (Fubini).** Sejam $(\Omega, \mathscr{A}, \mu)$ e $(\Omega', \mathscr{A}', \gamma)$ dois espaços de medida $\sigma$-finita e $\nu = \mu \times \gamma$.
+
+a)  Se $f: \Omega \times \Omega' \to \overline{\mathbb{R}}$ é uma função $\mathscr{A} \times \mathscr{A}'$-mensurável e não-negativa, então as funções $\omega \mapsto \int_{\Omega'} f(\omega, \cdot) d\gamma$ e $\omega' \mapsto \int_\Omega f(\cdot, \omega') d\mu$ são $\mathscr{A}$ e $\mathscr{A}'$ mensuráveis respectivamente e $$\int_\Omega \left[\int_{\Omega'} f(\omega, \cdot) d\gamma\right] d\mu = \int_{\Omega'} \left[\int_\Omega f(\cdot, \omega') d\mu\right] d\gamma = \int_{\Omega \times \Omega'} f d\nu.$$ A conclusão da parte a) é usualmente conhecida como Teorema de Tonelli.
+
+b)  Se $f$ é $\nu$-integrável, então $f(\omega, \cdot)$ é $\gamma$-integrável para quase todo $\omega[\mu]$. e $f(\cdot, \omega')$ é $\mu$-integrável para quase todo $\omega'[\gamma]$. $$\int_\Omega \left[\int_{\Omega'} f(\omega, \cdot) d\gamma\right] d\mu = \int_{\Omega'} \left[\int_\Omega f(\cdot, \omega') d\mu\right] d\gamma = \int_{\Omega \times \Omega'} f d\nu.$$
+
+**Demonstração.** 
+a) A Prop. 5.2.2 afirma a validez de a) para $f$ indicador de um conjunto de $\mathscr{A} \times \mathscr{A}'$. Por linearidade a) é válida para funções simples não-negativas e pelo Teorema da Convergência Monotônica para funções não-negativas $\mathscr{A} \times \mathscr{A}'$-mensuráveis.
+
+b) Como $\int_{\Omega \times \Omega'} |f| d\nu < \infty$, resulta que
+    $$\int_\Omega \left[\int_{\Omega'} |f(\omega, \cdot)| d\gamma\right] d\mu = \int_{\Omega'} \left[\int_\Omega |f(\cdot, \omega')| d\mu\right] d\gamma < \infty$$
+    e portanto
+    $$\int_{\Omega'} |f(\omega, \cdot)| d\gamma \text{ é finita q. t. p. } [\mu]$$
+    e
+    $$\int_\Omega |f(\cdot, \omega')| d\mu \text{ é finita q. t. p. } [\gamma]$$
+    Aplicando o Teorema de Tonelli (parte a)) a $f^+$ e $f^-$, e efetuando às correspondentes diferenças, resulta o teorema.
 
 ## Exemplos e aplicações {#cap5e3e}
 
+### O Teorema de Tonelli pode não ser aplicável se $\mu$ e $\gamma$ não são $\sigma$-finitos {#cap5e3e1e}
+
+Seja $\Omega = \Omega' = [0, 1]$, $\mathscr{A} = \mathscr{A}' = \text{borelianos}$, $\mu = \text{medida de Lebesgue}$, $\gamma = \text{medida da contagem}$. Seja $\Delta = \{(\omega, \omega'): \omega = \omega'\}$. Como $\Delta$ é fechado $\in \mathscr{A} \times \mathscr{A}'$ e $I_\Delta$ é $\mathscr{A} \times \mathscr{A}'$-mensurável.
+$$\int_\Omega \left[\int_{\Omega'} I_\Delta(\omega, \cdot) d\gamma\right] d\mu = \int_\Omega 1 d\mu = 1$$
+$$\int_{\Omega'} \left[\int_\Omega I_\Delta(\cdot, \omega') d\mu\right] d\gamma = \int_{\Omega'} 0 d\gamma = 0.$$
+O Exerc. 12 contém um exemplo de um produto de dois espaços de medida, um deles não-$\sigma$-finito, no qual o Teorema de Tonelli ainda pode ser aplicado.
+
+### A hipótese de integrabilidade no Teorema de Fubini não pode ser eliminada {#cap5e3e2e}
+
+$\Omega = \Omega' = \{1, 2, \ldots\}$, $\mathscr{A} = \mathscr{A}' = \text{partes de } \Omega, \mu = \gamma = \text{medida da contagem}$.
+$$f(\omega, \omega') = \begin{cases} 1 & \omega = \omega' \\ -1 & \omega = 2i+1, \omega' = 2i + 2 \\ &\text{ou } \omega = 2i + 2 \text{ e } \omega' = 2i + 1, \\ &i = 0, 1, \ldots \\ 0 & \text{em outros casos} \end{cases}$$
+
+```{r figure-05-03-02-01, fig.show='hold', fig.align='center', echo=FALSE, cache=TRUE}
+knitr::include_graphics(rep("figures/figure-05-03-02-01.png"))
+```
+
+Então,
+$$\int_\Omega \left[\int_{\Omega'} f(\omega, \cdot) d\gamma\right] d\mu = \int_{\Omega'} \left[\int_\Omega f(\cdot, \omega') d\mu\right] d\gamma = 0$$
+e
+$$\int_{\Omega \times \Omega'} |f| d(\mu \times \gamma) = \int_{\Omega \times \Omega'} f^+ d(\mu \times \gamma) =$$
+$$= \int_{\Omega \times \Omega'} f^- d(\mu \times \gamma) = +\infty.$$
+
+### Fórmula de Integração por partes {#cap5e3e3e}
+
+Seja $\Delta = [a, b]$ um intervalo onde os extremos podem ser finitos ou não. Seja $\mu$ uma medida $\sigma$-finita sobre os borelianos de $[a, b]$ e $f$ e $g$ duas funções integráveis em relação a $\mu$. Sejam
+$$F(x) = \int_{[a, x]} f d\mu, G(x) = \int_{[a, x]} g d\mu,$$
+$$F(y-0) = \int_{[a, y)} f d\mu \text{ e } G(y-0) = \int_{[a, y)} g d\mu.$$
+Temos o seguinte:
+
+**TEOREMA 5.3.3.1 (Integração por partes)**
+$$\int_\Delta f(x) G(x)d\mu = F(b)G(b)-\int_\Delta g(y) F(y-0) d\mu.$$
+
+**Demonstração.** Seja $E = \{ (x, y): y \leq x\}$
+
+```{r figure-05-03-03-01, fig.show='hold', fig.align='center', echo=FALSE, cache=TRUE}
+knitr::include_graphics(rep("figures/figure-05-03-03-01.png"))
+```
+
+Seja $h: \Delta \times \Delta \to \mathbb{R}$ definida por
+$$h(x, y) = f(x) g(y) I_E(x, y)$$
+
+Agora $h$ é mensurável e temos
+$$\int_{\Delta \times \Delta} |h| d(\mu \times \mu) = \int_{\Delta \times \Delta} |f(x)||g(y)|I_E(x, y) d(\mu \times \mu) \leq$$
+$$\leq \int_{\Delta \times \Delta} |f||g| d(\mu \times \mu) = \left(\int_\Delta |f| d\mu\right)\left(\int_\Delta |g| d\mu\right) < \infty$$
+Portanto $h$ é $\mu \times \mu$-integrável. Por Fubini temos então
+$$\int_{\Delta \times \Delta} h(x, y) d(\mu \times \mu) = \int_\Delta g(y)\left[\int_\Delta f(x) I_E(x, y) d\mu\right] d\mu =$$
+$$= \int_\Delta g(y)\left[\int_{[y,b]} f(x) d\mu\right] d\mu =$$
+$$= \int_\Delta g(y)\left[\int_{[a,b]} f(x) d\mu\right] - \int_{[a,y)} f(x) d \mu \quad d \mu =$$
+$$= \int_\Delta g(y)[F(b)-F(y-0)] d\mu =$$
+$$= \int_\Delta g(y)F(b) d\mu - \int_\Delta g(y)F(y-0) d\mu =$$
+$$= F(b)G(b)-\int_\Delta g(y)F(y-0) d\mu.$$
+
+Se agora integramos primeiro em relação a $y$ e depois em relação a $x$ temos
+$$\int_{\Delta \times \Delta} h(x, y) d(\mu \times \mu) = \int_\Delta f(x)\left[\int_\Delta g(y)I_E(x, y) d\mu\right] d\mu =$$
+$$= \int_\Delta f(x)\left[\int_{[a,x]} g(y) d\mu\right] d\mu = \int_\Delta f(x)G(x) d\mu.$$
+Temos portanto que
+$$\int_\Delta f(x)G(x) d\mu = F(b)G(b)-\int_\Delta g(y)F(y-0) d\mu,$$
+o que prova o Teorema.
+No Exerc. 15 encontra-se outra fórmula muito usada que é provada com a mesma técnica empregada neste Teorema.
+
 ## Produtos finitos e infinitos de espaços de medida {#cap5e4e}
 
-## Exercícios {- #ex5}
+Na Seção 5.2 foram apresentados os resultados correspondentes ao produto de dois espaços de medida. O número 2 não tem nada de especial e os teoremas e demonstrações para o caso do produto de um número *finito* de espaços de medida são inteiramente análogos. Para que a exposição fique mais completa, enunciaremos, sem demonstração, os principais resultados para o produto de um número finito de espaços de medida.
+
+**TEOREMA 5.4.1.** Sejam $(\Omega_i, \mathscr{A}_i, \mu_i)_{i=1,2,\ldots,n}$ $n$ espaços de medida. Seja $\mathbb{S}$ a semi-álgebra dos retângulos mensuráveis, ou seja,
+$$\mathbb{S} = \left\{\prod_{i=1}^n A_i: A_i \in \mathscr{A}_i\right\}.$$
+Então existe uma medida $\mu$ sobre $\sigma(\mathbb{S}) = \prod_{i=1}^n \mathscr{A}_i$, tal que
+$$\mu\left(\prod_{i=1}^n A_i\right) = \prod_{i=1}^n \mu_i(A_i); A_i \in \mathscr{A}_i, i = 1, 2, \ldots, n.$$
+Se $\mu_1, \mu_2, \ldots, \mu_n$ são $\sigma$-finitas, então $\mu$ é única. $\mu$ é chamada *medida-produto* e denotada com $\mu = \prod_{i=1}^n \mu_i$.
+
+**TEOREMA 5.4.2 (Fubini).** Sejam $\{(\Omega_i, \mathscr{A}_i, \mu_i)\}_{i=1,2,\ldots,n}$ espaços de medida $\sigma$-finitos e $\mu$ a medida-produto.
+
+a) Se $f: \prod\limits_{i=1}^n \Omega_i \to \overline{\mathbb{R}}$ é não-negativa e $\prod\limits_{i=1}^n \mathscr{A}_i$-mensurável, então
+    
+    $$\int_{\prod\limits_{i=1}^n \Omega_i} f d\mu =$$
+    (a função produzida depois de cada integração é mensurável nas variáveis que restam).
+
+b) Se $f: \prod\limits_{i=1}^n \Omega_i \to \overline{\mathbb{R}}$ é $\prod\limits_{i=1}^n \mathscr{A}_i$-mensurável e $\mu$-integrável, a fórmula estabelecida em a) é válida novamente.
+
+Passemos agora ao caso de um número infinito de espaços. Seja
+$$\{(\Omega_i, \mathscr{A}_i, \mu_i)\}_{i=1,2,\ldots}$$
+uma sequência de espaços de medida, tais que $\mu_i(\Omega_i) = 1$. (Ou seja, uma sequência de espaços de probabilidade). Seja
+$$\mathbb{S} = \left\{\prod\limits_{i=1}^\infty A_i: A_i \in \mathscr{A}_i, A_i = \Omega_i \text{ salvo um número finito de índices }\right\}.$$
+$\mathbb{S}$ é uma semi-álgebra; os elementos de $\mathbb{S}$ são chamados *retângulos mensuráveis*. Indicaremos com $\Omega = \prod\limits_{i=1}^\infty \Omega_i$ e com $\mathscr{A}$ a $\sigma$-álgebra gerada por $\mathbb{S}$ ($\mathscr{A} = \sigma(\mathbb{S})$); ou seja, $\mathscr{A}$ é a $\sigma$-álgebra produto. Seja
+$$\varphi_n: \Omega \to \prod\limits_{i=1}^n \Omega_i$$
+$$= \int_{\Omega_1} \mu_1(d\omega_1) \ldots \int_{\Omega_2} \int_{\Omega_{n-1}} \mu_{n-1}(d\omega_{n-1}) \int_{\Omega_n} f(\omega_1, \omega_2, \ldots, \omega_n)\mu_n(d\omega_n)$$
+a função definida por
+$$\varphi_n(\omega_1, \omega_2, \ldots) = (\omega_1, \omega_2, \ldots, \omega_n).$$
+$\varphi_n$ é $\mathscr{A}$-$\prod\limits_{i=1}^n \mathscr{A}_i$ mensurável. Vamos denotar com $\mathscr{F}_n = \varphi_n^{-1}\left(\prod\limits_{i=1}^n \mathscr{A}_i\right)$ a menor $\sigma$-álgebra que faz $\varphi_n$ mensurável. Os elementos de $\mathscr{F}_n$ são chamados $n$-cilindros. Se $B$ é um $n$-cilindro, $B$ tem a seguinte propriedade: se $\omega = (\omega_1, \omega_2, \ldots)\in B$ e $\omega' = (\omega_1', \omega_2', \ldots)$ é tal que $\omega_1 = \omega_1', \ldots, \omega_n = \omega_n'$, então $\omega' \in B$. Seja $\mathscr{F} = \bigcup\limits_{n=1}^\infty \mathscr{F}_n$; os elementos de $\mathscr{F}$ são chamados *cilindros*. $\mathscr{F}$ é uma álgebra, como é fácil verificar. Vamos agora definir sobre $\mathscr{F}$ uma função de conjunto $\mu$ não-negativa, finita e finitamente aditiva. Seja $B \in \mathscr{F}$. Então $B \in \mathscr{F}_n$ para algum $n$, e portanto existe $A \in \prod\limits_{i=1}^n \mathscr{A}_i$, tal que $B = \varphi_n^{-1}(A)$. Definimos
+$$\mu(B) = (\mu_1 \times \mu_2 \times \ldots \times \mu_n)(A).$$
+Deixamos ao leitor a verificação de que o valor de $\mu(B)$ não depende do conjunto $A$, tal que $\varphi_n^{-1}(A) = B$, e das propriedades de $\mu$ enunciadas anteriormente. Finalmente seja $\Omega^{(n)} = \prod\limits_{i=n+1}^\infty \Omega_i$, e $\mathscr{F}^{(n)}$ e $\mu^{(n)}$ os objetos correspondentes a $\mathscr{F}$ e $\mu$ em $\Omega^{(n)}$ (fazendo a construção anterior em $\Omega^{(n)}$). Seja $A \in \mathscr{F}$. Então $A(\omega_1, \omega_2, \ldots, \omega_n) \in \mathscr{F}^{(n)}$ (a seção de $A$ pelo ponto $(\omega_1, \omega_2, \ldots, \omega_n)$). Deixamos ao leitor a verificação da seguinte fórmula:
+$$\mu(A) = \int \ldots \int \mu^{(n)}(A(\omega_1, \omega_2, \ldots, \omega_n)) d\mu_1 \ldots d\mu_n.$$
+(Ou seja, a integral de $\mu^{(n)}(A(\omega_1, \omega_2, \ldots, \omega_n))$ em relação à medida produto $\mu_1 \times \mu_2 \times \ldots \times \mu_n$). Vamos agora enunciar o resultado mais importante desta seção.
+
+**TEOREMA 5.4.3.** Existe uma única medida $\mu$ sobre a $\sigma$-álgebra produto $\mathscr{A} = \prod\limits_{i=1}^\infty \mathscr{A}_i = \sigma(\mathbb{S}) = \sigma(\mathscr{F})$, tal que se $A = \prod\limits_{i=1}^\infty A_i$ e $A \in \mathbb{S}$, então
+$$\mu(A) = \prod\limits_{i=1}^\infty \mu_i(A_i).$$
+(Note-se que $\mu_i(A_i) = 1$, excepto para um número finito de índices).
+
+**Demonstração.** Pelo Teorema de Extensão é suficiente provar que $\mu$ sobre $\mathscr{F}$ é $\sigma$-aditiva ou, equivalentemente, que $\mu$ é contínua, superiormente, no vazio. Seja portanto $\{A_n\}_{n=1,2,\ldots}$ uma sequência decrescente de elementos de $\mathscr{F}$, tais que $\mu(A_n) \geq \varepsilon > 0$ para todo $n$. É preciso provar que $\bigcap\limits_{n=1}^\infty A_n \neq \varnothing$.
+
+Seja $E_n = \left\{\omega_1: \mu^{(1)}(A_n(\omega_1)) > \frac{\varepsilon}{2}\right\}$. Afirmamos que $\mu_1(E_n) \geq \frac{\varepsilon}{2}$. Caso contrário,
+$$\mu(A_n) = \int_{\Omega_1} \mu^{(1)}(A_n(\omega_1)) d\mu_1 =$$
+$$= \int_{E_n} \mu^{(1)}(A_n(\omega_1)) d\mu_1 + \int_{E_n^c} \mu^{(1)}(A_n(\omega_1)) d\mu_1 \leq$$
+$$\leq \mu_1(E_n) + \frac{\varepsilon}{2} \mu_1(E_n^c) < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon,$$
+o que é uma contradição. Portanto para todo $n$, $\mu_1(E_n) \geq \varepsilon/2$. Como $A_n$ é uma sequência decrescente, $E_n$ é também decrescente e como $\mu_1(E_n) \geq \varepsilon/2$, para todo $n$, resulta que $\bigcap\limits_{n=1}^\infty E_n \neq \varnothing$ ($\mu_1$ é $\sigma$-aditiva). Seja $\tilde{\omega}_1 \in \bigcap\limits_{n=1}^\infty E_n$.
+Temos que $E_n(\tilde{\omega}_1)$ é uma sequência decrescente e $\mu^{(1)}(E_n(\tilde{\omega}_1)) \geq \varepsilon/2$ para todo $n$. Podemos então aplicar o argumento anterior a essa sequência no espaço $\Omega^{(1)}$. Obteríamos então outro ponto $\tilde{\omega}_2 \in \Omega_2$, tal que para todo $n$, $\mu^{(2)}(A_n(\tilde{\omega}_1, \tilde{\omega}_2)) \geq \varepsilon/4$. Continuando dessa maneira podemos construir uma sequência $(\tilde{\omega}_1, \tilde{\omega}_2, \ldots)$, tal que $\tilde{\omega}_n \in \Omega_n, n = 1, 2, \ldots$ e $\forall j = 1, 2, \ldots, \forall n, n = 1, 2, \ldots$
+$$\mu^{(j)}(A_n(\tilde{\omega}_1, \tilde{\omega}_2, \ldots, \tilde{\omega}_j)) \geq \varepsilon/2^j!$$
+Afirmamos que $(\tilde{\omega}_1, \tilde{\omega}_2, \ldots) \in \bigcap\limits_{n=1}^\infty A_n$. Fixemos $n$ e consideremos $A_n$. Como $A_n \in \mathscr{F}$, existe um $m$ tal que $A_n$ é um $m$-cilindro. Como
+$$\mu^{(m)}(A_n(\tilde{\omega}_1, \tilde{\omega}_2, \ldots, \tilde{\omega}_m)) \geq \varepsilon/2^m > 0,$$
+$A_n(\tilde{\omega}_1, \tilde{\omega}_2, \ldots, \tilde{\omega}_m) \neq \varnothing$. Isto é, existe $(\omega_1, \omega_2, \ldots)\in A_n$, tal que $\omega_1 = \tilde{\omega}_1, \ldots, \omega_m = \tilde{\omega}_m$. Mas como $A_n$ é um $m$-cilindro, isso implica que $(\tilde{\omega}_1, \tilde{\omega}_2, \ldots)\in A_n$. Como $n$ foi escolhido arbitrariamente, resulta que $(\tilde{\omega}_1, \tilde{\omega}_2, \ldots) \in \bigcap\limits_{n=1}^\infty A_n$, o que prova o Teorema.
+
+A extensão deste resultado ao caso de um conjunto não-enumerável de espaços de probabilidade é imediata. Daremos aqui só o enunciado do resultado deixando a demonstração como exercício. Seja $\{(\Omega_i, \mathscr{A}_i, \mu_i)\}_{i \in I}$ uma família de espaços de probabilidades, onde $I$ é um conjunto de índices arbitrário. Seja
+$$\mathbb{S} = \left\{\prod_{i \in I} A_i: A_i \in \mathscr{A}_i, A_i = \Omega_i \text{ exceto para um número finito de índices }\right\}$$
+a semi-álgebra dos retângulos mensuráveis e
+$$\mathscr{A} = \sigma(\mathbb{S}) = \prod_{i \in I} \mathscr{A}_i$$
+a $\sigma$-álgebra produto.
+
+**TEOREMA 5.4.4.** Existe uma única probabilidade $\mu$ sobre $\mathscr{A}$, tal que se $A = \prod\limits_{i \in I} A_i \in \mathbb{S}$, então
+$$\mu(A) = \prod_{i \in I} \mu_i(A_i).$$
+(note-se que o produto só tem um número finito de fatores diferentes de 1)
+$\mu$ é chamada *medida (probabilidade) produto* e denotada com $\prod_{i \in I} \mu_i$.
+
+**Demonstração.** Veja o Exerc. 7.
+
+## Exercícios {#ex5 .unnumbered}
+
+1. Seja $\Lambda$ a $\sigma$-álgebra de Lebesgue em $\mathbb{R}^n$ $n > 1$. Seja $\prod\limits_{i=1}^n \Lambda_i$ o produto de $n$ $\sigma$-álgebras de Lebesgue. (Provar que $\prod\limits_{i=1}^n \Lambda_i \subseteq \Lambda$ e que a inclusão é estrita). Que classe de conjuntos deve ser agregada a $\prod\limits_{i=1}^n \Lambda_i$ para se obter $\Lambda$?
+
+2. Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida $\sigma$-finito e $f: \Omega \to [0, +\infty]$ uma função mensurável. Seja $(\overline{\mathbb{R}}, \mathscr{R}, \lambda)$ a reta real estendida com a $\sigma$-álgebra de Borel e a medida de Lebesgue. Sejam:
+$$A = \{(\omega, y): \omega \in \Omega, y \in \overline{\mathbb{R}}, 0 \leq y \leq f(\omega)\};$$
+$$B = \{(\omega, y): \omega \in \Omega, y \in \overline{\mathbb{R}}, 0 \leq y < f(\omega)\};$$
+$$G = \{(\omega, y): \omega \in \Omega, y \in \overline{\mathbb{R}}, y = f(\omega)\}.$$
+Provar:
+
+    a) $A, B \text{ e } G$ são $\mathscr{A} \times \mathscr{R}$-mensuráveis;
+
+    b) $(\mu \times \lambda)(G) = 0$;
+
+    c) $\mu \times \lambda(A) = \mu \times \lambda(B) = \int_\Omega f d\mu$.
+    
+3. Dar um exemplo de um conjunto, tal que toda seção dele seja mensurável, mas que o conjunto não pertença a $\sigma$-álgebra-produto, portanto, não-mensurável.
+
+4. Se $F(x, y) = F_1(x)F_2(y)$, onde $F_1$ e $F_2$ são funções de distribuição em $\mathbb{R}^1$, então $\mu_F = \mu_{F_1} \times \mu_{F_2}$.
+
+5. Se $\lambda$ indica a medida de Lebesgue em $\mathbb{R}^n$, então $\forall A \subseteq \mathbb{R}^n$:
+$$\lambda^*(A) = \inf\{\lambda(\mathscr{U}): \mathscr{U} \supseteq A, \mathscr{U} \text{ aberto}\};$$
+$$\lambda_*(A) = \sup\{\lambda(K): K \subseteq A, K \text{ compacto}\}.$$
+
+6. Seja $A$ uma matriz $n \times n$ com coeficientes $a_{ij}$. Consideremos a transformação em $\mathbb{R}^n$ definida por
+    
+    $$T(x_1, \ldots, x_n) = (y_1, \ldots, y_n) = \sum_{j=1}^n a_{ij}x_j + c_i.$$
+    Provar que para todo boreliano $B$ de $\mathbb{R}^n$,
+    $$\lambda(T(B)) = |\det(A)|\lambda(B),$$
+    onde $|\det(A)|$ indica o valor absoluto do determinante de $A$.
+
+    Sugestão. É suficiente provar a identidade para conjuntos $B$ que sejam produto de intervalos. Trate primeiro dos casos:
+    1) $y_i = x_i + c_i, i = 1, 2, \ldots, n$;
+    2) $y_i = x_i$ se $i \neq j$ e $i \neq k; y_j = x_k y_k = x_j$;
+    3) $y_i = x_i$ se $i \neq j; y_j = c x_j$;
+    4) $y_i = x_i$ se $i \neq j; y_j = x_j \pm x_k$, onde $k \neq j$.
+    Use o fato que toda transformação $T$ é composição de transformações dos tipos 1), 2), 3) e 4).
+    
+7. Prove o Teor. 5.4.4
+
+    (Sugestão. Os elementos de $\Omega = \prod\limits_{i \in I} \Omega_i$ são funções $\omega$ de $I$ em $\bigcup\limits_{i \in I} \Omega_i$, tal que $\omega_i = \omega(i) \in \Omega_i$. Se $J \subseteq I$ definimos $\varphi_J: \Omega \to \prod\limits_{i \in J} \Omega_i$ como $\varphi_J(\omega) = \omega|_J$. Resulta como antes, que $\varphi_J$ é $\mathscr{A}$-$\prod\limits_{i \in J} \mathscr{A}_i$ mensurável. Os elementos da $\sigma$-álgebra $\varphi_J^{-1}\left(\prod\limits_{i \in J} \mathscr{A}_i\right)$ são chamados $J$-cilindros. Observe que os $J$-cilindros com $J$ enumerável são uma sub-$\sigma$-álgebra de $\mathscr{A}$ que contém $\mathbb{S}$ e portanto é igual a $\mathscr{A}$. Também temos que, para cada $J$ enumerável, $\mu$ restringida a $\varphi_J^{-1}\left(\prod\limits_{i \in J} \mathscr{A}_i\right)$ é $\sigma$-aditiva pelo Teor. 5.4.3).
+
+8. Seja $\{(\Omega_n, \mathscr{A}_n, \mu_n)\}_{n=1,2,\ldots}$ uma sequência de espaços de probabilidade e $(\Omega, \mathscr{A}, \mu)$ o espaço produto. Se $A \subseteq \Omega$ é da forma $A = \prod\limits_{i=1}^\infty A_i$, com $A_i \in \mathscr{A}_i$, então $A \in \mathscr{A}$ e
+    $$\mu(A) = \lim_{n \to \infty} \prod_{i=1}^n \mu_i(A_i).$$
+
+9. Seja $\{(\Omega_n, \mathscr{A}_n, \mu_n)\}_{n=1,2,\ldots}$ uma sequência de probabilidades, tais que $\Omega_n = \{0, 1\}$, $\mathscr{A}_n = \{\varnothing, \{0\}, \{1\}, \{0, 1\}\}$ e $\mu_n$ é tal que $\mu_n(\{0\}) = \mu_n(\{1\}) = \frac{1}{2}$. Seja $(\Omega, \mathscr{A}, \mu)$ o espaço produto e $A = \{\omega: \omega \in \Omega, \omega \text{ só tem um número finito de zeros ou um número finito de uns}\}$. Prove que $A \in \mathscr{A}$ e $\mu(A) = 0$.
+
+10. Consideremos os espaços $(\mathbb{N}, \mathbb{P}(\mathbb{N}), \#)$ e $(\mathbb{R}^1, \mathscr{R}^1, \lambda)$ e o correspondente espaço-produto. Seja $B = \left\{\left.(x, n): a \leq x \leq b, n_1 \leq n \leq n_2\right.\right\}$ um retângulo mensurável. Seja $f: \mathbb{R}^1 \times \mathbb{N} \to \mathbb{R}^1$ definida por
+    
+    $$f(x, n) = \begin{cases} n & x \in [0, 1] \text{ e } n = 1, 2, \ldots, k. \\ 0 & x \notin [0, 1] \text{ ou } n > k. \end{cases}$$
+    Calcular $(\lambda \times \#)(B)$ e provar que
+    $$\int_{\mathbb{R}^1 \times \mathbb{N}} f d(\lambda \times \#) = \frac{k(k+1)}{2}.$$
+
+11. Sejam $(\Omega, \mathscr{A}, \mu)$ e $(\Omega', \mathscr{A}', \mu')$ dois espaços de medida $\sigma$-finitos. Seja $f$ uma função definida sobre $\Omega$, $\mathscr{A}$-mensurável e $\mu$-integrável. Seja $g$ uma função definida sobre $\Omega'$, $\mathscr{A}'$-mensurável e $\mu'$-integrável. Provar que a função
+    
+    $$\varphi(\omega, \omega') = f(\omega)g(\omega')$$
+    é $\mathscr{A} \times \mathscr{A}'$-mensurável, $(\mu \times \mu')$-integrável e que
+    $$\int_{\Omega \times \Omega'} \varphi d(\mu \times \mu') = \left(\int_\Omega f(\omega)\mu(d\omega)\right)\left(\int_{\Omega'} g(\omega')\mu'(d\omega')\right).$$
+    
+12. Seja $(\mathbb{N}, \mathscr{A}, \#)$ o espaço de medida que consiste nos naturais com a $\sigma$-álgebra de partes e a medida da contagem. Seja $(\Omega', \mathscr{A}', \gamma)$ um espaço de medida arbitrário.
+    
+    Provar:
+
+    i) $C \in \mathscr{A} \times \mathscr{A}'$ se, e somente se, $C_n$ (seção de $C$ por $n$) $\in \mathscr{A}', n = 1, 2, \ldots$
+
+    ii) Existe uma única medida-produto $\nu$. $\nu$ é dada pela fórmula:
+        $$\nu(C) = \sum_{n=1}^\infty \gamma(C_n)$$
+
+    iii) $f$ definida em $\mathbb{N} \times \Omega'$, é $\mathscr{A} \times \mathscr{A}'$-mensurável se, e somente se, $\forall n f_n$ (seção de $f$ por $n$) é $\mathscr{A}'$-mensurável.
+
+    iv) $f$ é integrável em relação a $\nu$ se, e somente se,
+        $$\sum_{n=1}^\infty \int_{\Omega'} |f_n| d\gamma < \infty.$$
+    Neste caso
+    $$\int_{\mathbb{N} \times \Omega'} f d\nu = \sum_{n=1}^\infty \int_{\Omega'} f_n d\gamma = \int_{\Omega'} \left(\sum_{n=1}^\infty f_n\right) d\gamma.$$
+    
+13. (Tomado de [3], Cap. 10). Consideremos o espaço de medida $(\Omega', \mathscr{A}', \mu)$, onde $\Omega' = \mathbb{R}^1$, $\mathscr{A}' = \mathbb{P}(\mathbb{R}^1)$ e $\mu(A) = 0$ se $A$ é enumerável e $\mu(A) = +\infty$ se $A$ é não-enumerável. Seja $\Omega = \Omega' \times \Omega'$, $\mathscr{A} = \mathscr{A}' \times \mathscr{A}'$. Vamos construir duas medidas sobre $\mathscr{A}$, tal que para todo retângulo $A' \times A''$ tomam o valor $\mu(A') \times \mu(A'')$. Se um conjunto $C$ pode ser escrito na forma $C = D \cup E$, onde a projeção de $D$ sobre o primeiro eixo é enumerável e a projeção de $E$ sobre o segundo eixo é também enumerável, definimos $\nu_1(C) = 0$. Caso contrário, $\nu_1(C) = +\infty$. $\nu_1$ é uma medida sobre $\mathscr{A}$. Se $\nu_1(C) = 0$, $C$ está contido em uma união enumerável de retas do plano. $\nu_1(A' \times A'') = \mu(A') \times \mu(A'')$. Vamos definir agora $\nu_2$. Se $C$ pode ser escrito na forma $C = D \cup E \cup F$, onde a projeção de $D$ sobre o primeiro eixo, a de $E$ sobre o segundo eixo e a de $F$ sobre a reta $y = x$ são enumeráveis, definimos $\nu_2(C) = 0$. Caso contrário, $\nu_2(C) = +\infty$. $\nu_2$ é uma medida sobre $\mathscr{A}$. Se $\nu_2(C) = 0$, $C$ está contido em uma união enumerável de retas, $\nu_2(A' \times A'') = \mu(A') \times \mu(A'')$, $\forall A' \in \mathscr{A}', \forall A'' \in \mathscr{A}'$. Se $C = \{(\omega_1, \omega_2): \omega_1 + \omega_2 = 0, \omega_1, \omega_2 \in \Omega', i=1, 2\}$, temos que $\nu_2(C) = 0$, mas $\nu_1(C) = +\infty$. Portanto $\nu_1 \neq \nu_2$.
+
+14. Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de probabilidades. Seja $f: \Omega \to \mathbb{R}^1$ uma função mensurável (ou seja, uma *variável aleatória*). Definimos
+
+    $$F(x) = \mu([f \leq x]), x \in \mathbb{R}^1.$$
+    A função $F$ tem as seguintes propriedades: é não-decrescente, contínua à direita e
+    $$\lim_{x \to -\infty} F(x) = 0, \quad \lim_{x \to +\infty} F(x) = 1.$$
+    Uma função com estas propriedades é chamada de *função de distribuição*. Provar:
+
+    i) $\forall u, 0 < u < 1, \mu([F \circ f \leq u]) \leq u$;
+
+    ii) Se $F$ é contínua $\mu([F \circ f \leq u]) = u$.
+
+    Portanto, se $F$ é contínua, a medida induzida por $F \circ f$ (isto é, $\mu(F \circ f)^{-1}$) sobre os borelianos de $[0, 1]$ coincide com a medida de Lebesgue nesse intervalo.
+    
+15. (Integração por partes)
+
+    Seja $(a,b]$ um intervalo e $F$ e $G$ duas funções não-decrescentes e contínuas à direita, definidas em $(a,b]$. Sejam $\mu_F$ e $\mu_G$ as medidas de Lebesgue-Stieltjes induzidas por $F$ e $G$ respectivamente. Então, se $F$ e $G$ não têm pontos de descontinuidade comuns,
+    $$\int_{(a,b]} F(x)\mu_G(dx) + \int_{(a,b]} G(y)\mu_F(dy) = F(b)G(b) - F(a)G(a).$$
+    
+    Roteiro de demonstração: Sejam
+    $$A = \{(x, y): a < x \leq b, a < y \leq b, y \leq x\};$$
+    $$B = \{(x, y): a < x \leq b, a < y \leq b, y \geq x\};$$
+    $$D = \{(x, y): a < x \leq b, a < y \leq b, x = y\}.$$
+    Seja $\mu_G \times \mu_F$ a medida produto sobre $(a, b] \times (a, b]$.
+    Temos
+    $$\int_{(a,b]} F(x)\mu_G(dx) = \int_{(a,b]} \left(\int_{(a,b]} I_A(x, y)\mu_F(dy) + F(a)\right)\mu_G(dx) =$$
+    $$= \int_{(a,b] \times (a,b]} I_A(x, y)d(\mu_G \times \mu_F) + F(a)(G(b)-G(a)).$$
+    
+    Analogamente podemos provar que
+    $$\int_{(a,b]} G(y)\mu_F(dy) = \int_{(a,b] \times (a,b]} I_B(x, y)d(\mu_G \times \mu_F) + G(a)(F(b)-F(a)).$$
+    Somando membro a membro, obtemos
+    $$\int_{(a,b]} F(x)\mu_G(dx) + \int_{(a,b]} G(y)\mu_F(dy) =$$
+    $$= \int_{(a,b] \times (a,b]} (I_A + I_B)d(\mu_G \times \mu_F) + F(a)(G(b)-G(a)) + G(a)(F(b)-F(a)).$$
+    Usando as relações
+    $$I_A + I_B = I_{(a,b] \times (a,b]} + I_D$$
+    e
+    $$(\mu_G \times \mu_F)((a,b] \times (a,b]) = (G(b)-G(a))(F(b)-F(a)),$$
+    temos
+    $$\int_{(a,b]} F(x)\mu_G(dx) + \int_{(a,b]} G(y)\mu_F(dy) =$$
+    $$= (G(b)-G(a))(F(b)-F(a)) + F(a)(G(b)-G(a)) + G(a)(F(b)-F(a)) +$$
+    $$+ (\mu_G \times \mu_F)(D) = G(b)F(b) - G(a)F(a) + (\mu_G \times \mu_F)(D).$$
+    
+    Note finalmente que as hipóteses sobre $F$ e $G$, de não terem pontos de descontinuidade comuns, são equivalentes a
+    $$(\mu_G \times \mu_F)(D) = 0,$$
+    o que prova o resultado.
+
+16. Seja $G$ a função de Cantor em $[0, 1]$ (veja o Exerc. 20 do Cap. 7). Calcular $\int_0^1 x \mu_G(dx)$.
+
+    (Sugestão. Integrando por partes $\int_0^1 x \mu_G(dx) = 1-\int_0^1 G(x) dx$. Verifique que depois que $\int_0^1 G(x) dx = \frac{1}{2}$).
