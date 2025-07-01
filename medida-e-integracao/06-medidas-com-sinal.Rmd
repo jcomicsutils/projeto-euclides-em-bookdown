@@ -2,10 +2,533 @@
 
 ## Generalidades {#cap6e1e}
 
+O objetivo deste capítulo é estudar funções de conjunto $\sigma$-aditivas mas não necessariamente positivas. Um importante exemplo de tais funções é o seguinte: seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida e $f$ uma função real mensurável, tal que $\int_\Omega f^- d\mu < \infty$. A função
+$$A \mapsto \nu(A) = \int_A f d\mu \text{ (integral indefinida da função } f)$$
+tem as seguintes propriedades:
+
+i) $\nu(\varnothing) = 0$;
+
+ii) $\forall A \in \mathscr{A}$, $-\infty < \nu(A) \leq +\infty$;
+
+iii) Se $\{A_n\}_{n=1,2,3,\ldots}$ é uma sequência de conjuntos mensuráveis disjuntos, então
+$$\nu\left(\sum_{n=1}^\infty A_n\right) = \sum_{n=1}^\infty \nu(A_n),$$
+ou seja, $\nu$ é $\sigma$-aditiva.
+
+**DEFINIÇÃO 6.1.1.** Uma função de conjunto sobre um espaço mensurável $(\Omega, \mathscr{A})$, com as propriedades i), ii) e iii), é chamada *medida com sinal*.
+
+Observe que temos permitido o valor $+\infty$ e não o valor $-\infty$. A razão é a seguinte. Suponhamos que conservando as outras propriedades, permitamos que existam $A$ e $B$, tais que $\mu(A) = +\infty$ e $\mu(B) = -\infty$. Consideremos as seguintes identidades:
+$$+\infty = \mu(A) = \mu(A-B) + \mu(A \cap B);$$
+$$-\infty = \mu(B) = \mu(B-A) + \mu(A \cap B);$$
+$$\mu(A \Delta B) = \mu(B-A) + \mu(A-B).$$
+
+É fácil ver que $\mu(A \cap B) < \infty$, porque em caso contrário uma das primeiras duas identidades ficaria sem sentido. Então resultaria $\mu(A-B) = +\infty$ e $\mu(B-A) = -\infty$, o que deixa sem sentido a última identidade.
+Passemos agora ao estudo das propriedades básicas de uma medida com sinal.
+
+**PROPOSIÇÃO 6.1.1.** Se $B \subseteq A$, e $|\mu(A)| < \infty$, então $|\mu(B)| < \infty$.
+
+**Demonstração.** Veja o Exerc. 1.
+
+**PROPOSIÇÃO 6.1.2.** Se $\{A_n\}_{n=1,2,\ldots}$ é uma sequência de conjuntos mensuráveis disjuntos, então $\left|\mu\left(\sum\limits_{n=1}^\infty A_n\right)\right| < +\infty$ se, e somente se, $\sum\limits_{n=1}^\infty |\mu(A_n)| < \infty$.
+
+**Demonstração.** Se $\sum\limits_{n=1}^\infty |\mu(A_n)| < \infty$, temos
+$$\left|\mu\left(\sum\limits_{n=1}^\infty A_n\right)\right| = \left|\sum_{n=1}^\infty \mu(A_n)\right| \leq \sum_{n=1}^\infty |\mu(A_n)| < \infty,$$
+o que prova uma parte. Para provar a outra parte observemos que se $\tau$ é uma permutação dos naturais, temos que
+$$\mu\left(\sum_{n=1}^\infty A_{\tau(n)}\right) = \mu\left(\sum_{n=1}^\infty A_{(n)}\right) = \sum_{n=1}^\infty \mu(A_{\tau(n)}).$$
+Ou seja, a soma da série $\sum\limits_{n=1}^\infty \mu(A_n)$ é finita e invariante por meio de reordenamentos. Então a série é absolutamente convergente.
+
+**PROPOSIÇÃO 6.1.3.**
+
+a) Se $A_n \uparrow A$, então $\mu(A_n) \to \mu(A)$;
+
+b) Se $A_n \downarrow A$, e existe um índice $n_0$ tal que $|\mu(A_{n_0})| < \infty$, então $\mu(A_n) \to \mu(A)$.
+
+**Demonstração.** Veja o Exerc. 2.
+
+Na proposição anterior observe-se que escrevemos $\mu(A_n) \to \mu(A)$. Isso deve-se ao fato de que para uma medida com sinal, $A \subseteq B$, não implica necessariamente que $\mu(A) \leq \mu(B)$.
+
 ## Decomposição de Hahn e Jordan {#cap6e2e}
+
+**DEFINIÇÃO 6.2.1.** Um conjunto $A \in \mathscr{A}$ é chamado *positivo* se $\forall C \subseteq A, C \in \mathscr{A}, \mu(C) \geq 0$. Um conjunto $B \in \mathscr{A}$ é chamado *negativo* se $\forall C \subseteq B, C \in \mathscr{A}, \mu(C) \leq 0$. Um conjunto $N \in \mathscr{A}$ é chamado *nulo* se $\forall C \subseteq N, C \in \mathscr{A}, \mu(C) = 0$.
+
+**TEOREMA 6.2.1 (Decomposição de Hahn).** Seja $\mu$ uma medida com sinal sobre $(\Omega, \mathscr{A})$. Então existem dois conjuntos $A$ e $B$ pertencendo a $\mathscr{A}$, tais que
+
+i) $A+B = \Omega (A \cap B = \varnothing)$;
+
+ii) $A$ é positivo e $B$ é negativo em relação a $\mu$.
+
+**Demonstração.** A primeira observação a ser feita é que a classe dos conjuntos negativos é um $\sigma$-anel (veja o Exerc. 3). Seja
+$$\alpha = \inf \{\mu(B): B \text{ é negativo}\}$$
+e seja $\{B_i\}_{i=1,2,\ldots}$ tais que $\mu(B_i) \to \alpha$. Seja $B = \bigcup\limits_{i=1}^\infty B_i$. Então $B$ é negativo e $\forall i \mu(B) \leq \mu(B_i)$. Portanto $\mu(B) = \alpha$ (em particular $\alpha > -\infty$). Seja $A = \Omega - B = B^c$. O teorema ficará provado se verificarmos que $A$ é positivo. Suponhamos o contrário. Então, existe $A_0 \subseteq A, A_0 \in \mathscr{A}$, tal que $\mu(A_0) < 0$.
+
+Agora $A_0$ não pode ser um conjunto negativo, porque se fosse, o conjunto $A_0 + B$ seria negativo e com medida menor que $\alpha$.
+
+Seja então $k_1$ o menor inteiro positivo, tal que existe $A_1 \subseteq A_0$ com $\mu(A_1) \geq \frac{1}{k_1}$. Agora o conjunto $A_0 - A_1$ tem medida $\mu(A_0) - \mu(A_1) < \mu(A_0) < 0$, mas não pode ser um conjunto negativo pelas mesmas razões anteriores. Seja então $k_2$ o menor inteiro positivo, tal que existe $A_2 \subseteq A_0 - A_1$ com a propriedade que $\mu(A_2) \geq \frac{1}{k_2}$.
+
+Continuando com este procedimento podemos escolher então uma sequência de conjuntos $A_1, A_2, \ldots$, disjuntos, todos contidos em $A_0$, com $\mu(A_n) \geq \frac{1}{k_n}$, onde $k_n$ é o menor inteiro positivo, com a propriedade de que existe um conjunto $A_n \subseteq A_0 - \sum\limits_{i=1}^{n-1} A_i$ com
+$$\mu(A_n) \geq \frac{1}{k_n}.$$
+
+```{r figure-06-02-01, fig.show='hold', fig.align='center', echo=FALSE, cache=TRUE}
+knitr::include_graphics(rep("figures/figure-06-02-01.png"))
+```
+
+Como $\sum\limits_{n=1}^\infty A_n \subseteq A_0$ e $|\mu(A_0)| < \infty$, resulta que
+$$\mu\left(\sum_{n=1}^\infty A_n\right) = \sum_{n=1}^\infty \mu(A_n) < +\infty.$$
+Em particular $\mu(A_n)$ e $\frac{1}{k_n}$ são sequências convergentes a 0. Consideremos
+$\mathscr{D} = A_0 - \sum\limits_{n=1}^\infty A_n$. Temos que $\mu(\mathscr{D}) < \mu(A_0) < 0$. Provando que $\mathscr{D}$ é negativo, teremos uma contradição (porque agregando $\mathscr{D}$ a $B$ obteríamos um conjunto negativo com medida menor que $\alpha$). Seja $C \subseteq \mathscr{D}$ $C \in \mathscr{A}$. Se $\mu(C) > 0$, a sequência
+$$\mu(C+A_n) = \mu(C) + \mu(A_n) \to \mu(C) > 0;$$
+portanto existiria $k_n \geq 2$, tal que
+$$\mu(C) + \mu(A_n) \geq \frac{1}{k_n-1},$$
+o que é uma contradição pela forma como $k_n$ foi escolhido. Uma outra demonstração mais curta da Decomposição de Hahn está contida no Exerc. 30.
+
+**DEFINIÇÃO 6.2.2.** Chamaremos ao par $(A, B)$ dado pela proposição anterior uma *decomposição de Hahn* para $\mu$.
+
+A *decomposição de Hahn* não é única. Se $N$ é um conjunto nulo, e $(A, B)$ é uma *decomposição de Hahn*, então
+$$(A \cup N, B-N) \quad \text{e} \quad (A-N, B \cup N)$$
+são também *decomposições de Hahn* para $\mu$. Sejam agora $(A_1, B_1)$ e $(A_2, B_2)$ duas *decomposições de Hahn* para $\mu$.
+
+```{r figure-06-02-02, fig.show='hold', fig.align='center', echo=FALSE, cache=TRUE}
+knitr::include_graphics(rep("figures/figure-06-02-02.png"))
+```
+
+Se $C \subseteq A_1 \cap B_2$, então como $C \subseteq A_1$, resulta $\mu(C) \geq 0$. Por outra parte como $C \subseteq B_2$, $\mu(C) \leq 0$. Ou seja, $\mu(C)=0$ e $A_1 \cap B_2$, e portanto um conjunto nulo. Da mesma forma $A_2 \cap B_1$ é nulo.
+Essas considerações provam que as funções
+$$\mu^+(C) = \mu(A \cap C) \text{ e } \mu^-(C) = -\mu(C \cap B)$$
+estão bem definidas no sentido de que seu valor não depende da *decomposição de Hahn* escolhida. $\mu^+$ e $\mu^-$ são medidas positivas. Como $\mu^-(\Omega) = -\mu(B) < +\infty$, $\mu^-$ é uma medida finita, e temos
+$$\mu = \mu^+ - \mu^-.$$
+
+**DEFINIÇÃO 6.2.3.** $\mu^+$ é chamada *variação positiva* e $\mu^-$ *variação negativa*. A medida
+$$|\mu| = \mu^+ + \mu^-$$
+é chamada *variação total* da medida com sinal $\mu$.
+
+A *decomposição de $\mu$ como*
+$$\mu = \mu^+ - \mu^-$$
+é chamada *decomposição de Jordan* da medida com sinal $\mu$.
 
 ## Continuidade absoluta. Teorema de Radon-Nikodym {#cap6e3e}
 
+Sejam $\mu$ e $\nu$ duas medidas com sinal sobre $(\Omega, \mathscr{A})$.
+
+**DEFINIÇÃO 6.3.1.** Dizemos que $\nu$ é *absolutamente contínua* em relação a $\mu$ se, para cada $A \in \mathscr{A}$ com $|\mu|(A) = 0$, resulta $\nu(A) = 0$. Usaremos a notação $\nu \ll \mu$ para indicar esse fato.
+
+A condição de continuidade absoluta tem várias versões equivalentes. Elas estão contidas na proposição seguinte.
+
+**PROPOSIÇÃO 6.3.1.** São equivalentes
+
+a) $\nu \ll \mu$;
+
+b) $\nu^+ \ll \mu$ e $\nu^- \ll \mu$;
+
+c) $|\nu| \ll |\mu|$.
+
+**Demonstração.** Vamos provar somente a) $\implies$ b). As outras implicações são simples. Seja $(A, B)$ uma *decomposição de Hahn* para $\nu$.
+
+Se $|\mu|(C) = 0$, então
+$$|\mu(C \cap A)| = 0 \quad \text{e} \quad |\mu(C \cap B)| = 0.$$
+Então
+$$\nu^+(C) = \nu(C \cap A) = 0 \quad \text{e} \quad \nu^-(C) = -\nu(C \cap B) = 0,$$
+e portanto
+$$\nu^+ \ll \mu \quad \text{e} \quad \nu^- \ll \mu,$$
+o que prova b).
+
+A relação de continuidade absoluta deve ser pensada da seguinte forma: “$\nu$ é pequena se $\mu$ é pequena”. Esta frase é precisa quando $\nu$ é finita, como se mostra na seguinte proposição.
+
+**PROPOSIÇÃO 6.3.2.** Se $\nu$ é uma medida finita com sinal e $\nu \ll \mu$, então
+$$\forall \varepsilon > 0, \text{ existe } \delta > 0 \text{ tal que }$$
+$$|\mu|(C) < \delta \text{ implica } |\nu|(C) < \varepsilon.$$
+
+**Demonstração.** Neguemos a tese. Então existe $\varepsilon > 0$, uma sequência de números $\delta_n > 0$, que podemos escolher de forma tal que $\sum\limits_{n=1}^\infty \delta_n < \infty$, e uma sequência de conjuntos $C_n$ tais que
+$$|\nu|(C_n) \geq \varepsilon \quad \text{e} \quad |\mu|(C_n) < \delta_n.$$
+Seja $C = \lim \sup C_n$. Como
+$$\sum_{n=1}^\infty |\mu|(C_n) \leq \sum_{n=1}^\infty \delta_n < \infty$$
+resulta que $|\mu|(C) = 0$. Por outra parte, como $\nu$ é finita,
+$$|\nu|(C) = |\nu|(\lim \sup C_n) \geq \lim \sup |\nu|(C_n) \geq \varepsilon.$$
+Esta contradição prova então o resultado.
+
+Passemos agora a apresentar um resultado muito importante, conhecido como *Teorema de Radon-Nikodym*. Imprecisamente este teorema afirma que se uma medida é absolutamente contínua em relação à outra, então a primeira é uma integral indefinida de uma função em relação à segunda medida. Vamos provar este teorema para o caso de duas medidas positivas e finitas. As generalizações a casos mais gerais serão indicadas em proposições posteriores com indicações sobre a sua demonstração.
+Vamos primeiro provar o lema a seguir.
+
+**LEMA 6.3.1.** Se $\mu$ e $\nu$ são medidas finitas, tais que $\nu \ll \mu$ e $\nu$ não é identicamente nula, então existe um conjunto $A$ e um $\varepsilon > 0$, tal que $\mu(A) > 0$ e $A$ é positivo para $\nu-\varepsilon\mu$.
+
+**Demonstração.** Seja $(A_n, B_n)$ uma *decomposição de Hahn* para $\nu - \frac{1}{n}\mu$.
+Claramente o resultado ficará demonstrado, se provarmos que existe um índice $n$, tal que $\mu(A_n) > 0$. Se pelo contrário para todo $n$, $\mu(A_n) = 0$, resulta que $\mu\left(\bigcup\limits_{n=1}^\infty A_n\right) = 0$ e portanto, $\nu\left(\bigcup\limits_{n=1}^\infty A_n\right) = 0$. Agora
+$$\left(\bigcup_{n=1}^\infty A_n\right)^c = \bigcap_{n=1}^\infty A_n^c = \bigcap_{n=1}^\infty B_n$$
+e para todo $n$
+$$\nu(B_n)-\frac{1}{n}\mu(B_n) \leq 0.$$
+Portanto,
+$$\nu\left(\bigcap_{n=1}^\infty B_n\right) = 0$$
+e então $\nu \equiv 0$, o que é uma contradição.
+
+**TEOREMA 6.3.1 (Radon-Nikodym).** Sejam $\nu$ e $\mu$ duas medidas positivas finitas sobre $(\Omega, \mathscr{A})$, tais que $\nu \ll \mu$. Então existe uma função $f$ mensurável e finita, tal que para todo $A \in \mathscr{A}$,
+$$\nu(A) = \int_A f d\mu.$$
+Esta função $f$ é única $[\mu]$.
+
+**Demonstração.** Seja
+$$\mathbb{H} = \left\{g: g \geq 0 \text{ mensurável e } \forall A \in \mathscr{A} \int_A g d\mu \leq \nu(A)\right\}.$$
+Como $0 \in \mathbb{H}$, $\mathbb{H} \neq \varnothing$. $\mathbb{H}$ tem a seguinte propriedade: se $g_1, g_2, \ldots, g_k$ pertencem a $\mathbb{H}$; então $\bigvee\limits_{i=1}^k g_i \in \mathbb{H}$. Porque se definimos $A_1 = \left[g_1 \geq \bigvee\limits_{i=1}^k g_i\right]$, e para $2 \leq j \leq k$,
+$$A_j = \left[g_j \geq \bigvee_{i=1}^k g_i, \quad g_j > \bigvee_{i=1}^{j-1} g_i\right],$$
+resulta que $A_1, A_2, \ldots, A_k$ são conjuntos disjuntos e $\sum\limits_{i=1}^k A_i = \Omega$. Se $A \in \mathscr{A}$, temos
+$$\int_A \left(\bigvee_{i=1}^k g_i\right) d\mu = \sum_{j=1}^k \int_{A \cap A_j} g_j d\mu \leq \sum_{j=1}^k \nu(A \cap A_j) = \nu(A),$$
+provando que $\bigvee\limits_{i=1}^k g_i \in \mathbb{H}$.
+
+Usando o teorema da convergência monótona, podemos estender este resultado para sequências; isto é, se $g_1, g_2, \ldots$ é uma sequência de funções em $\mathbb{H}$, $\sup_i g_i \in \mathbb{H}$. Seja agora
+$$\beta = \sup \left\{\int_\Omega g d\mu: g \in \mathbb{H}\right\}.$$
+e $\{f_n\}_{n=1,2,\ldots}$ uma sequência de funções de $\mathbb{H}$, tais que
+$$\int_\Omega f_n d\mu \to \beta.$$
+Se definimos $\tilde{f} = \sup f_n$, temos que $\tilde{f} \in \mathbb{H}$ e
+$$\int_\Omega \tilde{f} d\mu = \beta.$$
+Como $\beta \leq \nu(\Omega)$, $\tilde{f}$ é integrável. Portanto, existe uma função $f$ finita tal que $f = \tilde{f}$ q. t. p. $[\mu]$. Vamos provar que $f$ é a função que estamos procurando. Isso é equivalente a provar que a medida positiva
+$$\tilde{\nu} = \nu - \int f d\mu$$ 
+e identicamente 0. Se não é identicamente nula, pelo Lema existe $A \in \mathscr{A}$ e $\varepsilon > 0$, tal que $\mu(A) > 0$ e $A$ é positivo para
+$$\nu - \int f d\mu - \varepsilon\mu.$$
+($\int f d\mu$ é a *função integral indefinida*. Veja a Def. 4.1.5).
+Ou seja, $\forall C \in \mathscr{A}$,
+$$\nu(C \cap A) \geq \int_{C \cap A} f d\mu + \varepsilon\mu(C \cap A).$$
+Como $f \in \mathbb{H}$, também temos
+$$\nu(C-A) \geq \int_{C-A} f d\mu.$$
+Somando estas duas desigualdades, temos
+$$\nu(C) \geq \int_C f d\mu + \varepsilon\mu(C \cap A) = \int_C f d\mu + \int_C \varepsilon I_A d\mu =$$
+$$= \int_C (f + \varepsilon I_A) d\mu.$$
+Portanto, $f + \varepsilon I_A \in \mathbb{H}$. Mas
+$$\int_\Omega (f + \varepsilon I_A) d\mu = \int_\Omega f d\mu + \varepsilon\mu(A) = \beta + \varepsilon\mu(A) > \beta,$$
+o que é uma contradição. Portanto, $\tilde{\nu}=0$. Se $g$ é outra função, tal que
+$$\forall A \in \mathscr{A}, \int_A g d\mu = \nu(A),$$
+temos
+$$\int_A (f-g) d\mu = 0 \forall A \in \mathscr{A},$$
+o que implica $f-g = 0$ q. t. p. $[\mu]$, ou seja, $f = g$ q. t. p. $[\mu]$.
+
+**COROLÁRIO 6.3.1.** Se $\mu$ e $\nu$ são duas medidas sobre $(\Omega, \mathscr{A})$, $\sigma$-finitas e $\nu \ll \mu$, então existe uma função $f$ mensurável, não-negativa, finita, tal que $\forall A \in \mathscr{A}$,
+$$\int_A f d\mu = \nu(A).$$
+Esta função $f$ é única $[\mu]$.
+
+**Demonstração.** Como $\mu$ e $\nu$ são $\sigma$-finitas, existe uma sequência de conjuntos $\{A_n\}_{n=1,2,\ldots}$ disjuntos e tais que $\sum\limits_{n=1}^\infty A_n = \Omega$ e
+$\forall n \nu(A_n) < \infty$ e $\mu(A_n) < \infty$.
+Utilizando o teorema anterior, obtemos funções $f_n$ tais que
+$$\forall n, \forall A \in \mathscr{A}, \int_{A \cap A_n} f_n d\mu = \nu(A \cap A_n).$$
+A função $f = \sum\limits_{n=1}^\infty I_{A_n}f_n$ satisfaz as condições do corolário.
+
+**COROLÁRIO 6.3.2.** Se $\nu$ é uma medida com sinal e $\mu$ é uma medida sobre $(\Omega, \mathscr{A})$ com $\nu \ll \mu$, e $\sigma$-finitas, então existe $f$ finita, tal que
+$$\forall A \in \mathscr{A} \nu(A) = \int_A f d\mu.$$
+A função $f$ é única $[\mu]$.
+
+**Demonstração.** Aplique o corolário anterior a $\nu^+$ e $\nu^-$.
+
+*Nota.* Observe-se que no Teor. 6.3.1 a função $f$ é integrável, no Cor. 6.3.1 $f$ é integrável se, e somente se, $\nu$ é finita, e no Cor. 6.3.2 $f$ é quase integrável ($f^-$ é integrável), resultando integrável só no caso de $\nu$ ser finita.
+
+**COROLÁRIO 6.3.3.** Seja $\nu$ uma medida com sinal e $\mu$ uma medida $\sigma$-finita sobre $(\Omega, \mathscr{A})$. Se $\nu \ll \mu$, existe uma função $f$ mensurável (não necessariamente finita), tal que
+$$\forall A \in \mathscr{A}, \nu(A) = \int_A f d\mu.$$
+A função $f$ é única $[\mu]$.
+
+**Demonstração.** Sem perda de generalidade podemos supor $\mu$ finita. Seja $(A_n, B_n)$ uma *decomposição de Hahn* para $\nu - n\mu$. Como
+$$-\infty < \nu(B_n) \leq n\mu(B_n) < +\infty,$$
+resulta que o conjunto $B = \bigcup\limits_{n=1}^\infty B_n$ tem medida $\sigma$-finita em relação a $\nu$.
+
+Seja
+$$C \subseteq \bigcap_{n=1}^\infty A_n = A.$$
+Então $\forall n$,
+$$\nu(C) - n\mu(C) \geq 0,$$
+isto é,
+$$\nu(C) \geq n\mu(C), \forall n.$$
+Desta desigualdade resulta então que, se $\mu(C) = 0$, $\nu(C) = 0$, porque $\nu \ll \mu$; e se $\mu(C) > 0$, $\nu(C) = +\infty$. Pelo corolário anterior podemos obter uma função $g$ finita, tal que
+$$\forall C \in \mathscr{A}, \nu(C \cap B) = \int_{C \cap B} g d\mu.$$
+
+(Note-se que $B$ tem medida $\sigma$-finita em relação a $\nu$). Se definimos então $f = +\infty I_A + g I_B$, esta função satisfaz as condições requeridas. O integrando que aparece no Teorema de Radon-Nikodym é chamado *derivada de Radon-Nikodym* de $\nu$ em relação a $\mu$. É denotada $\frac{d\nu}{d\mu}$. Deixaremos para os exercícios uma série de propriedades desta derivada.
+Vamos agora provar outro importante resultado.
+
+**DEFINIÇÃO 6.3.2.** Duas medidas com sinal $\mu$ e $\nu$ são chamadas *singulares* (em símbolos $\mu \perp \nu$), quando existem dois conjuntos $A$ e $B$, tais que
+$$A \cap B = \varnothing, A+B = \Omega \quad \text{e} \quad |\mu|(B) = |\nu|(A) = 0.$$
+Intuitivamente esta identidade indica que $\mu$ e $\nu$ “moram” em conjuntos disjuntos.
+
+**TEOREMA 6.3.2 (Teorema de Decomposição de Lebesgue).** Sejam $\nu$ e $\mu$ duas medidas com sinal $\sigma$-finitas sobre $(\Omega, \mathscr{A})$. Então existem duas medidas ($\sigma$-finitas) com sinal $\nu_0$ e $\nu_1$, tal que
+$$\nu = \nu_0 + \nu_1, \nu_0 \ll \mu, \nu_1 \perp \mu.$$
+Essas duas medidas estão univocamente determinadas.
+
+**Demonstração.** Decompondo as medidas em suas correspondentes variações, podemos supor que $\nu$ e $\mu$ são medidas positivas. Seja
+$$f = \frac{d\mu}{d(\nu+\mu)}.$$
+Tomemos $f \geq 0$ em todo ponto. Seja
+$$A = [f > 0] \quad \text{e} \quad B = [f = 0].$$
+Claramente
+$$A \cap B = \varnothing \quad \text{e} \quad A + B = \Omega.$$
+Temos que
+$$\mu(B) = \int_{[f=0]} f d(\mu+\nu) = 0.$$
+Se $C \subseteq A$ e $\mu(C) = 0$, então
+$$0 = \int_C f d(\mu+\nu).$$
+Esta equação implica então que
+$$(\mu + \nu)\left(\left[f > 0\right] \cap C\right) = 0,$$
+ou seja (como $C \subseteq [f > 0]$),
+$$(\mu + \nu)(C) = 0.$$
+E como $\mu(C) = 0$, resulta então $\nu(C) = 0$. Portanto, se definimos
+$$\nu_0(C) = \nu(C \cap A) \quad \text{e} \quad \nu_1(C) = \nu(C \cap B),$$
+temos a decomposição desejada. Se $(\bar{\nu}_0, \bar{\nu}_1)$ é outra decomposição, temos $\nu = \bar{\nu}_0 + \bar{\nu}_1 \implies \nu_0 - \bar{\nu}_0 = \bar{\nu}_1 - \nu_1$. Agora
+$$(\bar{\nu}_0 - \nu_0) \ll \mu \quad \text{e} \quad (\nu_1 - \bar{\nu}_1) \perp \mu$$
+(veja o Exerc. 9). Temos então uma medida que é simultaneamente singular e absolutamente contínua em relação a $\mu$. Essa medida tem que ser identicamente nula.
+
 ## Teorema de Representação de Riesz {#cap6e4e}
 
+Uma importante aplicação do Teorema de Radon-Nikodym é a representação de funcionais lineares limitados sobre $L_p$; $1 \leq p < \infty$.
+
+**DEFINIÇÃO 6.4.1.** Um *funcional linear* sobre $L_p, 1 \leq p \leq \infty$ é uma função $\varphi: L_p \to \mathbb{R}^1$, onde $\varphi$ é linear.
+
+Se $\varphi$ é um funcional linear, dizemos que é *limitado* se existe uma constante $K$, tal que
+$$\forall f \in L_p, |\varphi(f)| \leq K \left\|f\right\|_p.$$
+Definimos também a *norma* de $\varphi$ como
+$$\left\|\varphi\right\| = \sup \left\{|\varphi(f)|: \left\|f\right\|_p \leq 1\right\}.$$
+Temos o seguinte:
+
+**TEOREMA 6.4.1 (Representação de Riesz).** Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida $\sigma$-finita. Seja $1 \leq p \leq \infty$ e $q$ dado pela equação $\frac{1}{p} + \frac{1}{q} = 1$. Se $g \in L_q$, então a fórmula
+$$\varphi(f) = \int_\Omega fg d\mu, f \in L_p,$$
+
+define um *funcional linear limitado* sobre $L_p$. Temos também que $\left\|\varphi\right\| = \left\|g\right\|_q$. Reciprocamente se $\varphi$ é um *funcional linear limitado* sobre $L_p$, $1 \leq p < \infty$, existe $g \in L_q$, tal que $\forall f \in L_p$,
+$$\varphi(f) = \int_\Omega fg d\mu.$$
+
+**Demonstração.** Decorre da *desigualdade de Hölder* que se $f \in L_p$ e $g \in L_q$, $fg \in L_1$ e
+$$\left|\int_\Omega fg d\mu\right| \leq \left\|f\right\|_p \left\|g\right\|_q.$$
+Claramente a fórmula
+$$\varphi(f) = \int_\Omega fg d\mu$$
+define um *funcional linear contínuo* com $\left\|\varphi\right\| \leq \left\|g\right\|_q$. Para provar $\left\|\varphi\right\| = \left\|g\right\|_q$, consideremos primeiro o caso $1 < p < \infty$. Seja
+$$\varepsilon(g) = I_{[g \geq 0]} - I_{[g < 0]}$$
+e consideramos a função $\varepsilon(g)|g|^{q-1}$. Temos
+$$\left\|\varepsilon(g)|g|^{q-1}\right\|_p = \left(\int_\Omega \left(|\varepsilon(g)||g|^{q-1}\right)^p\right)^{1/p} = \left(\int_\Omega |g|^{q}\right)^{1/p} =$$
+$$= \left\|g\right\|_q^{q/p} = \left\|g\right\|_q^{q-1}.$$
+Por outra parte,
+$$\left\|\varphi\right\| \left\|\varepsilon(g)|g|^{q-1}\right\|_p \geq \varphi\left(\varepsilon(g)|g|^{q-1}\right) =$$
+$$= \int_\Omega \varepsilon(g)|g|^{q-1} g d\mu = \int_\Omega |g|^q d\mu =$$
+$$= \left\|g\right\|_q^q = \left\|g\right\|_q \left\|g\right\|_q^{q-1} =$$
+$$= \left\|g\right\|_q \left\|\varepsilon(g)|g|^{q-1}\right\|_p,$$
+o que prova $\left\|\varphi\right\| \geq \left\|g\right\|_q$.
+
+No caso $p = \infty$ ($q = 1$), temos $\varepsilon(g) \in L_p$. Resulta
+$$\varphi(\varepsilon(g)) = \int_\Omega \varepsilon(g) g d\mu =$$
+$$= \int_\Omega |g| d\mu = \left\|g\right\|_1$$
+e portanto $\left\|\varphi\right\| \geq \left\|g\right\|_1$. Finalmente consideremos o caso $p = 1, q = \infty$.
+Seja $g \in L_\infty$ e $A_n \uparrow \Omega$ com $0 < \mu(A_n) < \infty$. Consideremos
+$$\varepsilon(g)I_{[|g| \geq \left\|g\right\|_\infty-\eta]}I_{A_n}.$$
+$$\int_\Omega |\varepsilon(g)I_{[|g| \geq \left\|g\right\|_\infty-\eta]}I_{A_n}| d\mu =$$
+$$= \mu([|g| \geq \left\|g\right\|_\infty-\eta] \cap A_n).$$
+Escolhamos $n$ suficientemente grande para que o membro direito seja positivo. Agora:
+$$\varphi(\varepsilon(g)I_{[|g| \geq \left\|g\right\|_\infty-\eta]}I_{A_n}) = \int_\Omega [|g| \geq \left\|g\right\|_\infty-\eta] \cap A_n |g| d\mu \geq$$
+$$\geq \mu\left(\left[|g| \geq \left\|g\right\|_\infty-\eta\right] \cap A_n\right) (\left\|g\right\|_\infty-\eta)$$
+$$\implies \| \varepsilon(g)I_{[|g| \geq \left\|g\right\|_\infty-\eta]}I_{A_n}\|_I (\left\|g\right\|_\infty-\eta).$$
+
+Então $\left\|\varphi\right\| \geq \left\|g\right\|_\infty - \eta \forall \eta > 0$, e portanto $\left\|\varphi\right\| \geq \left\|g\right\|_\infty$.
+Seja agora $\varphi$ uma função linear limitada sobre $L_p$, com $1 \leq p < \infty$.
+Suponhamos primeiro que $\mu(\Omega) < \infty$.
+A fórmula $\nu(A) = \varphi(I_A)$ define uma função de conjunto aditiva.
+
+Como
+$$|\nu(A)| = |\varphi(I_A)| \leq \left\|\varphi\right\| \left\|I_A\right\|_p = \left\|\varphi\right\| (\mu(A))^{1/p},$$
+resulta que $\nu$ é contínua superiormente no vazio, e portanto uma medida com sinal. Também a desigualdade anterior indica que $\nu \ll \mu$.
+Pelo Teorema de Radon-Nikodym, existe uma função $g$ tal que
+$$\forall A \in \mathscr{A} \nu(A) = \int_A g d\mu = \int_\Omega I_A g d\mu.$$
+Por linearidade resulta que se $f$ é uma função simples
+$$\varphi(f) = \int_\Omega fg d\mu.$$
+
+Vamos provar agora que $g \in L_q$. Consideremos primeiramente o caso $1 < p < \infty$. Seja $0 \leq g_n \uparrow |g|$, onde $g_n$ é simples e $\in L_q$.
+$$\int_\Omega g_n^q d\mu \leq \int_\Omega |g| g_n^{q-1} d\mu =$$
+$$= \int_\Omega \varepsilon(g) g_n^{q-1} g d\mu =$$
+$$= \varphi(\varepsilon(g)g_n^{q-1}) \leq \left\|\varphi\right\| \left\|\varepsilon(g)g_n^{q-1}\right\|_p =$$
+$$= \left\|\varphi\right\| \left(\int_\Omega \left|(\varepsilon(g)g_n^{q-1})\right|^p\right)^{1/p} = \left\|\varphi\right\| \left(\int_\Omega g_n^q\right)^{1/p} =$$
+$$= \left\|\varphi\right\| \left\|g_n\right\|_q^{q/p} = \left\|\varphi\right\| \left\|g_n\right\|_q^{q-1}.$$
+Ou seja,
+$$\left\|g_n\right\|_q^q \leq \left\|\varphi\right\| \left\|g_n\right\|_q^{q-1}$$
+e portanto, $\left\|g_n\right\|_q \leq \left\|\varphi\right\|$. Temos então que $\left\|g\right\|_q \leq \left\|\varphi\right\|$ (Teorema da Convergência Monotônica). Consideremos agora o caso $p=1 (q=\infty)$. Queremos provar que $\left\|g\right\|_\infty \leq \left\|\varphi\right\|$.
+
+Caso contrário, a função simples $\varepsilon(g)I_{[|g| > \left\|\varphi\right\|]}$ seria diferente de 0, e
+$$\varphi(\varepsilon(g)I_{[|g| > \left\|\varphi\right\|]}) =$$
+$$= \int_{[|g| > \left\|\varphi\right\|]} |g| d\mu >$$
+$$> \left\|\varphi\right\| \mu([|g| > \left\|\varphi\right\|]) =$$
+$$= \left\|\varphi\right\| \left\|\varepsilon(g)I_{[|g| > \left\|\varphi\right\|]}\right\|_1$$
+o que seria uma contradição. Temos portanto, em geral, que $g \in L_q$. Agora os funcionais lineares limitados
+$$\varphi \text{ e } f \mapsto \int_\Omega fg d\mu$$
+coincidem sobre toda função simples. Mas essas são densas em $L_p$ e portanto, coincidem em todo $L_p$, o que prova o resultado para $\mu(\Omega) < \infty$. Consideremos, para o caso geral, uma sequência: $A_n \uparrow \Omega$ com $\mu(A_n) < \infty$. Pelo provado até agora para cada $n$, existe uma função $g \in L_q(L_q(A_n, \mathscr{A} \cap A_n, \mu|_{A_n}))$, tal que
+$$\forall f \in L_p, \varphi(I_{A_n}f) = \int_\Omega I_{A_n} g_n d\mu.$$
+Se $m \leq n$, aplicando a identidade anterior a indicadores de subconjuntos de $A_m$, vemos imediatamente que $\mu([g_m \neq g_n] \cap A_m) = 0$. Podemos então supor que $g_m = g_n$ sobre $A_m$, e definir $g$ sobre $\Omega$ pela fórmula
+$$g(\omega) = g_n(\omega), \quad \text{se } \omega \in A_n.$$
+É fácil verificar agora que esta função $g$ representa $\varphi$.
+
+Para o caso $1 < p < \infty$, é possível suprimir a hipótese de que a medida seja $\sigma$-finita. Este fato é o conteúdo da seguinte:
+
+**PROPOSIÇÃO 6.4.1.** Se $1 < p < \infty$, a hipótese de que a medida $\mu$ seja $\sigma$-finita pode ser suprimida.
+
+**Demonstração.** Para a primeira parte do teorema, essa hipótese foi utilizada somente para provar que no caso $p = 1, q = \infty$, $\left\|\varphi\right\| = \left\|g\right\|_\infty$. Na segunda parte prova-se que, se $\varphi$ é um funcional linear sobre $L_p$, $1 < p < \infty$, então existe um conjunto $A$ com medida $\sigma$-finita, tal que se $f \in L_p$ e $f=0$ sobre $A$, então $\varphi(f) = 0$. Isso permite reduzir o problema geral ao caso anterior, considerando o espaço
+$$\left(A, \mathscr{A} \cap A, \mu|_{A \cap \mathscr{A}}\right),$$
+que é $\sigma$-finito.
+Seja $f_n$ uma sequência de funções em $L_p$, tais que
+$$\varphi(f_n) \geq \left\|\varphi\right\| \left(1-\frac{1}{n}\right),$$
+com $\left\|f_n\right\| \leq 1$. Usando a desigualdade de Markov é fácil ver que existe $A$, com medida $\sigma$-finita, tal que $\forall n, f_n = 0$ sobre $A^c$. Seja agora $C$ um conjunto disjunto de $A$ com medida finita. Temos então, para $s \geq 0$,
+$$\left\|f_n \pm s I_C\right\|_p = \left(\int_\Omega |f_n \pm s I_C|^p\right)^{1/p} =$$
+$$= \left(\int_\Omega |f_n|^p + s^p \int_\Omega I_C^p\right)^{1/p} =$$
+$$= \left(\left\|f_n\right\|_p^p + s^p \mu(C)\right)^{1/p} \leq$$
+$$\leq (1 + s^p \mu(C))^{1/p}.$$
+
+Agora,
+$$\varphi(\pm s I_C) = \varphi(\pm s I_C)-\varphi(f_n) + \varphi(f_n) =$$
+$$= \varphi(f_n \pm s I_C)-\varphi(f_n) \leq$$
+$$\leq \left|\varphi(f_n \pm s I_C)\right|-\left\|\varphi\right\| \left(1-\frac{1}{n}\right) \leq$$
+$$\leq \left\|\varphi\right\| \left\|f_n \pm s I_C\right\|_p - \left\|\varphi\right\| \left(1-\frac{1}{n}\right) =$$
+$$= \left\|\varphi\right\| \left\{(1 + s^p \mu(C))^{1/p} - \left(1-\frac{1}{n}\right)\right\}.$$
+Portanto,
+$$\left|\varphi(sI_C)\right| \leq \left\|\varphi\right\| \left\{(1 + s^p \mu(C))^{1/p} - \left(1-\frac{1}{n}\right)\right\}.$$
+Tomando o limite, quando $n \to \infty$,
+$$\left|\varphi(sI_C)\right| \leq \left\|\varphi\right\| \left\{(1 + s^p \mu(C))^{1/p}-1\right\}.$$
+Dividindo por $s$, temos
+$$\left|\varphi(I_C)\right| \leq \left\|\varphi\right\| \left\{\frac{(1 + s^p \mu(C))^{1/p}-1}{s}\right\}.$$
+
+Usando a regra de L'Hospital é fácil ver que, quando $s \to 0$, o membro direito converge a 0. Portanto, para todo $C$ disjunto de $A$ com medida finita, $\varphi(I_C) = 0$. De aqui decorre o mesmo resultado para funções simples e por aproximação para funções $f \in L_p$ com suporte disjunto de $A$ como queríamos provar.
+
+Com as mesmas técnicas usadas na demonstração do Teor. 6.4.1 podemos obter a proposição a seguir.
+
+**PROPOSIÇÃO 6.4.2.** Seja $(\Omega, \mathscr{A}, \mu)$ um espaço de medida $\sigma$-finito. Para que uma funcional linear $\varphi$ sobre $L_\infty(\Omega, \mathscr{A}, \mu)$ seja da forma
+$$\varphi(f) = \int_\Omega fg d\mu,$$
+com $g \in L_1(\Omega, \mathscr{A}, \mu)$, é necessário e suficiente que a função aditiva de conjunto $A \mapsto \varphi(I_A)$ seja $\sigma$-aditiva sobre $\mathscr{A}$.
+
 ## Exercícios {- #ex6}
+
+1. Demonstrar a Prop. 6.1.1
+2. Demonstrar a Prop. 6.1.3
+3. Provar que a classe dos conjuntos negativos é um $\sigma$-anel.
+4. Se $\mu$ é uma medida com sinal, e $\nu = \nu^+-\nu^-$, onde $\nu^+$ e $\nu^-$ são medidas positivas finitas, então $\mu^+ \leq \nu^+$ e $\mu^- \leq \nu^-$.
+5. Se $f$ é integrável sobre $(\Omega, \mathscr{A}, \mu)$, e $\nu(A) = \int_A f d\mu$, então
+
+    $$\nu^+(A) = \int_A f^+ d\mu;$$
+    $$\nu^-(A) = \int_A f^- d\mu;$$
+    $$|\nu|(A) = \int_A |f| d\mu.$$
+
+6. Provar que $\mu^+(A) = \sup\{\mu(C): C \in \mathscr{A}, C \subseteq A\}$ e
+$\mu^-(A) = -\inf\{\mu(C): C \in \mathscr{A}, C \subseteq A\}$.
+
+7. Seja $\mathscr{M}^b(\Omega, \mathscr{A}) = \{\mu: \mu \text{ é medida com sinal finita}\}$. Com as operações definidas naturalmente, $\mathscr{M}^b(\Omega, \mathscr{A})$ é um espaço vetorial. Definimos para cada $\mu \in \mathscr{M}^b(\Omega, \mathscr{A})$, $\left\|\mu\right\| = |\mu|(\Omega)$. Provar que com essa norma, $\mathscr{M}^b(\Omega, \mathscr{A})$ é um *espaço de Banach*.
+
+8. Provar que, se $\mu$ é uma medida com sinal finita, então
+$$\left\|\mu\right\| = \sup\left\{\left|\int_\Omega f d\mu\right|: |f| \leq 1\right\}.$$
+
+9. Se $\nu_1, \nu_2$ e $\mu$ são medidas com sinal finitas, $\nu_1 \perp \mu$ e $\nu_2 \perp \mu$, então $(\nu_1 + \nu_2) \perp \mu$.
+
+10. Provar que os conjuntos positivos são um $\sigma$-anel.
+
+11. Um conjunto $N$ é nulo para uma medida com sinal $\mu$ se, e somente se $|\mu|(N) = 0$.
+
+12. Sejam $\mu$ e $\nu$ são medidas positivas finitas, e $\lambda$ uma medida positiva com $\mu \ll \lambda$ e $\nu \ll \lambda$. Se $f = \frac{d\mu}{d\lambda}$ e $g = \frac{d\nu}{d\lambda}$, resulta que $\left\|\mu-\nu\right\| = \int_\Omega |f-g| d\lambda$.
+
+13. Se $\mu$ e $\nu$ são duas probabilidades sobre $(\Omega, \mathscr{A})$, então $\left\|\mu-\nu\right\| = 2 \sup_{A \in \mathscr{A}} |\mu(A)-\nu(A)|$.
+
+14. Se $\nu_1$ e $\nu_2$ são medidas com sinal $\sigma$-finitas, $\mu$ uma medida $\sigma$-finita $\nu_1 \ll \mu$ e $\nu_2 \ll \mu$, então $\nu_1 + \nu_2 \ll \mu$, e
+$$\frac{d(\nu_1 + \nu_2)}{d\mu} = \frac{d\nu_1}{d\mu} + \frac{d\nu_2}{d\mu} \text{ q. t. p. } [\mu].$$
+
+15. Sejam $\mu$ e $\lambda$ duas medidas $\sigma$-finitas e $\nu$ uma medida com sinal $\sigma$-finita. Se $\nu \ll \mu \ll \lambda$, então
+$$\frac{d\nu}{d\lambda} = \frac{d\nu}{d\mu} \frac{d\mu}{d\lambda} \text{ q. t. p. } [\lambda].$$
+
+16. Sejam $\mu$ e $\lambda$ duas medidas $\sigma$-finitas, tais que $\mu \ll \lambda$. Seja $f$ uma função quase integrável $\mu$. Então
+$$\int_\Omega f d\mu = \int_\Omega f \frac{d\mu}{d\lambda} d\lambda.$$
+
+17. Se $\mu$ e $\nu$ são medidas, tais que $\mu \equiv \nu$ (isto é, $\mu \ll \nu \text{ e } \nu \ll \mu$), então
+$$\frac{d\mu}{d\nu} = \left(\frac{d\nu}{d\mu}\right)^{-1}.$$
+
+18. Seja $\nu \ll \mu$, onde $\nu$ é uma medida com sinal e $\mu$ é uma medida $\sigma$-finita. Então
+$$\nu\left(\left[\frac{d\nu}{d\mu} = 0\right]\right) = 0.$$
+
+19. Seja $\Omega$ um conjunto não enumerável e $\mathscr{A} = \{A: A \subseteq \Omega \text{ ou } A^c \text{ é enumerável}\}$.
+Seja
+$$\nu(A) = \begin{cases} 1 & A^c \text{ é enumerável} \\ 0 & A \text{ é enumerável} \end{cases}$$
+Seja $\mu$ a medida da contagem. Então $\nu \ll \mu$, mas o Teorema de Radon-Nikodym não é válido.
+
+20. Seja $\Omega = [0, 1]$, $\mathscr{A}$ a $\sigma$-álgebra de Borel de $[0, 1]$, $\nu$ a medida de Lebesgue, $\mu$ a medida da contagem. Então $\nu \ll \mu$, mas o Teorema de Radon-Nikodym não é válido.
+
+21. Seja $\lambda$ a medida de Lebesgue em $\mathbb{R}^1$. Seja
+$$f(x) = \frac{1}{e^{|x|}\sqrt{|x|}}, \text{ para } x \neq 0, \text{ e } +\infty, \text{ para } x = 0.$$
+Provar
+
+    a) $\int_{\mathbb{R}^1} f d\lambda < \infty$;
+
+    b) $\forall \varepsilon > 0 \int_{-\varepsilon}^\varepsilon f^2 d\lambda = +\infty$.
+
+    Seja $x_1, x_2, \ldots$ uma enumeração dos racionais. Definimos
+$$h(x) = \sum_{n=1}^\infty \frac{1}{2^n}f(x-x_n);$$
+
+    c) $\int_{\mathbb{R}^1} h d\lambda < \infty$ (portanto, $h$ é finita q. t. p. $[\lambda]$)
+
+    Para cada subconjunto $A$ mensurável Lebesgue, definimos
+$$\nu(A) = \int_A h^2 d\lambda;$$
+
+    d) $\nu \ll \lambda$;
+
+    e) $\nu$ é $\sigma$-finita;
+
+    f) Se $C$ é um intervalo com interior não-vazio $\nu(C) = +\infty$.
+    
+22. **DEFINIÇÃO.** Uma medida $\nu$ definida sobre a $\sigma$-álgebra de Lebesgue de $\mathbb{R}^1$ é dita *puramente atômica* se existe um conjunto enumerável $A$, tal que $\nu(A^c) = 0$.
+Provar que, se $\nu$ é uma medida finita sobre a $\sigma$-álgebra de Lebesgue de $\mathbb{R}^1$, $\nu$ pode ser decomposta de maneira única como soma de três medidas $\nu_1, \nu_2$ e $\nu_3$, tal que $\nu_1 \ll \lambda$, $\nu_2$ é puramente atômica, e $\nu_3 \perp \lambda$, com $\nu_3(\{x\}) = 0, \forall x \in \mathbb{R}^1$.
+
+23. Sejam $\mu$ e $\nu$ duas medidas finitas com sinal. Provar que existe uma medida com sinal que é menor que $\mu$ e $\nu$, porém maior que qualquer outra medida com sinal menor que $\mu$ e $\nu$. Essa medida é chamada *ínfimo* de $\mu$ e $\nu$ e é denotada com $\mu \wedge \nu$. Provar também a existência de um *supremo* $\mu \vee \nu$. Verifique que $(\mu \vee \nu) + (\mu \wedge \nu) = \mu + \nu$.
+(Sugestão. $\mu \wedge \nu = \frac{1}{2}(\mu + \nu - |\mu - \nu|)$).
+
+24. Provar que, se $\mu$ e $\nu$ são duas medidas positivas, então $\mu \perp \nu$ se, e somente se, $\mu \wedge \nu = 0$.
+
+25. Dar um exemplo de um espaço mensurável $(\Omega, \mathscr{A})$, uma medida finita com sinal $\nu$ sobre $\mathscr{A}$, e uma sequência de conjuntos $\{A_n\}_{n=1,2,\ldots}$ $A_n \in \mathscr{A} \forall n$, tais que
+  
+    $$\nu(\lim \inf A_n) > \lim \inf \nu(A_n);$$
+    
+    $$\nu(\lim \sup A_n) < \lim \sup \nu(A_n).$$
+    
+    (Sugestão. Seja $(\Omega, \mathscr{A})$ o intervalo $[0, 2]$ com os borelianos de $[0, 2]$. Seja $\lambda$ a medida de Lebesgue e $f$ a função
+    
+    $$f = I_{[0, 1]} - I_{(1, 2]}.$$
+    
+    Seja $\nu(A) = \int_A f d\lambda$. Seja
+    
+    $$A_n = \begin{cases} [0, 2] & n \text{ ímpar.} \\ [0, 1] & n \text{ par.} \end{cases}$$
+    
+    É fácil verificar que
+    
+    $\nu(\lim \inf A_n) = \nu([0, 1]) = 1$;
+    
+    $\lim \inf \nu(A_n) = 0$;
+  
+    $\nu(\lim \sup A_n) = \nu([0, 2]) = 0$;
+  
+    $\lim \sup \nu(A_n) = 1$.
+  
+26. Se $\mu$ é uma medida com sinal finita sobre $(\Omega, \mathscr{A})$ e $A_n \to A (A_n \in \mathscr{A}, A \in \mathscr{A})$, então $\mu(A_n) \to \mu(A)$.
+
+27. Provar que, se $\mu$ e $\nu$ são duas medidas finitas sobre $(\Omega, \mathscr{A})$, então
+$$\sup_{A \in \mathscr{A}} |\mu(A)-\nu(A)| \leq \|\mu-\nu\| \leq 2 \sup_{A \in \mathscr{A}} |\mu(A)-\nu(A)|$$
+(veja o Exerc. 13).
+
+28. Se $\mu$ é uma medida $\sigma$-finita sobre $(\Omega, \mathscr{A})$, então existe uma probabilidade $P$ sobre $(\Omega, \mathscr{A})$, tal que $\mu \ll P$ e $P \ll \mu$.
+
+29. Seja $(\Omega, \mathscr{A})$ um espaço mensurável. Sejam $\mathscr{F}_1$ e $\mathscr{F}_2$ duas famílias de medidas finitas sobre $(\Omega, \mathscr{A})$. Dizemos que $\mathscr{F}_1$ é equivalente a $\mathscr{F}_2$ (e escrevemos $\mathscr{F}_1 \equiv \mathscr{F}_2$), se $\mu(A) = 0, \forall \mu \in \mathscr{F}_1 \iff \nu(A) = 0, \forall \nu \in \mathscr{F}_2$.
+    
+    Provar que, se $\{\mu_n\}_{n=1,2,\ldots}$ é uma sequência de medidas finitas sobre $(\Omega, \mathscr{A})$, então existe uma probabilidade $P$ sobre $(\Omega, \mathscr{A})$, tal que $P \equiv \{\mu_n\}_{n=1,2,\ldots}$.
+    
+30. (Decomposição de Hahn). Definimos $\mu^-(S) = -\inf\{ \mu(A): A \in \mathscr{A}, A \subseteq S\}$:
+
+    i) Provar que $\mu^-$ é uma medida sobre $\mathscr{A}$;
+
+    ii) $\mu^-(\Omega) < \infty$.
+
+    **Demonstração.** Por i) $\mu^-$ é em particular aditiva. Então, se $\mu^-(S) = +\infty$ e $C \subseteq S$, temos $\mu^-(C) = +\infty$ ou $\mu^-(S-C) = +\infty$. Por indução, construímos uma sequência $\Omega = S_0 \supseteq S_1 \supseteq S_2 \supseteq \ldots$, com $\mu^-(S_n) = +\infty, \forall n$, escolhendo a cada passo um $C_n \subseteq S_{n-1}$, tal que $\mu(C_n) \leq -n$ e definindo $S_n = C_n$ ou $S_n = S_{n-1} - C_n$, de maneira que $\mu^-(S_n) = +\infty$. Como os conjuntos $S_{n-1} - S_n$ assim obtidos são disjuntos, não podemos ter $C_n = S_{n-1} - S_n$ para uma coleção infinita de índices $n$, pois
+        $$-\infty < \mu\left(\sum_{n: C_n=S_{n-1}-S_n} C_n\right) \leq \sum_{n: C_n=S_{n-1}-S_n} (-n).$$
+        Portanto, existe $N$ tal que $\forall n \geq N, C_n = S_n$. Então $\forall n \geq N, \mu(C_n) \leq -n$
+        $$\mu(\lim S_n) = \lim \mu(S_n) = -\infty,$$
+        o que é uma contradição,
+    
+    iii) Existe $B \in \mathscr{A}$, tal que $\mu^-(B) = \mu^-(\Omega)$.
+    
+    **Demonstração.** $\forall n$, existe $S_n$ com
+    $$-\mu^-(S_n) > \mu^-(\Omega) - \frac{1}{2^n}.$$
+    Então
+    $$\mu^-(S_n) > \mu^-(\Omega) - \frac{1}{2^n}$$
+    e portanto,
+    $$\mu^-(\Omega-S_n) < \frac{1}{2^n}.$$
+    Chamando $T_n = \bigcup\limits_{j=n+1}^\infty (\Omega-S_j)$, temos
+    $$\mu^-(T_n) \leq \sum_{j=n+1}^\infty \frac{1}{2^j} = \frac{1}{2^n}.$$
+    Agora
+    $$\mu^-(S_n-T_n) = \mu^-(S_n)-\mu^-(S_n \cap T_n) \leq \mu^-(S_n) + \mu^-(T_n)$$
+    $$< -\mu^-(\Omega) + \frac{1}{2^n} + \frac{1}{2^n}.$$
+    Como a sequência $S_n-T_n = \bigcap\limits_{j=n+1}^\infty S_j$ é decrescente, tem-se
+    $$\mu(\lim (S_n-T_n)) = \lim \mu(S_n-T_n) \leq -\mu^-(\Omega).$$
+    Portanto
+    $$\mu^-(\lim (S_n-T_n)) = \mu^-(\Omega).$$
+    
+    iv) Provar que $(\Omega-B, B)$ é uma *decomposição de Hahn* para $\mu$.
+    
+    Aprendi esta demonstração com o Prof. Carlos Isnard.

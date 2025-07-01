@@ -195,6 +195,105 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="cap6e4e" class="section level2 hasAnchor" number="6.4">
 <h2><span class="header-section-number">6.4</span> Teorema de Representação de Riesz<a href="cap6e4e.html#cap6e4e" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Uma importante aplicação do Teorema de Radon-Nikodym é a representação de funcionais lineares limitados sobre <span class="math inline">\(L_p\)</span>; <span class="math inline">\(1 \leq p &lt; \infty\)</span>.</p>
+<p><strong>DEFINIÇÃO 6.4.1.</strong> Um <em>funcional linear</em> sobre <span class="math inline">\(L_p, 1 \leq p \leq \infty\)</span> é uma função <span class="math inline">\(\varphi: L_p \to \mathbb{R}^1\)</span>, onde <span class="math inline">\(\varphi\)</span> é linear.</p>
+<p>Se <span class="math inline">\(\varphi\)</span> é um funcional linear, dizemos que é <em>limitado</em> se existe uma constante <span class="math inline">\(K\)</span>, tal que
+<span class="math display">\[\forall f \in L_p, |\varphi(f)| \leq K \left\|f\right\|_p.\]</span>
+Definimos também a <em>norma</em> de <span class="math inline">\(\varphi\)</span> como
+<span class="math display">\[\left\|\varphi\right\| = \sup \left\{|\varphi(f)|: \left\|f\right\|_p \leq 1\right\}.\]</span>
+Temos o seguinte:</p>
+<p><strong>TEOREMA 6.4.1 (Representação de Riesz).</strong> Seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida <span class="math inline">\(\sigma\)</span>-finita. Seja <span class="math inline">\(1 \leq p \leq \infty\)</span> e <span class="math inline">\(q\)</span> dado pela equação <span class="math inline">\(\frac{1}{p} + \frac{1}{q} = 1\)</span>. Se <span class="math inline">\(g \in L_q\)</span>, então a fórmula
+<span class="math display">\[\varphi(f) = \int_\Omega fg d\mu, f \in L_p,\]</span></p>
+<p>define um <em>funcional linear limitado</em> sobre <span class="math inline">\(L_p\)</span>. Temos também que <span class="math inline">\(\left\|\varphi\right\| = \left\|g\right\|_q\)</span>. Reciprocamente se <span class="math inline">\(\varphi\)</span> é um <em>funcional linear limitado</em> sobre <span class="math inline">\(L_p\)</span>, <span class="math inline">\(1 \leq p &lt; \infty\)</span>, existe <span class="math inline">\(g \in L_q\)</span>, tal que <span class="math inline">\(\forall f \in L_p\)</span>,
+<span class="math display">\[\varphi(f) = \int_\Omega fg d\mu.\]</span></p>
+<p><strong>Demonstração.</strong> Decorre da <em>desigualdade de Hölder</em> que se <span class="math inline">\(f \in L_p\)</span> e <span class="math inline">\(g \in L_q\)</span>, <span class="math inline">\(fg \in L_1\)</span> e
+<span class="math display">\[\left|\int_\Omega fg d\mu\right| \leq \left\|f\right\|_p \left\|g\right\|_q.\]</span>
+Claramente a fórmula
+<span class="math display">\[\varphi(f) = \int_\Omega fg d\mu\]</span>
+define um <em>funcional linear contínuo</em> com <span class="math inline">\(\left\|\varphi\right\| \leq \left\|g\right\|_q\)</span>. Para provar <span class="math inline">\(\left\|\varphi\right\| = \left\|g\right\|_q\)</span>, consideremos primeiro o caso <span class="math inline">\(1 &lt; p &lt; \infty\)</span>. Seja
+<span class="math display">\[\varepsilon(g) = I_{[g \geq 0]} - I_{[g &lt; 0]}\]</span>
+e consideramos a função <span class="math inline">\(\varepsilon(g)|g|^{q-1}\)</span>. Temos
+<span class="math display">\[\left\|\varepsilon(g)|g|^{q-1}\right\|_p = \left(\int_\Omega \left(|\varepsilon(g)||g|^{q-1}\right)^p\right)^{1/p} = \left(\int_\Omega |g|^{q}\right)^{1/p} =\]</span>
+<span class="math display">\[= \left\|g\right\|_q^{q/p} = \left\|g\right\|_q^{q-1}.\]</span>
+Por outra parte,
+<span class="math display">\[\left\|\varphi\right\| \left\|\varepsilon(g)|g|^{q-1}\right\|_p \geq \varphi\left(\varepsilon(g)|g|^{q-1}\right) =\]</span>
+<span class="math display">\[= \int_\Omega \varepsilon(g)|g|^{q-1} g d\mu = \int_\Omega |g|^q d\mu =\]</span>
+<span class="math display">\[= \left\|g\right\|_q^q = \left\|g\right\|_q \left\|g\right\|_q^{q-1} =\]</span>
+<span class="math display">\[= \left\|g\right\|_q \left\|\varepsilon(g)|g|^{q-1}\right\|_p,\]</span>
+o que prova <span class="math inline">\(\left\|\varphi\right\| \geq \left\|g\right\|_q\)</span>.</p>
+<p>No caso <span class="math inline">\(p = \infty\)</span> (<span class="math inline">\(q = 1\)</span>), temos <span class="math inline">\(\varepsilon(g) \in L_p\)</span>. Resulta
+<span class="math display">\[\varphi(\varepsilon(g)) = \int_\Omega \varepsilon(g) g d\mu =\]</span>
+<span class="math display">\[= \int_\Omega |g| d\mu = \left\|g\right\|_1\]</span>
+e portanto <span class="math inline">\(\left\|\varphi\right\| \geq \left\|g\right\|_1\)</span>. Finalmente consideremos o caso <span class="math inline">\(p = 1, q = \infty\)</span>.
+Seja <span class="math inline">\(g \in L_\infty\)</span> e <span class="math inline">\(A_n \uparrow \Omega\)</span> com <span class="math inline">\(0 &lt; \mu(A_n) &lt; \infty\)</span>. Consideremos
+<span class="math display">\[\varepsilon(g)I_{[|g| \geq \left\|g\right\|_\infty-\eta]}I_{A_n}.\]</span>
+<span class="math display">\[\int_\Omega |\varepsilon(g)I_{[|g| \geq \left\|g\right\|_\infty-\eta]}I_{A_n}| d\mu =\]</span>
+<span class="math display">\[= \mu([|g| \geq \left\|g\right\|_\infty-\eta] \cap A_n).\]</span>
+Escolhamos <span class="math inline">\(n\)</span> suficientemente grande para que o membro direito seja positivo. Agora:
+<span class="math display">\[\varphi(\varepsilon(g)I_{[|g| \geq \left\|g\right\|_\infty-\eta]}I_{A_n}) = \int_\Omega [|g| \geq \left\|g\right\|_\infty-\eta] \cap A_n |g| d\mu \geq\]</span>
+<span class="math display">\[\geq \mu\left(\left[|g| \geq \left\|g\right\|_\infty-\eta\right] \cap A_n\right) (\left\|g\right\|_\infty-\eta)\]</span>
+<span class="math display">\[\implies \| \varepsilon(g)I_{[|g| \geq \left\|g\right\|_\infty-\eta]}I_{A_n}\|_I (\left\|g\right\|_\infty-\eta).\]</span></p>
+<p>Então <span class="math inline">\(\left\|\varphi\right\| \geq \left\|g\right\|_\infty - \eta \forall \eta &gt; 0\)</span>, e portanto <span class="math inline">\(\left\|\varphi\right\| \geq \left\|g\right\|_\infty\)</span>.
+Seja agora <span class="math inline">\(\varphi\)</span> uma função linear limitada sobre <span class="math inline">\(L_p\)</span>, com <span class="math inline">\(1 \leq p &lt; \infty\)</span>.
+Suponhamos primeiro que <span class="math inline">\(\mu(\Omega) &lt; \infty\)</span>.
+A fórmula <span class="math inline">\(\nu(A) = \varphi(I_A)\)</span> define uma função de conjunto aditiva.</p>
+<p>Como
+<span class="math display">\[|\nu(A)| = |\varphi(I_A)| \leq \left\|\varphi\right\| \left\|I_A\right\|_p = \left\|\varphi\right\| (\mu(A))^{1/p},\]</span>
+resulta que <span class="math inline">\(\nu\)</span> é contínua superiormente no vazio, e portanto uma medida com sinal. Também a desigualdade anterior indica que <span class="math inline">\(\nu \ll \mu\)</span>.
+Pelo Teorema de Radon-Nikodym, existe uma função <span class="math inline">\(g\)</span> tal que
+<span class="math display">\[\forall A \in \mathscr{A} \nu(A) = \int_A g d\mu = \int_\Omega I_A g d\mu.\]</span>
+Por linearidade resulta que se <span class="math inline">\(f\)</span> é uma função simples
+<span class="math display">\[\varphi(f) = \int_\Omega fg d\mu.\]</span></p>
+<p>Vamos provar agora que <span class="math inline">\(g \in L_q\)</span>. Consideremos primeiramente o caso <span class="math inline">\(1 &lt; p &lt; \infty\)</span>. Seja <span class="math inline">\(0 \leq g_n \uparrow |g|\)</span>, onde <span class="math inline">\(g_n\)</span> é simples e <span class="math inline">\(\in L_q\)</span>.
+<span class="math display">\[\int_\Omega g_n^q d\mu \leq \int_\Omega |g| g_n^{q-1} d\mu =\]</span>
+<span class="math display">\[= \int_\Omega \varepsilon(g) g_n^{q-1} g d\mu =\]</span>
+<span class="math display">\[= \varphi(\varepsilon(g)g_n^{q-1}) \leq \left\|\varphi\right\| \left\|\varepsilon(g)g_n^{q-1}\right\|_p =\]</span>
+<span class="math display">\[= \left\|\varphi\right\| \left(\int_\Omega \left|(\varepsilon(g)g_n^{q-1})\right|^p\right)^{1/p} = \left\|\varphi\right\| \left(\int_\Omega g_n^q\right)^{1/p} =\]</span>
+<span class="math display">\[= \left\|\varphi\right\| \left\|g_n\right\|_q^{q/p} = \left\|\varphi\right\| \left\|g_n\right\|_q^{q-1}.\]</span>
+Ou seja,
+<span class="math display">\[\left\|g_n\right\|_q^q \leq \left\|\varphi\right\| \left\|g_n\right\|_q^{q-1}\]</span>
+e portanto, <span class="math inline">\(\left\|g_n\right\|_q \leq \left\|\varphi\right\|\)</span>. Temos então que <span class="math inline">\(\left\|g\right\|_q \leq \left\|\varphi\right\|\)</span> (Teorema da Convergência Monotônica). Consideremos agora o caso <span class="math inline">\(p=1 (q=\infty)\)</span>. Queremos provar que <span class="math inline">\(\left\|g\right\|_\infty \leq \left\|\varphi\right\|\)</span>.</p>
+<p>Caso contrário, a função simples <span class="math inline">\(\varepsilon(g)I_{[|g| &gt; \left\|\varphi\right\|]}\)</span> seria diferente de 0, e
+<span class="math display">\[\varphi(\varepsilon(g)I_{[|g| &gt; \left\|\varphi\right\|]}) =\]</span>
+<span class="math display">\[= \int_{[|g| &gt; \left\|\varphi\right\|]} |g| d\mu &gt;\]</span>
+<span class="math display">\[&gt; \left\|\varphi\right\| \mu([|g| &gt; \left\|\varphi\right\|]) =\]</span>
+<span class="math display">\[= \left\|\varphi\right\| \left\|\varepsilon(g)I_{[|g| &gt; \left\|\varphi\right\|]}\right\|_1\]</span>
+o que seria uma contradição. Temos portanto, em geral, que <span class="math inline">\(g \in L_q\)</span>. Agora os funcionais lineares limitados
+<span class="math display">\[\varphi \text{ e } f \mapsto \int_\Omega fg d\mu\]</span>
+coincidem sobre toda função simples. Mas essas são densas em <span class="math inline">\(L_p\)</span> e portanto, coincidem em todo <span class="math inline">\(L_p\)</span>, o que prova o resultado para <span class="math inline">\(\mu(\Omega) &lt; \infty\)</span>. Consideremos, para o caso geral, uma sequência: <span class="math inline">\(A_n \uparrow \Omega\)</span> com <span class="math inline">\(\mu(A_n) &lt; \infty\)</span>. Pelo provado até agora para cada <span class="math inline">\(n\)</span>, existe uma função <span class="math inline">\(g \in L_q(L_q(A_n, \mathscr{A} \cap A_n, \mu|_{A_n}))\)</span>, tal que
+<span class="math display">\[\forall f \in L_p, \varphi(I_{A_n}f) = \int_\Omega I_{A_n} g_n d\mu.\]</span>
+Se <span class="math inline">\(m \leq n\)</span>, aplicando a identidade anterior a indicadores de subconjuntos de <span class="math inline">\(A_m\)</span>, vemos imediatamente que <span class="math inline">\(\mu([g_m \neq g_n] \cap A_m) = 0\)</span>. Podemos então supor que <span class="math inline">\(g_m = g_n\)</span> sobre <span class="math inline">\(A_m\)</span>, e definir <span class="math inline">\(g\)</span> sobre <span class="math inline">\(\Omega\)</span> pela fórmula
+<span class="math display">\[g(\omega) = g_n(\omega), \quad \text{se } \omega \in A_n.\]</span>
+É fácil verificar agora que esta função <span class="math inline">\(g\)</span> representa <span class="math inline">\(\varphi\)</span>.</p>
+<p>Para o caso <span class="math inline">\(1 &lt; p &lt; \infty\)</span>, é possível suprimir a hipótese de que a medida seja <span class="math inline">\(\sigma\)</span>-finita. Este fato é o conteúdo da seguinte:</p>
+<p><strong>PROPOSIÇÃO 6.4.1.</strong> Se <span class="math inline">\(1 &lt; p &lt; \infty\)</span>, a hipótese de que a medida <span class="math inline">\(\mu\)</span> seja <span class="math inline">\(\sigma\)</span>-finita pode ser suprimida.</p>
+<p><strong>Demonstração.</strong> Para a primeira parte do teorema, essa hipótese foi utilizada somente para provar que no caso <span class="math inline">\(p = 1, q = \infty\)</span>, <span class="math inline">\(\left\|\varphi\right\| = \left\|g\right\|_\infty\)</span>. Na segunda parte prova-se que, se <span class="math inline">\(\varphi\)</span> é um funcional linear sobre <span class="math inline">\(L_p\)</span>, <span class="math inline">\(1 &lt; p &lt; \infty\)</span>, então existe um conjunto <span class="math inline">\(A\)</span> com medida <span class="math inline">\(\sigma\)</span>-finita, tal que se <span class="math inline">\(f \in L_p\)</span> e <span class="math inline">\(f=0\)</span> sobre <span class="math inline">\(A\)</span>, então <span class="math inline">\(\varphi(f) = 0\)</span>. Isso permite reduzir o problema geral ao caso anterior, considerando o espaço
+<span class="math display">\[\left(A, \mathscr{A} \cap A, \mu|_{A \cap \mathscr{A}}\right),\]</span>
+que é <span class="math inline">\(\sigma\)</span>-finito.
+Seja <span class="math inline">\(f_n\)</span> uma sequência de funções em <span class="math inline">\(L_p\)</span>, tais que
+<span class="math display">\[\varphi(f_n) \geq \left\|\varphi\right\| \left(1-\frac{1}{n}\right),\]</span>
+com <span class="math inline">\(\left\|f_n\right\| \leq 1\)</span>. Usando a desigualdade de Markov é fácil ver que existe <span class="math inline">\(A\)</span>, com medida <span class="math inline">\(\sigma\)</span>-finita, tal que <span class="math inline">\(\forall n, f_n = 0\)</span> sobre <span class="math inline">\(A^c\)</span>. Seja agora <span class="math inline">\(C\)</span> um conjunto disjunto de <span class="math inline">\(A\)</span> com medida finita. Temos então, para <span class="math inline">\(s \geq 0\)</span>,
+<span class="math display">\[\left\|f_n \pm s I_C\right\|_p = \left(\int_\Omega |f_n \pm s I_C|^p\right)^{1/p} =\]</span>
+<span class="math display">\[= \left(\int_\Omega |f_n|^p + s^p \int_\Omega I_C^p\right)^{1/p} =\]</span>
+<span class="math display">\[= \left(\left\|f_n\right\|_p^p + s^p \mu(C)\right)^{1/p} \leq\]</span>
+<span class="math display">\[\leq (1 + s^p \mu(C))^{1/p}.\]</span></p>
+<p>Agora,
+<span class="math display">\[\varphi(\pm s I_C) = \varphi(\pm s I_C)-\varphi(f_n) + \varphi(f_n) =\]</span>
+<span class="math display">\[= \varphi(f_n \pm s I_C)-\varphi(f_n) \leq\]</span>
+<span class="math display">\[\leq \left|\varphi(f_n \pm s I_C)\right|-\left\|\varphi\right\| \left(1-\frac{1}{n}\right) \leq\]</span>
+<span class="math display">\[\leq \left\|\varphi\right\| \left\|f_n \pm s I_C\right\|_p - \left\|\varphi\right\| \left(1-\frac{1}{n}\right) =\]</span>
+<span class="math display">\[= \left\|\varphi\right\| \left\{(1 + s^p \mu(C))^{1/p} - \left(1-\frac{1}{n}\right)\right\}.\]</span>
+Portanto,
+<span class="math display">\[\left|\varphi(sI_C)\right| \leq \left\|\varphi\right\| \left\{(1 + s^p \mu(C))^{1/p} - \left(1-\frac{1}{n}\right)\right\}.\]</span>
+Tomando o limite, quando <span class="math inline">\(n \to \infty\)</span>,
+<span class="math display">\[\left|\varphi(sI_C)\right| \leq \left\|\varphi\right\| \left\{(1 + s^p \mu(C))^{1/p}-1\right\}.\]</span>
+Dividindo por <span class="math inline">\(s\)</span>, temos
+<span class="math display">\[\left|\varphi(I_C)\right| \leq \left\|\varphi\right\| \left\{\frac{(1 + s^p \mu(C))^{1/p}-1}{s}\right\}.\]</span></p>
+<p>Usando a regra de L’Hospital é fácil ver que, quando <span class="math inline">\(s \to 0\)</span>, o membro direito converge a 0. Portanto, para todo <span class="math inline">\(C\)</span> disjunto de <span class="math inline">\(A\)</span> com medida finita, <span class="math inline">\(\varphi(I_C) = 0\)</span>. De aqui decorre o mesmo resultado para funções simples e por aproximação para funções <span class="math inline">\(f \in L_p\)</span> com suporte disjunto de <span class="math inline">\(A\)</span> como queríamos provar.</p>
+<p>Com as mesmas técnicas usadas na demonstração do Teor. 6.4.1 podemos obter a proposição a seguir.</p>
+<p><strong>PROPOSIÇÃO 6.4.2.</strong> Seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida <span class="math inline">\(\sigma\)</span>-finito. Para que uma funcional linear <span class="math inline">\(\varphi\)</span> sobre <span class="math inline">\(L_\infty(\Omega, \mathscr{A}, \mu)\)</span> seja da forma
+<span class="math display">\[\varphi(f) = \int_\Omega fg d\mu,\]</span>
+com <span class="math inline">\(g \in L_1(\Omega, \mathscr{A}, \mu)\)</span>, é necessário e suficiente que a função aditiva de conjunto <span class="math inline">\(A \mapsto \varphi(I_A)\)</span> seja <span class="math inline">\(\sigma\)</span>-aditiva sobre <span class="math inline">\(\mathscr{A}\)</span>.</p>
 </div>
             </section>
 

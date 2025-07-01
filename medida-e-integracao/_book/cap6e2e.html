@@ -195,6 +195,44 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="cap6e2e" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> Decomposição de Hahn e Jordan<a href="cap6e2e.html#cap6e2e" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>DEFINIÇÃO 6.2.1.</strong> Um conjunto <span class="math inline">\(A \in \mathscr{A}\)</span> é chamado <em>positivo</em> se <span class="math inline">\(\forall C \subseteq A, C \in \mathscr{A}, \mu(C) \geq 0\)</span>. Um conjunto <span class="math inline">\(B \in \mathscr{A}\)</span> é chamado <em>negativo</em> se <span class="math inline">\(\forall C \subseteq B, C \in \mathscr{A}, \mu(C) \leq 0\)</span>. Um conjunto <span class="math inline">\(N \in \mathscr{A}\)</span> é chamado <em>nulo</em> se <span class="math inline">\(\forall C \subseteq N, C \in \mathscr{A}, \mu(C) = 0\)</span>.</p>
+<p><strong>TEOREMA 6.2.1 (Decomposição de Hahn).</strong> Seja <span class="math inline">\(\mu\)</span> uma medida com sinal sobre <span class="math inline">\((\Omega, \mathscr{A})\)</span>. Então existem dois conjuntos <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> pertencendo a <span class="math inline">\(\mathscr{A}\)</span>, tais que</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(A+B = \Omega (A \cap B = \varnothing)\)</span>;</p></li>
+<li><p><span class="math inline">\(A\)</span> é positivo e <span class="math inline">\(B\)</span> é negativo em relação a <span class="math inline">\(\mu\)</span>.</p></li>
+</ol>
+<p><strong>Demonstração.</strong> A primeira observação a ser feita é que a classe dos conjuntos negativos é um <span class="math inline">\(\sigma\)</span>-anel (veja o Exerc. 3). Seja
+<span class="math display">\[\alpha = \inf \{\mu(B): B \text{ é negativo}\}\]</span>
+e seja <span class="math inline">\(\{B_i\}_{i=1,2,\ldots}\)</span> tais que <span class="math inline">\(\mu(B_i) \to \alpha\)</span>. Seja <span class="math inline">\(B = \bigcup\limits_{i=1}^\infty B_i\)</span>. Então <span class="math inline">\(B\)</span> é negativo e <span class="math inline">\(\forall i \mu(B) \leq \mu(B_i)\)</span>. Portanto <span class="math inline">\(\mu(B) = \alpha\)</span> (em particular <span class="math inline">\(\alpha &gt; -\infty\)</span>). Seja <span class="math inline">\(A = \Omega - B = B^c\)</span>. O teorema ficará provado se verificarmos que <span class="math inline">\(A\)</span> é positivo. Suponhamos o contrário. Então, existe <span class="math inline">\(A_0 \subseteq A, A_0 \in \mathscr{A}\)</span>, tal que <span class="math inline">\(\mu(A_0) &lt; 0\)</span>.</p>
+<p>Agora <span class="math inline">\(A_0\)</span> não pode ser um conjunto negativo, porque se fosse, o conjunto <span class="math inline">\(A_0 + B\)</span> seria negativo e com medida menor que <span class="math inline">\(\alpha\)</span>.</p>
+<p>Seja então <span class="math inline">\(k_1\)</span> o menor inteiro positivo, tal que existe <span class="math inline">\(A_1 \subseteq A_0\)</span> com <span class="math inline">\(\mu(A_1) \geq \frac{1}{k_1}\)</span>. Agora o conjunto <span class="math inline">\(A_0 - A_1\)</span> tem medida <span class="math inline">\(\mu(A_0) - \mu(A_1) &lt; \mu(A_0) &lt; 0\)</span>, mas não pode ser um conjunto negativo pelas mesmas razões anteriores. Seja então <span class="math inline">\(k_2\)</span> o menor inteiro positivo, tal que existe <span class="math inline">\(A_2 \subseteq A_0 - A_1\)</span> com a propriedade que <span class="math inline">\(\mu(A_2) \geq \frac{1}{k_2}\)</span>.</p>
+<p>Continuando com este procedimento podemos escolher então uma sequência de conjuntos <span class="math inline">\(A_1, A_2, \ldots\)</span>, disjuntos, todos contidos em <span class="math inline">\(A_0\)</span>, com <span class="math inline">\(\mu(A_n) \geq \frac{1}{k_n}\)</span>, onde <span class="math inline">\(k_n\)</span> é o menor inteiro positivo, com a propriedade de que existe um conjunto <span class="math inline">\(A_n \subseteq A_0 - \sum\limits_{i=1}^{n-1} A_i\)</span> com
+<span class="math display">\[\mu(A_n) \geq \frac{1}{k_n}.\]</span></p>
+<p><img src="figures/figure-06-02-01.png" width="184" style="display: block; margin: auto;" /></p>
+<p>Como <span class="math inline">\(\sum\limits_{n=1}^\infty A_n \subseteq A_0\)</span> e <span class="math inline">\(|\mu(A_0)| &lt; \infty\)</span>, resulta que
+<span class="math display">\[\mu\left(\sum_{n=1}^\infty A_n\right) = \sum_{n=1}^\infty \mu(A_n) &lt; +\infty.\]</span>
+Em particular <span class="math inline">\(\mu(A_n)\)</span> e <span class="math inline">\(\frac{1}{k_n}\)</span> são sequências convergentes a 0. Consideremos
+<span class="math inline">\(\mathscr{D} = A_0 - \sum\limits_{n=1}^\infty A_n\)</span>. Temos que <span class="math inline">\(\mu(\mathscr{D}) &lt; \mu(A_0) &lt; 0\)</span>. Provando que <span class="math inline">\(\mathscr{D}\)</span> é negativo, teremos uma contradição (porque agregando <span class="math inline">\(\mathscr{D}\)</span> a <span class="math inline">\(B\)</span> obteríamos um conjunto negativo com medida menor que <span class="math inline">\(\alpha\)</span>). Seja <span class="math inline">\(C \subseteq \mathscr{D}\)</span> <span class="math inline">\(C \in \mathscr{A}\)</span>. Se <span class="math inline">\(\mu(C) &gt; 0\)</span>, a sequência
+<span class="math display">\[\mu(C+A_n) = \mu(C) + \mu(A_n) \to \mu(C) &gt; 0;\]</span>
+portanto existiria <span class="math inline">\(k_n \geq 2\)</span>, tal que
+<span class="math display">\[\mu(C) + \mu(A_n) \geq \frac{1}{k_n-1},\]</span>
+o que é uma contradição pela forma como <span class="math inline">\(k_n\)</span> foi escolhido. Uma outra demonstração mais curta da Decomposição de Hahn está contida no Exerc. 30.</p>
+<p><strong>DEFINIÇÃO 6.2.2.</strong> Chamaremos ao par <span class="math inline">\((A, B)\)</span> dado pela proposição anterior uma <em>decomposição de Hahn</em> para <span class="math inline">\(\mu\)</span>.</p>
+<p>A <em>decomposição de Hahn</em> não é única. Se <span class="math inline">\(N\)</span> é um conjunto nulo, e <span class="math inline">\((A, B)\)</span> é uma <em>decomposição de Hahn</em>, então
+<span class="math display">\[(A \cup N, B-N) \quad \text{e} \quad (A-N, B \cup N)\]</span>
+são também <em>decomposições de Hahn</em> para <span class="math inline">\(\mu\)</span>. Sejam agora <span class="math inline">\((A_1, B_1)\)</span> e <span class="math inline">\((A_2, B_2)\)</span> duas <em>decomposições de Hahn</em> para <span class="math inline">\(\mu\)</span>.</p>
+<p><img src="figures/figure-06-02-02.png" width="168" style="display: block; margin: auto;" /></p>
+<p>Se <span class="math inline">\(C \subseteq A_1 \cap B_2\)</span>, então como <span class="math inline">\(C \subseteq A_1\)</span>, resulta <span class="math inline">\(\mu(C) \geq 0\)</span>. Por outra parte como <span class="math inline">\(C \subseteq B_2\)</span>, <span class="math inline">\(\mu(C) \leq 0\)</span>. Ou seja, <span class="math inline">\(\mu(C)=0\)</span> e <span class="math inline">\(A_1 \cap B_2\)</span>, e portanto um conjunto nulo. Da mesma forma <span class="math inline">\(A_2 \cap B_1\)</span> é nulo.
+Essas considerações provam que as funções
+<span class="math display">\[\mu^+(C) = \mu(A \cap C) \text{ e } \mu^-(C) = -\mu(C \cap B)\]</span>
+estão bem definidas no sentido de que seu valor não depende da <em>decomposição de Hahn</em> escolhida. <span class="math inline">\(\mu^+\)</span> e <span class="math inline">\(\mu^-\)</span> são medidas positivas. Como <span class="math inline">\(\mu^-(\Omega) = -\mu(B) &lt; +\infty\)</span>, <span class="math inline">\(\mu^-\)</span> é uma medida finita, e temos
+<span class="math display">\[\mu = \mu^+ - \mu^-.\]</span></p>
+<p><strong>DEFINIÇÃO 6.2.3.</strong> <span class="math inline">\(\mu^+\)</span> é chamada <em>variação positiva</em> e <span class="math inline">\(\mu^-\)</span> <em>variação negativa</em>. A medida
+<span class="math display">\[|\mu| = \mu^+ + \mu^-\]</span>
+é chamada <em>variação total</em> da medida com sinal <span class="math inline">\(\mu\)</span>.</p>
+<p>A <em>decomposição de <span class="math inline">\(\mu\)</span> como</em>
+<span class="math display">\[\mu = \mu^+ - \mu^-\]</span>
+é chamada <em>decomposição de Jordan</em> da medida com sinal <span class="math inline">\(\mu\)</span>.</p>
 </div>
             </section>
 

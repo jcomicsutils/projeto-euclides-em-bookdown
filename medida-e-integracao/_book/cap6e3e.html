@@ -195,6 +195,134 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="cap6e3e" class="section level2 hasAnchor" number="6.3">
 <h2><span class="header-section-number">6.3</span> Continuidade absoluta. Teorema de Radon-Nikodym<a href="cap6e3e.html#cap6e3e" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sejam <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\nu\)</span> duas medidas com sinal sobre <span class="math inline">\((\Omega, \mathscr{A})\)</span>.</p>
+<p><strong>DEFINIÇÃO 6.3.1.</strong> Dizemos que <span class="math inline">\(\nu\)</span> é <em>absolutamente contínua</em> em relação a <span class="math inline">\(\mu\)</span> se, para cada <span class="math inline">\(A \in \mathscr{A}\)</span> com <span class="math inline">\(|\mu|(A) = 0\)</span>, resulta <span class="math inline">\(\nu(A) = 0\)</span>. Usaremos a notação <span class="math inline">\(\nu \ll \mu\)</span> para indicar esse fato.</p>
+<p>A condição de continuidade absoluta tem várias versões equivalentes. Elas estão contidas na proposição seguinte.</p>
+<p><strong>PROPOSIÇÃO 6.3.1.</strong> São equivalentes</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\nu \ll \mu\)</span>;</p></li>
+<li><p><span class="math inline">\(\nu^+ \ll \mu\)</span> e <span class="math inline">\(\nu^- \ll \mu\)</span>;</p></li>
+<li><p><span class="math inline">\(|\nu| \ll |\mu|\)</span>.</p></li>
+</ol>
+<p><strong>Demonstração.</strong> Vamos provar somente a) <span class="math inline">\(\implies\)</span> b). As outras implicações são simples. Seja <span class="math inline">\((A, B)\)</span> uma <em>decomposição de Hahn</em> para <span class="math inline">\(\nu\)</span>.</p>
+<p>Se <span class="math inline">\(|\mu|(C) = 0\)</span>, então
+<span class="math display">\[|\mu(C \cap A)| = 0 \quad \text{e} \quad |\mu(C \cap B)| = 0.\]</span>
+Então
+<span class="math display">\[\nu^+(C) = \nu(C \cap A) = 0 \quad \text{e} \quad \nu^-(C) = -\nu(C \cap B) = 0,\]</span>
+e portanto
+<span class="math display">\[\nu^+ \ll \mu \quad \text{e} \quad \nu^- \ll \mu,\]</span>
+o que prova b).</p>
+<p>A relação de continuidade absoluta deve ser pensada da seguinte forma: “<span class="math inline">\(\nu\)</span> é pequena se <span class="math inline">\(\mu\)</span> é pequena”. Esta frase é precisa quando <span class="math inline">\(\nu\)</span> é finita, como se mostra na seguinte proposição.</p>
+<p><strong>PROPOSIÇÃO 6.3.2.</strong> Se <span class="math inline">\(\nu\)</span> é uma medida finita com sinal e <span class="math inline">\(\nu \ll \mu\)</span>, então
+<span class="math display">\[\forall \varepsilon &gt; 0, \text{ existe } \delta &gt; 0 \text{ tal que }\]</span>
+<span class="math display">\[|\mu|(C) &lt; \delta \text{ implica } |\nu|(C) &lt; \varepsilon.\]</span></p>
+<p><strong>Demonstração.</strong> Neguemos a tese. Então existe <span class="math inline">\(\varepsilon &gt; 0\)</span>, uma sequência de números <span class="math inline">\(\delta_n &gt; 0\)</span>, que podemos escolher de forma tal que <span class="math inline">\(\sum\limits_{n=1}^\infty \delta_n &lt; \infty\)</span>, e uma sequência de conjuntos <span class="math inline">\(C_n\)</span> tais que
+<span class="math display">\[|\nu|(C_n) \geq \varepsilon \quad \text{e} \quad |\mu|(C_n) &lt; \delta_n.\]</span>
+Seja <span class="math inline">\(C = \lim \sup C_n\)</span>. Como
+<span class="math display">\[\sum_{n=1}^\infty |\mu|(C_n) \leq \sum_{n=1}^\infty \delta_n &lt; \infty\]</span>
+resulta que <span class="math inline">\(|\mu|(C) = 0\)</span>. Por outra parte, como <span class="math inline">\(\nu\)</span> é finita,
+<span class="math display">\[|\nu|(C) = |\nu|(\lim \sup C_n) \geq \lim \sup |\nu|(C_n) \geq \varepsilon.\]</span>
+Esta contradição prova então o resultado.</p>
+<p>Passemos agora a apresentar um resultado muito importante, conhecido como <em>Teorema de Radon-Nikodym</em>. Imprecisamente este teorema afirma que se uma medida é absolutamente contínua em relação à outra, então a primeira é uma integral indefinida de uma função em relação à segunda medida. Vamos provar este teorema para o caso de duas medidas positivas e finitas. As generalizações a casos mais gerais serão indicadas em proposições posteriores com indicações sobre a sua demonstração.
+Vamos primeiro provar o lema a seguir.</p>
+<p><strong>LEMA 6.3.1.</strong> Se <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\nu\)</span> são medidas finitas, tais que <span class="math inline">\(\nu \ll \mu\)</span> e <span class="math inline">\(\nu\)</span> não é identicamente nula, então existe um conjunto <span class="math inline">\(A\)</span> e um <span class="math inline">\(\varepsilon &gt; 0\)</span>, tal que <span class="math inline">\(\mu(A) &gt; 0\)</span> e <span class="math inline">\(A\)</span> é positivo para <span class="math inline">\(\nu-\varepsilon\mu\)</span>.</p>
+<p><strong>Demonstração.</strong> Seja <span class="math inline">\((A_n, B_n)\)</span> uma <em>decomposição de Hahn</em> para <span class="math inline">\(\nu - \frac{1}{n}\mu\)</span>.
+Claramente o resultado ficará demonstrado, se provarmos que existe um índice <span class="math inline">\(n\)</span>, tal que <span class="math inline">\(\mu(A_n) &gt; 0\)</span>. Se pelo contrário para todo <span class="math inline">\(n\)</span>, <span class="math inline">\(\mu(A_n) = 0\)</span>, resulta que <span class="math inline">\(\mu\left(\bigcup\limits_{n=1}^\infty A_n\right) = 0\)</span> e portanto, <span class="math inline">\(\nu\left(\bigcup\limits_{n=1}^\infty A_n\right) = 0\)</span>. Agora
+<span class="math display">\[\left(\bigcup_{n=1}^\infty A_n\right)^c = \bigcap_{n=1}^\infty A_n^c = \bigcap_{n=1}^\infty B_n\]</span>
+e para todo <span class="math inline">\(n\)</span>
+<span class="math display">\[\nu(B_n)-\frac{1}{n}\mu(B_n) \leq 0.\]</span>
+Portanto,
+<span class="math display">\[\nu\left(\bigcap_{n=1}^\infty B_n\right) = 0\]</span>
+e então <span class="math inline">\(\nu \equiv 0\)</span>, o que é uma contradição.</p>
+<p><strong>TEOREMA 6.3.1 (Radon-Nikodym).</strong> Sejam <span class="math inline">\(\nu\)</span> e <span class="math inline">\(\mu\)</span> duas medidas positivas finitas sobre <span class="math inline">\((\Omega, \mathscr{A})\)</span>, tais que <span class="math inline">\(\nu \ll \mu\)</span>. Então existe uma função <span class="math inline">\(f\)</span> mensurável e finita, tal que para todo <span class="math inline">\(A \in \mathscr{A}\)</span>,
+<span class="math display">\[\nu(A) = \int_A f d\mu.\]</span>
+Esta função <span class="math inline">\(f\)</span> é única <span class="math inline">\([\mu]\)</span>.</p>
+<p><strong>Demonstração.</strong> Seja
+<span class="math display">\[\mathbb{H} = \left\{g: g \geq 0 \text{ mensurável e } \forall A \in \mathscr{A} \int_A g d\mu \leq \nu(A)\right\}.\]</span>
+Como <span class="math inline">\(0 \in \mathbb{H}\)</span>, <span class="math inline">\(\mathbb{H} \neq \varnothing\)</span>. <span class="math inline">\(\mathbb{H}\)</span> tem a seguinte propriedade: se <span class="math inline">\(g_1, g_2, \ldots, g_k\)</span> pertencem a <span class="math inline">\(\mathbb{H}\)</span>; então <span class="math inline">\(\bigvee\limits_{i=1}^k g_i \in \mathbb{H}\)</span>. Porque se definimos <span class="math inline">\(A_1 = \left[g_1 \geq \bigvee\limits_{i=1}^k g_i\right]\)</span>, e para <span class="math inline">\(2 \leq j \leq k\)</span>,
+<span class="math display">\[A_j = \left[g_j \geq \bigvee_{i=1}^k g_i, \quad g_j &gt; \bigvee_{i=1}^{j-1} g_i\right],\]</span>
+resulta que <span class="math inline">\(A_1, A_2, \ldots, A_k\)</span> são conjuntos disjuntos e <span class="math inline">\(\sum\limits_{i=1}^k A_i = \Omega\)</span>. Se <span class="math inline">\(A \in \mathscr{A}\)</span>, temos
+<span class="math display">\[\int_A \left(\bigvee_{i=1}^k g_i\right) d\mu = \sum_{j=1}^k \int_{A \cap A_j} g_j d\mu \leq \sum_{j=1}^k \nu(A \cap A_j) = \nu(A),\]</span>
+provando que <span class="math inline">\(\bigvee\limits_{i=1}^k g_i \in \mathbb{H}\)</span>.</p>
+<p>Usando o teorema da convergência monótona, podemos estender este resultado para sequências; isto é, se <span class="math inline">\(g_1, g_2, \ldots\)</span> é uma sequência de funções em <span class="math inline">\(\mathbb{H}\)</span>, <span class="math inline">\(\sup_i g_i \in \mathbb{H}\)</span>. Seja agora
+<span class="math display">\[\beta = \sup \left\{\int_\Omega g d\mu: g \in \mathbb{H}\right\}.\]</span>
+e <span class="math inline">\(\{f_n\}_{n=1,2,\ldots}\)</span> uma sequência de funções de <span class="math inline">\(\mathbb{H}\)</span>, tais que
+<span class="math display">\[\int_\Omega f_n d\mu \to \beta.\]</span>
+Se definimos <span class="math inline">\(\tilde{f} = \sup f_n\)</span>, temos que <span class="math inline">\(\tilde{f} \in \mathbb{H}\)</span> e
+<span class="math display">\[\int_\Omega \tilde{f} d\mu = \beta.\]</span>
+Como <span class="math inline">\(\beta \leq \nu(\Omega)\)</span>, <span class="math inline">\(\tilde{f}\)</span> é integrável. Portanto, existe uma função <span class="math inline">\(f\)</span> finita tal que <span class="math inline">\(f = \tilde{f}\)</span> q. t. p. <span class="math inline">\([\mu]\)</span>. Vamos provar que <span class="math inline">\(f\)</span> é a função que estamos procurando. Isso é equivalente a provar que a medida positiva
+<span class="math display">\[\tilde{\nu} = \nu - \int f d\mu\]</span>
+e identicamente 0. Se não é identicamente nula, pelo Lema existe <span class="math inline">\(A \in \mathscr{A}\)</span> e <span class="math inline">\(\varepsilon &gt; 0\)</span>, tal que <span class="math inline">\(\mu(A) &gt; 0\)</span> e <span class="math inline">\(A\)</span> é positivo para
+<span class="math display">\[\nu - \int f d\mu - \varepsilon\mu.\]</span>
+(<span class="math inline">\(\int f d\mu\)</span> é a <em>função integral indefinida</em>. Veja a Def. 4.1.5).
+Ou seja, <span class="math inline">\(\forall C \in \mathscr{A}\)</span>,
+<span class="math display">\[\nu(C \cap A) \geq \int_{C \cap A} f d\mu + \varepsilon\mu(C \cap A).\]</span>
+Como <span class="math inline">\(f \in \mathbb{H}\)</span>, também temos
+<span class="math display">\[\nu(C-A) \geq \int_{C-A} f d\mu.\]</span>
+Somando estas duas desigualdades, temos
+<span class="math display">\[\nu(C) \geq \int_C f d\mu + \varepsilon\mu(C \cap A) = \int_C f d\mu + \int_C \varepsilon I_A d\mu =\]</span>
+<span class="math display">\[= \int_C (f + \varepsilon I_A) d\mu.\]</span>
+Portanto, <span class="math inline">\(f + \varepsilon I_A \in \mathbb{H}\)</span>. Mas
+<span class="math display">\[\int_\Omega (f + \varepsilon I_A) d\mu = \int_\Omega f d\mu + \varepsilon\mu(A) = \beta + \varepsilon\mu(A) &gt; \beta,\]</span>
+o que é uma contradição. Portanto, <span class="math inline">\(\tilde{\nu}=0\)</span>. Se <span class="math inline">\(g\)</span> é outra função, tal que
+<span class="math display">\[\forall A \in \mathscr{A}, \int_A g d\mu = \nu(A),\]</span>
+temos
+<span class="math display">\[\int_A (f-g) d\mu = 0 \forall A \in \mathscr{A},\]</span>
+o que implica <span class="math inline">\(f-g = 0\)</span> q. t. p. <span class="math inline">\([\mu]\)</span>, ou seja, <span class="math inline">\(f = g\)</span> q. t. p. <span class="math inline">\([\mu]\)</span>.</p>
+<p><strong>COROLÁRIO 6.3.1.</strong> Se <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\nu\)</span> são duas medidas sobre <span class="math inline">\((\Omega, \mathscr{A})\)</span>, <span class="math inline">\(\sigma\)</span>-finitas e <span class="math inline">\(\nu \ll \mu\)</span>, então existe uma função <span class="math inline">\(f\)</span> mensurável, não-negativa, finita, tal que <span class="math inline">\(\forall A \in \mathscr{A}\)</span>,
+<span class="math display">\[\int_A f d\mu = \nu(A).\]</span>
+Esta função <span class="math inline">\(f\)</span> é única <span class="math inline">\([\mu]\)</span>.</p>
+<p><strong>Demonstração.</strong> Como <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\nu\)</span> são <span class="math inline">\(\sigma\)</span>-finitas, existe uma sequência de conjuntos <span class="math inline">\(\{A_n\}_{n=1,2,\ldots}\)</span> disjuntos e tais que <span class="math inline">\(\sum\limits_{n=1}^\infty A_n = \Omega\)</span> e
+<span class="math inline">\(\forall n \nu(A_n) &lt; \infty\)</span> e <span class="math inline">\(\mu(A_n) &lt; \infty\)</span>.
+Utilizando o teorema anterior, obtemos funções <span class="math inline">\(f_n\)</span> tais que
+<span class="math display">\[\forall n, \forall A \in \mathscr{A}, \int_{A \cap A_n} f_n d\mu = \nu(A \cap A_n).\]</span>
+A função <span class="math inline">\(f = \sum\limits_{n=1}^\infty I_{A_n}f_n\)</span> satisfaz as condições do corolário.</p>
+<p><strong>COROLÁRIO 6.3.2.</strong> Se <span class="math inline">\(\nu\)</span> é uma medida com sinal e <span class="math inline">\(\mu\)</span> é uma medida sobre <span class="math inline">\((\Omega, \mathscr{A})\)</span> com <span class="math inline">\(\nu \ll \mu\)</span>, e <span class="math inline">\(\sigma\)</span>-finitas, então existe <span class="math inline">\(f\)</span> finita, tal que
+<span class="math display">\[\forall A \in \mathscr{A} \nu(A) = \int_A f d\mu.\]</span>
+A função <span class="math inline">\(f\)</span> é única <span class="math inline">\([\mu]\)</span>.</p>
+<p><strong>Demonstração.</strong> Aplique o corolário anterior a <span class="math inline">\(\nu^+\)</span> e <span class="math inline">\(\nu^-\)</span>.</p>
+<p><em>Nota.</em> Observe-se que no Teor. 6.3.1 a função <span class="math inline">\(f\)</span> é integrável, no Cor. 6.3.1 <span class="math inline">\(f\)</span> é integrável se, e somente se, <span class="math inline">\(\nu\)</span> é finita, e no Cor. 6.3.2 <span class="math inline">\(f\)</span> é quase integrável (<span class="math inline">\(f^-\)</span> é integrável), resultando integrável só no caso de <span class="math inline">\(\nu\)</span> ser finita.</p>
+<p><strong>COROLÁRIO 6.3.3.</strong> Seja <span class="math inline">\(\nu\)</span> uma medida com sinal e <span class="math inline">\(\mu\)</span> uma medida <span class="math inline">\(\sigma\)</span>-finita sobre <span class="math inline">\((\Omega, \mathscr{A})\)</span>. Se <span class="math inline">\(\nu \ll \mu\)</span>, existe uma função <span class="math inline">\(f\)</span> mensurável (não necessariamente finita), tal que
+<span class="math display">\[\forall A \in \mathscr{A}, \nu(A) = \int_A f d\mu.\]</span>
+A função <span class="math inline">\(f\)</span> é única <span class="math inline">\([\mu]\)</span>.</p>
+<p><strong>Demonstração.</strong> Sem perda de generalidade podemos supor <span class="math inline">\(\mu\)</span> finita. Seja <span class="math inline">\((A_n, B_n)\)</span> uma <em>decomposição de Hahn</em> para <span class="math inline">\(\nu - n\mu\)</span>. Como
+<span class="math display">\[-\infty &lt; \nu(B_n) \leq n\mu(B_n) &lt; +\infty,\]</span>
+resulta que o conjunto <span class="math inline">\(B = \bigcup\limits_{n=1}^\infty B_n\)</span> tem medida <span class="math inline">\(\sigma\)</span>-finita em relação a <span class="math inline">\(\nu\)</span>.</p>
+<p>Seja
+<span class="math display">\[C \subseteq \bigcap_{n=1}^\infty A_n = A.\]</span>
+Então <span class="math inline">\(\forall n\)</span>,
+<span class="math display">\[\nu(C) - n\mu(C) \geq 0,\]</span>
+isto é,
+<span class="math display">\[\nu(C) \geq n\mu(C), \forall n.\]</span>
+Desta desigualdade resulta então que, se <span class="math inline">\(\mu(C) = 0\)</span>, <span class="math inline">\(\nu(C) = 0\)</span>, porque <span class="math inline">\(\nu \ll \mu\)</span>; e se <span class="math inline">\(\mu(C) &gt; 0\)</span>, <span class="math inline">\(\nu(C) = +\infty\)</span>. Pelo corolário anterior podemos obter uma função <span class="math inline">\(g\)</span> finita, tal que
+<span class="math display">\[\forall C \in \mathscr{A}, \nu(C \cap B) = \int_{C \cap B} g d\mu.\]</span></p>
+<p>(Note-se que <span class="math inline">\(B\)</span> tem medida <span class="math inline">\(\sigma\)</span>-finita em relação a <span class="math inline">\(\nu\)</span>). Se definimos então <span class="math inline">\(f = +\infty I_A + g I_B\)</span>, esta função satisfaz as condições requeridas. O integrando que aparece no Teorema de Radon-Nikodym é chamado <em>derivada de Radon-Nikodym</em> de <span class="math inline">\(\nu\)</span> em relação a <span class="math inline">\(\mu\)</span>. É denotada <span class="math inline">\(\frac{d\nu}{d\mu}\)</span>. Deixaremos para os exercícios uma série de propriedades desta derivada.
+Vamos agora provar outro importante resultado.</p>
+<p><strong>DEFINIÇÃO 6.3.2.</strong> Duas medidas com sinal <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\nu\)</span> são chamadas <em>singulares</em> (em símbolos <span class="math inline">\(\mu \perp \nu\)</span>), quando existem dois conjuntos <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>, tais que
+<span class="math display">\[A \cap B = \varnothing, A+B = \Omega \quad \text{e} \quad |\mu|(B) = |\nu|(A) = 0.\]</span>
+Intuitivamente esta identidade indica que <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\nu\)</span> “moram” em conjuntos disjuntos.</p>
+<p><strong>TEOREMA 6.3.2 (Teorema de Decomposição de Lebesgue).</strong> Sejam <span class="math inline">\(\nu\)</span> e <span class="math inline">\(\mu\)</span> duas medidas com sinal <span class="math inline">\(\sigma\)</span>-finitas sobre <span class="math inline">\((\Omega, \mathscr{A})\)</span>. Então existem duas medidas (<span class="math inline">\(\sigma\)</span>-finitas) com sinal <span class="math inline">\(\nu_0\)</span> e <span class="math inline">\(\nu_1\)</span>, tal que
+<span class="math display">\[\nu = \nu_0 + \nu_1, \nu_0 \ll \mu, \nu_1 \perp \mu.\]</span>
+Essas duas medidas estão univocamente determinadas.</p>
+<p><strong>Demonstração.</strong> Decompondo as medidas em suas correspondentes variações, podemos supor que <span class="math inline">\(\nu\)</span> e <span class="math inline">\(\mu\)</span> são medidas positivas. Seja
+<span class="math display">\[f = \frac{d\mu}{d(\nu+\mu)}.\]</span>
+Tomemos <span class="math inline">\(f \geq 0\)</span> em todo ponto. Seja
+<span class="math display">\[A = [f &gt; 0] \quad \text{e} \quad B = [f = 0].\]</span>
+Claramente
+<span class="math display">\[A \cap B = \varnothing \quad \text{e} \quad A + B = \Omega.\]</span>
+Temos que
+<span class="math display">\[\mu(B) = \int_{[f=0]} f d(\mu+\nu) = 0.\]</span>
+Se <span class="math inline">\(C \subseteq A\)</span> e <span class="math inline">\(\mu(C) = 0\)</span>, então
+<span class="math display">\[0 = \int_C f d(\mu+\nu).\]</span>
+Esta equação implica então que
+<span class="math display">\[(\mu + \nu)\left(\left[f &gt; 0\right] \cap C\right) = 0,\]</span>
+ou seja (como <span class="math inline">\(C \subseteq [f &gt; 0]\)</span>),
+<span class="math display">\[(\mu + \nu)(C) = 0.\]</span>
+E como <span class="math inline">\(\mu(C) = 0\)</span>, resulta então <span class="math inline">\(\nu(C) = 0\)</span>. Portanto, se definimos
+<span class="math display">\[\nu_0(C) = \nu(C \cap A) \quad \text{e} \quad \nu_1(C) = \nu(C \cap B),\]</span>
+temos a decomposição desejada. Se <span class="math inline">\((\bar{\nu}_0, \bar{\nu}_1)\)</span> é outra decomposição, temos <span class="math inline">\(\nu = \bar{\nu}_0 + \bar{\nu}_1 \implies \nu_0 - \bar{\nu}_0 = \bar{\nu}_1 - \nu_1\)</span>. Agora
+<span class="math display">\[(\bar{\nu}_0 - \nu_0) \ll \mu \quad \text{e} \quad (\nu_1 - \bar{\nu}_1) \perp \mu\]</span>
+(veja o Exerc. 9). Temos então uma medida que é simultaneamente singular e absolutamente contínua em relação a <span class="math inline">\(\mu\)</span>. Essa medida tem que ser identicamente nula.</p>
 </div>
             </section>
 

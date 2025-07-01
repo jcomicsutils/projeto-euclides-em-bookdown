@@ -195,6 +195,38 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="cap6e1e" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> Generalidades<a href="cap6e1e.html#cap6e1e" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>O objetivo deste capítulo é estudar funções de conjunto <span class="math inline">\(\sigma\)</span>-aditivas mas não necessariamente positivas. Um importante exemplo de tais funções é o seguinte: seja <span class="math inline">\((\Omega, \mathscr{A}, \mu)\)</span> um espaço de medida e <span class="math inline">\(f\)</span> uma função real mensurável, tal que <span class="math inline">\(\int_\Omega f^- d\mu &lt; \infty\)</span>. A função
+<span class="math display">\[A \mapsto \nu(A) = \int_A f d\mu \text{ (integral indefinida da função } f)\]</span>
+tem as seguintes propriedades:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(\nu(\varnothing) = 0\)</span>;</p></li>
+<li><p><span class="math inline">\(\forall A \in \mathscr{A}\)</span>, <span class="math inline">\(-\infty &lt; \nu(A) \leq +\infty\)</span>;</p></li>
+<li><p>Se <span class="math inline">\(\{A_n\}_{n=1,2,3,\ldots}\)</span> é uma sequência de conjuntos mensuráveis disjuntos, então
+<span class="math display">\[\nu\left(\sum_{n=1}^\infty A_n\right) = \sum_{n=1}^\infty \nu(A_n),\]</span>
+ou seja, <span class="math inline">\(\nu\)</span> é <span class="math inline">\(\sigma\)</span>-aditiva.</p></li>
+</ol>
+<p><strong>DEFINIÇÃO 6.1.1.</strong> Uma função de conjunto sobre um espaço mensurável <span class="math inline">\((\Omega, \mathscr{A})\)</span>, com as propriedades i), ii) e iii), é chamada <em>medida com sinal</em>.</p>
+<p>Observe que temos permitido o valor <span class="math inline">\(+\infty\)</span> e não o valor <span class="math inline">\(-\infty\)</span>. A razão é a seguinte. Suponhamos que conservando as outras propriedades, permitamos que existam <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>, tais que <span class="math inline">\(\mu(A) = +\infty\)</span> e <span class="math inline">\(\mu(B) = -\infty\)</span>. Consideremos as seguintes identidades:
+<span class="math display">\[+\infty = \mu(A) = \mu(A-B) + \mu(A \cap B);\]</span>
+<span class="math display">\[-\infty = \mu(B) = \mu(B-A) + \mu(A \cap B);\]</span>
+<span class="math display">\[\mu(A \Delta B) = \mu(B-A) + \mu(A-B).\]</span></p>
+<p>É fácil ver que <span class="math inline">\(\mu(A \cap B) &lt; \infty\)</span>, porque em caso contrário uma das primeiras duas identidades ficaria sem sentido. Então resultaria <span class="math inline">\(\mu(A-B) = +\infty\)</span> e <span class="math inline">\(\mu(B-A) = -\infty\)</span>, o que deixa sem sentido a última identidade.
+Passemos agora ao estudo das propriedades básicas de uma medida com sinal.</p>
+<p><strong>PROPOSIÇÃO 6.1.1.</strong> Se <span class="math inline">\(B \subseteq A\)</span>, e <span class="math inline">\(|\mu(A)| &lt; \infty\)</span>, então <span class="math inline">\(|\mu(B)| &lt; \infty\)</span>.</p>
+<p><strong>Demonstração.</strong> Veja o Exerc. 1.</p>
+<p><strong>PROPOSIÇÃO 6.1.2.</strong> Se <span class="math inline">\(\{A_n\}_{n=1,2,\ldots}\)</span> é uma sequência de conjuntos mensuráveis disjuntos, então <span class="math inline">\(\left|\mu\left(\sum\limits_{n=1}^\infty A_n\right)\right| &lt; +\infty\)</span> se, e somente se, <span class="math inline">\(\sum\limits_{n=1}^\infty |\mu(A_n)| &lt; \infty\)</span>.</p>
+<p><strong>Demonstração.</strong> Se <span class="math inline">\(\sum\limits_{n=1}^\infty |\mu(A_n)| &lt; \infty\)</span>, temos
+<span class="math display">\[\left|\mu\left(\sum\limits_{n=1}^\infty A_n\right)\right| = \left|\sum_{n=1}^\infty \mu(A_n)\right| \leq \sum_{n=1}^\infty |\mu(A_n)| &lt; \infty,\]</span>
+o que prova uma parte. Para provar a outra parte observemos que se <span class="math inline">\(\tau\)</span> é uma permutação dos naturais, temos que
+<span class="math display">\[\mu\left(\sum_{n=1}^\infty A_{\tau(n)}\right) = \mu\left(\sum_{n=1}^\infty A_{(n)}\right) = \sum_{n=1}^\infty \mu(A_{\tau(n)}).\]</span>
+Ou seja, a soma da série <span class="math inline">\(\sum\limits_{n=1}^\infty \mu(A_n)\)</span> é finita e invariante por meio de reordenamentos. Então a série é absolutamente convergente.</p>
+<p><strong>PROPOSIÇÃO 6.1.3.</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Se <span class="math inline">\(A_n \uparrow A\)</span>, então <span class="math inline">\(\mu(A_n) \to \mu(A)\)</span>;</p></li>
+<li><p>Se <span class="math inline">\(A_n \downarrow A\)</span>, e existe um índice <span class="math inline">\(n_0\)</span> tal que <span class="math inline">\(|\mu(A_{n_0})| &lt; \infty\)</span>, então <span class="math inline">\(\mu(A_n) \to \mu(A)\)</span>.</p></li>
+</ol>
+<p><strong>Demonstração.</strong> Veja o Exerc. 2.</p>
+<p>Na proposição anterior observe-se que escrevemos <span class="math inline">\(\mu(A_n) \to \mu(A)\)</span>. Isso deve-se ao fato de que para uma medida com sinal, <span class="math inline">\(A \subseteq B\)</span>, não implica necessariamente que <span class="math inline">\(\mu(A) \leq \mu(B)\)</span>.</p>
 </div>
             </section>
 
