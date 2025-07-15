@@ -2,14 +2,238 @@
 
 ## Diferenciação de funções monótonas {#cap7e1e}
 
+Vamos começar este capítulo fixando uma notação básica que será utilizada até o fim do mesmo.
+
+Vamos indicar com $\lambda$ a medida de Lebesgue em $\mathbb{R}^n$ e $\lambda^*$ a medida exterior de Lebesgue. A expressão “em quase todo ponto” (q. t. p.) se refere à medida de Lebesgue.
+
+Dada uma função real $f$ definida num intervalo $[a, b]$ de $\mathbb{R}^1$, definimos, para cada ponto $x \in (a, b)$, as *derivadas* ou *números derivados* da função $f$ no ponto $x$ pelas fórmulas: $$D^+(f)(x) = \limsup_{h \to 0} \frac{f(x+h)-f(x)}{h},$$ $$D_+(f)(x) = \liminf_{h \to 0} \frac{f(x+h)-f(x)}{h},$$ $$D^-(f)(x) = \limsup_{h \to 0} \frac{f(x+h)-f(x)}{h},$$ $$D_-(f)(x) = \liminf_{h \to 0} \frac{f(x+h)-f(x)}{h},$$
+
+Se estes quatro números coincidem e são finitos no ponto $x$, dizemos que $f$ é *derivável* nesse ponto.
+
+Se $f$ é uma função integrável em $[a, b]$, a função definida por $\int_a^x f(y) dy + C$, onde $C$ é uma constante, é chamada *integral indefinida* da função $f$.
+
+Seja $A \subseteq \mathbb{R}^n$. Vamos indicar com $\delta(A) = \sup\left\{\left\|x-y\right\|: x \in A, y \in A\right\}$ o *diâmetro* de $A$.
+
+**DEFINIÇÃO 7.1.1.** Uma sequência de conjuntos $A_k(x)$, com a propriedade $x \in A_k(x)$, dizemos que se “contrai” a $x$ quando $\delta(A_k(x)) \to 0$. Indicaremos esta propriedade com a notação $A_k(x) \to x$. Esta noção é fundamental no importante e clássico:
+
+**TEOREMA 7.1.1 (Vitali).** Seja $A \subseteq \mathbb{R}^n$, com $\lambda^*(A) < \infty$. Se para cada $x \in A$ associamos uma sequência de cubos fechados (de lados paralelos aos eixos coordenados) que se contrai a $x$ $\{Q_k(x)\}_{k=1,2,\ldots}$, então existe uma sequência de cubos fechados disjuntos $\{R_j\}_{j=1,2,\ldots}$, tal que
+
+```         
+i) $\{R_j\}_{j=1,2,\ldots}$ é uma subfamília de $\mathscr{F} = \{\{Q_k(x)\}_{k=1,2,\ldots}\}_{x \in A}$
+
+ii) $\lambda\left(A-\sum_{j=1}^\infty R_j\right) = 0$
+```
+
+Uma família com as propriedades de $\{\{Q_k(x)\}_{k=1,2,\ldots}\}_{x \in A}$ é chamada um *recobrimento de Vitali* do conjunto $A$.
+
+**Demonstração.** Seja $0$ aberto, tal que $A \subseteq 0$ e $\lambda(0) < \infty$. Podemos supor sem perda de generalidade que $\forall x, \forall k, Q_k(x) \subseteq 0$. Vamos denotar com $r(Q)$ o raio (semilado) de $Q$.
+
+Escolhemos agora $R_1 \in \mathscr{F}$ arbitrariamente. Suponhamos já escolhidos $R_1, R_2, \ldots, R_m$. Se $A-\sum\limits_{i=1}^m R_i = \varnothing$, o processo acaba aqui e o teorema fica provado. Caso contrário, seja $$\ell_m = \sup \left\{r(Q_k(x)): x \in A-\sum_{i=1}^m R_i, k=1,2,\ldots, \text{e } Q_k(x) \cap R_i = \varnothing, \text{ para } i = 1, 2, \ldots, m\right\}.$$
+
+Observe-se que o conjunto que define $\ell_m$ é não-vazio. Seja $R_{m+1}$ um elemento deste conjunto de retângulos, tal que $r(R_{m+1}) > \frac{1}{2}\ell_m$. Dessa forma fica escolhida a sequência $\{R_j\}_{j=1,2,\ldots}$. Como $$\sum_{j=1}^\infty \lambda(R_j) = \lambda\left(\sum_{j=1}^\infty R_j\right) \leq \lambda(0) < \infty,$$ $\lambda(R_m) \to 0$, o que implica que $r(R_m) \to 0$, e como $2r(R_m) > \ell_{m-1}$, que $\ell_m \to 0$. Vamos denotar com $\tilde{R}_j$ o retângulo obtido multiplicando os lados de $R_j$ por 5, ou seja, $r(\tilde{R}_j) = 5r(R_j)$. Vamos provar agora que para todo $N$, $$A - \sum_{i=1}^N R_i \subseteq \bigcup_{j=N+1}^\infty \tilde{R}_j.$$
+
+```{r figure-07-01-01, fig.show='hold', fig.align='center', echo=FALSE, cache=TRUE}
+knitr::include_graphics(rep("figures/figure-07-01-01.png"))
+```
+
+Seja $x \in \left(A - \sum_{i=1}^N R_i\right)$ e seja $R \in \mathscr{F}$, tal que $x \in R$, e $R$ é disjunto de $R_1, R_2, \ldots, R_N$. Se $R$ é disjunto de $R_1, R_2, \ldots, R_m$, então $r(R) \leq \ell_m < 2r(R_{m+1})$. Como o membro direito converge a 0, existe então um primeiro $m$, tal que $R \cap R_m \neq \varnothing$. É claro que $m > N$. Como $R$ é disjunto de $R_1, R_2, \ldots, R_{m-1}$, temos que $$r(R) \leq \ell_{m-1} < 2r(R_m).$$ Desta desigualdade para $r(R)$ e do fato que $R \cap R_m \neq \varnothing$, decorre facilmente que $R \subseteq \tilde{R}_m$ (veja a Fig. 7.1.1), e portanto $$A - \sum_{i=1}^N R_i \subseteq \bigcup_{j=N+1}^\infty \tilde{R}_j.$$ Agora $$\lambda^*\left(A - \sum_{i=1}^N R_i\right) \leq \sum_{j=N+1}^\infty \lambda(\tilde{R}_j) \leq 5^n \sum_{j=N+1}^\infty \lambda(R_j).$$ Como $\sum\limits_{j=N+1}^\infty \lambda(R_j) \xrightarrow{N \to \infty} 0$, o resultado desejado fica provado.
+
+*Nota.* Observe-se que a conclusão do teorema poderia ser trocada pela seguinte: $\forall \varepsilon > 0$, existem $N$ cubos disjuntos $R_1, \ldots, R_N$, tais que
+
+i)  $R_i \in \mathscr{F}, i = 1, 2, \ldots, N$;
+
+ii) $\lambda^*\left(A-\sum_{i=1}^N R_i\right) < \varepsilon$.
+
+**TEOREMA 7.1.2.** Seja $\varphi$ uma função de conjunto não-negativa definida sobre os cubos fechados do $\mathbb{R}^n$. Suponhamos que $\varphi$ tenha a seguinte propriedade: se $\sum\limits_{k=1}^\infty Q_k \subseteq Q_0$, onde $Q_k, k=0, 1, 2, \ldots$ são cubos fechados, então $\sum\limits_{k=1}^\infty \varphi(Q_k) \leq \varphi(Q_0)$. Então, para quase todo $x \in \mathbb{R}^n$, se $Q_k(x) \to x$, $\lim_{k} \frac{\varphi(Q_k(x))}{\lambda(Q_k(x))}$ existe (pode ser infinito) e não depende da sequência $\{Q_k(x)\}_{k=1,2,\ldots}$
+
+**Demonstração.** Seja $A \subseteq \mathbb{R}^n$ limitado. O teorema ficará provado se para qualquer par de racionais $r_1$ e $r_2$, com $0 < r_1 < r_2$, o conjunto $A_{r_1 r_2} = \left\{x \in A: \exists Q_k \to x \text{ e } \tilde{Q}_k \to x, \text{ tais que } \frac{\varphi(Q_k)}{\lambda(Q_k)} > r_2 > r_1 > \frac{\varphi(\tilde{Q}_k)}{\lambda(\tilde{Q}_k)} \text{ } k = 1, 2, \ldots\right\}$ tem medida de Lebesgue 0. Isso decorre da identidade $$A \cap \left\{x: \exists Q_k \to x \text{ e } \frac{\varphi(Q_k)}{\lambda(Q_k)}\right\} = \bigcup A_{r_1 r_2}$$ e do fato que $\mathbb{R}^n$ é uma reunião enumerável de conjuntos limitados. Seja $\delta > 0$ e $O$ aberto, tal que $A_{r_1 r_2} \subseteq O$ e $\lambda(O) < \lambda^*(A_{r_1 r_2}) + \delta$. Indiquemos com $Q_k(x)$ e $\tilde{Q}_k(x)$ as sequências que aparecem para cada $x \in A_{r_1 r_2}$ que podemos supor contidas em $O$ sem perda de generalidade. Como $\{Q_k(x)\}_{x \in A_{r_1 r_2}}$ é um *recobrimento de Vitali*, podemos escolher $\{\tilde{Q}_k\}_{k=1,2,\ldots}$ uma sequência de cubos disjuntos, tais que $$\lambda\left(A_{r_1 r_2} - \sum_{k=1}^\infty \tilde{Q}_k\right) = 0.$$ Também temos $$\sum_{k=1}^\infty \varphi(\tilde{Q}_k) \leq r_1 \sum_{k=1}^\infty \lambda(\tilde{Q}_k) = r_1 \lambda\left(\sum_{k=1}^\infty \tilde{Q}_k\right) \leq r_1 \lambda(O).$$ Consideremos o conjunto $B = A_{r_1 r_2} \cap \left(\bigcup_{k=1}^\infty \mathring{\tilde{Q}}_k\right)$. Se $\partial(C)$ indica a fronteira do conjunto $C$, $\lambda(\partial(\mathring{\tilde{Q}}_k)) = 0$. ($\mathring{\tilde{Q}}_k$ indica o interior de $\tilde{Q}_k$). Temos $$\lambda^*(A_{r_1 r_2}-B) = \lambda^*\left(A_{r_1 r_2} - \bigcup_{k=1}^\infty \mathring{\tilde{Q}}_k\right) =$$ $$= \lambda^*\left(\left(A_{r_1 r_2} - \bigcup_{k=1}^\infty \mathring{\tilde{Q}}_k\right) \cup \left(A_{r_1 r_2} \cap \bigcup_{k=1}^\infty \partial(\mathring{\tilde{Q}}_k)\right)\right) \leq$$ $$\leq \lambda^*\left(A_{r_1 r_2} - \bigcup_{k=1}^\infty \mathring{\tilde{Q}}_k\right) + \lambda^*\left(A_{r_1 r_2} \cap \bigcup_{k=1}^\infty \partial(\mathring{\tilde{Q}}_k)\right) = 0.$$ Também $$\lambda^*(A_{r_1 r_2}) \leq \lambda^*(A_{r_1 r_2}-B) + \lambda^*(B) \leq \lambda^*(B).$$ Agora, para cada $x \in B$, podemos considerar uma sequência $Q_k(x)$, tal que $Q_k(x) \to x$, $\frac{\varphi(Q_k(x))}{\lambda(Q_k(x))} > r_2$ e $Q_k(x) \subseteq \mathring{\tilde{Q}}_j \forall k$, para algum $j$ fixo. Utilizando o Teorema de Vitali, obtemos uma sucessão $\{Q_k\}_{k=1,2,\ldots}$ de cubos disjuntos, tais que $$\lambda\left(B - \sum_{k=1}^\infty Q_k\right) = 0.$$ Agora $$r_2 \lambda^*(A_{r_1 r_2}) \leq r_2 \lambda^*(B) \leq r_2 \lambda^*\left(\left[B - \sum_{k=1}^\infty Q_k\right] + \sum_{k=1}^\infty Q_k\right) \leq$$ $$\leq r_2 \lambda^*\left(B - \sum_{k=1}^\infty Q_k\right) + r_2 \lambda\left(\sum_{k=1}^\infty \tilde{Q}_k\right) = r_2 \sum_{k=1}^\infty \lambda(Q_k) \leq$$ $$\leq \sum_{k=1}^\infty \varphi(Q_k) \leq \sum_{k=1}^\infty \varphi(\tilde{Q}_k) \leq r_1 \lambda(O) \leq$$ $$\leq r_1(\lambda^*(A_{r_1 r_2}) + \delta).$$ Disso resulta $$(r_2-r_1)\lambda^*(A_{r_1 r_2}) \leq r_1\delta.$$ Como $r_2-r_1 > 0$ e $\delta$ é arbitrário $\lambda^*(A_{r_1 r_2}) = 0$, como queríamos provar.
+
+**COROLÁRIO 7.1.1.** Toda função não-decrescente $f$ num intervalo $[a, b]$ é derivável em quase todo ponto. Se $f'$ indica a derivada, esta função é mensurável, $\int_a^b |f'(x)| dx < \infty$ e $$\int_a^b f'(x) dx \leq f(b)-f(a).$$
+
+**Demonstração.** Definimos para cada intervalo $[x, y] \subseteq [a, b]$, $$\varphi([x, y]) = f(y)-f(x).$$ Evidentemente $\varphi \geq 0$, e também é fácil ver que se $\{[x_k, y_k]\}_{k=1,2,\ldots}$ é uma sequência de intervalos disjuntos contidos em $[x, y]$, então $$\varphi([x, y]) \geq \sum_{k=1}^\infty \varphi([x_k, y_k]).$$ Podemos então aplicar o teorema anterior e concluir que, para quase todo $x \in (a, b)$, as sequências $$\frac{f(x)-f(x-h_k)}{h_k} = \frac{\varphi([x-h_k, x])}{h_k}, \quad h_k > 0$$ e $$\frac{f(x+h_k)-f(x)}{h_k} = \frac{\varphi([x, x+h_k])}{h_k}, \quad h_k > 0$$ têm limite e são iguais. O limite também é independente da sequência $h_k$. Isso é equivalente a dizer que para quase todo $x \in (a, b)$, $\lim_{h \to 0} \frac{f(x+h)-f(x)}{h}$ existe. Denotaremos com $f'$ a função definida como $\lim_{h \to 0} \frac{f(x+h)-f(x)}{h}$, quando este limite existe e é igual a 0 nos restantes pontos. Definimos agora $f(x)$, para $x \geq b$, como $f(b)$ e $$g_n(x) = n\left[f\left(x+\frac{1}{n}\right)-f(x)\right].$$ $g_n$ é uma função mensurável e converge em quase todo ponto a $f'$. Portanto, $f'$ é mensurável Lebesgue. Como $f'$ é crescente, resulta $g_n \geq 0$, e, então, pelo Lema de Fatou: $$\int_a^b f' \leq \liminf_n \int_a^b g_n = \liminf_n \left\{n \left[\int_a^{b+1/n} f(x) dx - \int_a^{a+1/n} f(x) dx\right]\right\} =$$ $$= \liminf_n \left\{n \left[\int_b^{b+1/n} f - \int_a^{a+1/n} f\right]\right\} \leq \liminf_n \left\{f(b) - \frac{f(a)}{n} \cdot 1/n \right\} = f(b)-f(a).$$ Daí resulta também que $f'$ é integrável e portanto finita em quase todo ponto. Portanto $f$ é derivável em q. t. p.
+
 ## Funções de variação limitada {#cap7e2e}
+
+Seja $f$ uma função definida sobre um intervalo $[a, b]$. Seja $a = x_0 < x_1 < x_2 < \ldots < x_n = b$ uma partição de $[a, b]$. Definimos $$r^+ = \sum_{i=1}^n (f(x_i)-f(x_{i-1}))^+;$$ $$r^- = \sum_{i=1}^n (f(x_i)-f(x_{i-1}))^-;$$ $$r = \sum_{i=1}^n |f(x_i)-f(x_{i-1})| = r^+ + r^-.$$ Definimos também $$V_f^+[a, b] = \sup r^+$$ $$V_f^-[a, b] = \sup r^-$$ $$V_f[a, b] = \sup r$$ (Os sup. são tomados sobre o conjunto das partições finitas).
+
+**DEFINIÇÃO 7.2.1.** Uma função $f$ é dita de *variação limitada*, se $V_f[a, b] < \infty$. Temos claramente que $$V_f^+[a, b] \leq V_f[a, b] \leq V_f^+[a, b] + V_f^-[a, b].$$ e $$V_f[a, b] \leq V_f[a, b].$$ Vamos provar agora a importante:
+
+**PROPOSIÇÃO 7.2.1.** $f$ é uma função de *variação limitada* sobre um intervalo $[a, b]$ se, e somente se, $f$ é diferença de duas funções não-decrescentes.
+
+**Demonstração.** Vamos provar primeiramente a fórmula $$f(b)-f(a) = V_f^+[a, b]-V_f^-[a, b].$$ Para qualquer partição de $[a, b]$, temos que $$r^+ = r^- + f(b)-f(a).$$ Tomando sup no membro direito, resulta $$r^+ \leq V_f^-[a, b] + f(b)-f(a).$$ Tomando agora sup sobre o membro esquerdo $$V_f^+[a, b] \leq V_f^-[a, b] + f(b)-f(a).$$ Como $V_f[a, b] < \infty$, todos termos desta desigualdade são finitos e portanto: $$V_f^+[a, b]-V_f^-[a, b] \leq f(b)-f(a);$$ Da mesma forma é possível provar que $$V_f^-[a, b]-V_f^+[a, b] \leq f(a)-f(b)$$ o que prova a identidade desejada. Aplicando agora essa fórmula para cada ponto $x \in [a, b]$, temos $$f(x)-f(a) = V_f^+[a, x]-V_f^-[a, x].$$ (Observe-se que todos os termos são finitos porque $$0 \leq V_f^+[a, x] \leq V_f[a, x] \leq V_f[a, b] < \infty$$ e $$0 \leq V_f^-[a, x] \leq V_f[a, x] \leq V_f[a, b] < \infty).$$ Temos, portanto, $$f(x) = V_f^+[a, x]-\left\{V_f^-[a, x]-f(a)\right\}.$$Como $x \to V_f^+[a, x]$ e $x \to V_f^-[a, x]$ são não-decrescentes, temos escrito $f$ como diferença de duas funções monotônicas. Reciprocamente, suponhamos que $f=f_1-f_2$, onde $f_1$ e $f_2$ são monotônicas. Seja $a = x_0 < x_1 < \ldots < x_n = b$, uma partição de $[a, b]$. Então $$\sum_{i=1}^n |f(x_i)-f(x_{i-1})| = \sum_{i=1}^n |f_1(x_i)-f_1(x_{i-1})-(f_2(x_i)-f_2(x_{i-1}))| \leq$$ $$\leq \sum_{i=1}^n (f_1(x_i)-f_1(x_{i-1})) + \sum_{i=1}^n (f_2(x_i)-f_2(x_{i-1})) \leq$$ $$\leq f_1(b)-f_1(a) + f_2(b)-f_2(a) < \infty.$$ Portanto, $V_f[a, b] < \infty$ o que prova a proposição.
+
+**COROLÁRIO 7.2.1.** Toda função de *variação limitada* em $[a, b]$ é derivável em quase todo ponto.
 
 ## Teorema de diferenciação de Lebesgue {#cap7e3e}
 
+Seja $\mathbb{J}$ a família de todos os intervalos fechados com centro na origem. Se $I \in \mathbb{J}$, então indicaremos com $I(x) = x+I$. Suponhamos que $A$ seja um conjunto *limitado* e para cada $x \in A$ se associe um intervalo $I(x)$. Temos então a seguinte:
+
+**PROPOSIÇÃO 7.3.1.** Existe uma sequência de pontos $\{x_j\}_{j=1,2,\ldots} \in A$, tais que
+
+i)  $A \subseteq \bigcup\limits_{j=1}^\infty I(x_j)$;
+
+ii) todo ponto de $\bigcup\limits_{j=1}^\infty I(x_j)$ pertence ao máximo a quatro conjuntos dos $I(x_j)$. De outra forma: $\sum\limits_{j=1}^\infty I_{I(x_j)} \leq 4$.
+
+**Demonstração.**
+
+i)  Se $\sup\{\lambda(I(x)): x \in A\} = +\infty$ basta tomar um intervalo para cobrir $A$. Caso contrário, seja $\ell_0 = \sup\{\lambda(I(x)): x \in A\}$, e seja $x_1$, tal que $\lambda(I(x_1)) > \ell_0/2$.
+
+    Suponhamos $x_1, x_2, \ldots, x_n$ já escolhidos. Se $A-\bigcup\limits_{i=1}^n I(x_i) = \varnothing$, o processo acaba. Caso contrário, seja $$\ell_n = \sup \left\{\lambda(I(x)): x \in A-\bigcup_{i=1}^n I(x_i)\right\}$$ e escolham $x_{n+1} \in A-\bigcup\limits_{i=1}^n I(x_i)$, tal que $$\lambda(I(x_{n+1})) > \frac{\ell_n}{2}.$$ Observemos primeiro que $\bigcup\limits_{i=1}^\infty I(x_i)$ é um conjunto limitado, porque $A$ é limitado e $\sup_i \lambda(I(x_i)) < \infty$. Denotemos com $\tilde{I}(x_i)$ o intervalo com centro em $x_i$ e comprimento um quarto do comprimento de $I(x_i)$. Como $$x_{n+1} \notin \bigcup_{i=1}^n I(x_i)$$ resulta que os intervalos $\tilde{I}(x_i)$ são disjuntos: (Use a relação (\*) que aparece mais abaixo). Como a união é um conjunto limitado resulta que: $$\infty > \lambda\left(\bigcup_{i=1}^\infty I(x_i)\right) \geq \lambda\left(\sum_{i=1}^\infty \tilde{I}(x_i)\right) =$$ $$= \sum_{i=1}^\infty \lambda(\tilde{I}(x_i)) =$$ $$= \sum_{i=1}^\infty \frac{1}{4}\lambda(I(x_i)) = \frac{1}{4} \sum_{i=1}^\infty \lambda(I(x_i)).$$ Portanto, $\lambda(I(x_i)) \to 0$, o que implica que $\ell_n \to 0$. Vamos provar agora que $A \subseteq \bigcup\limits_{i=1}^\infty I(x_i)$. Caso contrário, existe $x$, tal que $\forall n$ $$x \in A - \bigcup_{i=1}^n I(x_i).$$ Então, temos que $\forall n \lambda(I(x)) \leq \ell_n$, que é uma contradição porque $\ell_n \to 0$.
+
+ii) Seja agora $y \in \bigcup\limits_{i=1}^\infty I(x_i)$. Consideremos
+
+    $$\mathbb{H} = \left\{I(x_i): y \in I(x_i), y \leq x_i\right\}.$$ Provaremos que no máximo há dois intervalos em $\mathbb{H}$. Suponhamos que há pelo menos dois. Seja $i_1$ o menor índice, tal que $I(x_{i_1}) \in \mathbb{H}$. Seja $i_2$ o índice seguinte com essa propriedade. Por construção, $x_{i_2} \notin I(x_{i_1})$. Se $j \leq k$, temos a seguinte desigualdade: $$2\lambda(I(x_j)) > \ell_{j-1} \geq \ell_{k-1} \geq \lambda(I(x_k)),$$ ou seja (se $r(I) = \lambda(I)/2$), $$2r(I(x_j)) > r(I(x_k)). \quad (*)$$ A distância entre $y$ e o extremo direito de $I(x_{i_2})$ é maior que $$r(I(x_{i_1})) + r(I(x_{i_2})) > 2r(I(x_{i_1}))$$ (veja a Fig. 7.3.1).
+
+```{r figure-07-03-01, fig.show='hold', fig.align='center', echo=FALSE, cache=TRUE}
+knitr::include_graphics(rep("figures/figure-07-03-01.png"))
+```
+
+Se existisse $I(x_{i_3}) \in \mathbb{H}$, teríamos que
+$$r(I(x_{i_3})) > 2r(I(x_{i_1})),$$
+uma contradição à desigualdade (*). Como um argumento semelhante pode ser aplicado aos intervalos $I(x_i)$ com centros $x_i \leq y$, resulta que o número máximo de intervalos que pode conter $y$ e $y \leq 4$, como queríamos provar.
+
+Seja $f$ uma função integrável Lebesgue em $\mathbb{R}^1$. Definimos $$Mf(x) = \sup_{I: x \in I} \left\{\frac{1}{\lambda(I)}\int_I |f| d\lambda: I \text{ intervalo fechado com } x \in I\right\}.$$ O operador $M$ é chamado *operador maximal de Hardy-Littlewood*. As principais propriedades do operador $M$ estão contidas na seguinte:
+
+**PROPOSIÇÃO 7.3.2.**
+
+i)  $Mf$ é mensurável;
+
+ii) $M$ é subaditivo. ($M(f+g) \leq M(f) + M(g)$);
+
+iii) $\forall a > 0, \lambda([Mf > a]) \leq \frac{8}{a} \int_{\mathbb{R}^n} |f| d\lambda = \frac{8}{a} \left\|f\right\|_1$.
+
+**Demonstração.**
+
+i)  Se $I$ é um intervalo fixo, contendo a origem a função
+
+    $$x \mapsto \frac{1}{\lambda(I)}\int_{I+x} |f| d\lambda$$ é contínua. O supremo sobre $I$ é uma função semicontínua inferiormente. Mas esse supremo coincide com $Mf(x)$;
+
+ii) Decorre da desigualdade
+
+    $$\frac{1}{\lambda(I)}\int_I |f+g| d\lambda \leq \frac{1}{\lambda(I)}\left\{\int_I |f| d\lambda + \int_I |g| d\lambda\right\} = \frac{1}{\lambda(I)}\int_I |f| d\lambda +$$ $$+ \frac{1}{\lambda(I)}\int_I |g| d\lambda;$$
+
+iii) Vamos primeiramente considerar o operador $\tilde{M}$, definido assim:
+
+$$\tilde{M}f(x) = \sup \left\{\frac{1}{\lambda(I)}\int_I |f| d\lambda: I \text{ intervalo fechado com centro em } x\right\}.$$
+
+Com os mesmos argumentos do caso anterior, $\tilde{M}f$ é mensurável e $\tilde{M}$ é subaditivo.
+
+Se $x \in [\tilde{M}f > a]$, existe um intervalo fechado centrado em $x$, $I(x)$, tal que
+
+$$\frac{1}{\lambda(I(x))} \int_{I(x)} |f| d\lambda > a.$$
+
+Pela proposição anterior, existem $x_1, x_2, \ldots$, tais que
+
+$$[\tilde{M}f > a] \cap [-n, n] \subseteq \bigcup_{i=1}^\infty I(x_i) \quad \text{e} \quad \sum_{i=1}^\infty I_{I(x_i)} \leq 4.$$
+
+Temos então
+
+$$\lambda([\tilde{M}f > a] \cap [-n, n]) \leq \sum_{i=1}^\infty \lambda(I(x_i)) \leq \sum_{i=1}^\infty \frac{1}{a} \int_{I(x_i)} |f| d\lambda =$$
+
+$$= \frac{1}{a} \int_{\mathbb{R}^n} |f| \left(\sum_{i=1}^\infty I_{I(x_i)}\right) d\lambda \leq \frac{4}{a} \int_{\mathbb{R}^n} |f| d\lambda.$$
+
+Como a desigualdade é válida para todo $n$, resulta que
+
+$$\lambda([Mf > a]) \leq \frac{4}{a} \int_{\mathbb{R}^n} |f| d\lambda.$$
+
+Consideremos agora o caso de $M$. Se $x \in I$, seja $I(x)$ o menor intervalo fechado centrado em $x$ e contendo $I$. Temos
+
+$$\lambda(I) \leq \lambda(I(x)) \leq 2\lambda(I).$$
+
+Daí
+
+$$\frac{1}{\lambda(I)}\int_I |f| d\lambda \leq \frac{2}{\lambda(I(x))} \int_{I(x)} |f| d\lambda \leq 2\tilde{M}f(x).$$
+
+Como esta desigualdade é válida para todo $I$, temos que
+
+$$Mf(x) \leq 2\tilde{M}f(x).$$
+
+Resulta então
+
+$$\lambda([Mf > a]) \leq \lambda([2\tilde{M}f > a]) = \lambda\left(\left[\tilde{M}f > \frac{a}{2}\right]\right) \leq$$
+
+$$\leq \frac{8}{a} \int_{\mathbb{R}^n} |f| d\lambda = \frac{8}{a} \left\|f\right\|_1.$$
+
+**TEOREMA 7.3.1 (De diferenciação de Lebesgue).** Seja $f$ integrável em $\mathbb{R}^1$ e seja $\varphi(x) = \int_{-\infty}^x f(y) dy$. Então, para quase todo $x$, $$\frac{d\varphi}{dx}(x) = f(x).$$
+
+**Demonstração.** Observemos primeiro que se $f$ é contínua, a fórmula é válida em todo ponto. Por considerações de simetria é suficiente provar que, para quase todo $x$, $$\lim_{h \to 0} \frac{\varphi(x+h)-\varphi(x)}{h} = f(x).$$ Definimos $$\overline{M}f(x) = \sup_{h>0} \left\{\frac{1}{h}\int_{[x,x+h]} |f| d\lambda\right\}.$$ Como na proposição, resulta que $\overline{M}f$ é mensurável e $\overline{M}$ é subaditivo. É claro que $\overline{M} \leq M$. Portanto, $$[\overline{M}f > a] \subseteq [Mf > a]$$ e $$\lambda([\overline{M}f > a]) \leq \frac{8}{a} \int_{\mathbb{R}^n} |f| d\lambda = \frac{8}{a} \left\|f\right\|_1.$$ Agora $$\left[\frac{\varphi(x+h)-\varphi(x)}{h} \not\to f(x)\right] =$$ $$= \bigcup_{\quad a>0 \\ a \text{ racional}} \left\{x: \exists h_n, h_n > 0, h_n \to 0, \\ \text{tal que } \forall n \left|\left(\frac{1}{h_n}\int_{[x,x+h_n]} f\right)-f(x)\right| > a \right\}.$$
+
+É suficiente provar então que $\forall a > 0$, $a$ racional, o conjunto descrito no membro direito tem medida 0. Dado $\varepsilon > 0$, seja $g$ uma função contínua com $\left\|f-g\right\|_1 < \varepsilon$. Como para toda sequência $h_n$, $$\left(\frac{1}{h_n}\int_{[x,x+h_n]} g\right)-g(x) \xrightarrow{n \to \infty} 0, \text{ com } h_n > 0 \text{ e } h_n \to 0,$$ é suficiente provar que $$\lambda\left(\left\{x: \exists h_n, h_n > 0, h_n \to 0, \text{ tal que } \forall n \left|\frac{1}{h_n}\int_{[x,x+h_n]} (f-g) d\lambda \\ - (f-g)(x)\right| > a\right\}\right) = 0.$$
+
+Este conjunto está contido em $$\left\{x: \exists h_n, h_n > 0, h_n \to 0, \text{ tal que } \forall n \frac{1}{h_n}\int_{[x,x+h_n]} |f-g| d\lambda > \frac{a}{2}\right\} \cup$$ $$\cup \left[|f-g|> \frac{a}{2}\right] \subseteq \left[\overline{M}(f-g) \geq \frac{a}{2}\right] \cup \left[|f-g|> \frac{a}{2}\right].$$ Temos, portanto, que a medida a ser calculada é menor ou igual a $$\lambda\left(\left[\overline{M}(f-g) \geq \frac{a}{2}\right]\right) + \lambda\left(\left[|f-g| > \frac{a}{2}\right]\right) \leq \frac{16}{a} \left\|f-g\right\|_1 + \frac{2\left\|f-g\right\|_1}{a} \leq \frac{18}{a} \varepsilon.$$ Como $\varepsilon$ é arbitrário, a medida procurada é 0, como queríamos provar.
+
+**COROLÁRIO 7.3.1.** Seja $f$ integrável em $[a, b]$. Então, se $\varphi$ é uma *integral indefinida* de $f$, temos que $\varphi' = f$ q. t. p.
+
+Com a mesma técnica utilizada na demonstração do *Teorema de diferenciação de Lebesgue*, podemos provar o seguinte:
+
+**TEOREMA 7.3.2 (Teorema de densidade de Lebesgue).** Seja $A$ um conjunto mensurável em $\mathbb{R}^1$. Seja $I_n(x)$, para cada $x \in A$, uma sequência de intervalos fechados, tais que $I_n(x) \to x$. Então $$\frac{\lambda(I_n(x) \cap A)}{\lambda(I_n(x))} \to I_A \quad \text{q. t. p.}$$
+
+*Observações.* O método de demonstração utilizado para provar o *Teorema de diferenciação de Lebesgue* foi escolhido pela sua imediata generalização para $\mathbb{R}^n$.
+
+A Prop. 7.3.1 torna-se modificada trocando-se os intervalos por cubos e a constante 4 por $2^n$. (com idêntica demonstração).
+
+Na definição do *operador maximal* os intervalos são trocados também por cubos; a constante 8 que aparece na desigualdade muda, mas para os efeitos da demonstração interessa somente que exista uma constante $c$, tal que $$\forall a > 0 \lambda([Mf > a]) \leq \frac{c}{a} \int_{\mathbb{R}^n} |f| d\lambda.$$ O *Teorema de Diferenciação* é enunciado dessa forma:
+
+**TEOREMA 7.3.3.** Seja $f$ integrável Lebesgue em $\mathbb{R}^n$. Seja $Q(x,r)$ um cubo de centro $x$ e semilado $r > 0$. Então $$\lim_{r \to 0} \frac{1}{\lambda(Q(x,r))} \int_{Q(x,r)} f(y) dy = f(x) \text{ q. t. p.}$$ Uma pergunta interessante seria saber se o Teorema continua sendo válido quando os $Q(x, r)$ são trocados por outros conjuntos como por exemplo
+
+$B(x, r)$: bola aberta de raio $r > 0$ e centro $x$;
+
+$Q(x)$: cubo contendo $x$;
+
+$R(x)$: retângulo (intervalo) arbitrário contendo $x$.
+
+O teorema continua sendo válido para bolas e é falso para os outros tipos de conjuntos. (veja [@10]).
+
 ## Continuidade absoluta {#cap7e4e}
+
+**DEFINIÇÃO 7.4.1.** Uma função $f$ definida sobre o intervalo $[a, b]$ é chamada *absolutamente contínua* se $\forall \varepsilon > 0, \exists \delta > 0$, tal que, se $\{(x_i, y_i)\}_{i=1,2,\ldots,n}$ é uma família de intervalos disjuntos contidos em $[a, b]$ com $\sum\limits_{i=1}^n (y_i-x_i) < \delta$, então
+$$\sum_{i=1}^n |f(y_i)-f(x_i)| < \varepsilon.$$
+
+*Notas.* 
+
+a) Toda função absolutamente contínua é contínua.
+
+b) Se $f$ é integrável em $[a, b]$ e $F$ é uma *integral indefinida* da $f$, então $F$ é absolutamente contínua (veja o Exerc. 3).
+
+c) Toda função absolutamente contínua é de *variação limitada* (veja o Exerc. 4).
+
+d) Como consequência de c), resulta que toda função absolutamente contínua é derivável em quase todo ponto.
+
+O objetivo desta seção é provar que uma função é *absolutamente contínua* se, e somente se, é uma *integral indefinida*. Antes de entrar na prova desse resultado necessitamos a seguinte:
+
+**PROPOSIÇÃO 7.4.1.** Se $f$ é *absolutamente contínua* em $[a, b]$ e $f' = 0$ em quase todo ponto, então $f$ é constante.
+
+**Demonstração.** Seja $a < c < b$, queremos provar que $f(a) = f(c)$. Seja $A = \{x: x \in (a, c), f'(x) = 0\}$. Então $\lambda(A) = c-a$. Seja $\varepsilon > 0$, e seja $\delta > 0$ o número correspondente a $\varepsilon > 0$ na definição de continuidade absoluta. Se $x \in A$, então para infinitos $h > 0$, com $[x, x+h] \subseteq (a, c]$, $|f(x+h)-f(x)| < h\varepsilon$. Pelo *Teorema de Vitali*, existem intervalos $[x_i, x_i+h_i] \subseteq (a, c]$, $i = 1, 2, \ldots, n$, disjuntos e tais que
+$$\lambda\left(A-\sum_{i=1}^n [x_i, x_i+h_i]\right) < \delta.$$
+Podemos supor também que
+$$x_1 < x_2 < \ldots < x_n.$$
+Como
+$$A-\sum_{i=1}^n [x_i, x_i+h_i] = A \cap \left\{(a, x_1) + \sum_{i=1}^{n-1} (x_i+h_i, x_{i+1}) + (x_n+h_n, c)\right\}$$
+e $\lambda(A) = c-a$, resulta que
+$$(x_1-a) + \sum_{i=1}^{n-1} (x_{i+1}-x_i-h_i) + (c-x_n-h_n) < \delta.$$
+Portanto, se denotamos com $I$ a expressão
+$$I = |f(x_1)-f(a)| + \sum_{i=1}^{n-1} |f(x_{i+1})-f(x_i+h_i)| + |f(c)-f(x_n+h_n)|.$$
+resulta que $I < \varepsilon$, pela *absoluta continuidade*. Agora
+$$|f(c)-f(a)| \leq I + \sum_{i=1}^n |f(x_i+h_i)-f(x_i)| \leq$$
+$$\leq I + \sum_{i=1}^n \varepsilon h_i \leq \varepsilon + \varepsilon \left(\sum_{i=1}^n h_i\right) \leq$$
+$$\leq \varepsilon + \varepsilon \sum_{i=1}^n \lambda([x_i, x_i+h_i]) =$$
+$$= \varepsilon + \varepsilon \lambda \left(\sum_{i=1}^n [x_i, x_i+h_i]\right) \leq$$
+$$\leq \varepsilon + \varepsilon(c-a).$$
+Como $\varepsilon$ é arbitrário, resulta que $f(c) = f(a)$, como queríamos provar.
+
+Passemos agora a provar o resultado central desta seção.
+
+**TEOREMA 7.4.1.** Uma função $\varphi$ sobre $[a, b]$ é uma *integral indefinida* se, e somente se, $\varphi$ é *absolutamente contínua*.
+
+**Demonstração.** Suponhamos $\varphi$ *absolutamente contínua*. Então, como $\varphi$ é de *variação limitada*, existem duas funções monótonas $\varphi_1$ e $\varphi_2$, tais que $\varphi = \varphi_1 - \varphi_2$. Então $\varphi'$ existe em quase todo ponto e $|\varphi'| \leq \varphi_1' + \varphi_2'$ q. t. p. Portanto,
+$$\int_a^b |\varphi'| \leq \int_a^b \varphi_1' + \int_a^b \varphi_2' \leq \varphi_1(b)-\varphi_1(a) + \varphi_2(b)-\varphi_2(a).$$
+De aqui resulta que $\varphi'$ é integrável. Pelo *Teorema de diferenciação de Lebesgue*, as funções *absolutamente contínuas*
+$$x \mapsto \int_a^x \varphi' \quad \text{e} \quad x \mapsto \varphi(x)$$
+têm derivadas iguais em quase todo ponto, e portanto, pela proposição anterior, existe uma constante $c$ tal que $\varphi(x) = \int_a^x \varphi' + c$, ou seja, $\varphi$ é uma *integral indefinida*.
+A recíproca é fácil (veja o Exerc. 3).
 
 ## Alguns resultados e exemplos especiais {#cap7e5e}
 
 ## Mudança de variáveis em integrais {#cap7e6e}
 
-## Exercícios {- #ex7}
+## Exercícios {#ex7 .unnumbered}
